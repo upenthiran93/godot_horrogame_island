@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://game/levels/a08_hollow_edge/a08_hollow_edge_blockout.tscn" id="1_blockout"]
+
+[node name="A08_HollowEdge" instance=ExtResource("1_blockout")]
+
+[node name="Decoration" type="Node3D" parent="."]
+
+[node name="Lighting" type="Node3D" parent="."]

@@ -1,0 +1,1145 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://game/levels/a06_ropeway/terrain_mesh.res" id="1_4g4kb"]
+[ext_resource type="Shape3D" path="res://game/levels/a06_ropeway/terrain_shape.res" id="2_j2mkv"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Prop_Ladder_1x4_01.fbx" id="3_hlakx"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Prop_Tree_Pine_01.fbx" id="4_xo2dq"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Prop_Tree_Pine_02.fbx" id="5_v0x28"]
+[ext_resource type="PackedScene" path="res://game/props/cable_car/cable_car.tscn" id="6_soit6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ki6o1"]
+albedo_color = Color(0.05, 0.09, 0.11, 1)
+metallic = 0.4
+roughness = 0.15
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ew6cb"]
+size = Vector2(900, 900)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_df2vk"]
+albedo_color = Color(0.22, 0.23, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ixl4u"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 19.063578
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3mfr3"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 19.063578
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_24gc7"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 19.063578
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_aukoa"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 19.063578
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kvwab"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.374128
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qpejr"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.374128
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xkff3"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.095709
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_02tys"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.095709
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ab4cx"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 4.863769
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_mdvrc"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 4.863769
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pr0u6"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 4.685216
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_g4wri"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 4.685216
+radial_segments = 6
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_vmwdw"]
+size = Vector3(4.2, 0.3, 0.5)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_gi8sm"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 79.001114
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4roib"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 79.001114
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5nu8g"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 21.057539
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0cond"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 21.057539
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8j1uv"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 21.057539
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vdfw2"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 21.057539
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_i0hsh"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.799246
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_nqoam"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.799246
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_aul3q"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.5422244
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_yx688"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.5422244
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vxuo6"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.3297515
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_54s48"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.3297515
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_neo2h"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.167325
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kipaa"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.167325
+radial_segments = 6
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_06ef8"]
+size = Vector3(4.2, 0.3, 0.5)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_himrt"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 83.574455
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_t3vp3"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 83.574455
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_75aqa"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 23.05255
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_486l8"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 23.05255
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_j2to3"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 23.05255
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5wrr8"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 23.05255
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_i5fdx"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 6.235483
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jwuj6"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 6.235483
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_r70p6"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.997187
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_owalt"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.997187
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vubfk"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.8014007
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xgihw"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.8014007
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_onafh"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.6525435
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_24ot0"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 5.6525435
+radial_segments = 6
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_2hut7"]
+size = Vector3(4.2, 0.3, 0.5)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_yl5n1"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 121.50122
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0jcr3"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 121.50122
+radial_segments = 6
+rings = 1
+
+[node name="A06_Ropeway" type="Node3D" unique_id=1964173864]
+
+[node name="Terrain" type="StaticBody3D" parent="." unique_id=136950256]
+
+[node name="TerrainMesh" type="MeshInstance3D" parent="Terrain" unique_id=2087609061]
+mesh = ExtResource("1_4g4kb")
+
+[node name="TerrainShape" type="CollisionShape3D" parent="Terrain" unique_id=2096532834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -245)
+shape = ExtResource("2_j2mkv")
+
+[node name="Ocean" type="MeshInstance3D" parent="." unique_id=1408065500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.15, -245)
+material_override = SubResource("StandardMaterial3D_ki6o1")
+mesh = SubResource("PlaneMesh_ew6cb")
+
+[node name="Geometry" type="Node3D" parent="." unique_id=361798723]
+
+[node name="Ropeway" type="Node3D" parent="Geometry" unique_id=1126633862]
+
+[node name="RopewayLine" type="Node3D" parent="Geometry/Ropeway" unique_id=814987895]
+
+[node name="Pylon_2" type="Node3D" parent="Geometry/Ropeway/RopewayLine" unique_id=173947964]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 64.61718, -235)
+
+[node name="Leg_00" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=252160241]
+transform = Transform3D(-0.9983283, 0.057701662, 0.0033350382, 0.05779796, 0.996665, 0.0576052, 0, 0.057701662, -0.9983339, -1.05, 8.5, -1.05)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_ixl4u")
+
+[node name="Leg_20" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=1211173975]
+transform = Transform3D(-0.9983283, -0.057701662, -0.0033350382, -0.05779796, 0.996665, 0.0576052, 0, 0.057701662, -0.9983339, 1.05, 8.5, -1.05)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_3mfr3")
+
+[node name="Leg_02" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=505295885]
+transform = Transform3D(-0.9983283, 0.057701662, -0.0033350382, 0.05779796, 0.996665, -0.0576052, 0, -0.057701662, -0.9983339, -1.05, 8.5, 1.05)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_24gc7")
+
+[node name="Leg_22" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=1051148674]
+transform = Transform3D(-0.9983283, -0.057701662, 0.0033350382, -0.05779796, 0.996665, -0.0576052, 0, -0.057701662, -0.9983339, 1.05, 8.5, 1.05)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_aukoa")
+
+[node name="Brace_0_a" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=1251595846]
+transform = Transform3D(-0.83844364, 0.5442744, -0.027887648, 0.5449884, 0.8373452, -0.04290407, 0, -0.05117109, -0.9986899, -0.13749999, 2.25, 1.4625001)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_kvwab")
+
+[node name="Brace_0_b" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=1011822272]
+transform = Transform3D(-0.83844364, -0.5442744, -0.027887648, -0.5449884, 0.8373452, 0.04290407, 0, 0.05117109, -0.9986899, 0.13749999, 2.25, -1.4625001)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_qpejr")
+
+[node name="Brace_1_a" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=2088602573]
+transform = Transform3D(-0.88438475, 0.46607846, -0.025189562, 0.46675864, 0.883096, -0.04772759, 0, -0.053966995, -0.9985428, -0.13750005, 6.75, 1.1875)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_xkff3")
+
+[node name="Brace_1_b" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=1481194859]
+transform = Transform3D(-0.88438475, -0.46607846, -0.025189562, -0.46675864, 0.883096, 0.04772759, 0, 0.053966995, -0.9985428, 0.13750005, 6.75, -1.1875)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_02tys")
+
+[node name="Brace_2_a" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=1293096729]
+transform = Transform3D(-0.9266908, 0.3752234, -0.021249313, 0.3758246, 0.9252084, -0.05239557, 0, -0.056540508, -0.99840033, -0.13749999, 11.25, 0.91249996)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_ab4cx")
+
+[node name="Brace_2_b" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=422312590]
+transform = Transform3D(-0.9266908, -0.3752234, -0.021249313, -0.3758246, 0.9252084, 0.05239557, 0, 0.056540508, -0.99840033, 0.13749999, 11.25, -0.91249996)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_mdvrc")
+
+[node name="Brace_3_a" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=1961030715]
+transform = Transform3D(-0.96212673, 0.2721326, -0.01600048, 0.2726026, 0.960468, -0.05647228, 0, -0.05869526, -0.998276, -0.13749999, 15.75, 0.6375)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_pr0u6")
+
+[node name="Brace_3_b" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=1238321481]
+transform = Transform3D(-0.96212673, -0.2721326, -0.01600048, -0.2726026, 0.960468, 0.05647228, 0, 0.05869526, -0.998276, 0.13749999, 15.75, -0.6375)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_g4wri")
+
+[node name="CrossArm" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=1994512334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18, 0)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("BoxMesh_vmwdw")
+
+[node name="MaintLadder_0" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=1512827715 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 1.7)
+
+[node name="MaintLadder_1" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=1205706504 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 4, 1.7)
+
+[node name="MaintLadder_2" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=2141923745 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 8, 1.7)
+
+[node name="MaintLadder_3" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=31830186 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 12, 1.7)
+
+[node name="MaintLadder_4" parent="Geometry/Ropeway/RopewayLine/Pylon_2" unique_id=645250170 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 16, 1.7)
+
+[node name="Rope_45_2" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine" unique_id=486623212]
+transform = Transform3D(-1, 0, 0, 0, 0.6505272, -0.75948304, 0, -0.75948304, -0.6505272, 4.5, 57.121002, -205)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_gi8sm")
+
+[node name="Rope_75_2" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine" unique_id=1212515607]
+transform = Transform3D(-1, 0, 0, 0, 0.6505272, -0.75948304, 0, -0.75948304, -0.6505272, 7.5, 57.121002, -205)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_4roib")
+
+[node name="Pylon_3" type="Node3D" parent="Geometry/Ropeway/RopewayLine" unique_id=1699482494]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 108.27558, -305)
+
+[node name="Leg_00" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=838139227]
+transform = Transform3D(-0.99863094, 0.052237824, 0.0027325205, 0.052309237, 0.99726754, 0.052166305, 0, 0.052237824, -0.99863476, -1.05, 9.5, -1.05)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_5nu8g")
+
+[node name="Leg_20" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=1801646854]
+transform = Transform3D(-0.99863094, -0.052237824, -0.0027325205, -0.052309237, 0.99726754, 0.052166305, 0, 0.052237824, -0.99863476, 1.05, 9.5, -1.05)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_0cond")
+
+[node name="Leg_02" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=38086261]
+transform = Transform3D(-0.99863094, 0.052237824, -0.0027325205, 0.052309237, 0.99726754, -0.052166305, 0, -0.052237824, -0.99863476, -1.05, 9.5, 1.05)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_8j1uv")
+
+[node name="Leg_22" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=1598201388]
+transform = Transform3D(-0.99863094, -0.052237824, 0.0027325205, -0.052309237, 0.99726754, -0.052166305, 0, -0.052237824, -0.99863476, 1.05, 9.5, 1.05)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_vdfw2")
+
+[node name="Brace_0_a" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=1421876717]
+transform = Transform3D(-0.86315215, 0.504376, -0.023944423, 0.504944, 0.8621811, -0.040930636, 0, -0.047419958, -0.9988751, -0.13749999, 2.5, 1.4625001)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_i0hsh")
+
+[node name="Brace_0_b" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=1243828741]
+transform = Transform3D(-0.86315215, -0.504376, -0.023944423, -0.504944, 0.8621811, 0.040930636, 0, 0.047419958, -0.9988751, 0.13749999, 2.5, -1.4625001)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_nqoam")
+
+[node name="Brace_1_a" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=484574629]
+transform = Transform3D(-0.9032775, 0.42852834, -0.021289406, 0.42905685, 0.9021649, -0.044819802, 0, -0.049619086, -0.99876827, -0.13750005, 7.5, 1.1875)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_aul3q")
+
+[node name="Brace_1_b" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=633972469]
+transform = Transform3D(-0.9032775, -0.42852834, -0.021289406, -0.42905685, 0.9021649, 0.044819802, 0, 0.049619086, -0.99876827, 0.13750005, 7.5, -1.1875)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_yx688")
+
+[node name="Brace_2_a" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=547060310]
+transform = Transform3D(-0.93938136, 0.34241748, -0.017691333, 0.3428742, 0.9381301, -0.048469406, 0, -0.051597152, -0.998668, -0.13749999, 12.5, 0.91249996)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_vxuo6")
+
+[node name="Brace_2_b" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=1802084572]
+transform = Transform3D(-0.93938136, -0.34241748, -0.017691333, -0.3428742, 0.9381301, 0.048469406, 0, 0.051597152, -0.998668, 0.13749999, 12.5, -0.91249996)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_54s48")
+
+[node name="Brace_3_a" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=1724551393]
+transform = Transform3D(-0.9689918, 0.24674276, -0.013150041, 0.24709292, 0.96761864, -0.051568788, 0, -0.05321902, -0.99858284, -0.13749999, 17.5, 0.6375)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_neo2h")
+
+[node name="Brace_3_b" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=496024884]
+transform = Transform3D(-0.9689918, -0.24674276, -0.013150041, -0.24709292, 0.96761864, 0.051568788, 0, 0.05321902, -0.99858284, 0.13749999, 17.5, -0.6375)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_kipaa")
+
+[node name="CrossArm" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=1184659140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("BoxMesh_06ef8")
+
+[node name="MaintLadder_0" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=1999493635 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 1.7)
+
+[node name="MaintLadder_1" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=582025754 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 4, 1.7)
+
+[node name="MaintLadder_2" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=771993980 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 8, 1.7)
+
+[node name="MaintLadder_3" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=361330118 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 12, 1.7)
+
+[node name="MaintLadder_4" parent="Geometry/Ropeway/RopewayLine/Pylon_3" unique_id=1874630493 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 16, 1.7)
+
+[node name="Rope_45_3" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine" unique_id=230868428]
+transform = Transform3D(-1, 0, 0, 0, 0.5463201, -0.8375765, 0, -0.8375765, -0.5463201, 4.5, 105.646385, -270)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_himrt")
+
+[node name="Rope_75_3" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine" unique_id=2048448056]
+transform = Transform3D(-1, 0, 0, 0, 0.5463201, -0.8375765, 0, -0.8375765, -0.5463201, 7.5, 105.646385, -270)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_t3vp3")
+
+[node name="Pylon_4" type="Node3D" parent="Geometry/Ropeway/RopewayLine" unique_id=18951567]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 193.09462, -390)
+
+[node name="Leg_00" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=2056773506]
+transform = Transform3D(-0.9988583, 0.047717065, 0.002279515, 0.04777148, 0.99772054, 0.047662586, 0, 0.04771707, -0.9988609, -1.05, 10.5, -1.05)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_75aqa")
+
+[node name="Leg_20" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=1698985573]
+transform = Transform3D(-0.9988583, -0.047717065, -0.002279515, -0.04777148, 0.99772054, 0.047662586, 0, 0.04771707, -0.9988609, 1.05, 10.5, -1.05)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_486l8")
+
+[node name="Leg_02" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=601996562]
+transform = Transform3D(-0.9988583, 0.047717065, -0.002279515, 0.04777148, 0.99772054, -0.047662586, 0, -0.04771707, -0.9988609, -1.05, 10.5, 1.05)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_j2to3")
+
+[node name="Leg_22" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=755206685]
+transform = Transform3D(-0.9988583, -0.047717065, 0.002279515, -0.04777148, 0.99772054, -0.047662586, 0, -0.04771707, -0.9988609, 1.05, 10.5, 1.05)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_5wrr8")
+
+[node name="Brace_0_a" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=501003354]
+transform = Transform3D(-0.8829078, 0.46908957, -0.020708142, 0.46954644, 0.8820487, -0.038938385, 0, -0.044102434, -0.999027, -0.13749999, 2.75, 1.4625001)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_i5fdx")
+
+[node name="Brace_0_b" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=216268156]
+transform = Transform3D(-0.8829078, -0.46908957, -0.020708142, -0.46954644, 0.8820487, 0.038938385, 0, 0.044102434, -0.999027, 0.13749999, 2.75, -1.4625001)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_jwuj6")
+
+[node name="Brace_1_a" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=1312838295]
+transform = Transform3D(-0.9180624, 0.396019, -0.018178511, 0.396436, 0.9170967, -0.04209761, 0, -0.04585485, -0.9989481, -0.13750005, 8.25, 1.1875)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_r70p6")
+
+[node name="Brace_1_b" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=1339910230]
+transform = Transform3D(-0.9180624, -0.396019, -0.018178511, -0.396436, 0.9170967, 0.04209761, 0, 0.04585485, -0.9989481, 0.13750005, 8.25, -1.1875)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_owalt")
+
+[node name="Brace_2_a" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=1229410656]
+transform = Transform3D(-0.94911385, 0.3145792, -0.014928573, 0.3149332, 0.9480469, -0.044990223, 0, -0.04740234, -0.9988759, -0.13749999, 13.75, 0.91249996)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_vubfk")
+
+[node name="Brace_2_b" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=1502199874]
+transform = Transform3D(-0.94911385, -0.3145792, -0.014928573, -0.3149332, 0.9480469, 0.044990223, 0, 0.04740234, -0.9988759, 0.13749999, 13.75, -0.91249996)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_xgihw")
+
+[node name="Brace_3_a" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=448602178]
+transform = Transform3D(-0.97416687, 0.22556217, -0.0109867565, 0.22582959, 0.9730133, -0.047393855, 0, -0.04865066, -0.99881583, -0.13749999, 19.25, 0.6375)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_onafh")
+
+[node name="Brace_3_b" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=1982796983]
+transform = Transform3D(-0.97416687, -0.22556217, -0.0109867565, -0.22582959, 0.9730133, 0.047393855, 0, 0.04865066, -0.99881583, 0.13749999, 19.25, -0.6375)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_24ot0")
+
+[node name="CrossArm" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=1075963467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22, 0)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("BoxMesh_2hut7")
+
+[node name="MaintLadder_0" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=1874591824 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 1.7)
+
+[node name="MaintLadder_1" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=1804316063 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 4, 1.7)
+
+[node name="MaintLadder_2" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=1330702163 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 8, 1.7)
+
+[node name="MaintLadder_3" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=939583404 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 12, 1.7)
+
+[node name="MaintLadder_4" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=836164937 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 16, 1.7)
+
+[node name="MaintLadder_5" parent="Geometry/Ropeway/RopewayLine/Pylon_4" unique_id=1255539735 instance=ExtResource("3_hlakx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 20, 1.7)
+
+[node name="Rope_45_4" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine" unique_id=748504599]
+transform = Transform3D(-1, 0, 0, 0, 0.7145529, -0.69958144, 0, -0.69958144, -0.7145529, 4.5, 171.8851, -347.5)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_yl5n1")
+
+[node name="Rope_75_4" type="MeshInstance3D" parent="Geometry/Ropeway/RopewayLine" unique_id=581085040]
+transform = Transform3D(-1, 0, 0, 0, 0.7145529, -0.69958144, 0, -0.69958144, -0.7145529, 7.5, 171.8851, -347.5)
+material_override = SubResource("StandardMaterial3D_df2vk")
+mesh = SubResource("CylinderMesh_0jcr3")
+
+[node name="MountainPines" type="Node3D" parent="Geometry/Ropeway" unique_id=1434874323]
+
+[node name="Pine_000" parent="Geometry/Ropeway/MountainPines" unique_id=1816800142 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(3.934037, 0, 0.5130466, 0, 3.6827846, 0, -0.5130466, 0, 3.934037, 46.154114, 41.50287, -244.6969)
+
+[node name="Pine_001" parent="Geometry/Ropeway/MountainPines" unique_id=971201172 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-1.6661779, 0, 4.308178, 0, 4.57198, 0, -4.308178, 0, -1.6661779, 25.016212, 35.75723, -194.38858)
+
+[node name="Pine_002" parent="Geometry/Ropeway/MountainPines" unique_id=134701489 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(2.2661831, 0, 4.6620274, 0, 5.483773, 0, -4.6620274, 0, 2.2661831, 51.464966, 16.376368, -198.3664)
+
+[node name="Pine_003" parent="Geometry/Ropeway/MountainPines" unique_id=1374662961 instance=ExtResource("5_v0x28")]
+transform = Transform3D(4.913641, 0, -2.8328648, 0, 5.499079, 0, 2.8328648, 0, 4.913641, -39.420624, 96.6241, -282.01608)
+
+[node name="Pine_004" parent="Geometry/Ropeway/MountainPines" unique_id=2057334589 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-0.45140073, 0, -3.9955025, 0, 3.690036, 0, 3.9955025, 0, -0.45140073, 32.300964, 11.143965, -169.36629)
+
+[node name="Pine_005" parent="Geometry/Ropeway/MountainPines" unique_id=315944195 instance=ExtResource("5_v0x28")]
+transform = Transform3D(0.20385598, 0, -3.6473248, 0, 3.512032, 0, 3.6473248, 0, 0.20385598, -13.946548, 91.47184, -277.14377)
+
+[node name="Pine_006" parent="Geometry/Ropeway/MountainPines" unique_id=565712211 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-1.0064577, 0, -3.737774, 0, 3.9691393, 0, 3.737774, 0, -1.0064577, -21.960068, 81.59912, -262.06097)
+
+[node name="Pine_007" parent="Geometry/Ropeway/MountainPines" unique_id=1091438818 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-4.0311313, 0, 2.3084388, 0, 5.004182, 0, -2.3084388, 0, -4.0311313, -48.121235, 78.722115, -264.40286)
+
+[node name="Pine_008" parent="Geometry/Ropeway/MountainPines" unique_id=1697419847 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(4.3430796, 0, -2.0560203, 0, 4.5763097, 0, 2.0560203, 0, 4.3430796, -42.2556, 98.574814, -284.90408)
+
+[node name="Pine_009" parent="Geometry/Ropeway/MountainPines" unique_id=1658770541 instance=ExtResource("5_v0x28")]
+transform = Transform3D(3.061303, 0, -1.4178218, 0, 3.398558, 0, 1.4178218, 0, 3.061303, 52.767593, 50.562626, -256.6502)
+
+[node name="Pine_010" parent="Geometry/Ropeway/MountainPines" unique_id=1539631268 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(4.982442, 0, 2.8401222, 0, 5.5556407, 0, -2.8401222, 0, 4.982442, 44.677803, 43.51365, -247.43294)
+
+[node name="Pine_011" parent="Geometry/Ropeway/MountainPines" unique_id=520526777 instance=ExtResource("5_v0x28")]
+transform = Transform3D(2.0062673, 0, -4.650011, 0, 5.5644045, 0, 4.650011, 0, 2.0062673, 32.823723, 43.01163, -207.56638)
+
+[node name="Pine_012" parent="Geometry/Ropeway/MountainPines" unique_id=1327911796 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(2.0716252, 0, -3.7792377, 0, 4.2641954, 0, 3.7792377, 0, 2.0716252, 43.56804, 34.90487, -231.80467)
+
+[node name="Pine_013" parent="Geometry/Ropeway/MountainPines" unique_id=257043456 instance=ExtResource("5_v0x28")]
+transform = Transform3D(2.0035055, 0, -2.5573995, 0, 3.0908558, 0, 2.5573995, 0, 2.0035055, 15.068993, 88.144844, -271.46005)
+
+[node name="Pine_014" parent="Geometry/Ropeway/MountainPines" unique_id=101216321 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(3.4785957, 0, -1.2443129, 0, 4.0916095, 0, 1.2443129, 0, 3.4785957, 17.116188, 97.37712, -292.91904)
+
+[node name="Pine_015" parent="Geometry/Ropeway/MountainPines" unique_id=889586681 instance=ExtResource("5_v0x28")]
+transform = Transform3D(2.096537, 0, -3.4102867, 0, 4.3470106, 0, 3.4102867, 0, 2.096537, -18.075813, 62.944466, -235.79877)
+
+[node name="Pine_016" parent="Geometry/Ropeway/MountainPines" unique_id=1440022579 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-3.0687878, 0, 2.0978794, 0, 4.4541087, 0, -2.0978794, 0, -3.0687878, -35.93991, 88.18779, -274.59583)
+
+[node name="Pine_017" parent="Geometry/Ropeway/MountainPines" unique_id=1107164315 instance=ExtResource("5_v0x28")]
+transform = Transform3D(3.0480416, 0, 4.4929094, 0, 6.325608, 0, -4.4929094, 0, 3.0480416, 34.695526, 49.657566, -219.3465)
+
+[node name="Pine_018" parent="Geometry/Ropeway/MountainPines" unique_id=2067944816 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-2.0406487, 0, -3.2109149, 0, 3.9037468, 0, 3.2109149, 0, -2.0406487, 54.53376, 56.191525, -264.46643)
+
+[node name="Pine_019" parent="Geometry/Ropeway/MountainPines" unique_id=901591992 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-4.6892157, 0, -2.054958, 0, 5.425584, 0, 2.054958, 0, -4.6892157, -9.647652, 57.94909, -226.78152)
+
+[node name="Pine_020" parent="Geometry/Ropeway/MountainPines" unique_id=981715811 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-0.5834653, 0, -5.095417, 0, 5.488625, 0, 5.095417, 0, -0.5834653, 46.071976, 26.031464, -216.85033)
+
+[node name="Pine_021" parent="Geometry/Ropeway/MountainPines" unique_id=644294913 instance=ExtResource("5_v0x28")]
+transform = Transform3D(4.2130218, 0, -0.46251267, 0, 4.3692665, 0, 0.46251267, 0, 4.2130218, -51.16199, 48.16424, -218.07976)
+
+[node name="Pine_022" parent="Geometry/Ropeway/MountainPines" unique_id=153001433 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-4.3531694, 0, -1.8386971, 0, 5.0714407, 0, 1.8386971, 0, -4.3531694, 33.80857, 34.57873, -192.55682)
+
+[node name="Pine_023" parent="Geometry/Ropeway/MountainPines" unique_id=1596255868 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-2.9273603, 0, 2.0704658, 0, 3.7368867, 0, -2.0704658, 0, -2.9273603, 51.99922, 9.322726, -182.86572)
+
+[node name="Pine_024" parent="Geometry/Ropeway/MountainPines" unique_id=1092429083 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-3.6567283, 0, -1.0348614, 0, 3.5718381, 0, 1.0348614, 0, -3.6567283, -46.768482, 30.650278, -186.53488)
+
+[node name="Pine_025" parent="Geometry/Ropeway/MountainPines" unique_id=632596703 instance=ExtResource("5_v0x28")]
+transform = Transform3D(3.2984672, 0, -3.8703477, 0, 4.7427735, 0, 3.8703477, 0, 3.2984672, 36.956886, 76.3803, -290.77655)
+
+[node name="Pine_026" parent="Geometry/Ropeway/MountainPines" unique_id=1881856366 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(4.4834213, 0, -3.021769, 0, 5.1004443, 0, 3.021769, 0, 4.4834213, -57.8239, 86.89748, -276.48993)
+
+[node name="Pine_027" parent="Geometry/Ropeway/MountainPines" unique_id=2122392282 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-3.72722, 0, 2.8644593, 0, 4.8018866, 0, -2.8644593, 0, -3.72722, 58.735275, 3.743775, -170.69614)
+
+[node name="Pine_028" parent="Geometry/Ropeway/MountainPines" unique_id=1517231385 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(3.6222694, 0, -4.204223, 0, 5.894792, 0, 4.204223, 0, 3.6222694, 20.818207, 65.63105, -239.59814)
+
+[node name="Pine_029" parent="Geometry/Ropeway/MountainPines" unique_id=344913839 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-0.7945011, 0, -5.523383, 0, 5.775324, 0, 5.523383, 0, -0.7945011, -13.954147, 99.563515, -292.94507)
+
+[node name="Pine_030" parent="Geometry/Ropeway/MountainPines" unique_id=1594637716 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-0.34953013, 0, 3.67074, 0, 4.269736, 0, -3.67074, 0, -0.34953013, 20.633423, 12.039956, -171.75537)
+
+[node name="Pine_031" parent="Geometry/Ropeway/MountainPines" unique_id=1027293971 instance=ExtResource("5_v0x28")]
+transform = Transform3D(3.94801, 0, -0.41138107, 0, 4.7387786, 0, 0.41138107, 0, 3.94801, -5.5386963, 49.153763, -212.24744)
+
+[node name="Pine_032" parent="Geometry/Ropeway/MountainPines" unique_id=1395146723 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(1.8261713, 0, -3.6887577, 0, 4.1215563, 0, 3.6887577, 0, 1.8261713, -23.936455, 52.118, -215.1813)
+
+[node name="Pine_033" parent="Geometry/Ropeway/MountainPines" unique_id=1244207483 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-2.916754, 0, 4.3805237, 0, 6.1952333, 0, -4.3805237, 0, -2.916754, -51.372326, 45.67095, -212.51756)
+
+[node name="Pine_034" parent="Geometry/Ropeway/MountainPines" unique_id=278929615 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-4.0810122, 0, -0.66155165, 0, 3.8740318, 0, 0.66155165, 0, -4.0810122, 55.41638, 36.663326, -234.944)
+
+[node name="Pine_035" parent="Geometry/Ropeway/MountainPines" unique_id=1392069974 instance=ExtResource("5_v0x28")]
+transform = Transform3D(1.2318523, 0, -3.5048487, 0, 4.0359774, 0, 3.5048487, 0, 1.2318523, 20.091156, 36.607815, -195.00897)
+
+[node name="Pine_036" parent="Geometry/Ropeway/MountainPines" unique_id=1941522031 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-0.8265072, 0, -4.442139, 0, 4.7482495, 0, 4.442139, 0, -0.8265072, -36.23485, 68.13472, -253.72388)
+
+[node name="Pine_037" parent="Geometry/Ropeway/MountainPines" unique_id=1602832602 instance=ExtResource("5_v0x28")]
+transform = Transform3D(4.735453, 0, 2.96021, 0, 5.9200892, 0, -2.96021, 0, 4.735453, -47.010174, 76.323425, -261.43027)
+
+[node name="Pine_038" parent="Geometry/Ropeway/MountainPines" unique_id=1563208323 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(4.5417223, 0, -0.06655043, 0, 4.2466164, 0, 0.06655043, 0, 4.5417223, -48.342117, 74.845764, -259.53284)
+
+[node name="Pine_039" parent="Geometry/Ropeway/MountainPines" unique_id=276757957 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-2.1159294, 0, -4.7723823, 0, 6.214731, 0, 4.7723823, 0, -2.1159294, 55.030678, 75.257515, -290.2399)
+
+[node name="Pine_040" parent="Geometry/Ropeway/MountainPines" unique_id=159731034 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-0.041358426, 0, 4.9659295, 0, 4.6051064, 0, -4.9659295, 0, -0.041358426, 54.18872, 22.872726, -209.14258)
+
+[node name="Pine_041" parent="Geometry/Ropeway/MountainPines" unique_id=102240557 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-4.438278, 0, 2.444357, 0, 5.3610215, 0, -2.444357, 0, -4.438278, -42.58459, 22.515116, -168.16118)
+
+[node name="Pine_042" parent="Geometry/Ropeway/MountainPines" unique_id=1794812811 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-1.0370913, 0, 4.9695697, 0, 5.2531466, 0, -4.9695697, 0, -1.0370913, -27.90831, 35.085995, -189.15714)
+
+[node name="Pine_043" parent="Geometry/Ropeway/MountainPines" unique_id=741587010 instance=ExtResource("5_v0x28")]
+transform = Transform3D(2.7782605, 0, 3.5616894, 0, 5.0325675, 0, -3.5616894, 0, 2.7782605, 46.229424, 58.995495, -266.84778)
+
+[node name="Pine_044" parent="Geometry/Ropeway/MountainPines" unique_id=468616927 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(5.669298, 0, 0.22957097, 0, 5.562079, 0, -0.22957097, 0, 5.669298, -27.533834, 67.19447, -249.11844)
+
+[node name="Pine_045" parent="Geometry/Ropeway/MountainPines" unique_id=1775628432 instance=ExtResource("5_v0x28")]
+transform = Transform3D(3.5048172, 0, 1.2606205, 0, 4.2411704, 0, -1.2606205, 0, 3.5048172, 31.095718, 53.25516, -222.68652)
+
+[node name="Pine_046" parent="Geometry/Ropeway/MountainPines" unique_id=894968500 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-2.5530024, 0, -2.2361498, 0, 3.5108588, 0, 2.2361498, 0, -2.5530024, -1.4441338, 54.0754, -218.913)
+
+[node name="Pine_047" parent="Geometry/Ropeway/MountainPines" unique_id=609651575 instance=ExtResource("5_v0x28")]
+transform = Transform3D(5.4171624, 0, -1.2410823, 0, 5.7876134, 0, 1.2410823, 0, 5.4171624, 61.942642, 19.73867, -202.79047)
+
+[node name="Pine_048" parent="Geometry/Ropeway/MountainPines" unique_id=2049833014 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(3.8510804, 0, -1.2973312, 0, 4.2070737, 0, 1.2973312, 0, 3.8510804, 58.87816, 36.944286, -234.2761)
+
+[node name="Pine_049" parent="Geometry/Ropeway/MountainPines" unique_id=1253090398 instance=ExtResource("5_v0x28")]
+transform = Transform3D(5.1562567, 0, -2.1333952, 0, 6.549173, 0, 2.1333952, 0, 5.1562567, 66.99321, 67.64523, -280.06393)
+
+[node name="Pine_050" parent="Geometry/Ropeway/MountainPines" unique_id=1981400941 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(4.5180526, 0, 3.0829005, 0, 5.578439, 0, -3.0829005, 0, 4.5180526, 28.305893, 76.257065, -260.85)
+
+[node name="Pine_051" parent="Geometry/Ropeway/MountainPines" unique_id=101560955 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-3.1104121, 0, 1.0399723, 0, 3.0791745, 0, -1.0399723, 0, -3.1104121, -53.356163, 113.689316, -299.42407)
+
+[node name="Pine_052" parent="Geometry/Ropeway/MountainPines" unique_id=571238669 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(4.6704755, 0, 0.8449117, 0, 5.129052, 0, -0.8449117, 0, 4.6704755, 25.528374, 94.44575, -287.63828)
+
+[node name="Pine_053" parent="Geometry/Ropeway/MountainPines" unique_id=1055873612 instance=ExtResource("5_v0x28")]
+transform = Transform3D(0.72802323, 0, 4.9704666, 0, 5.380656, 0, -4.9704666, 0, 0.72802323, -40.11377, 80.5501, -266.35858)
+
+[node name="Pine_054" parent="Geometry/Ropeway/MountainPines" unique_id=1830284252 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-2.8437388, 0, 1.9822582, 0, 3.6031008, 0, -1.9822582, 0, -2.8437388, -51.27379, 41.153515, -205.33981)
+
+[node name="Pine_055" parent="Geometry/Ropeway/MountainPines" unique_id=1281718884 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-1.6845486, 0, -4.1453204, 0, 4.5823703, 0, 4.1453204, 0, -1.6845486, 65.555855, 55.986473, -261.33575)
+
+[node name="Pine_056" parent="Geometry/Ropeway/MountainPines" unique_id=1353565380 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(2.6460276, 0, -3.6970105, 0, 4.9691534, 0, 3.6970105, 0, 2.6460276, -50.7618, 45.166557, -211.1885)
+
+[node name="Pine_057" parent="Geometry/Ropeway/MountainPines" unique_id=190960958 instance=ExtResource("5_v0x28")]
+transform = Transform3D(4.3899603, 0, -0.082702585, 0, 4.863109, 0, 0.082702585, 0, 4.3899603, 29.093758, 58.67505, -230.76312)
+
+[node name="Pine_058" parent="Geometry/Ropeway/MountainPines" unique_id=1868566175 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-0.07091802, 0, 4.14667, 0, 4.7775044, 0, -4.14667, 0, -0.07091802, 34.36635, 29.599056, -184.05396)
+
+[node name="Pine_059" parent="Geometry/Ropeway/MountainPines" unique_id=1891811523 instance=ExtResource("5_v0x28")]
+transform = Transform3D(4.794687, 0, -0.11503507, 0, 4.4211564, 0, 0.11503507, 0, 4.794687, -14.217915, 27.697042, -175.67752)
+
+[node name="Pine_060" parent="Geometry/Ropeway/MountainPines" unique_id=1812287347 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-1.9430518, 0, -5.360751, 0, 5.412561, 0, 5.360751, 0, -1.9430518, -41.886086, 40.153866, -202.47263)
+
+[node name="Pine_061" parent="Geometry/Ropeway/MountainPines" unique_id=71735979 instance=ExtResource("5_v0x28")]
+transform = Transform3D(3.770215, 0, -3.960425, 0, 5.4161882, 0, 3.960425, 0, 3.770215, -3.0927963, 48.77045, -211.0484)
+
+[node name="Pine_062" parent="Geometry/Ropeway/MountainPines" unique_id=127712597 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(4.355026, 0, -0.48404863, 0, 4.3092985, 0, 0.48404863, 0, 4.355026, -35.08126, 51.42846, -216.50262)
+
+[node name="Pine_063" parent="Geometry/Ropeway/MountainPines" unique_id=29942189 instance=ExtResource("5_v0x28")]
+transform = Transform3D(0.06598709, 0, -3.2254548, 0, 3.284074, 0, 3.2254548, 0, 0.06598709, -52.631344, 32.026775, -189.66685)
+
+[node name="Pine_064" parent="Geometry/Ropeway/MountainPines" unique_id=1376672853 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(3.8007696, 0, 0.91699904, 0, 3.6437893, 0, -0.91699904, 0, 3.8007696, -31.592152, 85.90086, -271.61832)
+
+[node name="Pine_065" parent="Geometry/Ropeway/MountainPines" unique_id=1239194037 instance=ExtResource("5_v0x28")]
+transform = Transform3D(1.7276344, 0, 4.2646046, 0, 5.4085827, 0, -4.2646046, 0, 1.7276344, -31.129135, 90.85752, -277.46167)
+
+[node name="Pine_066" parent="Geometry/Ropeway/MountainPines" unique_id=1843645551 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(3.2989032, 0, -1.932911, 0, 4.0569286, 0, 1.932911, 0, 3.2989032, 49.861313, 32.354164, -228.18884)
+
+[node name="Pine_067" parent="Geometry/Ropeway/MountainPines" unique_id=135619197 instance=ExtResource("5_v0x28")]
+transform = Transform3D(3.4748557, 0, -1.9764576, 0, 4.0819516, 0, 1.9764576, 0, 3.4748557, -28.76414, 57.116467, -223.18887)
+
+[node name="Pine_068" parent="Geometry/Ropeway/MountainPines" unique_id=655457927 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(3.5461557, 0, -1.8626999, 0, 4.614218, 0, 1.8626999, 0, 3.5461557, 14.868805, 64.90293, -237.13194)
+
+[node name="Pine_069" parent="Geometry/Ropeway/MountainPines" unique_id=1040826933 instance=ExtResource("5_v0x28")]
+transform = Transform3D(4.414809, 0, -0.6713719, 0, 4.413979, 0, 0.6713719, 0, 4.414809, -30.792809, 56.26539, -222.34253)
+
+[node name="Pine_070" parent="Geometry/Ropeway/MountainPines" unique_id=1557804397 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(0.7414749, 0, 5.04081, 0, 5.6947327, 0, -5.04081, 0, 0.7414749, -36.24774, 35.004475, -188.9877)
+
+[node name="Pine_071" parent="Geometry/Ropeway/MountainPines" unique_id=379385421 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-3.8187141, 0, -1.8742778, 0, 4.7132287, 0, 1.8742778, 0, -3.8187141, -18.604527, 52.08612, -213.89735)
+
+[node name="Pine_072" parent="Geometry/Ropeway/MountainPines" unique_id=1497437249 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-4.5699487, 0, -0.8511875, 0, 4.8158135, 0, 0.8511875, 0, -4.5699487, -44.718193, 31.938879, -188.38348)
+
+[node name="Pine_073" parent="Geometry/Ropeway/MountainPines" unique_id=1702794762 instance=ExtResource("5_v0x28")]
+transform = Transform3D(3.2831476, 0, -3.3178923, 0, 4.3267536, 0, 3.3178923, 0, 3.2831476, -24.427315, 83.49124, -265.7495)
+
+[node name="Pine_074" parent="Geometry/Ropeway/MountainPines" unique_id=1510259446 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(4.5477405, 0, -1.7353249, 0, 4.671572, 0, 1.7353249, 0, 4.5477405, -38.552643, 54.202614, -224.15338)
+
+[node name="Pine_075" parent="Geometry/Ropeway/MountainPines" unique_id=145609229 instance=ExtResource("5_v0x28")]
+transform = Transform3D(0.6057392, 0, 4.777614, 0, 5.747255, 0, -4.777614, 0, 0.6057392, -53.06337, 58.611336, -234.98969)
+
+[node name="Pine_076" parent="Geometry/Ropeway/MountainPines" unique_id=917048517 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-1.5549537, 0, 3.0686107, 0, 3.5913103, 0, -3.0686107, 0, -1.5549537, 43.062546, 73.61371, -286.53073)
+
+[node name="Pine_077" parent="Geometry/Ropeway/MountainPines" unique_id=1413293999 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-3.2253077, 0, 0.090116836, 0, 3.5287645, 0, -0.090116836, 0, -3.2253077, -57.773693, 31.999762, -187.91414)
+
+[node name="Pine_078" parent="Geometry/Ropeway/MountainPines" unique_id=2070141246 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-3.3142037, 0, 2.5313125, 0, 4.1508417, 0, -2.5313125, 0, -3.3142037, 18.122803, 66.98121, -241.7254)
+
+[node name="Pine_079" parent="Geometry/Ropeway/MountainPines" unique_id=142426898 instance=ExtResource("5_v0x28")]
+transform = Transform3D(0.92638254, 0, -3.080805, 0, 3.1409533, 0, 3.080805, 0, 0.92638254, 25.350449, 83.399925, -268.54205)
+
+[node name="Pine_080" parent="Geometry/Ropeway/MountainPines" unique_id=370257861 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(3.6668248, 0, 1.3734838, 0, 4.161637, 0, -1.3734838, 0, 3.6668248, 46.938988, 12.857714, -190.82703)
+
+[node name="Pine_081" parent="Geometry/Ropeway/MountainPines" unique_id=452266739 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-1.5638509, 0, -2.8497326, 0, 3.296067, 0, 2.8497326, 0, -1.5638509, -53.494476, 60.859135, -238.258)
+
+[node name="Pine_082" parent="Geometry/Ropeway/MountainPines" unique_id=1152921528 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-0.6325628, 0, -5.431658, 0, 6.412136, 0, 5.431658, 0, -0.6325628, -37.307243, 49.90273, -215.97528)
+
+[node name="Pine_083" parent="Geometry/Ropeway/MountainPines" unique_id=205267458 instance=ExtResource("5_v0x28")]
+transform = Transform3D(4.0600634, 0, -3.0988219, 0, 5.75095, 0, 3.0988219, 0, 4.0600634, 54.707344, 52.647423, -259.4137)
+
+[node name="Pine_084" parent="Geometry/Ropeway/MountainPines" unique_id=1265306123 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(3.3235314, 0, 2.4710352, 0, 4.796527, 0, -2.4710352, 0, 3.3235314, 26.43042, 35.572636, -194.28828)
+
+[node name="Pine_085" parent="Geometry/Ropeway/MountainPines" unique_id=1040229548 instance=ExtResource("5_v0x28")]
+transform = Transform3D(2.0508409, 0, 3.8492737, 0, 5.016262, 0, -3.8492737, 0, 2.0508409, 56.277092, 8.88483, -181.96799)
+
+[node name="Pine_086" parent="Geometry/Ropeway/MountainPines" unique_id=790165732 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-3.2348092, 0, 0.35080427, 0, 3.4304936, 0, -0.35080427, 0, -3.2348092, -41.19362, 49.381485, -217.24959)
+
+[node name="Pine_087" parent="Geometry/Ropeway/MountainPines" unique_id=984488525 instance=ExtResource("5_v0x28")]
+transform = Transform3D(4.824351, 0, 2.1409476, 0, 5.9383874, 0, -2.1409476, 0, 4.824351, -52.413403, 45.95706, -213.36902)
+
+[node name="Pine_088" parent="Geometry/Ropeway/MountainPines" unique_id=1159557698 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-2.6638477, 0, 2.4854023, 0, 4.117256, 0, -2.4854023, 0, -2.6638477, 43.509903, 54.294373, -260.84744)
+
+[node name="Pine_089" parent="Geometry/Ropeway/MountainPines" unique_id=1771889288 instance=ExtResource("5_v0x28")]
+transform = Transform3D(5.0135036, 0, 1.6135259, 0, 5.6640425, 0, -1.6135259, 0, 5.0135036, 19.601212, 58.36842, -225.37515)
+
+[node name="Pine_090" parent="Geometry/Ropeway/MountainPines" unique_id=265062416 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-2.2249365, 0, 2.4332771, 0, 3.5993502, 0, -2.4332771, 0, -2.2249365, -26.557629, 58.792095, -226.54047)
+
+[node name="Pine_091" parent="Geometry/Ropeway/MountainPines" unique_id=344373066 instance=ExtResource("5_v0x28")]
+transform = Transform3D(4.864574, 0, 0.2270352, 0, 4.644146, 0, -0.2270352, 0, 4.864574, 29.018143, 10.776198, -168.77231)
+
+[node name="Pine_092" parent="Geometry/Ropeway/MountainPines" unique_id=1976863841 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(4.36596, 0, 2.9946296, 0, 6.158709, 0, -2.9946296, 0, 4.36596, -8.57436, 36.766823, -191.90482)
+
+[node name="Pine_093" parent="Geometry/Ropeway/MountainPines" unique_id=1541596126 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-3.9014442, 0, 0.06399691, 0, 4.506351, 0, -0.06399691, 0, -3.9014442, -53.5595, 60.992744, -238.37387)
+
+[node name="Pine_094" parent="Geometry/Ropeway/MountainPines" unique_id=382886879 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(2.466779, 0, 4.394589, 0, 5.511129, 0, -4.394589, 0, 2.466779, -27.139425, 31.034046, -183.87639)
+
+[node name="Pine_095" parent="Geometry/Ropeway/MountainPines" unique_id=1907476302 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-3.4802103, 0, -4.155395, 0, 5.3905725, 0, 4.155395, 0, -3.4802103, 24.003052, 15.171265, -175.228)
+
+[node name="Pine_096" parent="Geometry/Ropeway/MountainPines" unique_id=95498786 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(1.4405158, 0, -5.49246, 0, 5.7971754, 0, 5.49246, 0, 1.4405158, -9.732197, 101.592926, -297.96872)
+
+[node name="Pine_097" parent="Geometry/Ropeway/MountainPines" unique_id=2050396000 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-3.0841892, 0, -3.2374125, 0, 4.76027, 0, 3.2374125, 0, -3.0841892, -17.96666, 68.25868, -246.13663)
+
+[node name="Pine_098" parent="Geometry/Ropeway/MountainPines" unique_id=193290049 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(3.8017113, 0, 0.83927065, 0, 3.5120707, 0, -0.83927065, 0, 3.8017113, -30.127804, 69.1254, -252.36064)
+
+[node name="Pine_099" parent="Geometry/Ropeway/MountainPines" unique_id=711308219 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-5.140368, 0, -1.4321278, 0, 6.3873444, 0, 1.4321278, 0, -5.140368, -22.994015, 24.450798, -170.03088)
+
+[node name="Pine_100" parent="Geometry/Ropeway/MountainPines" unique_id=1856700403 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-2.1677768, 0, 4.0173554, 0, 4.8684855, 0, -4.0173554, 0, -2.1677768, 43.914238, 23.491722, -212.23264)
+
+[node name="Pine_101" parent="Geometry/Ropeway/MountainPines" unique_id=2009905919 instance=ExtResource("5_v0x28")]
+transform = Transform3D(1.520195, 0, 3.2282548, 0, 3.8721225, 0, -3.2282548, 0, 1.520195, 49.628136, 19.214941, -203.71896)
+
+[node name="Pine_102" parent="Geometry/Ropeway/MountainPines" unique_id=436008852 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(4.330553, 0, -2.516123, 0, 5.3527107, 0, 2.516123, 0, 4.330553, -16.09356, 71.71848, -249.23598)
+
+[node name="Pine_103" parent="Geometry/Ropeway/MountainPines" unique_id=512414175 instance=ExtResource("5_v0x28")]
+transform = Transform3D(3.3704236, 0, -3.2743123, 0, 5.0416927, 0, 3.2743123, 0, 3.3704236, 32.50637, 64.305336, -242.05795)
+
+[node name="Pine_104" parent="Geometry/Ropeway/MountainPines" unique_id=1864702895 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-4.1078105, 0, 2.941217, 0, 5.8233743, 0, -2.941217, 0, -4.1078105, 37.394943, 16.295683, -197.26895)
+
+[node name="Pine_105" parent="Geometry/Ropeway/MountainPines" unique_id=1587161889 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-3.757117, 0, 4.334425, 0, 5.4036703, 0, -4.334425, 0, -3.757117, -48.19326, 75.08283, -259.9009)
+
+[node name="Pine_106" parent="Geometry/Ropeway/MountainPines" unique_id=1749959560 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-5.5494657, 0, -0.42868903, 0, 6.036771, 0, 0.42868903, 0, -5.5494657, 60.894638, 14.5077715, -193.62305)
+
+[node name="Pine_107" parent="Geometry/Ropeway/MountainPines" unique_id=1892178894 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-0.45495388, 0, -3.799869, 0, 3.961546, 0, 3.799869, 0, -0.45495388, 50.929367, 33.8822, -231.0469)
+
+[node name="Pine_108" parent="Geometry/Ropeway/MountainPines" unique_id=1894685630 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(0.74988127, 0, 5.212666, 0, 5.6033278, 0, -5.212666, 0, 0.74988127, -38.706657, 62.424965, -241.66928)
+
+[node name="Pine_109" parent="Geometry/Ropeway/MountainPines" unique_id=1645925767 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-1.7798482, 0, 4.9375963, 0, 5.979635, 0, -4.9375963, 0, -1.7798482, 32.65812, 86.92379, -277.94202)
+
+[node name="Pine_110" parent="Geometry/Ropeway/MountainPines" unique_id=631499350 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-3.7642634, 0, -1.7840154, 0, 4.4701085, 0, 1.7840154, 0, -3.7642634, 63.58715, 48.0504, -248.44334)
+
+[node name="Pine_111" parent="Geometry/Ropeway/MountainPines" unique_id=712745022 instance=ExtResource("5_v0x28")]
+transform = Transform3D(1.446816, 0, 4.802254, 0, 5.7269096, 0, -4.802254, 0, 1.446816, -39.017967, 107.68379, -294.77817)
+
+[node name="Pine_112" parent="Geometry/Ropeway/MountainPines" unique_id=195596158 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(0.7126675, 0, -4.1062856, 0, 3.9105558, 0, 4.1062856, 0, 0.7126675, -38.77333, 65.009384, -245.80176)
+
+[node name="Pine_113" parent="Geometry/Ropeway/MountainPines" unique_id=1569804017 instance=ExtResource("5_v0x28")]
+transform = Transform3D(5.25475, 0, 0.4029259, 0, 5.019939, 0, -0.4029259, 0, 5.25475, -34.884605, 74.21427, -258.84238)
+
+[node name="Pine_114" parent="Geometry/Ropeway/MountainPines" unique_id=2099036710 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-0.7835738, 0, -3.9122474, 0, 3.7823832, 0, 3.9122474, 0, -0.7835738, -14.557125, 53.910477, -218.37299)
+
+[node name="Pine_115" parent="Geometry/Ropeway/MountainPines" unique_id=879590591 instance=ExtResource("5_v0x28")]
+transform = Transform3D(1.5834309, 0, -3.0592968, 0, 3.988226, 0, 3.0592968, 0, 1.5834309, -15.081699, 33.756752, -184.4324)
+
+[node name="Pine_116" parent="Geometry/Ropeway/MountainPines" unique_id=1876815086 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(0.6812049, 0, -3.5454679, 0, 3.835575, 0, 3.5454679, 0, 0.6812049, 53.98078, 65.26958, -278.75186)
+
+[node name="Pine_117" parent="Geometry/Ropeway/MountainPines" unique_id=680246041 instance=ExtResource("5_v0x28")]
+transform = Transform3D(5.6231637, 0, -0.23022078, 0, 6.482357, 0, 0.23022078, 0, 5.6231637, -47.288376, 65.49246, -248.1855)
+
+[node name="Pine_118" parent="Geometry/Ropeway/MountainPines" unique_id=1183872909 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-2.0677905, 0, 3.6126723, 0, 4.8500137, 0, -3.6126723, 0, -2.0677905, 66.29489, 16.14111, -195.20566)
+
+[node name="Pine_119" parent="Geometry/Ropeway/MountainPines" unique_id=959940108 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-2.6606152, 0, -2.8196812, 0, 3.661089, 0, 2.8196812, 0, -2.6606152, 55.524773, 55.801525, -263.93124)
+
+[node name="Pine_120" parent="Geometry/Ropeway/MountainPines" unique_id=1222538980 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-0.16614936, 0, 4.775364, 0, 5.4604907, 0, -4.775364, 0, -0.16614936, 36.405685, 76.733665, -282.73538)
+
+[node name="Pine_121" parent="Geometry/Ropeway/MountainPines" unique_id=274874753 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-1.7837074, 0, -3.204525, 0, 3.6505299, 0, 3.204525, 0, -1.7837074, -57.625515, 81.941475, -271.8169)
+
+[node name="Pine_122" parent="Geometry/Ropeway/MountainPines" unique_id=1320352676 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(4.4350367, 0, -2.3672237, 0, 5.272142, 0, 2.3672237, 0, 4.4350367, 36.840782, 40.512215, -239.34924)
+
+[node name="Pine_123" parent="Geometry/Ropeway/MountainPines" unique_id=479225816 instance=ExtResource("5_v0x28")]
+transform = Transform3D(4.761409, 0, 0.49255407, 0, 5.1661253, 0, -0.49255407, 0, 4.761409, -40.02395, 64.59072, -245.01743)
+
+[node name="Pine_124" parent="Geometry/Ropeway/MountainPines" unique_id=438566219 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(3.7049043, 0, -3.4797492, 0, 5.837083, 0, 3.4797492, 0, 3.7049043, -11.573257, 101.838776, -297.76688)
+
+[node name="Pine_125" parent="Geometry/Ropeway/MountainPines" unique_id=1961970880 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-1.6849115, 0, -4.19505, 0, 4.1832175, 0, 4.19505, 0, -1.6849115, 57.17167, 27.775692, -217.35751)
+
+[node name="Pine_126" parent="Geometry/Ropeway/MountainPines" unique_id=352859629 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(2.3799288, 0, 4.373817, 0, 4.636751, 0, -4.373817, 0, 2.3799288, -34.60148, 82.77152, -268.02405)
+
+[node name="Pine_127" parent="Geometry/Ropeway/MountainPines" unique_id=855136184 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-2.4873037, 0, -4.2622275, 0, 5.286305, 0, 4.2622275, 0, -2.4873037, 20.43496, 97.40119, -293.22095)
+
+[node name="Pine_128" parent="Geometry/Ropeway/MountainPines" unique_id=534047654 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-2.7695649, 0, 3.3779016, 0, 4.4786105, 0, -3.3779016, 0, -2.7695649, -8.5149, 48.092983, -211.22475)
+
+[node name="Pine_129" parent="Geometry/Ropeway/MountainPines" unique_id=1375451450 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-0.815877, 0, 4.328802, 0, 5.188297, 0, -4.328802, 0, -0.815877, -31.187634, 110.23902, -295.9252)
+
+[node name="Pine_130" parent="Geometry/Ropeway/MountainPines" unique_id=188597974 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(1.6884156, 0, 2.8338368, 0, 3.5858428, 0, -2.8338368, 0, 1.6884156, -10.458466, 87.17194, -268.00885)
+
+[node name="Pine_131" parent="Geometry/Ropeway/MountainPines" unique_id=860035211 instance=ExtResource("5_v0x28")]
+transform = Transform3D(3.5103998, 0, 1.93995, 0, 3.9794147, 0, -1.93995, 0, 3.5103998, -36.934746, 64.02971, -243.96059)
+
+[node name="Pine_132" parent="Geometry/Ropeway/MountainPines" unique_id=1801629381 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-0.0150206955, 0, -4.0437274, 0, 4.811573, 0, 4.0437274, 0, -0.0150206955, 49.89215, 22.499422, -209.75096)
+
+[node name="Pine_133" parent="Geometry/Ropeway/MountainPines" unique_id=295084800 instance=ExtResource("5_v0x28")]
+transform = Transform3D(5.1278677, 0, -1.0378952, 0, 4.8690133, 0, 1.0378952, 0, 5.1278677, -29.61489, 81.61579, -264.97113)
+
+[node name="Pine_134" parent="Geometry/Ropeway/MountainPines" unique_id=1850102201 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(2.6844034, 0, 1.7772716, 0, 2.9278617, 0, -1.7772716, 0, 2.6844034, 24.269547, 41.880363, -204.1484)
+
+[node name="Pine_135" parent="Geometry/Ropeway/MountainPines" unique_id=197557421 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-2.7914996, 0, -3.0436556, 0, 4.087445, 0, 3.0436556, 0, -2.7914996, -12.211262, 47.1321, -208.70749)
+
+[node name="Pine_136" parent="Geometry/Ropeway/MountainPines" unique_id=1673755789 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-2.4098132, 0, 3.6853237, 0, 5.24057, 0, -3.6853237, 0, -2.4098132, -11.029022, 71.33145, -246.63231)
+
+[node name="Pine_137" parent="Geometry/Ropeway/MountainPines" unique_id=1109891175 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-3.443018, 0, -0.47829998, 0, 3.3870668, 0, 0.47829998, 0, -3.443018, 45.438164, 8.10875, -179.89188)
+
+[node name="Pine_138" parent="Geometry/Ropeway/MountainPines" unique_id=66935539 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(3.17486, 0, 4.685803, 0, 5.560453, 0, -4.685803, 0, 3.17486, -10.035301, 61.372997, -231.76312)
+
+[node name="Pine_139" parent="Geometry/Ropeway/MountainPines" unique_id=1746528812 instance=ExtResource("5_v0x28")]
+transform = Transform3D(1.9692158, 0, -5.178588, 0, 5.335038, 0, 5.178588, 0, 1.9692158, -12.494785, 98.85153, -290.48477)
+
+[node name="Pine_140" parent="Geometry/Ropeway/MountainPines" unique_id=1369096231 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(1.2518091, 0, -3.87614, 0, 4.8801103, 0, 3.87614, 0, 1.2518091, -3.78339, 85.484505, -263.29993)
+
+[node name="Pine_141" parent="Geometry/Ropeway/MountainPines" unique_id=1920669448 instance=ExtResource("5_v0x28")]
+transform = Transform3D(1.8772641, 0, -4.036133, 0, 5.3265815, 0, 4.036133, 0, 1.8772641, 52.080025, 33.510975, -230.4357)
+
+[node name="Pine_142" parent="Geometry/Ropeway/MountainPines" unique_id=434999999 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(2.8969324, 0, 4.124022, 0, 5.9404798, 0, -4.124022, 0, 2.8969324, 27.423355, 39.696213, -200.78116)
+
+[node name="Pine_143" parent="Geometry/Ropeway/MountainPines" unique_id=1512391248 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-1.7833202, 0, -3.9001014, 0, 3.949723, 0, 3.9001014, 0, -1.7833202, 21.344574, 58.68847, -226.00848)
+
+[node name="Pine_144" parent="Geometry/Ropeway/MountainPines" unique_id=1135062096 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-2.8481107, 0, 3.3780215, 0, 4.0978036, 0, -3.3780215, 0, -2.8481107, -4.5014153, 89.65179, -272.87543)
+
+[node name="Pine_145" parent="Geometry/Ropeway/MountainPines" unique_id=907810120 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-3.330954, 0, -3.970224, 0, 5.0259104, 0, 3.970224, 0, -3.330954, 28.076591, 76.34044, -260.8984)
+
+[node name="Pine_146" parent="Geometry/Ropeway/MountainPines" unique_id=655451531 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(2.5435624, 0, -2.7124429, 0, 3.9720218, 0, 2.7124429, 0, 2.5435624, 16.556488, 52.260403, -217.05103)
+
+[node name="Pine_147" parent="Geometry/Ropeway/MountainPines" unique_id=1396035817 instance=ExtResource("5_v0x28")]
+transform = Transform3D(4.594655, 0, 2.0762892, 0, 5.351028, 0, -2.0762892, 0, 4.594655, 48.23584, 82.33187, -299.72302)
+
+[node name="Pine_148" parent="Geometry/Ropeway/MountainPines" unique_id=624737236 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(2.8054037, 0, 2.7058704, 0, 4.1493697, 0, -2.7058704, 0, 2.8054037, 66.60779, 20.575693, -203.90472)
+
+[node name="Pine_149" parent="Geometry/Ropeway/MountainPines" unique_id=2127963311 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-2.9264832, 0, -2.8237793, 0, 4.7681327, 0, 2.8237793, 0, -2.9264832, 49.65496, 8.804954, -181.60281)
+
+[node name="Pine_150" parent="Geometry/Ropeway/MountainPines" unique_id=1497399892 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-0.19394088, 0, 3.2886233, 0, 3.4698753, 0, -3.2886233, 0, -0.19394088, 26.59002, 29.121296, -183.56311)
+
+[node name="Pine_151" parent="Geometry/Ropeway/MountainPines" unique_id=1756767497 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-3.6357737, 0, 3.3553326, 0, 4.8981614, 0, -3.3553326, 0, -3.6357737, -34.88746, 39.46799, -196.74396)
+
+[node name="Pine_152" parent="Geometry/Ropeway/MountainPines" unique_id=481075169 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-3.84603, 0, -2.067982, 0, 4.774416, 0, 2.067982, 0, -3.84603, 41.86724, 17.186287, -199.71329)
+
+[node name="Pine_153" parent="Geometry/Ropeway/MountainPines" unique_id=1487040243 instance=ExtResource("5_v0x28")]
+transform = Transform3D(0.6669879, 0, 4.93612, 0, 4.9765334, 0, -4.93612, 0, 0.6669879, -10.280281, 89.81912, -272.62686)
+
+[node name="Pine_154" parent="Geometry/Ropeway/MountainPines" unique_id=1384116702 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-2.6677873, 0, -3.4479477, 0, 4.196283, 0, 3.4479477, 0, -2.6677873, -55.530025, 59.06195, -235.28775)
+
+[node name="Pine_155" parent="Geometry/Ropeway/MountainPines" unique_id=1451043565 instance=ExtResource("5_v0x28")]
+transform = Transform3D(1.5611464, 0, 3.0501106, 0, 3.3749819, 0, -3.0501106, 0, 1.5611464, 52.04373, 50.35459, -256.43185)
+
+[node name="Pine_156" parent="Geometry/Ropeway/MountainPines" unique_id=1454265300 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(-4.173346, 0, -3.717993, 0, 5.999407, 0, 3.717993, 0, -4.173346, -43.785187, 25.400803, -173.38742)
+
+[node name="Pine_157" parent="Geometry/Ropeway/MountainPines" unique_id=918687407 instance=ExtResource("5_v0x28")]
+transform = Transform3D(2.4111385, 0, 3.8421214, 0, 4.995169, 0, -3.8421214, 0, 2.4111385, -40.36937, 80.12434, -265.9132)
+
+[node name="Pine_158" parent="Geometry/Ropeway/MountainPines" unique_id=862356941 instance=ExtResource("4_xo2dq")]
+transform = Transform3D(1.9337872, 0, -3.5393686, 0, 4.7326937, 0, 3.5393686, 0, 1.9337872, -4.5419006, 57.00759, -224.13036)
+
+[node name="Pine_159" parent="Geometry/Ropeway/MountainPines" unique_id=98621360 instance=ExtResource("5_v0x28")]
+transform = Transform3D(-0.32025248, 0, -3.998518, 0, 4.415047, 0, 3.998518, 0, -0.32025248, -3.3780022, 75.15224, -250.77728)
+
+[node name="Dynamic" type="Node3D" parent="." unique_id=1567693549]
+
+[node name="CableCar" parent="Dynamic" unique_id=2059876967 instance=ExtResource("6_soit6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 120.53196, -303.4)
+
+[node name="Markers" type="Node3D" parent="." unique_id=1825220792]
+
+[node name="Mk_Ch03_Pylon_2" type="Marker3D" parent="Markers" unique_id=938930565]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 82.61718, -235)
+
+[node name="Mk_Ch03_Pylon_2_Base" type="Marker3D" parent="Markers" unique_id=1259919884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 64.61718, -233.1)
+
+[node name="Mk_Ch03_Pylon_3" type="Marker3D" parent="Markers" unique_id=856791939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 128.27559, -305)
+
+[node name="Mk_Ch03_Pylon_3_Base" type="Marker3D" parent="Markers" unique_id=12456944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 108.27558, -303.1)
+
+[node name="Mk_Ch03_Pylon_4" type="Marker3D" parent="Markers" unique_id=653168454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 215.09462, -390)
+
+[node name="Mk_Ch03_Pylon_4_Base" type="Marker3D" parent="Markers" unique_id=917016928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 193.09462, -388.1)
+
+[node name="Mk_Ch03_CarStop" type="Marker3D" parent="Markers" unique_id=728681538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 120.53196, -303.4)
+
+[node name="Vegetation" type="Node3D" parent="." unique_id=614928646]
+
+[node name="Pines" type="Node3D" parent="Vegetation" unique_id=1218760897]
+
+[node name="DeadTrees" type="Node3D" parent="Vegetation" unique_id=377787727]
+
+[node name="Bushes" type="Node3D" parent="Vegetation" unique_id=1425485861]

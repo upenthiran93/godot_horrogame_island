@@ -1,0 +1,2297 @@
+[gd_scene format=3]
+
+[ext_resource type="ArrayMesh" path="res://game/levels/a10_festival_ring/terrain_mesh.res" id="1_yj4a2"]
+[ext_resource type="Shape3D" path="res://game/levels/a10_festival_ring/terrain_shape.res" id="2_fqard"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Prop_Crate_01.fbx" id="3_tekte"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Prop_Crate_02.fbx" id="4_idqxw"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Prop_Crate_03.fbx" id="5_i8dyx"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Prop_Barrel_01.fbx" id="6_7ve51"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Prop_Tree_Pine_01.fbx" id="7_rmssk"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Prop_Tree_Pine_02.fbx" id="8_8fupx"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Generic_TreeDead_01.fbx" id="9_cw482"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7iex"]
+albedo_color = Color(0.05, 0.09, 0.11, 1)
+metallic = 0.4
+roughness = 0.15
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rn8ga"]
+size = Vector2(900, 900)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4pi7b"]
+albedo_color = Color(0.5, 0.46, 0.38, 1)
+roughness = 0.9
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_v2u8f"]
+top_radius = 9.4
+bottom_radius = 9.6
+height = 0.05
+radial_segments = 24
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sgp5k"]
+albedo_color = Color(0.384, 0.408, 0.352, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_ogqp8"]
+size = Vector3(0.7, 3.174178, 1.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wln3t"]
+size = Vector3(0.7, 3.174178, 1.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qrnw0"]
+albedo_color = Color(0.2, 0.19, 0.17, 1)
+roughness = 0.9
+
+[sub_resource type="SphereMesh" id="SphereMesh_quaw0"]
+radius = 0.09
+height = 0.18
+radial_segments = 12
+rings = 6
+
+[sub_resource type="BoxMesh" id="BoxMesh_8t2bk"]
+size = Vector3(0.1, 0.5, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o7g4u"]
+size = Vector3(0.12, 0.35, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lux7g"]
+size = Vector3(0.04, 0.34, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7num3"]
+size = Vector3(0.04, 0.34, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_et03m"]
+size = Vector3(0.7, 2.7656686, 1.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k3x4e"]
+size = Vector3(0.7, 2.7656686, 1.1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_i0pq5"]
+radius = 0.09
+height = 0.18
+radial_segments = 12
+rings = 6
+
+[sub_resource type="BoxMesh" id="BoxMesh_btq1l"]
+size = Vector3(0.1, 0.5, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_b5ea6"]
+size = Vector3(0.12, 0.35, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_40ijb"]
+size = Vector3(0.04, 0.34, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u3ils"]
+size = Vector3(0.04, 0.34, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kla0e"]
+size = Vector3(0.7, 2.8125591, 1.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pm8ut"]
+size = Vector3(0.7, 2.8125591, 1.1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_c5ip4"]
+radius = 0.09
+height = 0.18
+radial_segments = 12
+rings = 6
+
+[sub_resource type="BoxMesh" id="BoxMesh_giuiq"]
+size = Vector3(0.1, 0.5, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oxy2l"]
+size = Vector3(0.12, 0.35, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0ywdd"]
+size = Vector3(0.04, 0.34, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dh2yp"]
+size = Vector3(0.04, 0.34, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_doxyn"]
+size = Vector3(0.7, 3.2967725, 1.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q31w8"]
+size = Vector3(0.7, 3.2967725, 1.1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_juqxi"]
+radius = 0.09
+height = 0.18
+radial_segments = 12
+rings = 6
+
+[sub_resource type="BoxMesh" id="BoxMesh_63qpd"]
+size = Vector3(0.1, 0.5, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kunit"]
+size = Vector3(0.12, 0.35, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kd0lo"]
+size = Vector3(0.04, 0.34, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_laqbs"]
+size = Vector3(0.04, 0.34, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jphno"]
+size = Vector3(0.7, 3.28017, 1.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y6r47"]
+size = Vector3(0.7, 3.28017, 1.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lcwyk"]
+albedo_color = Color(0.3, 0.28, 0.24, 1)
+roughness = 0.9
+
+[sub_resource type="SphereMesh" id="SphereMesh_w8laj"]
+radius = 0.1
+height = 0.2
+radial_segments = 12
+rings = 6
+
+[sub_resource type="BoxMesh" id="BoxMesh_q4ar4"]
+size = Vector3(0.12, 1.2, 0.06)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sryn0"]
+size = Vector3(0.14, 0.7, 0.05)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ok8rp"]
+size = Vector3(0.04, 0.9, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mjrni"]
+size = Vector3(0.04, 0.9, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uwfm4"]
+size = Vector3(0.7, 3.1542659, 1.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gwa8k"]
+size = Vector3(0.7, 3.1542659, 1.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wjs7c"]
+size = Vector3(0.7, 3.0143838, 1.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p76uq"]
+size = Vector3(0.7, 3.0143838, 1.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_acigu"]
+size = Vector3(0.7, 2.6915421, 1.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7nn8r"]
+size = Vector3(0.7, 2.6915421, 1.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ltulb"]
+size = Vector3(0.7, 2.7500725, 1.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_quecu"]
+size = Vector3(0.7, 2.7500725, 1.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d5tfh"]
+albedo_color = Color(0.396, 0.412, 0.368, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_sedi1"]
+size = Vector3(0.75, 1, 0.75)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qmho0"]
+albedo_color = Color(0.01, 0.01, 0.01, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_qt6jj"]
+size = Vector3(0.34, 0.06, 0.34)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nuv7h"]
+albedo_color = Color(0.6, 0.55, 0.45, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_67paq"]
+size = Vector3(0.05, 0.03, 0.14)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2vnbt"]
+size = Vector3(0.05, 0.03, 0.14)
+
+[sub_resource type="BoxMesh" id="BoxMesh_clxdu"]
+size = Vector3(0.05, 0.03, 0.14)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ttvkh"]
+size = Vector3(0.05, 0.03, 0.14)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m7edj"]
+albedo_color = Color(0.42, 0.32, 0.22, 1)
+roughness = 0.9
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_eduv2"]
+top_radius = 0.02
+bottom_radius = 0.025
+height = 0.9
+radial_segments = 10
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1x4c3"]
+albedo_color = Color(0.85, 0.45, 0.1, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_52fnm"]
+size = Vector3(0.28, 0.2, 0.01)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dfnl1"]
+size = Vector3(0.75, 1, 0.75)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hlja3"]
+size = Vector3(0.34, 0.06, 0.34)
+
+[sub_resource type="BoxMesh" id="BoxMesh_47swh"]
+size = Vector3(0.05, 0.03, 0.14)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lb2vy"]
+size = Vector3(0.05, 0.03, 0.14)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xet04"]
+size = Vector3(0.05, 0.03, 0.14)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qvmrs"]
+size = Vector3(0.05, 0.03, 0.14)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kumps"]
+top_radius = 0.02
+bottom_radius = 0.025
+height = 0.9
+radial_segments = 10
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_k0xm1"]
+size = Vector3(0.28, 0.2, 0.01)
+
+[sub_resource type="BoxMesh" id="BoxMesh_80pnv"]
+size = Vector3(0.75, 1, 0.75)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jxwkg"]
+size = Vector3(0.34, 0.06, 0.34)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qtwpk"]
+size = Vector3(0.05, 0.03, 0.14)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sr266"]
+size = Vector3(0.05, 0.03, 0.14)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ptkju"]
+size = Vector3(0.05, 0.03, 0.14)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8sl1x"]
+size = Vector3(0.05, 0.03, 0.14)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_q7o8l"]
+top_radius = 0.02
+bottom_radius = 0.025
+height = 0.9
+radial_segments = 10
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_g20ml"]
+size = Vector3(0.28, 0.2, 0.01)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_87fml"]
+albedo_color = Color(0.12, 0.11, 0.1, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_lsap5"]
+size = Vector3(10, 0.14, 1.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4lxj1"]
+size = Vector3(1.5, 0.14, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3wm0a"]
+albedo_color = Color(0.3, 0.24, 0.17, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_pyd3y"]
+size = Vector3(4, 0.8, 1.6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8bm4x"]
+size = Vector3(1.6, 0.8, 4)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_810or"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 1.1
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lbog3"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 1.1
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_j27gb"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 1.1
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hpnyq"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 1.1
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_o3bw0"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 10.000072
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hc2rl"]
+top_radius = 0.012
+bottom_radius = 0.012
+height = 5.0003147
+radial_segments = 6
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_142fe"]
+albedo_color = Color(0.2, 0.3, 0.38, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_w4v5h"]
+size = Vector3(3.6, 0.08, 2.6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5l7o2"]
+size = Vector3(2.4, 0.08, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xywb5"]
+albedo_color = Color(0.39500004, 0.45600003, 0.482, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_wex75"]
+size = Vector3(4.2, 2, 0.08)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fkgmc"]
+size = Vector3(0.08, 2, 3.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_508vy"]
+size = Vector3(0.08, 2, 3.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_70m5h"]
+size = Vector3(2.4, 0.06, 3.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4nrvo"]
+size = Vector3(2.4, 0.06, 3.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4ot38"]
+size = Vector3(2.2, 0.06, 0.9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_66688"]
+albedo_color = Color(0.26, 0.2, 0.15, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_8f77d"]
+size = Vector3(0.06, 0.8, 0.8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_igs8g"]
+size = Vector3(0.06, 0.8, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p1wgg"]
+albedo_color = Color(0.2, 0.25, 0.3, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_4s0wm"]
+size = Vector3(0.3, 0.04, 0.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h22sh"]
+albedo_color = Color(0.85, 0.82, 0.72, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_d2gha"]
+size = Vector3(0.28, 0.01, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sqyun"]
+albedo_color = Color(0.45, 0.25, 0.14, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_33nmr"]
+size = Vector3(0.14, 0.2, 0.14)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yub3s"]
+albedo_color = Color(0.22, 0.23, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jhw8k"]
+top_radius = 0.06
+bottom_radius = 0.09
+height = 6.0
+radial_segments = 10
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_42dhb"]
+size = Vector3(0.6, 0.35, 0.3)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7pymj"]
+top_radius = 0.06
+bottom_radius = 0.09
+height = 6.0
+radial_segments = 10
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_c81o4"]
+size = Vector3(0.6, 0.35, 0.3)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pbxwo"]
+top_radius = 0.06
+bottom_radius = 0.09
+height = 6.0
+radial_segments = 10
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_x7fiy"]
+size = Vector3(0.6, 0.35, 0.3)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5jw1o"]
+top_radius = 0.06
+bottom_radius = 0.09
+height = 6.0
+radial_segments = 10
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_iyalh"]
+size = Vector3(0.6, 0.35, 0.3)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ctcx4"]
+top_radius = 0.06
+bottom_radius = 0.09
+height = 6.0
+radial_segments = 10
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_jg5fu"]
+size = Vector3(0.6, 0.35, 0.3)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vf48j"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.0000043
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_n8qoo"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.0377167
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_33w6v"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.2738587
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hf3rw"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.5343251
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rd82h"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.8064274
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_dlibs"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 2.181254
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_i4gqn"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 2.1681037
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_yd0o3"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.8832121
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_r038a"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.8777523
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5ek5b"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.5123633
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cqdhe"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.1997372
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_k0oaq"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.3224078
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_02tv3"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.0189286
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lqp5d"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.0677274
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1fiip"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.6986417
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_b4lkg"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.0000043
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_bs7q7"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.0377167
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_dy3jv"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.2738587
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_yxn5s"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.5343251
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ffs6k"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.8064274
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_dvtui"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 2.181254
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_j28ik"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 2.1681037
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_bxgqu"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.8832121
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_40daw"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.8777523
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_gfdbc"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.5123633
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vw1nk"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.1997372
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_gi56n"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.3224078
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vfx5s"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.0189286
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pyo7m"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.0677274
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1w01d"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 1.6986417
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_25c63"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 1.0999967
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_s5ie7"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 1.0999967
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0ney1"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 1.1000017
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xxx8b"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 1.1000017
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_udfb4"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 1.099999
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_g5lo7"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 1.099999
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_36fj0"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 1.0999995
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_60366"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 1.0999995
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6gcml"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 1.0999982
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_gnt07"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 1.0999982
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_q0cbp"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 1.0999999
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pio22"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 1.0999999
+radial_segments = 10
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xal76"]
+albedo_color = Color(0.5, 0.52, 0.55, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_yucie"]
+size = Vector3(3.2, 0.14, 3.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rnn8u"]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.5, 0.52, 0.55, 0.4)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_gquqt"]
+size = Vector3(3.2, 1, 0.05)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_eif23"]
+top_radius = 0.05
+bottom_radius = 0.07
+height = 3.2
+radial_segments = 10
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42x2q"]
+albedo_color = Color(1, 0.85, 0.55, 1)
+roughness = 0.9
+emission_enabled = true
+emission = Color(1, 0.8, 0.5, 1)
+emission_energy_multiplier = 3.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_3s8bf"]
+size = Vector3(0.3, 0.18, 0.3)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_txymi"]
+top_radius = 0.05
+bottom_radius = 0.07
+height = 3.2
+radial_segments = 10
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_kcght"]
+size = Vector3(0.3, 0.18, 0.3)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jb6rx"]
+top_radius = 0.05
+bottom_radius = 0.07
+height = 3.2
+radial_segments = 10
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_wmwhq"]
+size = Vector3(0.3, 0.18, 0.3)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cgyoe"]
+top_radius = 0.05
+bottom_radius = 0.07
+height = 3.2
+radial_segments = 10
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_n18wk"]
+size = Vector3(0.3, 0.18, 0.3)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_o0abc"]
+top_radius = 0.05
+bottom_radius = 0.07
+height = 3.2
+radial_segments = 10
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_04hmn"]
+size = Vector3(0.3, 0.18, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_j1b3t"]
+size = Vector3(2, 0.12, 1.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5mdpy"]
+albedo_color = Color(0.3, 0.33, 0.2, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_7qc82"]
+size = Vector3(1.2, 0.8, 0.7)
+
+[sub_resource type="BoxMesh" id="BoxMesh_is3xs"]
+size = Vector3(1.4, 0.06, 0.9)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6icq6"]
+top_radius = 0.07
+bottom_radius = 0.07
+height = 0.6
+radial_segments = 10
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f28my"]
+albedo_color = Color(0.6, 0.1, 0.08, 1)
+roughness = 0.9
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_thvv1"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.06
+radial_segments = 10
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_ovjse"]
+size = Vector3(0.04, 0.3, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2f4ao"]
+size = Vector3(0.4, 0.55, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0o300"]
+size = Vector3(0.08, 0.1, 0.08)
+
+[sub_resource type="BoxMesh" id="BoxMesh_63vtw"]
+size = Vector3(0.3, 0.2, 0.15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_boc43"]
+albedo_color = Color(0.6, 0.1, 0.08, 1)
+roughness = 0.9
+emission_enabled = true
+emission = Color(0.6, 0.1, 0.08, 1)
+emission_energy_multiplier = 0.6
+
+[sub_resource type="BoxMesh" id="BoxMesh_dru6g"]
+size = Vector3(0.06, 0.06, 0.02)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jw4g5"]
+size = Vector3(2.6, 0.12, 1.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_m2c03"]
+size = Vector3(2.5, 0.02, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cgwl6"]
+size = Vector3(2.5, 0.02, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2b6bd"]
+size = Vector3(2.5, 0.02, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0jltj"]
+size = Vector3(2.5, 0.02, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0mfg8"]
+size = Vector3(2.6, 0.06, 0.06)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ecc21"]
+size = Vector3(0.06, 0.06, 1.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_v6isp"]
+size = Vector3(0.06, 0.06, 1.9)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cwkyc"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 1.0
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4phid"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 1.0
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_o4u6j"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 1.0
+radial_segments = 10
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_w83t4"]
+top_radius = 0.04
+bottom_radius = 0.04
+height = 1.0
+radial_segments = 10
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1f3f0"]
+transparency = 1
+albedo_color = Color(0.9, 0.7, 0.1, 0.6)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_p0u3j"]
+size = Vector3(2, 0.9, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p7qox"]
+size = Vector3(0.3, 0.4, 0.15)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_smyqr"]
+top_radius = 0.08
+bottom_radius = 0.1
+height = 1.1
+radial_segments = 10
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_wukr4"]
+size = Vector3(0.5, 0.55, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u8dod"]
+size = Vector3(0.22, 0.26, 0.02)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqi65"]
+albedo_color = Color(0.08, 0.08, 0.09, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_7mxnk"]
+size = Vector3(0.1, 0.04, 0.02)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ve8tj"]
+albedo_color = Color(0.6, 0.1, 0.08, 1)
+roughness = 0.9
+emission_enabled = true
+emission = Color(0.6, 0.1, 0.08, 1)
+emission_energy_multiplier = 1.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_yk8xa"]
+size = Vector3(0.36, 0.12, 0.02)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n6cy6"]
+albedo_color = Color(0.1, 0.7, 0.2, 1)
+roughness = 0.9
+emission_enabled = true
+emission = Color(0.1, 0.8, 0.2, 1)
+emission_energy_multiplier = 1.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_lfc7b"]
+size = Vector3(0.36, 0.12, 0.02)
+
+[node name="A10_FestivalRing" type="Node3D" unique_id=2019913033]
+
+[node name="Terrain" type="StaticBody3D" parent="." unique_id=169951067]
+
+[node name="TerrainMesh" type="MeshInstance3D" parent="Terrain" unique_id=1323207361]
+mesh = ExtResource("1_yj4a2")
+
+[node name="TerrainShape" type="CollisionShape3D" parent="Terrain" unique_id=1758386827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -209, 0, -337.5)
+shape = ExtResource("2_fqard")
+
+[node name="Ocean" type="MeshInstance3D" parent="." unique_id=2007798421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -0.15, -337.5)
+material_override = SubResource("StandardMaterial3D_y7iex")
+mesh = SubResource("PlaneMesh_rn8ga")
+
+[node name="Geometry" type="Node3D" parent="." unique_id=1367005564]
+
+[node name="FestivalRing" type="Node3D" parent="Geometry" unique_id=980072029]
+
+[node name="RingGround" type="MeshInstance3D" parent="Geometry/FestivalRing" unique_id=771523320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -205, 105.222244, -335)
+material_override = SubResource("StandardMaterial3D_4pi7b")
+mesh = SubResource("CylinderMesh_v2u8f")
+
+[node name="Stone_0" type="Node3D" parent="Geometry/FestivalRing" unique_id=631800479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -197, 105.17531, -335)
+
+[node name="Block" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_0" unique_id=118979961]
+transform = Transform3D(0.99881935, -0.04857863, 0, 0.04857863, 0.99881935, 0, 0, 0, 1, 0, 1.4870889, 0)
+material_override = SubResource("StandardMaterial3D_sgp5k")
+mesh = SubResource("BoxMesh_ogqp8")
+
+[node name="Col" type="StaticBody3D" parent="Geometry/FestivalRing/Stone_0" unique_id=602611377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.587089, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Geometry/FestivalRing/Stone_0/Col" unique_id=333636773]
+shape = SubResource("BoxShape3D_wln3t")
+
+[node name="OpenHands" type="Node3D" parent="Geometry/FestivalRing/Stone_0" unique_id=64508708]
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, -0.38, 0.8, 0)
+
+[node name="Head" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_0/OpenHands" unique_id=1536222557]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("SphereMesh_quaw0")
+
+[node name="Body" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_0/OpenHands" unique_id=944870970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_8t2bk")
+
+[node name="Legs" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_0/OpenHands" unique_id=659308994]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_o7g4u")
+
+[node name="ArmL" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_0/OpenHands" unique_id=1456673398]
+transform = Transform3D(0.7648422, 0.64421767, 0, -0.64421767, 0.7648422, 0, 0, 0, 1, -0.15, 0.7, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_lux7g")
+
+[node name="ArmR" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_0/OpenHands" unique_id=1929203489]
+transform = Transform3D(0.7648422, -0.64421767, 0, 0.64421767, 0.7648422, 0, 0, 0, 1, 0.15, 0.7, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_7num3")
+
+[node name="Stone_1" type="Node3D" parent="Geometry/FestivalRing" unique_id=1424396206]
+transform = Transform3D(0.76604444, 0, -0.6427876, 0, 1, 0, 0.6427876, 0, 0.76604444, -198.87164, 105.16006, -329.8577)
+
+[node name="Block" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_1" unique_id=117981114]
+transform = Transform3D(0.9999482, 0.010176229, 0, -0.010176229, 0.9999482, 0, 0, 0, 1, 0, 1.2828343, 0)
+material_override = SubResource("StandardMaterial3D_sgp5k")
+mesh = SubResource("BoxMesh_et03m")
+
+[node name="Col" type="StaticBody3D" parent="Geometry/FestivalRing/Stone_1" unique_id=1514440195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3828343, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Geometry/FestivalRing/Stone_1/Col" unique_id=2021930950]
+shape = SubResource("BoxShape3D_k3x4e")
+
+[node name="OpenHands" type="Node3D" parent="Geometry/FestivalRing/Stone_1" unique_id=1793679133]
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, -0.38, 0.8, 0)
+
+[node name="Head" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_1/OpenHands" unique_id=2130249485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("SphereMesh_i0pq5")
+
+[node name="Body" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_1/OpenHands" unique_id=1234031752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_btq1l")
+
+[node name="Legs" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_1/OpenHands" unique_id=1158893087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_b5ea6")
+
+[node name="ArmL" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_1/OpenHands" unique_id=1823260736]
+transform = Transform3D(0.7648422, 0.64421767, 0, -0.64421767, 0.7648422, 0, 0, 0, 1, -0.15, 0.7, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_40ijb")
+
+[node name="ArmR" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_1/OpenHands" unique_id=88513046]
+transform = Transform3D(0.7648422, -0.64421767, 0, 0.64421767, 0.7648422, 0, 0, 0, 1, 0.15, 0.7, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_u3ils")
+
+[node name="Stone_2" type="Node3D" parent="Geometry/FestivalRing" unique_id=1265536444]
+transform = Transform3D(0.17364822, 0, -0.9848077, 0, 1, 0, 0.9848077, 0, 0.17364822, -203.61081, 105.12379, -327.12155)
+
+[node name="Block" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_2" unique_id=802587236]
+transform = Transform3D(0.9994632, -0.032761764, 0, 0.032761764, 0.9994632, 0, 0, 0, 1, 0, 1.3062795, 0)
+material_override = SubResource("StandardMaterial3D_sgp5k")
+mesh = SubResource("BoxMesh_kla0e")
+
+[node name="Col" type="StaticBody3D" parent="Geometry/FestivalRing/Stone_2" unique_id=433683023]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4062796, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Geometry/FestivalRing/Stone_2/Col" unique_id=1641251266]
+shape = SubResource("BoxShape3D_pm8ut")
+
+[node name="OpenHands" type="Node3D" parent="Geometry/FestivalRing/Stone_2" unique_id=1405312751]
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, -0.38, 0.8, 0)
+
+[node name="Head" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_2/OpenHands" unique_id=976328751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("SphereMesh_c5ip4")
+
+[node name="Body" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_2/OpenHands" unique_id=1179927211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_giuiq")
+
+[node name="Legs" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_2/OpenHands" unique_id=1402344737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_oxy2l")
+
+[node name="ArmL" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_2/OpenHands" unique_id=2004918365]
+transform = Transform3D(0.7648422, 0.64421767, 0, -0.64421767, 0.7648422, 0, 0, 0, 1, -0.15, 0.7, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_0ywdd")
+
+[node name="ArmR" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_2/OpenHands" unique_id=527463619]
+transform = Transform3D(0.7648422, -0.64421767, 0, 0.64421767, 0.7648422, 0, 0, 0, 1, 0.15, 0.7, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_dh2yp")
+
+[node name="Stone_3" type="Node3D" parent="Geometry/FestivalRing" unique_id=1624733834]
+transform = Transform3D(-0.50000006, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, -0.50000006, -209, 105.11295, -328.0718)
+
+[node name="Block" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_3" unique_id=292354986]
+transform = Transform3D(0.9989022, -0.0468445, 0, 0.0468445, 0.9989022, 0, 0, 0, 1, 0, 1.5483862, 0)
+material_override = SubResource("StandardMaterial3D_sgp5k")
+mesh = SubResource("BoxMesh_doxyn")
+
+[node name="Col" type="StaticBody3D" parent="Geometry/FestivalRing/Stone_3" unique_id=1599514619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6483862, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Geometry/FestivalRing/Stone_3/Col" unique_id=1782209716]
+shape = SubResource("BoxShape3D_q31w8")
+
+[node name="OpenHands" type="Node3D" parent="Geometry/FestivalRing/Stone_3" unique_id=1386523266]
+transform = Transform3D(-5.6824803e-08, 0, -1.3, 0, 1.3, 0, 1.3, 0, -5.6824803e-08, -0.38, 0.8, 0)
+
+[node name="Head" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_3/OpenHands" unique_id=757498812]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("SphereMesh_juqxi")
+
+[node name="Body" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_3/OpenHands" unique_id=206500976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_63qpd")
+
+[node name="Legs" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_3/OpenHands" unique_id=203548107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_kunit")
+
+[node name="ArmL" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_3/OpenHands" unique_id=1164793813]
+transform = Transform3D(0.7648422, 0.64421767, 0, -0.64421767, 0.7648422, 0, 0, 0, 1, -0.15, 0.7, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_kd0lo")
+
+[node name="ArmR" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_3/OpenHands" unique_id=456212185]
+transform = Transform3D(0.7648422, -0.64421767, 0, 0.64421767, 0.7648422, 0, 0, 0, 1, 0.15, 0.7, 0)
+material_override = SubResource("StandardMaterial3D_qrnw0")
+mesh = SubResource("BoxMesh_laqbs")
+
+[node name="Stone_4" type="Node3D" parent="Geometry/FestivalRing" unique_id=1073148240]
+transform = Transform3D(-0.9396926, 0, -0.3420202, 0, 1, 0, 0.3420202, 0, -0.9396926, -212.51755, 105.23609, -332.26382)
+
+[node name="Block" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_4" unique_id=129034392]
+transform = Transform3D(0.9999929, -0.0037656822, 0, 0.0037656822, 0.9999929, 0, 0, 0, 1, 0, 1.540085, 0)
+material_override = SubResource("StandardMaterial3D_sgp5k")
+mesh = SubResource("BoxMesh_jphno")
+
+[node name="Col" type="StaticBody3D" parent="Geometry/FestivalRing/Stone_4" unique_id=2128524403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.640085, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Geometry/FestivalRing/Stone_4/Col" unique_id=1846538298]
+shape = SubResource("BoxShape3D_y6r47")
+
+[node name="TheVisitor" type="Node3D" parent="Geometry/FestivalRing/Stone_4" unique_id=146981268]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.38, 0.6, 0)
+
+[node name="Head" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_4/TheVisitor" unique_id=1608426699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0)
+material_override = SubResource("StandardMaterial3D_lcwyk")
+mesh = SubResource("SphereMesh_w8laj")
+
+[node name="Body" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_4/TheVisitor" unique_id=1998002155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0)
+material_override = SubResource("StandardMaterial3D_lcwyk")
+mesh = SubResource("BoxMesh_q4ar4")
+
+[node name="Legs" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_4/TheVisitor" unique_id=42673482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+material_override = SubResource("StandardMaterial3D_lcwyk")
+mesh = SubResource("BoxMesh_sryn0")
+
+[node name="ArmL" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_4/TheVisitor" unique_id=43736889]
+transform = Transform3D(0.9950042, 0.09983342, 0, -0.09983342, 0.9950042, 0, 0, 0, 1, -0.17, 1.15, 0)
+material_override = SubResource("StandardMaterial3D_lcwyk")
+mesh = SubResource("BoxMesh_ok8rp")
+
+[node name="ArmR" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_4/TheVisitor" unique_id=1644758561]
+transform = Transform3D(0.9950042, -0.09983342, 0, 0.09983342, 0.9950042, 0, 0, 0, 1, 0.17, 1.15, 0)
+material_override = SubResource("StandardMaterial3D_lcwyk")
+mesh = SubResource("BoxMesh_mjrni")
+
+[node name="Stone_5" type="Node3D" parent="Geometry/FestivalRing" unique_id=1305187618]
+transform = Transform3D(-0.9396926, 0, 0.34202015, 0, 1, 0, -0.34202015, 0, -0.9396926, -212.51755, 105.16799, -337.73618)
+
+[node name="Block" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_5" unique_id=887261921]
+transform = Transform3D(0.9992796, -0.037950806, 0, 0.037950806, 0.9992796, 0, 0, 0, 1, 0, 1.4771329, 0)
+material_override = SubResource("StandardMaterial3D_sgp5k")
+mesh = SubResource("BoxMesh_uwfm4")
+
+[node name="Col" type="StaticBody3D" parent="Geometry/FestivalRing/Stone_5" unique_id=55698593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5771329, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Geometry/FestivalRing/Stone_5/Col" unique_id=2011977702]
+shape = SubResource("BoxShape3D_gwa8k")
+
+[node name="Stone_6" type="Node3D" parent="Geometry/FestivalRing" unique_id=1572495651]
+transform = Transform3D(-0.4999999, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, -0.4999999, -209, 105.02916, -341.9282)
+
+[node name="Block" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_6" unique_id=1425349420]
+transform = Transform3D(0.99926174, 0.038418893, 0, -0.038418893, 0.99926174, 0, 0, 0, 1, 0, 1.4071919, 0)
+material_override = SubResource("StandardMaterial3D_sgp5k")
+mesh = SubResource("BoxMesh_wjs7c")
+
+[node name="Col" type="StaticBody3D" parent="Geometry/FestivalRing/Stone_6" unique_id=1040727458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5071919, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Geometry/FestivalRing/Stone_6/Col" unique_id=1386131699]
+shape = SubResource("BoxShape3D_p76uq")
+
+[node name="Stone_7" type="Node3D" parent="Geometry/FestivalRing" unique_id=1438534378]
+transform = Transform3D(0.17364815, 0, 0.9848077, 0, 1, 0, -0.9848077, 0, 0.17364815, -203.61081, 105.08482, -342.87845)
+
+[node name="Block" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_7" unique_id=1928243986]
+transform = Transform3D(0.9989603, 0.04558879, 0, -0.04558879, 0.9989603, 0, 0, 0, 1, 0, 1.245771, 0)
+material_override = SubResource("StandardMaterial3D_sgp5k")
+mesh = SubResource("BoxMesh_acigu")
+
+[node name="Col" type="StaticBody3D" parent="Geometry/FestivalRing/Stone_7" unique_id=1430396334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3457711, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Geometry/FestivalRing/Stone_7/Col" unique_id=446535442]
+shape = SubResource("BoxShape3D_7nn8r")
+
+[node name="Stone_8" type="Node3D" parent="Geometry/FestivalRing" unique_id=2115162182]
+transform = Transform3D(0.7660443, 0, 0.64278775, 0, 1, 0, -0.64278775, 0, 0.7660443, -198.87164, 105.126724, -340.1423)
+
+[node name="Block" type="MeshInstance3D" parent="Geometry/FestivalRing/Stone_8" unique_id=1414998596]
+transform = Transform3D(0.9996024, 0.028196247, 0, -0.028196247, 0.9996024, 0, 0, 0, 1, 0, 1.2750362, 0)
+material_override = SubResource("StandardMaterial3D_sgp5k")
+mesh = SubResource("BoxMesh_ltulb")
+
+[node name="Col" type="StaticBody3D" parent="Geometry/FestivalRing/Stone_8" unique_id=1631955797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3750362, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="Geometry/FestivalRing/Stone_8/Col" unique_id=933948932]
+shape = SubResource("BoxShape3D_quecu")
+
+[node name="Socket_1" type="Node3D" parent="Geometry/FestivalRing" unique_id=362972961]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -205, 105.207794, -332.6)
+
+[node name="Pillar" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_1" unique_id=2028428669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_d5tfh")
+mesh = SubResource("BoxMesh_sedi1")
+
+[node name="Hole" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_1" unique_id=625807674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.97, 0)
+material_override = SubResource("StandardMaterial3D_qmho0")
+mesh = SubResource("BoxMesh_qt6jj")
+
+[node name="Pry_0" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_1" unique_id=1636465951]
+transform = Transform3D(0.921061, 0, 0.38941833, 0, 1, 0, -0.38941833, 0, 0.921061, 0.2763183, 0.97, 0.116825506)
+material_override = SubResource("StandardMaterial3D_nuv7h")
+mesh = SubResource("BoxMesh_67paq")
+
+[node name="Pry_1" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_1" unique_id=1852669988]
+transform = Transform3D(-0.38941836, 0, 0.921061, 0, 1, 0, -0.921061, 0, -0.38941836, -0.116825506, 0.97, 0.2763183)
+material_override = SubResource("StandardMaterial3D_nuv7h")
+mesh = SubResource("BoxMesh_2vnbt")
+
+[node name="Pry_2" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_1" unique_id=1790271820]
+transform = Transform3D(-0.92106104, 0, -0.3894183, 0, 1, 0, 0.3894183, 0, -0.92106104, -0.2763183, 0.97, -0.116825506)
+material_override = SubResource("StandardMaterial3D_nuv7h")
+mesh = SubResource("BoxMesh_clxdu")
+
+[node name="Pry_3" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_1" unique_id=1687563898]
+transform = Transform3D(0.38941845, 0, -0.921061, 0, 1, 0, 0.921061, 0, 0.38941845, 0.116825506, 0.97, -0.2763183)
+material_override = SubResource("StandardMaterial3D_nuv7h")
+mesh = SubResource("BoxMesh_ttvkh")
+
+[node name="TagStake_1" type="Node3D" parent="Geometry/FestivalRing" unique_id=972486007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -204.1, 105.18755, -332.1)
+
+[node name="Stake" type="MeshInstance3D" parent="Geometry/FestivalRing/TagStake_1" unique_id=87154799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_m7edj")
+mesh = SubResource("CylinderMesh_eduv2")
+
+[node name="Tag" type="MeshInstance3D" parent="Geometry/FestivalRing/TagStake_1" unique_id=1907965909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("StandardMaterial3D_1x4c3")
+mesh = SubResource("BoxMesh_52fnm")
+
+[node name="Text" type="Label3D" parent="Geometry/FestivalRing/TagStake_1" unique_id=1716258691]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0.012)
+pixel_size = 0.0015625
+modulate = Color(0.1, 0.05, 0, 1)
+text = "SOCKET 1/3
+RECOVERED"
+outline_size = 0
+
+[node name="Socket_2" type="Node3D" parent="Geometry/FestivalRing" unique_id=649775448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -207.07846, 105.15375, -336.2)
+
+[node name="Pillar" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_2" unique_id=432937166]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_d5tfh")
+mesh = SubResource("BoxMesh_dfnl1")
+
+[node name="Hole" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_2" unique_id=279578205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.97, 0)
+material_override = SubResource("StandardMaterial3D_qmho0")
+mesh = SubResource("BoxMesh_hlja3")
+
+[node name="Pry_0" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_2" unique_id=1441949115]
+transform = Transform3D(0.921061, 0, 0.38941833, 0, 1, 0, -0.38941833, 0, 0.921061, 0.2763183, 0.97, 0.116825506)
+material_override = SubResource("StandardMaterial3D_nuv7h")
+mesh = SubResource("BoxMesh_47swh")
+
+[node name="Pry_1" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_2" unique_id=2013247030]
+transform = Transform3D(-0.38941836, 0, 0.921061, 0, 1, 0, -0.921061, 0, -0.38941836, -0.116825506, 0.97, 0.2763183)
+material_override = SubResource("StandardMaterial3D_nuv7h")
+mesh = SubResource("BoxMesh_lb2vy")
+
+[node name="Pry_2" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_2" unique_id=2101325600]
+transform = Transform3D(-0.92106104, 0, -0.3894183, 0, 1, 0, 0.3894183, 0, -0.92106104, -0.2763183, 0.97, -0.116825506)
+material_override = SubResource("StandardMaterial3D_nuv7h")
+mesh = SubResource("BoxMesh_xet04")
+
+[node name="Pry_3" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_2" unique_id=166341982]
+transform = Transform3D(0.38941845, 0, -0.921061, 0, 1, 0, 0.921061, 0, 0.38941845, 0.116825506, 0.97, -0.2763183)
+material_override = SubResource("StandardMaterial3D_nuv7h")
+mesh = SubResource("BoxMesh_qvmrs")
+
+[node name="TagStake_2" type="Node3D" parent="Geometry/FestivalRing" unique_id=2020666034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -206.17847, 105.17698, -335.7)
+
+[node name="Stake" type="MeshInstance3D" parent="Geometry/FestivalRing/TagStake_2" unique_id=1482664637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_m7edj")
+mesh = SubResource("CylinderMesh_kumps")
+
+[node name="Tag" type="MeshInstance3D" parent="Geometry/FestivalRing/TagStake_2" unique_id=190293167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("StandardMaterial3D_1x4c3")
+mesh = SubResource("BoxMesh_k0xm1")
+
+[node name="Text" type="Label3D" parent="Geometry/FestivalRing/TagStake_2" unique_id=275192195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0.012)
+pixel_size = 0.0015625
+modulate = Color(0.1, 0.05, 0, 1)
+text = "SOCKET 2/3
+RECOVERED"
+outline_size = 0
+
+[node name="Socket_3" type="Node3D" parent="Geometry/FestivalRing" unique_id=87559751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -202.92154, 105.14019, -336.2)
+
+[node name="Pillar" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_3" unique_id=1112274329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_d5tfh")
+mesh = SubResource("BoxMesh_80pnv")
+
+[node name="Hole" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_3" unique_id=673251140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.97, 0)
+material_override = SubResource("StandardMaterial3D_qmho0")
+mesh = SubResource("BoxMesh_jxwkg")
+
+[node name="Pry_0" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_3" unique_id=172095726]
+transform = Transform3D(0.921061, 0, 0.38941833, 0, 1, 0, -0.38941833, 0, 0.921061, 0.2763183, 0.97, 0.116825506)
+material_override = SubResource("StandardMaterial3D_nuv7h")
+mesh = SubResource("BoxMesh_qtwpk")
+
+[node name="Pry_1" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_3" unique_id=1735415902]
+transform = Transform3D(-0.38941836, 0, 0.921061, 0, 1, 0, -0.921061, 0, -0.38941836, -0.116825506, 0.97, 0.2763183)
+material_override = SubResource("StandardMaterial3D_nuv7h")
+mesh = SubResource("BoxMesh_sr266")
+
+[node name="Pry_2" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_3" unique_id=1640037111]
+transform = Transform3D(-0.92106104, 0, -0.3894183, 0, 1, 0, 0.3894183, 0, -0.92106104, -0.2763183, 0.97, -0.116825506)
+material_override = SubResource("StandardMaterial3D_nuv7h")
+mesh = SubResource("BoxMesh_ptkju")
+
+[node name="Pry_3" type="MeshInstance3D" parent="Geometry/FestivalRing/Socket_3" unique_id=458398337]
+transform = Transform3D(0.38941845, 0, -0.921061, 0, 1, 0, 0.921061, 0, 0.38941845, 0.116825506, 0.97, -0.2763183)
+material_override = SubResource("StandardMaterial3D_nuv7h")
+mesh = SubResource("BoxMesh_8sl1x")
+
+[node name="TagStake_3" type="Node3D" parent="Geometry/FestivalRing" unique_id=141028093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -202.02155, 105.131, -335.7)
+
+[node name="Stake" type="MeshInstance3D" parent="Geometry/FestivalRing/TagStake_3" unique_id=28594231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_m7edj")
+mesh = SubResource("CylinderMesh_q7o8l")
+
+[node name="Tag" type="MeshInstance3D" parent="Geometry/FestivalRing/TagStake_3" unique_id=903376927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("StandardMaterial3D_1x4c3")
+mesh = SubResource("BoxMesh_g20ml")
+
+[node name="Text" type="Label3D" parent="Geometry/FestivalRing/TagStake_3" unique_id=961545393]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0.012)
+pixel_size = 0.0015625
+modulate = Color(0.1, 0.05, 0, 1)
+text = "SOCKET 3/3
+RECOVERED"
+outline_size = 0
+
+[node name="DigSite" type="Node3D" parent="Geometry/FestivalRing" unique_id=1556803038]
+
+[node name="Trench_A" type="MeshInstance3D" parent="Geometry/FestivalRing/DigSite" unique_id=779024684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -201, 105.10984, -346.5)
+material_override = SubResource("StandardMaterial3D_87fml")
+mesh = SubResource("BoxMesh_lsap5")
+
+[node name="Trench_B" type="MeshInstance3D" parent="Geometry/FestivalRing/DigSite" unique_id=1509346167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -213, 105.18823, -343)
+material_override = SubResource("StandardMaterial3D_87fml")
+mesh = SubResource("BoxMesh_4lxj1")
+
+[node name="Spoil_A" type="MeshInstance3D" parent="Geometry/FestivalRing/DigSite" unique_id=95584142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -201, 105.3687, -348.6)
+material_override = SubResource("StandardMaterial3D_3wm0a")
+mesh = SubResource("BoxMesh_pyd3y")
+
+[node name="Spoil_B" type="MeshInstance3D" parent="Geometry/FestivalRing/DigSite" unique_id=1122964587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -215, 105.499054, -343)
+material_override = SubResource("StandardMaterial3D_3wm0a")
+mesh = SubResource("BoxMesh_8bm4x")
+
+[node name="TapePost_206_349" type="MeshInstance3D" parent="Geometry/FestivalRing/DigSite" unique_id=2074187681]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -206, 105.684784, -349)
+material_override = SubResource("StandardMaterial3D_1x4c3")
+mesh = SubResource("CylinderMesh_810or")
+
+[node name="TapePost_196_349" type="MeshInstance3D" parent="Geometry/FestivalRing/DigSite" unique_id=930475658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196, 105.647, -349)
+material_override = SubResource("StandardMaterial3D_1x4c3")
+mesh = SubResource("CylinderMesh_lbog3")
+
+[node name="TapePost_206_344" type="MeshInstance3D" parent="Geometry/FestivalRing/DigSite" unique_id=1464827191]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -206, 105.62867, -344)
+material_override = SubResource("StandardMaterial3D_1x4c3")
+mesh = SubResource("CylinderMesh_j27gb")
+
+[node name="TapePost_196_344" type="MeshInstance3D" parent="Geometry/FestivalRing/DigSite" unique_id=1461018610]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196, 105.62783, -344)
+material_override = SubResource("StandardMaterial3D_1x4c3")
+mesh = SubResource("CylinderMesh_hpnyq")
+
+[node name="Tape_1" type="MeshInstance3D" parent="Geometry/FestivalRing/DigSite" unique_id=1530912917]
+transform = Transform3D(0.0037780495, 0.9999929, 0, 0.9999929, -0.0037780495, 0, 0, 0, -1, -201, 106.11589, -349)
+material_override = SubResource("StandardMaterial3D_1x4c3")
+mesh = SubResource("CylinderMesh_o3bw0")
+
+[node name="Tape_2" type="MeshInstance3D" parent="Geometry/FestivalRing/DigSite" unique_id=1243180810]
+transform = Transform3D(0, 0, 1, 0.99993706, -0.011222133, 0, 0.011222133, 0.99993706, 0, -206, 106.10672, -346.5)
+material_override = SubResource("StandardMaterial3D_1x4c3")
+mesh = SubResource("CylinderMesh_hc2rl")
+
+[node name="Tarp_1" type="MeshInstance3D" parent="Geometry/FestivalRing/DigSite" unique_id=1037188444]
+transform = Transform3D(0.95516294, -0.02344523, 0.2951509, 0.03993936, 0.9979514, -0.04997917, -0.29337445, 0.05952639, 0.9541426, -218, 105.59085, -331)
+material_override = SubResource("StandardMaterial3D_142fe")
+mesh = SubResource("BoxMesh_w4v5h")
+
+[node name="Tarp_2" type="MeshInstance3D" parent="Geometry/FestivalRing/DigSite" unique_id=1976642122]
+transform = Transform3D(0.9798639, -0.021456506, -0.19851041, 0.029971506, 0.9987505, 0.039989334, 0.19740434, -0.045133762, 0.9792827, -192, 105.454254, -336)
+material_override = SubResource("StandardMaterial3D_142fe")
+mesh = SubResource("BoxMesh_5l7o2")
+
+[node name="Crate_0" parent="Geometry/FestivalRing/DigSite" unique_id=1931990347 instance=ExtResource("3_tekte")]
+transform = Transform3D(0.99919844, 0, 0.0400307, 0, 1, 0, -0.0400307, 0, 0.99919844, -190, 105.62049, -346)
+
+[node name="Crate_1" parent="Geometry/FestivalRing/DigSite" unique_id=1046790458 instance=ExtResource("4_idqxw")]
+transform = Transform3D(0.9710325, 0, 0.23894744, 0, 1, 0, -0.23894744, 0, 0.9710325, -189.6, 105.620415, -345.3)
+
+[node name="Crate_2" parent="Geometry/FestivalRing/DigSite" unique_id=1497795764 instance=ExtResource("5_i8dyx")]
+transform = Transform3D(0.96804845, 0, 0.25076333, 0, 1, 0, -0.25076333, 0, 0.96804845, -189.2, 105.622986, -344.6)
+
+[node name="DigTent" type="Node3D" parent="Geometry/FestivalRing" unique_id=1300392056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196, 105.132286, -352)
+
+[node name="Back" type="MeshInstance3D" parent="Geometry/FestivalRing/DigTent" unique_id=1260033509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1.6)
+material_override = SubResource("StandardMaterial3D_xywb5")
+mesh = SubResource("BoxMesh_wex75")
+
+[node name="SideL" type="MeshInstance3D" parent="Geometry/FestivalRing/DigTent" unique_id=1617382290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 1, 0)
+material_override = SubResource("StandardMaterial3D_xywb5")
+mesh = SubResource("BoxMesh_fkgmc")
+
+[node name="SideR" type="MeshInstance3D" parent="Geometry/FestivalRing/DigTent" unique_id=1264990350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 1, 0)
+material_override = SubResource("StandardMaterial3D_xywb5")
+mesh = SubResource("BoxMesh_508vy")
+
+[node name="RoofL" type="MeshInstance3D" parent="Geometry/FestivalRing/DigTent" unique_id=1869352066]
+transform = Transform3D(0.9553365, -0.29552022, 0, 0.29552022, 0.9553365, 0, 0, 0, 1, -1, 2.2, 0)
+material_override = SubResource("StandardMaterial3D_142fe")
+mesh = SubResource("BoxMesh_70m5h")
+
+[node name="RoofR" type="MeshInstance3D" parent="Geometry/FestivalRing/DigTent" unique_id=2062458247]
+transform = Transform3D(0.9553365, 0.29552022, 0, -0.29552022, 0.9553365, 0, 0, 0, 1, 1, 2.2, 0)
+material_override = SubResource("StandardMaterial3D_142fe")
+mesh = SubResource("BoxMesh_4nrvo")
+
+[node name="DigTable" type="Node3D" parent="Geometry/FestivalRing/DigTent" unique_id=1112264688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.8)
+
+[node name="Top" type="MeshInstance3D" parent="Geometry/FestivalRing/DigTent/DigTable" unique_id=1475525429]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+material_override = SubResource("StandardMaterial3D_m7edj")
+mesh = SubResource("BoxMesh_4ot38")
+
+[node name="Leg_-1" type="MeshInstance3D" parent="Geometry/FestivalRing/DigTent/DigTable" unique_id=1329186367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.4, 0)
+material_override = SubResource("StandardMaterial3D_66688")
+mesh = SubResource("BoxMesh_8f77d")
+
+[node name="Leg_1" type="MeshInstance3D" parent="Geometry/FestivalRing/DigTent/DigTable" unique_id=1368392927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.4, 0)
+material_override = SubResource("StandardMaterial3D_66688")
+mesh = SubResource("BoxMesh_igs8g")
+
+[node name="DigLog" type="MeshInstance3D" parent="Geometry/FestivalRing/DigTent/DigTable" unique_id=593891965]
+transform = Transform3D(0.9800666, 0, 0.19866933, 0, 1, 0, -0.19866933, 0, 0.9800666, -0.6, 0.85, 0.05)
+material_override = SubResource("StandardMaterial3D_p1wgg")
+mesh = SubResource("BoxMesh_4s0wm")
+
+[node name="LastPage" type="MeshInstance3D" parent="Geometry/FestivalRing/DigTent/DigTable" unique_id=1755631444]
+transform = Transform3D(0.9553365, 0, -0.29552022, 0, 1, 0, 0.29552022, 0, 0.9553365, -0.3, 0.875, 0.1)
+material_override = SubResource("StandardMaterial3D_h22sh")
+mesh = SubResource("BoxMesh_d2gha")
+
+[node name="Lamp" type="MeshInstance3D" parent="Geometry/FestivalRing/DigTent/DigTable" unique_id=505593059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.9, 0)
+material_override = SubResource("StandardMaterial3D_sqyun")
+mesh = SubResource("BoxMesh_33nmr")
+
+[node name="FuelDrums" parent="Geometry/FestivalRing" unique_id=1762300115 instance=ExtResource("6_7ve51")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -199.5, 105.557976, -352)
+
+[node name="FloodPole_0" type="MeshInstance3D" parent="Geometry/FestivalRing" unique_id=345987730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -190, 108.10426, -343)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_jhw8k")
+
+[node name="FloodHead_0" type="MeshInstance3D" parent="Geometry/FestivalRing" unique_id=1860667804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -190, 111.20426, -343)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("BoxMesh_42dhb")
+
+[node name="FloodPole_1" type="MeshInstance3D" parent="Geometry/FestivalRing" unique_id=230974950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -220, 108.09857, -343)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_7pymj")
+
+[node name="FloodHead_1" type="MeshInstance3D" parent="Geometry/FestivalRing" unique_id=2021429266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -220, 111.19857, -343)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("BoxMesh_c81o4")
+
+[node name="FloodPole_2" type="MeshInstance3D" parent="Geometry/FestivalRing" unique_id=1602511974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -190, 108.19291, -327)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_pbxwo")
+
+[node name="FloodHead_2" type="MeshInstance3D" parent="Geometry/FestivalRing" unique_id=875581477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -190, 111.29291, -327)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("BoxMesh_x7fiy")
+
+[node name="FloodPole_3" type="MeshInstance3D" parent="Geometry/FestivalRing" unique_id=748551144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -220, 108.10357, -327)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_5jw1o")
+
+[node name="FloodHead_3" type="MeshInstance3D" parent="Geometry/FestivalRing" unique_id=1701837723]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -220, 111.20357, -327)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("BoxMesh_iyalh")
+
+[node name="FloodPole_4" type="MeshInstance3D" parent="Geometry/FestivalRing" unique_id=1098776005]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -208, 108.104645, -350)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_ctcx4")
+
+[node name="FloodHead_4" type="MeshInstance3D" parent="Geometry/FestivalRing" unique_id=421042843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -208, 111.20464, -350)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("BoxMesh_jg5fu")
+
+[node name="LiftTrack" type="Node3D" parent="Geometry/FestivalRing" unique_id=1108121177]
+
+[node name="Rail_L_00" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=753586743]
+transform = Transform3D(0, 0, 1, -0.9999957, -0.0029449337, 0, 0.0029449337, -0.9999957, 0, -213.2, 106.17065, -356.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_vf48j")
+
+[node name="Rail_L_01" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1268187690]
+transform = Transform3D(0, 0, 1, -0.9636541, 0.26715317, 0, -0.26715317, -0.9636541, 0, -213.2, 106.307785, -357.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_n8qoo")
+
+[node name="Rail_L_02" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=277563240]
+transform = Transform3D(-1, 0, 0, 0, 0.61947495, -0.7850164, 0, -0.7850164, -0.61947495, -213.2, 106.840965, -358.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_33w6v")
+
+[node name="Rail_L_03" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=991477574]
+transform = Transform3D(-1, 0, 0, 0, 0.75843185, -0.65175235, 0, -0.65175235, -0.75843185, -213.2, 107.81737, -359.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_hf3rw")
+
+[node name="Rail_L_04" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=2133863277]
+transform = Transform3D(-1, 0, 0, 0, 0.8327968, -0.55357885, 0, -0.55357885, -0.8327968, -213.2, 109.1514, -360.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_rd82h")
+
+[node name="Rail_L_05" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1195979542]
+transform = Transform3D(-1, 0, 0, 0, 0.88871926, -0.4584519, 0, -0.4584519, -0.88871926, -213.2, 110.872856, -361.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_dlibs")
+
+[node name="Rail_L_06" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=576235448]
+transform = Transform3D(-1, 0, 0, 0, 0.8872794, -0.46123254, 0, -0.46123254, -0.8872794, -213.2, 112.80397, -362.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_i4gqn")
+
+[node name="Rail_L_07" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=2001298850]
+transform = Transform3D(-1, 0, 0, 0, 0.84736705, -0.5310077, 0, -0.5310077, -0.84736705, -213.2, 114.56372, -363.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_yd0o3")
+
+[node name="Rail_L_08" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1213603872]
+transform = Transform3D(-1, 0, 0, 0, 0.8463976, -0.5325516, 0, -0.5325516, -0.8463976, -213.2, 116.156265, -364.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_r038a")
+
+[node name="Rail_L_09" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=972160561]
+transform = Transform3D(-1, 0, 0, 0, 0.7501949, -0.6612168, 0, -0.6612168, -0.7501949, -213.2, 117.51821, -365.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_5ek5b")
+
+[node name="Rail_L_10" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1753279833]
+transform = Transform3D(-1, 0, 0, 0, 0.55249554, -0.8335159, 0, -0.8335159, -0.55249554, -213.2, 118.416916, -366.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_cqdhe")
+
+[node name="Rail_L_11" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1649774214]
+transform = Transform3D(-1, 0, 0, 0, 0.6543448, -0.7561964, 0, -0.7561964, -0.6543448, -213.2, 119.181, -367.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_k0oaq")
+
+[node name="Rail_L_12" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1038001856]
+transform = Transform3D(0, 0, 1, -0.981423, 0.1918564, 0, -0.1918564, -0.981423, 0, -213.2, 119.711395, -368.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_02tv3")
+
+[node name="Rail_L_13" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1840723590]
+transform = Transform3D(0, 0, 1, -0.9365686, 0.3504844, 0, -0.3504844, -0.9365686, 0, -213.2, 119.996254, -369.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_lqp5d")
+
+[node name="Rail_L_14" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1274277960]
+transform = Transform3D(-1, 0, 0, 0, 0.80834746, -0.58870566, 0, -0.58870566, -0.80834746, -213.2, 120.86991, -370.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_1fiip")
+
+[node name="Rail_R_00" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1955176455]
+transform = Transform3D(0, 0, 1, -0.9999957, -0.0029449337, 0, 0.0029449337, -0.9999957, 0, -210.8, 106.17065, -356.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_b4lkg")
+
+[node name="Rail_R_01" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=112670569]
+transform = Transform3D(0, 0, 1, -0.9636541, 0.26715317, 0, -0.26715317, -0.9636541, 0, -210.8, 106.307785, -357.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_bs7q7")
+
+[node name="Rail_R_02" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=631234686]
+transform = Transform3D(-1, 0, 0, 0, 0.61947495, -0.7850164, 0, -0.7850164, -0.61947495, -210.8, 106.840965, -358.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_dy3jv")
+
+[node name="Rail_R_03" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1288032282]
+transform = Transform3D(-1, 0, 0, 0, 0.75843185, -0.65175235, 0, -0.65175235, -0.75843185, -210.8, 107.81737, -359.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_yxn5s")
+
+[node name="Rail_R_04" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1595532152]
+transform = Transform3D(-1, 0, 0, 0, 0.8327968, -0.55357885, 0, -0.55357885, -0.8327968, -210.8, 109.1514, -360.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_ffs6k")
+
+[node name="Rail_R_05" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1426808224]
+transform = Transform3D(-1, 0, 0, 0, 0.88871926, -0.4584519, 0, -0.4584519, -0.88871926, -210.8, 110.872856, -361.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_dvtui")
+
+[node name="Rail_R_06" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=490560140]
+transform = Transform3D(-1, 0, 0, 0, 0.8872794, -0.46123254, 0, -0.46123254, -0.8872794, -210.8, 112.80397, -362.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_j28ik")
+
+[node name="Rail_R_07" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=2063334594]
+transform = Transform3D(-1, 0, 0, 0, 0.84736705, -0.5310077, 0, -0.5310077, -0.84736705, -210.8, 114.56372, -363.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_bxgqu")
+
+[node name="Rail_R_08" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=645040574]
+transform = Transform3D(-1, 0, 0, 0, 0.8463976, -0.5325516, 0, -0.5325516, -0.8463976, -210.8, 116.156265, -364.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_40daw")
+
+[node name="Rail_R_09" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=2042977848]
+transform = Transform3D(-1, 0, 0, 0, 0.7501949, -0.6612168, 0, -0.6612168, -0.7501949, -210.8, 117.51821, -365.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_gfdbc")
+
+[node name="Rail_R_10" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=334600514]
+transform = Transform3D(-1, 0, 0, 0, 0.55249554, -0.8335159, 0, -0.8335159, -0.55249554, -210.8, 118.416916, -366.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_vw1nk")
+
+[node name="Rail_R_11" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=30827703]
+transform = Transform3D(-1, 0, 0, 0, 0.6543448, -0.7561964, 0, -0.7561964, -0.6543448, -210.8, 119.181, -367.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_gi56n")
+
+[node name="Rail_R_12" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1975648609]
+transform = Transform3D(0, 0, 1, -0.981423, 0.1918564, 0, -0.1918564, -0.981423, 0, -210.8, 119.711395, -368.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_vfx5s")
+
+[node name="Rail_R_13" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1708112430]
+transform = Transform3D(0, 0, 1, -0.9365686, 0.3504844, 0, -0.3504844, -0.9365686, 0, -210.8, 119.996254, -369.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_pyo7m")
+
+[node name="Rail_R_14" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=224493699]
+transform = Transform3D(-1, 0, 0, 0, 0.80834746, -0.58870566, 0, -0.58870566, -0.80834746, -210.8, 120.86991, -370.5)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_1w01d")
+
+[node name="Post_0_-12" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=377226133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -213.2, 105.57212, -356)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_25c63")
+
+[node name="Post_0_12" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=248928517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -210.8, 105.57212, -356)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_s5ie7")
+
+[node name="Post_3_-12" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=548158211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -213.2, 106.63552, -359)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_0ney1")
+
+[node name="Post_3_12" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1039715781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -210.8, 106.63552, -359)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_xxx8b")
+
+[node name="Post_6_-12" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1933755917]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -213.2, 111.24212, -362)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_udfb4")
+
+[node name="Post_6_12" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=705287180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -210.8, 111.24212, -362)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_g5lo7")
+
+[node name="Post_9_-12" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1009276915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -213.2, 116.35093, -365)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_36fj0")
+
+[node name="Post_9_12" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1705623975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -210.8, 116.35093, -365)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_60366")
+
+[node name="Post_12_-12" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=2114174185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -213.2, 119.01366, -368)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_6gcml")
+
+[node name="Post_12_12" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=254015182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -210.8, 119.01366, -368)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_gnt07")
+
+[node name="Post_15_-12" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=180373238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -213.2, 120.95646, -371)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_q0cbp")
+
+[node name="Post_15_12" type="MeshInstance3D" parent="Geometry/FestivalRing/LiftTrack" unique_id=1267205109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -210.8, 120.95646, -371)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_pio22")
+
+[node name="TopLanding" type="Node3D" parent="Geometry/FestivalRing" unique_id=953139178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -212, 120.656456, -372.8)
+
+[node name="Deck" type="MeshInstance3D" parent="Geometry/FestivalRing/TopLanding" unique_id=1584002837]
+material_override = SubResource("StandardMaterial3D_xal76")
+mesh = SubResource("BoxMesh_yucie")
+
+[node name="Fence" type="MeshInstance3D" parent="Geometry/FestivalRing/TopLanding" unique_id=687600798]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, -1.8)
+material_override = SubResource("StandardMaterial3D_rnn8u")
+mesh = SubResource("BoxMesh_gquqt")
+
+[node name="Sign" type="Label3D" parent="Geometry/FestivalRing/TopLanding" unique_id=1340096694]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, -1.7)
+pixel_size = 0.005625
+modulate = Color(0.9, 0.9, 0.8, 1)
+text = "SERVICE PATH ↑ UPPER STATION"
+outline_size = 0
+
+[node name="RimLamps" type="Node3D" parent="Geometry/FestivalRing" unique_id=1553748062]
+
+[node name="Post_1" type="MeshInstance3D" parent="Geometry/FestivalRing/RimLamps" unique_id=1635883965]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -225, 136.75272, -373.72983)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_eif23")
+
+[node name="Head_1" type="MeshInstance3D" parent="Geometry/FestivalRing/RimLamps" unique_id=431425036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -225, 138.40271, -373.72983)
+material_override = SubResource("StandardMaterial3D_42x2q")
+mesh = SubResource("BoxMesh_3s8bf")
+
+[node name="Lamp_1" type="OmniLight3D" parent="Geometry/FestivalRing/RimLamps" unique_id=1050523323]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -225, 138.15271, -373.72983)
+light_color = Color(1, 0.82, 0.55, 1)
+light_energy = 1.4
+omni_range = 11.0
+
+[node name="Post_2" type="MeshInstance3D" parent="Geometry/FestivalRing/RimLamps" unique_id=400981916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -216, 136.77812, -374.9875)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_txymi")
+
+[node name="Head_2" type="MeshInstance3D" parent="Geometry/FestivalRing/RimLamps" unique_id=2038279834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -216, 138.42812, -374.9875)
+material_override = SubResource("StandardMaterial3D_42x2q")
+mesh = SubResource("BoxMesh_kcght")
+
+[node name="Lamp_2" type="OmniLight3D" parent="Geometry/FestivalRing/RimLamps" unique_id=406537074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -216, 138.17812, -374.9875)
+light_color = Color(1, 0.82, 0.55, 1)
+light_energy = 1.4
+omni_range = 11.0
+
+[node name="Post_3" type="MeshInstance3D" parent="Geometry/FestivalRing/RimLamps" unique_id=1221044110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -207, 136.05884, -375)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_jb6rx")
+
+[node name="Head_3" type="MeshInstance3D" parent="Geometry/FestivalRing/RimLamps" unique_id=910180143]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -207, 137.70883, -375)
+material_override = SubResource("StandardMaterial3D_42x2q")
+mesh = SubResource("BoxMesh_wmwhq")
+
+[node name="Lamp_3" type="OmniLight3D" parent="Geometry/FestivalRing/RimLamps" unique_id=538418057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -207, 137.45883, -375)
+light_color = Color(1, 0.82, 0.55, 1)
+light_energy = 1.4
+omni_range = 11.0
+
+[node name="Post_4" type="MeshInstance3D" parent="Geometry/FestivalRing/RimLamps" unique_id=1595738415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -198, 136.45947, -375)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_cgyoe")
+
+[node name="Head_4" type="MeshInstance3D" parent="Geometry/FestivalRing/RimLamps" unique_id=1147503615]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -198, 138.10947, -375)
+material_override = SubResource("StandardMaterial3D_42x2q")
+mesh = SubResource("BoxMesh_n18wk")
+
+[node name="Lamp_4" type="OmniLight3D" parent="Geometry/FestivalRing/RimLamps" unique_id=596074413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -198, 137.85947, -375)
+light_color = Color(1, 0.82, 0.55, 1)
+light_energy = 1.4
+omni_range = 11.0
+
+[node name="Post_5" type="MeshInstance3D" parent="Geometry/FestivalRing/RimLamps" unique_id=1238739988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -189, 137.87253, -375)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_o0abc")
+
+[node name="Head_5" type="MeshInstance3D" parent="Geometry/FestivalRing/RimLamps" unique_id=312021113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -189, 139.52252, -375)
+material_override = SubResource("StandardMaterial3D_42x2q")
+mesh = SubResource("BoxMesh_04hmn")
+
+[node name="Lamp_5" type="OmniLight3D" parent="Geometry/FestivalRing/RimLamps" unique_id=513436146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -189, 139.27252, -375)
+light_color = Color(1, 0.82, 0.55, 1)
+light_energy = 1.4
+omni_range = 11.0
+
+[node name="RimTrees" type="Node3D" parent="Geometry/FestivalRing" unique_id=1621045531]
+
+[node name="Pine_00" parent="Geometry/FestivalRing/RimTrees" unique_id=1816800142 instance=ExtResource("7_rmssk")]
+transform = Transform3D(0.12902564, 0, -3.7144325, 0, 3.4757009, 0, 3.7144325, 0, 0.12902564, -231.4479, 118.54765, -305.49738)
+
+[node name="Pine_01" parent="Geometry/FestivalRing/RimTrees" unique_id=971201172 instance=ExtResource("8_8fupx")]
+transform = Transform3D(-4.0489936, 0, 1.0061914, 0, 4.596177, 0, -1.0061914, 0, -4.0489936, -210.15895, 118.3909, -299.69577)
+
+[node name="Pine_02" parent="Geometry/FestivalRing/RimTrees" unique_id=743109040 instance=ExtResource("7_rmssk")]
+transform = Transform3D(-2.9191086, 0, -2.4177918, 0, 3.7358527, 0, 2.4177918, 0, -2.9191086, -225.36104, 103.68578, -291.19257)
+
+[node name="Pine_03" parent="Geometry/FestivalRing/RimTrees" unique_id=751941555 instance=ExtResource("8_8fupx")]
+transform = Transform3D(-1.1824135, 0, -3.6248317, 0, 3.9710424, 0, 3.6248317, 0, -1.1824135, -205.17801, 154.1962, -378.63153)
+
+[node name="Dead_04" parent="Geometry/FestivalRing/RimTrees" unique_id=1212401317 instance=ExtResource("9_cw482")]
+transform = Transform3D(0.45082557, 0, -0.81974083, 0, 0.93553126, 0, 0.81974083, 0, 0.45082557, -193.07486, 125.56473, -372.8282)
+
+[node name="Pine_05" parent="Geometry/FestivalRing/RimTrees" unique_id=481811631 instance=ExtResource("8_8fupx")]
+transform = Transform3D(3.7293682, 0, 0.46544614, 0, 4.0415854, 0, -0.46544614, 0, 3.7293682, -187.3835, 162.20279, -379.60703)
+
+[node name="Pine_06" parent="Geometry/FestivalRing/RimTrees" unique_id=1642990738 instance=ExtResource("7_rmssk")]
+transform = Transform3D(1.5325044, 0, -3.118336, 0, 3.772537, 0, 3.118336, 0, 1.5325044, -194.75237, 113.79788, -295.88318)
+
+[node name="Pine_07" parent="Geometry/FestivalRing/RimTrees" unique_id=1349075550 instance=ExtResource("8_8fupx")]
+transform = Transform3D(0.5510184, 0, 3.3814466, 0, 4.0945997, 0, -3.3814466, 0, 0.5510184, -200.23625, 104.903015, -292.17523)
+
+[node name="Pine_08" parent="Geometry/FestivalRing/RimTrees" unique_id=1667674305 instance=ExtResource("7_rmssk")]
+transform = Transform3D(-4.3738976, 0, 1.1038374, 0, 5.314749, 0, -1.1038374, 0, -4.3738976, -187.52432, 115.44957, -297.0193)
+
+[node name="Dead_09" parent="Geometry/FestivalRing/RimTrees" unique_id=1212103093 instance=ExtResource("9_cw482")]
+transform = Transform3D(0.4620438, 0, -0.9374515, 0, 1.0451314, 0, 0.9374515, 0, 0.4620438, -190.78648, 114.46655, -296.29553)
+
+[node name="Pine_10" parent="Geometry/FestivalRing/RimTrees" unique_id=1937281648 instance=ExtResource("7_rmssk")]
+transform = Transform3D(-2.2532763, 0, -3.7588227, 0, 4.328117, 0, 3.7588227, 0, -2.2532763, -212.85504, 169.78665, -381.38098)
+
+[node name="Pine_11" parent="Geometry/FestivalRing/RimTrees" unique_id=664786311 instance=ExtResource("8_8fupx")]
+transform = Transform3D(-1.053075, 0, -4.802175, 0, 4.8487935, 0, 4.802175, 0, -1.053075, -211.15265, 97.140114, -288.72876)
+
+[node name="Pine_12" parent="Geometry/FestivalRing/RimTrees" unique_id=30803068 instance=ExtResource("7_rmssk")]
+transform = Transform3D(2.2656488, 0, 2.278818, 0, 3.0143125, 0, -2.278818, 0, 2.2656488, -228.23907, 118.85777, -301.0645)
+
+[node name="Pine_13" parent="Geometry/FestivalRing/RimTrees" unique_id=1008638744 instance=ExtResource("8_8fupx")]
+transform = Transform3D(2.372751, 0, 2.7078028, 0, 4.1395802, 0, -2.7078028, 0, 2.372751, -216.65321, 98.70948, -288.78644)
+
+[node name="Dead_14" parent="Geometry/FestivalRing/RimTrees" unique_id=1983315317 instance=ExtResource("9_cw482")]
+transform = Transform3D(1.2149663, 0, 0.11156472, 0, 1.2200778, 0, -0.11156472, 0, 1.2149663, -216.9572, 97.232254, -287.70544)
+
+[node name="Pine_15" parent="Geometry/FestivalRing/RimTrees" unique_id=1446741665 instance=ExtResource("8_8fupx")]
+transform = Transform3D(-2.1203938, 0, 3.888271, 0, 4.1342845, 0, -3.888271, 0, -2.1203938, -222.68082, 101.3288, -289.85834)
+
+[node name="Pine_16" parent="Geometry/FestivalRing/RimTrees" unique_id=2076171524 instance=ExtResource("7_rmssk")]
+transform = Transform3D(-2.0893896, 0, -3.3782809, 0, 4.511339, 0, 3.3782809, 0, -2.0893896, -187.48428, 118.60667, -369.9116)
+
+[node name="Pine_17" parent="Geometry/FestivalRing/RimTrees" unique_id=153398640 instance=ExtResource("8_8fupx")]
+transform = Transform3D(-1.8690671, 0, -4.196281, 0, 5.2244544, 0, 4.196281, 0, -1.8690671, -192.50449, 123.88788, -372.4798)
+
+[node name="Pine_18" parent="Geometry/FestivalRing/RimTrees" unique_id=832211239 instance=ExtResource("7_rmssk")]
+transform = Transform3D(-4.712129, 0, -1.5322758, 0, 4.688867, 0, 1.5322758, 0, -4.712129, -190.99478, 93.68161, -286.6798)
+
+[node name="Dead_19" parent="Geometry/FestivalRing/RimTrees" unique_id=2015608058 instance=ExtResource("9_cw482")]
+transform = Transform3D(-0.8007796, 0, -0.45608813, 0, 0.9215554, 0, 0.45608813, 0, -0.8007796, -216.60406, 110.90171, -293.95807)
+
+[node name="Pine_20" parent="Geometry/FestivalRing/RimTrees" unique_id=871965768 instance=ExtResource("7_rmssk")]
+transform = Transform3D(1.2154874, 0, -2.96243, 0, 3.608326, 0, 2.96243, 0, 1.2154874, -212.6423, 118.99229, -300.4104)
+
+[node name="Pine_21" parent="Geometry/FestivalRing/RimTrees" unique_id=96783856 instance=ExtResource("8_8fupx")]
+transform = Transform3D(-2.012941, 0, -4.277842, 0, 5.5558515, 0, 4.277842, 0, -2.012941, -198.48154, 117.5575, -298.6632)
+
+[node name="Pine_22" parent="Geometry/FestivalRing/RimTrees" unique_id=728489737 instance=ExtResource("7_rmssk")]
+transform = Transform3D(-3.5678234, 0, 0.39090383, 0, 4.1263127, 0, -0.39090383, 0, -3.5678234, -195.46396, 114.52434, -296.31497)
+
+[node name="Pine_23" parent="Geometry/FestivalRing/RimTrees" unique_id=1494695813 instance=ExtResource("8_8fupx")]
+transform = Transform3D(2.028779, 0, -2.2908707, 0, 3.4028976, 0, 2.2908707, 0, 2.028779, -210.1617, 107.8893, -293.35718)
+
+[node name="Dead_24" parent="Geometry/FestivalRing/RimTrees" unique_id=1132603079 instance=ExtResource("9_cw482")]
+transform = Transform3D(1.0360575, 0, -0.3525501, 0, 1.0943978, 0, 0.3525501, 0, 1.0360575, -188.14317, 183.33672, -384.68512)
+
+[node name="Pine_25" parent="Geometry/FestivalRing/RimTrees" unique_id=176137311 instance=ExtResource("8_8fupx")]
+transform = Transform3D(-2.1728466, 0, -2.5690613, 0, 3.291419, 0, 2.5690613, 0, -2.1728466, -212.43396, 182.47252, -384.90347)
+
+[node name="Pine_26" parent="Geometry/FestivalRing/RimTrees" unique_id=1608387290 instance=ExtResource("7_rmssk")]
+transform = Transform3D(4.1812153, 0, -1.481067, 0, 5.082822, 0, 1.481067, 0, 4.1812153, -229.71432, 148.51357, -374.72455)
+
+[node name="Pine_27" parent="Geometry/FestivalRing/RimTrees" unique_id=629046878 instance=ExtResource("8_8fupx")]
+transform = Transform3D(-1.1715035, 0, -4.230565, 0, 5.085733, 0, 4.230565, 0, -1.1715035, -210.14511, 107.01841, -293.0522)
+
+[node name="Pine_28" parent="Geometry/FestivalRing/RimTrees" unique_id=2086641733 instance=ExtResource("7_rmssk")]
+transform = Transform3D(2.2758439, 0, 2.12422, 0, 2.9515502, 0, -2.12422, 0, 2.2758439, -230.7212, 142.40326, -373.08237)
+
+[node name="Dead_29" parent="Geometry/FestivalRing/RimTrees" unique_id=773924106 instance=ExtResource("9_cw482")]
+transform = Transform3D(-1.3050874, 0, -0.17128791, 0, 1.3162799, 0, 0.17128791, 0, -1.3050874, -210.82733, 101.829666, -290.86304)
+
+[node name="Dynamic" type="Node3D" parent="." unique_id=1084149070]
+
+[node name="Generator" type="Node3D" parent="Dynamic" unique_id=1981617585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -192, 105.234795, -326)
+
+[node name="Slab" type="MeshInstance3D" parent="Dynamic/Generator" unique_id=1992093296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, 0)
+material_override = SubResource("StandardMaterial3D_87fml")
+mesh = SubResource("BoxMesh_j1b3t")
+
+[node name="Body" type="MeshInstance3D" parent="Dynamic/Generator" unique_id=679244792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+material_override = SubResource("StandardMaterial3D_5mdpy")
+mesh = SubResource("BoxMesh_7qc82")
+
+[node name="Frame" type="MeshInstance3D" parent="Dynamic/Generator" unique_id=389766724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.97, 0)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("BoxMesh_is3xs")
+
+[node name="Exhaust" type="MeshInstance3D" parent="Dynamic/Generator" unique_id=719099300]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45, 1.25, -0.2)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_6icq6")
+
+[node name="FuelCap" type="MeshInstance3D" parent="Dynamic/Generator" unique_id=1972830705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 1, 0)
+material_override = SubResource("StandardMaterial3D_f28my")
+mesh = SubResource("CylinderMesh_thvv1")
+
+[node name="PullCord" type="MeshInstance3D" parent="Dynamic/Generator" unique_id=1406733750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, 0.6, 0.4)
+material_override = SubResource("StandardMaterial3D_f28my")
+mesh = SubResource("BoxMesh_ovjse")
+
+[node name="FuelCan" type="Node3D" parent="Dynamic" unique_id=1587954472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -198, 105.07082, -347)
+
+[node name="Can" type="MeshInstance3D" parent="Dynamic/FuelCan" unique_id=152717889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+material_override = SubResource("StandardMaterial3D_f28my")
+mesh = SubResource("BoxMesh_2f4ao")
+
+[node name="Spout" type="MeshInstance3D" parent="Dynamic/FuelCan" unique_id=782546117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12, 0.62, 0)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("BoxMesh_0o300")
+
+[node name="FloodLights" type="Node3D" parent="Dynamic" unique_id=789374736]
+
+[node name="Flood_0" type="SpotLight3D" parent="Dynamic/FloodLights" unique_id=116311633]
+transform = Transform3D(-0.47058824, -0.2898266, 0.83339494, 0, 0.9445143, 0.32847014, -0.88235295, 0.15457419, -0.44447732, -190, 111.10426, -343)
+light_color = Color(1, 0.95, 0.85, 1)
+light_energy = 0.0
+spot_range = 36.0
+spot_attenuation = 0.6
+spot_angle = 42.0
+
+[node name="Flood_1" type="SpotLight3D" parent="Dynamic/FloodLights" unique_id=709663837]
+transform = Transform3D(-0.4705882, 0.28957766, -0.83348155, 0, 0.9446124, 0.328188, 0.88235295, 0.1544414, -0.44452348, -220, 111.09857, -343)
+light_color = Color(1, 0.95, 0.85, 1)
+light_energy = 0.0
+spot_range = 36.0
+spot_attenuation = 0.6
+spot_angle = 42.0
+
+[node name="Flood_2" type="SpotLight3D" parent="Dynamic/FloodLights" unique_id=1836302625]
+transform = Transform3D(0.47058824, -0.29369405, 0.83204, 0, 0.9429787, 0.33285326, -0.88235295, -0.15663683, 0.44375467, -190, 111.19291, -327)
+light_color = Color(1, 0.95, 0.85, 1)
+light_energy = 0.0
+spot_range = 36.0
+spot_attenuation = 0.6
+spot_angle = 42.0
+
+[node name="Flood_3" type="SpotLight3D" parent="Dynamic/FloodLights" unique_id=689181963]
+transform = Transform3D(0.47058824, 0.28979626, -0.83340555, 0, 0.9445263, 0.32843575, 0.88235295, -0.154558, 0.44448298, -220, 111.10357, -327)
+light_color = Color(1, 0.95, 0.85, 1)
+light_energy = 0.0
+spot_range = 36.0
+spot_attenuation = 0.6
+spot_angle = 42.0
+
+[node name="Flood_4" type="SpotLight3D" parent="Dynamic/FloodLights" unique_id=1921219634]
+transform = Transform3D(0.8320503, -0.35417563, 0.42690977, 0, 0.76962256, 0.6384992, -0.5547002, -0.5312635, 0.64036465, -208, 111.104645, -350)
+light_color = Color(1, 0.95, 0.85, 1)
+light_energy = 0.0
+spot_range = 36.0
+spot_attenuation = 0.6
+spot_angle = 42.0
+
+[node name="DigRadio" type="Node3D" parent="Dynamic" unique_id=1616710037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196.8, 106.04027, -352.9)
+
+[node name="Body" type="MeshInstance3D" parent="Dynamic/DigRadio" unique_id=1603104745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+material_override = SubResource("StandardMaterial3D_5mdpy")
+mesh = SubResource("BoxMesh_63vtw")
+
+[node name="Dial" type="MeshInstance3D" parent="Dynamic/DigRadio" unique_id=1929534650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 0.13, 0.08)
+material_override = SubResource("StandardMaterial3D_boc43")
+mesh = SubResource("BoxMesh_dru6g")
+
+[node name="Light" type="OmniLight3D" parent="Dynamic/DigRadio" unique_id=1059054175]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0.1)
+light_color = Color(1, 0.2, 0.15, 1)
+light_energy = 0.0
+omni_range = 3.0
+
+[node name="Lift" type="Node3D" parent="Dynamic" unique_id=77702760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -212, 105.222115, -356)
+
+[node name="Deck" type="MeshInstance3D" parent="Dynamic/Lift" unique_id=498854583]
+material_override = SubResource("StandardMaterial3D_xal76")
+mesh = SubResource("BoxMesh_jw4g5")
+
+[node name="Slat_0" type="MeshInstance3D" parent="Dynamic/Lift" unique_id=1334714148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07, -0.7)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("BoxMesh_m2c03")
+
+[node name="Slat_1" type="MeshInstance3D" parent="Dynamic/Lift" unique_id=583841453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07, -0.25)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("BoxMesh_cgwl6")
+
+[node name="Slat_2" type="MeshInstance3D" parent="Dynamic/Lift" unique_id=1990966111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07, 0.2)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("BoxMesh_2b6bd")
+
+[node name="Slat_3" type="MeshInstance3D" parent="Dynamic/Lift" unique_id=1233827456]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07, 0.65)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("BoxMesh_0jltj")
+
+[node name="RailBack" type="MeshInstance3D" parent="Dynamic/Lift" unique_id=2053874529]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.9)
+material_override = SubResource("StandardMaterial3D_xal76")
+mesh = SubResource("BoxMesh_0mfg8")
+
+[node name="RailL" type="MeshInstance3D" parent="Dynamic/Lift" unique_id=2019901249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 1, 0)
+material_override = SubResource("StandardMaterial3D_xal76")
+mesh = SubResource("BoxMesh_ecc21")
+
+[node name="RailR" type="MeshInstance3D" parent="Dynamic/Lift" unique_id=1556814416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 1, 0)
+material_override = SubResource("StandardMaterial3D_xal76")
+mesh = SubResource("BoxMesh_v6isp")
+
+[node name="Post_-12_-9" type="MeshInstance3D" parent="Dynamic/Lift" unique_id=545957958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 0.5, -0.9)
+material_override = SubResource("StandardMaterial3D_xal76")
+mesh = SubResource("CylinderMesh_cwkyc")
+
+[node name="Post_-12_9" type="MeshInstance3D" parent="Dynamic/Lift" unique_id=588634736]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 0.5, 0.9)
+material_override = SubResource("StandardMaterial3D_xal76")
+mesh = SubResource("CylinderMesh_4phid")
+
+[node name="Post_12_-9" type="MeshInstance3D" parent="Dynamic/Lift" unique_id=1749095459]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0.5, -0.9)
+material_override = SubResource("StandardMaterial3D_xal76")
+mesh = SubResource("CylinderMesh_o4u6j")
+
+[node name="Post_12_9" type="MeshInstance3D" parent="Dynamic/Lift" unique_id=1917618428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 0.5, 0.9)
+material_override = SubResource("StandardMaterial3D_xal76")
+mesh = SubResource("CylinderMesh_w83t4")
+
+[node name="Gate" type="MeshInstance3D" parent="Dynamic/Lift" unique_id=755325660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0.92)
+material_override = SubResource("StandardMaterial3D_1f3f0")
+mesh = SubResource("BoxMesh_p0u3j")
+
+[node name="Panel" type="MeshInstance3D" parent="Dynamic/Lift" unique_id=1523536084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05, 0.85, -0.6)
+material_override = SubResource("StandardMaterial3D_5mdpy")
+mesh = SubResource("BoxMesh_p7qox")
+
+[node name="LiftLamp" type="OmniLight3D" parent="Dynamic/Lift" unique_id=1360919776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+light_color = Color(1, 0.8, 0.5, 1)
+light_energy = 0.8
+
+[node name="LiftConsole" type="Node3D" parent="Dynamic" unique_id=137375039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -208.8, 105.11249, -353.4)
+
+[node name="Post" type="MeshInstance3D" parent="Dynamic/LiftConsole" unique_id=1253922670]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("CylinderMesh_smyqr")
+
+[node name="Box" type="MeshInstance3D" parent="Dynamic/LiftConsole" unique_id=1244464708]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
+material_override = SubResource("StandardMaterial3D_5mdpy")
+mesh = SubResource("BoxMesh_wukr4")
+
+[node name="Keypad" type="MeshInstance3D" parent="Dynamic/LiftConsole" unique_id=1864810584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 1.25, 0.16)
+material_override = SubResource("StandardMaterial3D_yub3s")
+mesh = SubResource("BoxMesh_u8dod")
+
+[node name="CardSlot" type="MeshInstance3D" parent="Dynamic/LiftConsole" unique_id=199464317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12, 1.2, 0.16)
+material_override = SubResource("StandardMaterial3D_uqi65")
+mesh = SubResource("BoxMesh_7mxnk")
+
+[node name="ScreenRed" type="MeshInstance3D" parent="Dynamic/LiftConsole" unique_id=1989803957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.48, 0.16)
+material_override = SubResource("StandardMaterial3D_ve8tj")
+mesh = SubResource("BoxMesh_yk8xa")
+
+[node name="ScreenGreen" type="MeshInstance3D" parent="Dynamic/LiftConsole" unique_id=1219343539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.48, 0.16)
+visible = false
+material_override = SubResource("StandardMaterial3D_n6cy6")
+mesh = SubResource("BoxMesh_lfc7b")
+
+[node name="Sign" type="Label3D" parent="Dynamic/LiftConsole" unique_id=361474948]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62, 0.17)
+pixel_size = 0.001875
+modulate = Color(0.9, 0.9, 0.8, 1)
+text = "CARGO LIFT 2
+CODE + KEYCARD"
+outline_size = 0
+
+[node name="Markers" type="Node3D" parent="." unique_id=1567515935]
+
+[node name="Mk_Ch04_Lift" type="Marker3D" parent="Markers" unique_id=1996553866]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -212, 105.222115, -356)
+
+[node name="Mk_Ch04_LiftConsole" type="Marker3D" parent="Markers" unique_id=249964530]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -208.8, 106.31362, -353)
+
+[node name="Mk_Ch04_LiftTop" type="Marker3D" parent="Markers" unique_id=450388867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -212, 121.406456, -371)
+
+[node name="Mk_Ch04_Ring" type="Marker3D" parent="Markers" unique_id=1408496029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -205, 105.19224, -335)
+
+[node name="Mk_Ch04_DigSite" type="Marker3D" parent="Markers" unique_id=1806524871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -201, 105.049835, -346.5)
+
+[node name="Mk_Ch04_Generator" type="Marker3D" parent="Markers" unique_id=836770724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -192, 105.234795, -326)
+
+[node name="Mk_Ch04_FuelCan" type="Marker3D" parent="Markers" unique_id=1208511229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -198, 105.07082, -347)
+
+[node name="Mk_Ch04_DigTable" type="Marker3D" parent="Markers" unique_id=2026808597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196, 105.94138, -352.8)
+
+[node name="Vegetation" type="Node3D" parent="." unique_id=1504774354]
+
+[node name="Pines" type="Node3D" parent="Vegetation" unique_id=2018114799]
+
+[node name="DeadTrees" type="Node3D" parent="Vegetation" unique_id=1964080103]
+
+[node name="Bushes" type="Node3D" parent="Vegetation" unique_id=1780536948]

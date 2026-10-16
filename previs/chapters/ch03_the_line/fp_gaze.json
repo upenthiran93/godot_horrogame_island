@@ -1,0 +1,383 @@
+{
+  "_help": "First-person gaze for Cam_FP, read by tools/add_fp_camera.gd. Per shot marker: gaze = [[seconds from shot start, spec], ...]. spec = \"ahead\" (walk direction) or an object: look [x,y,z] | lookg [x,z,height above ground] | track \"NodePath\" + dy (follow a moving node) | eye/eyeg (override the eye, e.g. inside a locker) | slats true (locker vents) | turn (head-turn speed, default 4) | pitch (for ahead). shakes = [[from, to, amount]]. Shots not listed look ahead.",
+  "eye_height": 1.64,
+  "crouch_height": 1.0,
+  "shots": {
+    "s02_above_the_camp": {
+      "gaze": [
+        [
+          0.0,
+          {
+            "look": [
+              6,
+              3,
+              -112
+            ]
+          }
+        ],
+        [
+          7.0,
+          {
+            "pitch": 0.2,
+            "turn": 1.5
+          }
+        ],
+        [
+          10.5,
+          {
+            "look": [
+              6,
+              30,
+              -175
+            ],
+            "turn": 3
+          }
+        ],
+        [
+          15.0,
+          {
+            "lookg": [
+              -6,
+              -200,
+              0
+            ],
+            "turn": 1.5
+          }
+        ]
+      ],
+      "shakes": [
+        [
+          11.6,
+          12.8,
+          0.035
+        ]
+      ]
+    },
+    "s03_something_on_the_slope": {
+      "gaze": [
+        [
+          0.0,
+          {
+            "pitch": 0.15
+          }
+        ],
+        [
+          2.5,
+          {
+            "track": "Actors/Actor_Creature",
+            "dy": 1.8,
+            "turn": 3
+          }
+        ],
+        [
+          17.5,
+          {
+            "pitch": 0.15,
+            "turn": 2
+          }
+        ]
+      ],
+      "shakes": [
+        [
+          12.0,
+          13.2,
+          0.035
+        ]
+      ]
+    },
+    "s04_it_s_ahead": {
+      "gaze": [
+        [
+          0.0,
+          {
+            "pitch": 0.2
+          }
+        ],
+        [
+          3.0,
+          {
+            "track": "Actors/Actor_Creature",
+            "dy": 1.8,
+            "turn": 4
+          }
+        ],
+        [
+          9.5,
+          {
+            "lookg": [
+              12,
+              -312,
+              1.0
+            ],
+            "turn": 1
+          }
+        ]
+      ]
+    },
+    "s05_the_breakdown": {
+      "gaze": [
+        [
+          0.0,
+          {
+            "pitch": 0.2
+          }
+        ],
+        [
+          7.0,
+          {
+            "lookg": [
+              2,
+              -300,
+              0
+            ],
+            "turn": 1.5
+          }
+        ],
+        [
+          12.0,
+          {
+            "look": [
+              6,
+              34,
+              -305
+            ],
+            "turn": 1.5
+          }
+        ],
+        [
+          16.0,
+          {
+            "look": [
+              6.3,
+              26,
+              -303.3
+            ],
+            "turn": 2
+          }
+        ]
+      ],
+      "shakes": [
+        [
+          1.0,
+          7.0,
+          0.06
+        ],
+        [
+          7.0,
+          9.0,
+          0.02
+        ]
+      ]
+    },
+    "s06_climbing_out": {
+      "gaze": [
+        [
+          0.0,
+          {
+            "look": [
+              6.0,
+              27.5,
+              -303.3
+            ]
+          }
+        ],
+        [
+          5.5,
+          {
+            "pitch": -0.55,
+            "turn": 3
+          }
+        ],
+        [
+          11.0,
+          {
+            "look": [
+              6,
+              36,
+              -305
+            ],
+            "turn": 4
+          }
+        ],
+        [
+          14.0,
+          {
+            "pitch": -0.55,
+            "turn": 3
+          }
+        ]
+      ]
+    },
+    "s07_the_fall": {
+      "gaze": [
+        [
+          0.0,
+          {
+            "pitch": -0.5,
+            "turn": 6
+          }
+        ],
+        [
+          0.6,
+          {
+            "pitch": -0.9,
+            "roll": 0.45,
+            "turn": 8
+          }
+        ],
+        [
+          1.2,
+          {
+            "pitch": -1.2,
+            "roll": -0.35,
+            "turn": 8
+          }
+        ],
+        [
+          1.9,
+          {
+            "pitch": -1.0,
+            "roll": 0.0,
+            "turn": 6
+          }
+        ],
+        [
+          2.8,
+          {
+            "pitch": -0.6,
+            "turn": 3
+          }
+        ]
+      ],
+      "shakes": [
+        [
+          1.0,
+          3.5,
+          0.03
+        ]
+      ]
+    },
+    "s08_waking_up": {
+      "gaze": [
+        [
+          0.0,
+          {
+            "pitch": -1.1,
+            "turn": 2
+          }
+        ],
+        [
+          3.5,
+          {
+            "pitch": -0.4,
+            "turn": 1.5
+          }
+        ],
+        [
+          7.2,
+          {
+            "pitch": 0.0,
+            "turn": 1.5
+          }
+        ]
+      ]
+    },
+    "s09_the_lit_path": {
+      "gaze": [
+        [
+          0.0,
+          "ahead"
+        ],
+        [
+          12.0,
+          {
+            "lookg": [
+              4.9,
+              -320.9,
+              1.2
+            ],
+            "turn": 1.5
+          }
+        ],
+        [
+          17.0,
+          "ahead"
+        ]
+      ]
+    },
+    "s10_the_old_stream": {
+      "gaze": [
+        [
+          0.0,
+          {
+            "lookg": [
+              4.9,
+              -320.9,
+              0.8
+            ]
+          }
+        ],
+        [
+          5.0,
+          {
+            "lookg": [
+              4.9,
+              -330,
+              1.0
+            ],
+            "turn": 2
+          }
+        ],
+        [
+          11.0,
+          {
+            "lookg": [
+              4.9,
+              -312,
+              1.4
+            ],
+            "turn": 2
+          }
+        ],
+        [
+          15.0,
+          "ahead"
+        ]
+      ]
+    },
+    "s11_the_forest": {
+      "gaze": [
+        [
+          0.0,
+          "ahead"
+        ],
+        [
+          7.0,
+          {
+            "lookg": [
+              -6,
+              -325,
+              1.6
+            ],
+            "turn": 2.5
+          }
+        ],
+        [
+          15.0,
+          {
+            "lookg": [
+              -13,
+              -327,
+              2.5
+            ],
+            "turn": 2
+          }
+        ],
+        [
+          22.0,
+          "ahead"
+        ]
+      ]
+    }
+  }
+}

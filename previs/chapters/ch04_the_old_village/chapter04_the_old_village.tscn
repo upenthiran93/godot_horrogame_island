@@ -1,0 +1,2093 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://previs/shared/previs_chapter.gd" id="1_hkm60"]
+[ext_resource type="PackedScene" path="res://game/levels/a08_hollow_edge/a08_hollow_edge_blockout.tscn" id="2_y3oxr"]
+[ext_resource type="PackedScene" path="res://game/levels/a09_village_lanes/a09_village_lanes_blockout.tscn" id="3_7umvm"]
+[ext_resource type="PackedScene" path="res://game/levels/a10_festival_ring/a10_festival_ring_blockout.tscn" id="4_u4cji"]
+[ext_resource type="PackedScene" path="res://game/levels/a11_burned_quarter/a11_burned_quarter_blockout.tscn" id="5_iqi5p"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Pawn_Idle_Female_01.fbx" id="6_dpkyc"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Pawn_Walk_Female_01.fbx" id="7_qcvbj"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Pawn_Run_Female_01.fbx" id="8_sph4o"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Pawn_Cower_Female_01.fbx" id="9_o4mpp"]
+[ext_resource type="PackedScene" path="res://assets/packs/synty_prototype/FBX/SM_Pawn_LadderClimb_Female_01.fbx" id="10_4k5x1"]
+
+[sub_resource type="Environment" id="Environment_xtlwx"]
+background_mode = 1
+background_color = Color(0.035, 0.045, 0.065, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.3, 0.34, 0.42, 1)
+ambient_light_energy = 0.8
+tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0.07, 0.09, 0.12, 1)
+fog_density = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lg1p3"]
+albedo_color = Color(0.02, 0.02, 0.025, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_y6e1h"]
+radius = 0.18
+height = 1.9
+
+[sub_resource type="SphereMesh" id="SphereMesh_v1wth"]
+radius = 0.15
+height = 0.3
+radial_segments = 12
+rings = 6
+
+[sub_resource type="BoxMesh" id="BoxMesh_k66ft"]
+size = Vector3(0.06, 1.35, 0.06)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rfk7n"]
+size = Vector3(0.06, 1.35, 0.06)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kyt6t"]
+size = Vector3(0.08, 0.9, 0.08)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4mf42"]
+size = Vector3(0.08, 0.9, 0.08)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_psa6d"]
+albedo_color = Color(0.04, 0.035, 0.03, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t3io3"]
+size = Vector3(0.5, 1.5, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1p0bh"]
+albedo_color = Color(0.8, 0.6, 0.2, 1)
+roughness = 0.9
+emission_enabled = true
+emission = Color(1, 0.75, 0.2, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_fptkf"]
+radius = 0.03
+height = 0.06
+radial_segments = 12
+rings = 6
+
+[sub_resource type="Animation" id="Animation_b75d7"]
+resource_name = "play"
+length = 503.0
+markers = [{
+"color": Color(1, 1, 1, 1),
+"name": &"s01_chapter_4",
+"time": 0.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s02_waking_up",
+"time": 4.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s03_the_hollow",
+"time": 18.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s04_the_first_houses",
+"time": 40.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s05_the_year_marks",
+"time": 60.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s06_the_healing_wall",
+"time": 74.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s07_the_guest_house",
+"time": 93.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s08_the_figure_in_the_window",
+"time": 129.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s09_the_festival_ring",
+"time": 143.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s10_the_dig_site",
+"time": 167.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s11_the_generator",
+"time": 191.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s12_the_radio",
+"time": 217.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s13_the_wrong_code",
+"time": 251.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s14_the_burned_quarter",
+"time": 275.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s15_the_keycard",
+"time": 305.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s16_it_stands_there",
+"time": 325.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s17_the_last_carving",
+"time": 345.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s18_it_hunts",
+"time": 369.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s19_the_real_code",
+"time": 403.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s20_the_cargo_lift",
+"time": 453.0
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"s21_end_of_chapter_4_so_far",
+"time": 497.0
+}]
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.01, 0.02, 4, 4.01, 4.02, 4.03, 4.4, 7, 9.5, 12, 13, 18, 18.01, 18.5, 20.5, 32.5, 35, 40, 40.01, 40.5, 48.5, 60, 60.01, 63.5, 67, 69, 74, 74.01, 85.4, 85.5, 85.51, 93, 93.01, 97, 99, 103.8, 105.2, 106, 112.5, 119, 124, 124.4, 129, 129.01, 132.4, 133, 136.6, 138.5, 143, 143.01, 146, 159.8, 161, 162.5, 167, 167.01, 168.5, 172, 174, 179, 180.5, 191, 191.01, 196.2, 207.12, 207.2, 208.5, 210.5, 212.5, 214.5, 217, 217.01, 230.6, 231, 232.5, 237.85, 244.7, 251, 251.01, 251.8, 256, 260.6, 261, 262, 268, 275, 275.01, 283, 289, 296, 297.5, 298, 305, 305.01, 309.5, 312, 318.5, 320.5, 325, 325.01, 327.5, 328.5, 334, 341.2, 345, 345.01, 355, 355.5, 362.28, 363, 369, 369.01, 376.82, 377.5, 380, 382, 385.5, 394, 403, 403.01, 409, 425, 440, 440.5, 441.5, 444.5, 453, 453.01, 463, 463.6, 464.88, 470.6, 470.8, 471.5, 472, 481, 487, 490.4, 493, 493.5, 497, 497.01, 497.02),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [true],
+"method": &"black"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [1.4],
+"method": &"fade_in"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": [NodePath("Cam_02_WakingUp")],
+"method": &"cut_to"
+}, {
+"args": [5.0, 0.05],
+"method": &"blur_to"
+}, {
+"args": ["Breathing, ragged. A high ringing in the ears.", 3.0],
+"method": &"sfx"
+}, {
+"args": [0.0, 3.5],
+"method": &"blur_to"
+}, {
+"args": ["(...Elias? ...No. The phone's dead. Where am I?)", 3.8],
+"method": &"narrate"
+}, {
+"args": ["Wind sighing through the stones of the hollow", 3.0],
+"method": &"sfx"
+}, {
+"args": ["(Something dragged me in here. These marks lead back to the foot of those steps.)", 5.449999999999999],
+"method": &"narrate"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": ["Far above: the faint hum of the lit path's lamps", 3.0],
+"method": &"sfx"
+}, {
+"args": ["(The lamps on the rim. The path is right up there. I can see it.)", 4.65],
+"method": &"narrate"
+}, {
+"args": ["(The steps are buried. No way up from this side. Only through.)", 4.550000000000001],
+"method": &"narrate"
+}, {
+"args": ["Loose stones tick down the rockfall and stop", 2.5],
+"method": &"sfx"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": ["Silence. Water dripping into the well.", 3.0],
+"method": &"sfx"
+}, {
+"args": ["(Houses. Roofless, old. Someone lived down here a long time ago.)", 4.65],
+"method": &"narrate"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": ["(Tally marks, one by every door. Someone counted the years.)", 4.4],
+"method": &"narrate"
+}, {
+"args": ["Fingertips on the cut strokes. The last row stops mid-group.", 3.0],
+"method": &"sfx"
+}, {
+"args": ["(The last row stops half done. All of them. At the same year.)", 4.5],
+"method": &"narrate"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": [NodePath("Cam_06_TheHealingWall_B")],
+"method": &"cut_to"
+}, {
+"args": ["(A man lying down. Then the same man standing, holding a little stone. They were given something.)", 6.0],
+"method": &"narrate"
+}, {
+"args": ["A faint glow in the carved crystals, or the moon on the stone", 3.0],
+"method": &"sfx"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": ["Old beds, laid out in a row. Dust. A rusted lantern.", 3.0],
+"method": &"sfx"
+}, {
+"args": ["(Beds. Laid out in a row. For strangers.)", 3.45],
+"method": &"narrate"
+}, {
+"args": [NodePath("Cam_07_TheGuestHouse_B")],
+"method": &"cut_to"
+}, {
+"args": ["(A log. English. Not the villagers'.)", 3.25],
+"method": &"narrate"
+}, {
+"args": ["Ship's log — first page", "...the savages have kept us alive past all reason. Hartley's leg, broken in three places, was whole by morning. I have seen the stone they used. They show it freely...", 6.0],
+"method": &"show_note"
+}, {
+"args": ["Ship's log — second page", "...I have asked them how. They told us everything, down to the yearly gathering and the three stones. They think of me as a guest. I have not corrected them...", 6.0],
+"method": &"show_note"
+}, {
+"args": ["Ship's log — third page", "...My country must have this. I will join their feast. I will take what they will not sell...", 5.0],
+"method": &"show_note"
+}, {
+"args": ["CREAK — a floorboard, overhead. There is no overhead.", 2.5],
+"method": &"sfx"
+}, {
+"args": ["(A floorboard. Upstairs. There is no upstairs.)", 3.75],
+"method": &"narrate"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": ["Stinger (low) — a tall figure in a long coat, standing in the lane", 2.5],
+"method": &"sfx"
+}, {
+"args": ["(Someone is standing in the lane.)", 3.1],
+"method": &"narrate"
+}, {
+"args": ["The lane is empty. Coat-hem prints in the mud.", 2.5],
+"method": &"sfx"
+}, {
+"args": ["(Gone. There are muddy prints on the sill. A heavy coat's hem.)", 4.550000000000001],
+"method": &"narrate"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": ["The wind drops. The ring of stones stands ahead, very still.", 3.0],
+"method": &"sfx"
+}, {
+"args": [NodePath("Cam_09_TheFestivalRing_B")],
+"method": &"cut_to"
+}, {
+"args": ["Open hands carved on every inward face; three empty sockets", 3.0],
+"method": &"sfx"
+}, {
+"args": ["(A ring of stones. Three sockets in the middle, empty. Something sat in each one.)", 5.5],
+"method": &"narrate"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": ["Dig tag", "SOCKET 1/3
+CRYSTAL RECOVERED
+E.R.
+
+DO NOT REMOVE — OWNER'S ORDERS", 5.0],
+"method": &"show_note"
+}, {
+"args": ["(Trenches. Tags. Fresh. Someone dug here recently, with orders.)", 4.6],
+"method": &"narrate"
+}, {
+"args": ["Orange tape snaps in the wind. Fresh spoil heaps.", 3.0],
+"method": &"sfx"
+}, {
+"args": [NodePath("Cam_10_TheDigSite_B")],
+"method": &"cut_to"
+}, {
+"args": ["Dig log — page 41", "...third socket cleared. E. (security) objected again to opening the circle. Overruled by the owner.
+
+The researcher keeps asking what the stones are for. Nobody tells her.
+
+(the last page is stuck under the radio)", 8.0],
+"method": &"show_note"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": [NodePath("Cam_11_TheGenerator_B")],
+"method": &"cut_to"
+}, {
+"args": [NodePath("Cam_11_TheGenerator_C")],
+"method": &"cut_to"
+}, {
+"args": ["(A generator. If it runs, I get light. And a radio.)", 4.0],
+"method": &"narrate"
+}, {
+"args": ["A fist of fuel into the tank. The cord, once, twice...", 2.5],
+"method": &"sfx"
+}, {
+"args": ["ROAR — the generator catches. The whole hollow rings with it.", 3.0],
+"method": &"sfx"
+}, {
+"args": ["(Too loud. The whole hollow heard that.)", 3.4],
+"method": &"narrate"
+}, {
+"args": ["Far off in the dark: loose stone clatters. Something has heard.", 3.0],
+"method": &"sfx"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": [NodePath("Cam_12_TheRadio_B")],
+"method": &"cut_to"
+}, {
+"args": ["Static. Under it, a voice you know.", 2.0],
+"method": &"sfx"
+}, {
+"args": ["SGT. ELIAS (RADIO): ...is somebody there? Don't be afraid. It's me. It's Elias.", 5.0],
+"method": &"narrate"
+}, {
+"args": ["SGT. ELIAS (RADIO): Stay where you are. The cargo lift at the ring will bring you up. The code is seven, three, nine, two.", 6.5],
+"method": &"narrate"
+}, {
+"args": ["SGT. ELIAS (RADIO): Hurry. Don't go into the old houses. Come on, now.", 4.5],
+"method": &"narrate"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": ["(...Elias? That's Elias's voice.)", 3.05],
+"method": &"narrate"
+}, {
+"args": ["(Seven, three, nine, two. It's asking for a card too.)", 4.1],
+"method": &"narrate"
+}, {
+"args": [NodePath("Cam_13_TheWrongCode_B")],
+"method": &"cut_to"
+}, {
+"args": ["Cargo Lift 2", "ENTER CODE:  7 3 9 2
+
+INVALID CODE
+INSERT KEYCARD", 7.0],
+"method": &"show_note"
+}, {
+"args": ["Four beeps, then one long one: INVALID", 2.5],
+"method": &"sfx"
+}, {
+"args": ["(Wrong. And it wants a keycard. Whoever sold me that code... wasn't telling the truth.)", 5.75],
+"method": &"narrate"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": ["The wind drops. The air smells of old smoke.", 3.0],
+"method": &"sfx"
+}, {
+"args": ["(Burned. All of it. They didn't leave. They were killed.)", 4.25],
+"method": &"narrate"
+}, {
+"args": [NodePath("Cam_14_TheBurnedQuarter_B")],
+"method": &"cut_to"
+}, {
+"args": ["Bones, heaped together as if gathered. One hand still closed.", 3.0],
+"method": &"sfx"
+}, {
+"args": ["(They were all gathered here. One of them is still holding the stone.)", 4.9],
+"method": &"narrate"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": ["(One of the company's. His keycard. He came down here and never left.)", 4.9],
+"method": &"narrate"
+}, {
+"args": ["Keycard", "SECURITY — LEVEL 2
+CARGO LIFT 2 / SERVICE PATH
+
+(taken from the guard's jacket)", 5.5],
+"method": &"show_note"
+}, {
+"args": ["(A flare. Light it. Slowly.)", 2.8],
+"method": &"narrate"
+}, {
+"args": ["The flare spits, flares red, and the quarter jumps out of the dark", 3.0],
+"method": &"sfx"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": ["Stinger — a tall figure in a long coat, back turned, in the red light", 3.0],
+"method": &"sfx"
+}, {
+"args": ["(There's someone there. A long coat. It's... a man.)", 4.0],
+"method": &"narrate"
+}, {
+"args": ["It begins to turn. A brass button catches the flare.", 3.0],
+"method": &"sfx"
+}, {
+"args": ["Nothing there. Wet coat-prints leading away.", 2.5],
+"method": &"sfx"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": ["The carving: the tall giver turns him black. A man on a cord. A stone rising from the sea.", 4.0],
+"method": &"sfx"
+}, {
+"args": ["(The giver turned him black. A man in a coat on a cord. That's what's following me.)", 5.6],
+"method": &"narrate"
+}, {
+"args": [NodePath("Cam_17_TheLastCarving_B")],
+"method": &"cut_to"
+}, {
+"args": ["Stinger — slow steps in the ash, close behind", 2.5],
+"method": &"sfx"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": [NodePath("Cam_18_ItHunts_B")],
+"method": &"cut_to"
+}, {
+"args": ["(Don't run. Don't breathe. Let it pass.)", 3.4],
+"method": &"narrate"
+}, {
+"args": ["Footfalls in the ash, slowing at the doorway", 3.0],
+"method": &"sfx"
+}, {
+"args": ["A long, slow sniff. The air tastes of him.", 3.0],
+"method": &"sfx"
+}, {
+"args": ["It turns away", 2.0],
+"method": &"sfx"
+}, {
+"args": ["It stands at the carving, watching the lane", 3.0],
+"method": &"sfx"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": [NodePath("Cam_19_TheRealCode_B")],
+"method": &"cut_to"
+}, {
+"args": ["Slow footsteps far behind, in the ash", 3.0],
+"method": &"sfx"
+}, {
+"args": [NodePath("Cam_19_TheRealCode_C")],
+"method": &"cut_to"
+}, {
+"args": ["The radio is silent now, but its dial is still red", 3.0],
+"method": &"sfx"
+}, {
+"args": ["Dig log — last page", "LIFT CREW: cargo lift 2 code is 2 6 0 4.
+Change it after the ceremony.
+
+Keycard at the gate. Ask security.", 7.0],
+"method": &"show_note"
+}, {
+"args": ["(Not seven-three-nine-two. Two-six-zero-four. The radio lied.)", 4.5],
+"method": &"narrate"
+}, {
+"args": [],
+"method": &"hide_note"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": ["Cargo Lift 2", "ENTER CODE:  2 6 0 4
+[card accepted]
+
+CODE ACCEPTED
+LIFT STARTING", 6.0],
+"method": &"show_note"
+}, {
+"args": ["A long green beep: CODE ACCEPTED", 2.5],
+"method": &"sfx"
+}, {
+"args": [NodePath("Cam_20_TheCargoLift_B")],
+"method": &"cut_to"
+}, {
+"args": [NodePath("Cam_20_TheCargoLift_C")],
+"method": &"cut_to"
+}, {
+"args": ["The safety gate clangs shut", 2.0],
+"method": &"sfx"
+}, {
+"args": ["Motor whine. The platform lurches and starts to climb the wall.", 3.0],
+"method": &"sfx"
+}, {
+"args": ["(Go. Go. Please go.)", 2.5],
+"method": &"narrate"
+}, {
+"args": ["Below, in the floodlights: it has reached the foot of the lift. It stops.", 3.0],
+"method": &"sfx"
+}, {
+"args": ["The generator coughs and dies. The floodlights go out one by one.", 3.0],
+"method": &"sfx"
+}, {
+"args": [NodePath("Cam_20_TheCargoLift_D")],
+"method": &"cut_to"
+}, {
+"args": ["(It stopped at the edge of the light. It didn't follow. It just watched me go.)", 5.35],
+"method": &"narrate"
+}, {
+"args": [1.5],
+"method": &"fade_out"
+}, {
+"args": [true],
+"method": &"black"
+}, {
+"args": [false],
+"method": &"slats"
+}, {
+"args": [],
+"method": &"hide_note"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Level/A10_FestivalRing/Dynamic/FloodLights/Flood_0:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 211.6, 211.75, 211.9, 212.05, 212.3, 487, 487.2, 487.45, 487.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, 3.0, 0.4, 5.0, 1.0, 6.0, 2.0, 0.0, 3.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Level/A10_FestivalRing/Dynamic/FloodLights/Flood_1:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 211.65, 211.8, 211.95, 212.1, 212.35, 487.05, 487.25, 487.5, 487.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, 3.0, 0.4, 5.0, 1.0, 6.0, 2.0, 0.0, 3.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Level/A10_FestivalRing/Dynamic/FloodLights/Flood_2:light_energy")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 211.7, 211.85, 212, 212.15, 212.4, 487.1, 487.3, 487.55, 487.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, 3.0, 0.4, 5.0, 1.0, 6.0, 2.0, 0.0, 3.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Level/A10_FestivalRing/Dynamic/FloodLights/Flood_3:light_energy")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 211.75, 211.9, 212.05, 212.2, 212.45, 487.15, 487.35, 487.6, 487.85),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, 3.0, 0.4, 5.0, 1.0, 6.0, 2.0, 0.0, 3.0, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Level/A10_FestivalRing/Dynamic/FloodLights/Flood_4:light_energy")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 211.8, 211.95, 212.1, 212.25, 212.5, 487.2, 487.4, 487.65, 487.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, 3.0, 0.4, 5.0, 1.0, 6.0, 2.0, 0.0, 3.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Level/A10_FestivalRing/Dynamic/DigRadio/Light:light_energy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 232.5, 237.5, 237.85, 244.35, 244.7, 249.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, 1.4, 0.0, 1.4, 0.0, 1.4, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Level/A10_FestivalRing/Dynamic/LiftConsole/ScreenRed:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 463.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Level/A10_FestivalRing/Dynamic/LiftConsole/ScreenGreen:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 463.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Level/A10_FestivalRing/Dynamic/FuelCan:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 195.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Level/A11_BurnedQuarter/Dynamic/Keycard:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 312.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Level/A11_BurnedQuarter/Dynamic/Flare/Light:light_energy")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 320.5, 320.7, 320.9, 321.2, 339.5, 339.75, 340, 340.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, 0.3, 2.0, 0.5, 4.0, 0.2, 4.0, 0.1, 4.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Level/A10_FestivalRing/Dynamic/Generator:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 210.5, 210.6, 210.7, 210.8, 210.9, 211, 211.1, 211.2, 211.3, 211.4, 211.5, 211.6, 211.7, 211.8, 211.9, 212, 212.1, 212.2, 212.3, 212.4, 212.5, 212.6, 212.7, 212.8, 213),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-192, 105.234795, -326), Vector3(-192, 105.22279, -326), Vector3(-192, 105.246796, -326), Vector3(-192, 105.22279, -326), Vector3(-192, 105.246796, -326), Vector3(-192, 105.22279, -326), Vector3(-192, 105.246796, -326), Vector3(-192, 105.22279, -326), Vector3(-192, 105.246796, -326), Vector3(-192, 105.22279, -326), Vector3(-192, 105.246796, -326), Vector3(-192, 105.22279, -326), Vector3(-192, 105.246796, -326), Vector3(-192, 105.22279, -326), Vector3(-192, 105.246796, -326), Vector3(-192, 105.22279, -326), Vector3(-192, 105.246796, -326), Vector3(-192, 105.22279, -326), Vector3(-192, 105.246796, -326), Vector3(-192, 105.22279, -326), Vector3(-192, 105.246796, -326), Vector3(-192, 105.22279, -326), Vector3(-192, 105.246796, -326), Vector3(-192, 105.22279, -326), Vector3(-192, 105.246796, -326), Vector3(-192, 105.234795, -326)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Level/A10_FestivalRing/Dynamic/Lift:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 471.5, 472, 472.5, 473, 473.5, 474, 474.5, 475, 475.5, 476, 476.5, 477, 477.5, 478, 478.5, 479, 479.5, 480, 480.5, 481, 481.5, 482, 482.5, 483, 483.5, 484, 484.5, 485, 485.5, 486, 486.5, 487, 487.5, 488, 488.5, 489, 489.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-212, 105.222115, -356), Vector3(-212, 105.222115, -356), Vector3(-212, 105.22089, -356.41666), Vector3(-212, 105.21966, -356.83334), Vector3(-212, 105.288475, -357.25), Vector3(-212, 105.40399, -357.66666), Vector3(-212, 105.56216, -358.08334), Vector3(-212, 105.89096, -358.5), Vector3(-212, 106.219765, -358.91666), Vector3(-212, 106.673416, -359.33334), Vector3(-212, 107.15828, -359.75), Vector3(-212, 107.699936, -360.16666), Vector3(-212, 108.32676, -360.58334), Vector3(-212, 108.95359, -361), Vector3(-212, 109.76131, -361.41666), Vector3(-212, 110.56902, -361.83334), Vector3(-212, 111.37304, -362.25), Vector3(-212, 112.17459, -362.66666), Vector3(-212, 112.94881, -363.08334), Vector3(-212, 113.61371, -363.5), Vector3(-212, 114.27862, -363.91666), Vector3(-212, 114.941376, -364.33334), Vector3(-212, 115.60359, -364.75), Vector3(-212, 116.19002, -365.16666), Vector3(-212, 116.66275, -365.58334), Vector3(-212, 117.13549, -366), Vector3(-212, 117.411674, -366.41666), Vector3(-212, 117.68787, -366.83334), Vector3(-212, 118.01466, -367.25), Vector3(-212, 118.37521, -367.66666), Vector3(-212, 118.67994, -368.08334), Vector3(-212, 118.7614, -368.5), Vector3(-212, 118.84285, -368.91666), Vector3(-212, 118.98388, -369.33334), Vector3(-212, 119.1398, -369.75), Vector3(-212, 119.46221, -370.16666), Vector3(-212, 120.03433, -370.58334), Vector3(-212, 120.60645, -371)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Level/A08_HollowEdge:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 4, 60),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Level/A09_VillageLanes:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 40, 167),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Level/A10_FestivalRing:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 143, 305, 403, 497),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Level/A11_BurnedQuarter:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 275, 453),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Actors/Actor_Creature:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 132.4, 136.5, 327.5, 341.3, 363, 403, 425, 453, 465, 497),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Actors/Actor_Protagonist:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Actors/Actor_Protagonist/Pose_Idle:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(4, 11.7, 19.5, 37.6, 40.5, 58.3, 61, 63.3, 74.5, 85.3, 93.5, 103.7, 138, 142.3, 143.5, 162.2, 168, 178.2, 192, 194.9, 196, 207.1, 217.5, 230.1, 251.5, 260.3, 275.5, 297.1, 305.3, 308.7, 309, 345, 345.5, 354.9, 369.8, 376.7, 377.2, 441.1, 453.5, 461.5, 467, 470.7, 489.5, 492.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Actors/Actor_Protagonist/Pose_Walk:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(4, 19.5, 37.6, 40.5, 58.3, 61, 63.3, 74.5, 85.3, 93.5, 103.7, 138, 142.3, 143.5, 162.2, 168, 178.2, 192, 194.9, 196, 207.1, 217.5, 230.1, 251.5, 260.3, 275.5, 297.1, 305.3, 308.7, 345.5, 354.9, 369.8, 376.7, 407, 441.1, 453.5, 461.5, 467, 470.7, 489.5, 492.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Actors/Actor_Protagonist/Pose_Run:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Actors/Actor_Protagonist/Pose_Crouch:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(4, 11.7, 309, 345, 377.2, 407),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Actors/Actor_Protagonist/Pose_Climb:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Actors/Actor_Protagonist:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(4, 17.98, 18, 19.5, 22.8, 26.3, 30.3, 32.8, 37.5, 37.6, 39.98, 40, 40.5, 45.3, 48.3, 48.4, 54.7, 57.4, 58.2, 58.4, 59.98, 60, 61, 63.2, 63.4, 73.98, 74, 74.5, 79.1, 84.5, 84.8, 85.2, 86.2, 92.98, 93, 93.5, 97.5, 99.3, 100.3, 102.5, 102.6, 103.6, 103.7, 128.98, 129, 138, 139.9, 142.2, 142.98, 143, 143.5, 148.1, 153.4, 156.1, 157.4, 159.8, 162.1, 162.2, 166.98, 167, 168, 171.8, 174.3, 177.3, 178.2, 190.98, 191, 192, 194.8, 196, 200.5, 205, 207, 207.1, 216.98, 217, 217.5, 223, 227.2, 230, 230.4, 250.98, 251, 251.5, 255.3, 256.1, 259.3, 259.4, 260.2, 260.3, 274.98, 275, 275.5, 280.5, 284.4, 292, 292.6, 297, 297.1, 304.98, 305, 305.3, 308.6, 324.98, 325, 344.98, 345, 345.5, 350.3, 354.8, 368.98, 369, 369.8, 372.3, 372.7, 374.2, 374.3, 376.6, 376.7, 402.98, 403, 407, 410.1, 415.3, 423.4, 425.5, 430, 434.7, 435.1, 438.7, 441.1, 452.98, 453, 453.5, 456.8, 457.6, 460.6, 460.7, 461.4, 461.5, 467, 469.6, 470.6, 470.7, 471.4, 471.5, 472.8, 473.9, 475.2, 476.4, 477.5, 480, 482.3, 483.5, 484.9, 485.9, 487.3, 488.3, 489.5, 492.5, 496.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-132, 105.02464, -321), Vector3(-132, 105.02464, -321), Vector3(-132, 105.02464, -321), Vector3(-132, 105.02464, -321), Vector3(-131.00288, 105.042946, -326.185), Vector3(-129.94534, 105.07734, -331.68423), Vector3(-128.75203, 105.1166, -337.972), Vector3(-128.0118, 105.19045, -341.9029), Vector3(-126.62015, 105.09432, -349.293), Vector3(-126.6, 105.09363, -349.4), Vector3(-126.6, 105.09363, -349.4), Vector3(-126.6, 105.09363, -349.4), Vector3(-126.6, 105.09363, -349.4), Vector3(-131.72523, 105.13263, -342.4443), Vector3(-134.92851, 105.066055, -338.09702), Vector3(-135.05765, 105.062614, -337.98532), Vector3(-146.04872, 105.058876, -335.2), Vector3(-150.90872, 105.08881, -335.2), Vector3(-152.34872, 105.109764, -335.2), Vector3(-152.4, 105.11014, -335.2), Vector3(-152.4, 105.11014, -335.2), Vector3(-152.4, 105.11014, -335.2), Vector3(-152.4, 105.11014, -335.2), Vector3(-153.08633, 105.15932, -337.74924), Vector3(-153.1, 105.15956, -337.8), Vector3(-153.1, 105.15956, -337.8), Vector3(-153.1, 105.15956, -337.8), Vector3(-153.1, 105.15956, -337.8), Vector3(-162.17442, 105.12274, -336.29526), Vector3(-172.9704, 105.09211, -336.0008), Vector3(-173.04063, 105.102425, -336.56894), Vector3(-173.09764, 105.103516, -337.3669), Vector3(-173.1, 105.10326, -337.4), Vector3(-173.1, 105.10326, -337.4), Vector3(-173.1, 105.10326, -337.4), Vector3(-173.1, 105.10326, -337.4), Vector3(-169.04248, 105.01857, -333.5404), Vector3(-168.3578, 105.02705, -331.12387), Vector3(-168, 105.0449, -329.77136), Vector3(-168, 105.10996, -326.69138), Vector3(-167.9553, 105.11256, -326.58084), Vector3(-166.6685, 105.113625, -326.02936), Vector3(-166.6, 105.113266, -326), Vector3(-166.6, 105.113266, -326), Vector3(-166.6, 105.113266, -326), Vector3(-166.6, 105.113266, -326), Vector3(-168, 105.07183, -328.25232), Vector3(-168, 105.02238, -331.47232), Vector3(-168, 105.02209, -331.5), Vector3(-168, 105.02209, -331.5), Vector3(-168, 105.02209, -331.5), Vector3(-176.00786, 105.035484, -335.0004), Vector3(-186.06473, 105.08395, -335.50925), Vector3(-191.14317, 105.11383, -336.23474), Vector3(-193.58278, 105.09576, -336.61655), Vector3(-198.05379, 105.165276, -337.51303), Vector3(-202.33553, 105.119064, -338.38684), Vector3(-202.4, 105.11866, -338.4), Vector3(-202.4, 105.11866, -338.4), Vector3(-202.4, 105.11866, -338.4), Vector3(-202.4, 105.11866, -338.4), Vector3(-200.98389, 105.101494, -343.52686), Vector3(-199.21317, 105.05824, -346.54498), Vector3(-197.2316, 105.09592, -350.24734), Vector3(-196.6, 105.118454, -351.3), Vector3(-196.6, 105.118454, -351.3), Vector3(-196.6, 105.118454, -351.3), Vector3(-196.6, 105.118454, -351.3), Vector3(-198.18803, 105.07119, -348.0247), Vector3(-198.2, 105.0709, -348), Vector3(-195.91116, 105.106865, -339.7631), Vector3(-192.93718, 105.15471, -331.74872), Vector3(-192.01555, 105.20809, -328.0622), Vector3(-192, 105.20876, -328), Vector3(-192, 105.20876, -328), Vector3(-192, 105.20876, -328), Vector3(-192, 105.20876, -328), Vector3(-193.56232, 105.10133, -338.33234), Vector3(-195.05165, 105.08736, -346.17108), Vector3(-196.58916, 105.11793, -351.26407), Vector3(-196.6, 105.118454, -351.3), Vector3(-196.6, 105.118454, -351.3), Vector3(-196.6, 105.118454, -351.3), Vector3(-196.6, 105.118454, -351.3), Vector3(-202.28268, 105.058014, -350.85605), Vector3(-203.48042, 105.08331, -350.8089), Vector3(-208.27959, 105.10608, -350.89777), Vector3(-208.40665, 105.10514, -350.9288), Vector3(-208.67648, 105.11227, -352.09808), Vector3(-208.7, 105.11275, -352.2), Vector3(-208.7, 105.11275, -352.2), Vector3(-208.7, 105.11275, -352.2), Vector3(-208.7, 105.11275, -352.2), Vector3(-210.54692, 105.10847, -346.49133), Vector3(-211.98752, 105.091675, -342.03857), Vector3(-219.48186, 105.16793, -336.85623), Vector3(-220.0886, 105.150635, -336.47827), Vector3(-225.21658, 105.06962, -335.22046), Vector3(-225.3, 105.06964, -335.2), Vector3(-225.3, 105.06964, -335.2), Vector3(-225.3, 105.06964, -335.2), Vector3(-225.3, 105.06964, -335.2), Vector3(-225.2, 105.07348, -331.2), Vector3(-225.2, 105.07348, -331.2), Vector3(-225.2, 105.07348, -331.2), Vector3(-225.2, 105.07348, -331.2), Vector3(-225.2, 105.07348, -331.2), Vector3(-225.2, 105.07348, -331.2), Vector3(-229.53616, 105.12094, -334.20737), Vector3(-234.3862, 105.166794, -335.19717), Vector3(-234.4, 105.166695, -335.2), Vector3(-234.4, 105.166695, -335.2), Vector3(-234.4, 105.166695, -335.2), Vector3(-233.51369, 105.19343, -331.55624), Vector3(-233.06404, 105.183815, -331.17776), Vector3(-231.25465, 105.13708, -329.8404), Vector3(-231.22731, 105.13589, -329.72263), Vector3(-232.37553, 105.17799, -326.46933), Vector3(-232.4, 105.18017, -326.4), Vector3(-232.4, 105.18017, -326.4), Vector3(-232.4, 105.18017, -326.4), Vector3(-232.4, 105.18017, -326.4), Vector3(-230.41158, 105.12046, -329.9022), Vector3(-225.98305, 105.07289, -335.00705), Vector3(-216.26305, 105.15441, -339.05707), Vector3(-213.75563, 105.136826, -340.1333), Vector3(-208.61993, 105.0467, -342.93457), Vector3(-203.256, 105.08689, -345.86035), Vector3(-202.82883, 105.0765, -346.1512), Vector3(-199.32129, 105.03879, -349.24954), Vector3(-197, 105.11511, -351.3), Vector3(-197, 105.11511, -351.3), Vector3(-197, 105.11511, -351.3), Vector3(-197, 105.11511, -351.3), Vector3(-202.26176, 105.05774, -350.8615), Vector3(-203.53911, 105.08467, -350.81), Vector3(-208.33829, 105.10554, -350.89886), Vector3(-208.4221, 105.10554, -350.99576), Vector3(-208.67393, 105.11221, -352.08707), Vector3(-208.7, 105.11275, -352.2), Vector3(-208.7, 105.11275, -352.2), Vector3(-211.12627, 105.11999, -354.5515), Vector3(-211.95851, 105.12302, -355.5502), Vector3(-212, 105.12307, -355.6), Vector3(-212, 105.12307, -355.6), Vector3(-212, 105.30212, -356), Vector3(-212, 105.32227, -357.08334), Vector3(-212, 105.5764, -358), Vector3(-212, 106.462494, -359.08334), Vector3(-212, 107.65457, -360.08334), Vector3(-212, 109.03359, -361), Vector3(-212, 113.02881, -363.08334), Vector3(-212, 116.080925, -365), Vector3(-212, 117.21549, -366), Vector3(-212, 118.02256, -367.16666), Vector3(-212, 118.74365, -368), Vector3(-212, 119.00151, -369.16666), Vector3(-212, 119.31336, -370), Vector3(-212, 120.686455, -371), Vector3(-212, 120.73646, -372.8), Vector3(-212, 120.73646, -372.8)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Actors/Actor_Protagonist:rotation")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(4, 17.98, 18, 19.4, 19.5, 39.98, 40, 40.4, 40.5, 48.3, 48.4, 54.6, 54.7, 59.98, 60, 60.9, 61, 73.98, 74, 74.4, 74.5, 79, 79.1, 84.5, 84.6, 92.98, 93, 93.4, 93.5, 97.5, 97.6, 100.2, 100.3, 102.5, 102.6, 128.98, 129, 137.9, 138, 139.8, 139.9, 142.98, 143, 143.4, 143.5, 148, 148.1, 153.3, 153.4, 157, 157.2, 166.98, 167, 167.9, 168, 171.7, 171.8, 173.8, 174, 176.9, 177.1, 190.98, 191, 191.9, 192, 195.9, 196, 200.3, 200.4, 204.8, 204.9, 216.98, 217, 217.4, 217.5, 222.8, 223.3, 227.1, 227.2, 250.98, 251, 251.4, 251.5, 255.7, 255.8, 259.3, 259.4, 274.98, 275, 275.4, 275.5, 284.4, 284.5, 292.5, 292.6, 304.98, 305, 324.98, 325, 344.98, 345, 345.4, 345.5, 350.2, 350.3, 368.98, 369, 369.7, 369.8, 372.3, 372.4, 374.2, 374.3, 402.98, 403, 406.9, 407, 409.9, 410, 415.2, 415.3, 425.2, 425.3, 434.9, 435, 452.98, 453, 453.4, 453.5, 457.2, 457.3, 460.6, 460.7, 466.9, 467, 469.4, 469.5, 471.4, 471.5, 496.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 3.1415927, 0), Vector3(0, 3.1415927, 0), Vector3(0, 8.742278e-08, 0), Vector3(0, 0, 0), Vector3(0, 2.9516044, 0), Vector3(0, 2.9554608, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, -0.63502675, 0), Vector3(0, -0.63502675, 0), Vector3(0, -1.3215442, 0), Vector3(0, -1.3215442, 0), Vector3(0, -1.5707964, 0), Vector3(0, -1.5707964, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, -2.878598, 0), Vector3(0, -2.878598, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, -1.4038261, 0), Vector3(0, -1.4038261, 0), Vector3(0, -1.5435303, 0), Vector3(0, -1.5435303, 0), Vector3(0, -3.070285, 0), Vector3(0, -3.070285, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0.810393, 0), Vector3(0, 0.810393, 0), Vector3(0, 0.26396373, 0), Vector3(0, 0.26396373, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 1.1659045, 0), Vector3(0, 1.1659045, 0), Vector3(0, 3.304833, 0), Vector3(0, 3.304833, 0), Vector3(0, 3.7083218, 0), Vector3(0, 3.7083218, 0), Vector3(0, 3.1415927, 0), Vector3(0, 3.1415927, 0), Vector3(0, 8.742278e-08, 0), Vector3(0, 0, 0), Vector3(0, -1.9832067, 0), Vector3(0, -1.9832067, 0), Vector3(0, -1.6207547, 0), Vector3(0, -1.6207547, 0), Vector3(0, -1.7126933, 0), Vector3(0, -1.7126933, 0), Vector3(0, -1.7681919, 0), Vector3(0, -1.7721134, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 2.8736823, 0), Vector3(0, 2.8736823, 0), Vector3(0, 2.6011732, 0), Vector3(0, 2.6011732, 0), Vector3(0, 2.6571147, 0), Vector3(0, 2.6571147, 0), Vector3(0, 2.6011732, 0), Vector3(0, 2.6011732, 0), Vector3(0, 3.1415927, 0), Vector3(0, 3.1415927, 0), Vector3(0, 5.8317323, 0), Vector3(0, 5.8317323, 0), Vector3(0, 6.5515513, 0), Vector3(0, 6.5515513, 0), Vector3(0, 6.641956, 0), Vector3(0, 6.641956, 0), Vector3(0, 6.528164, 0), Vector3(0, 6.528164, 0), Vector3(0, 6.2831855, 0), Vector3(0, 6.2831855, 0), Vector3(0, 3.2904825, 0), Vector3(0, 3.2904825, 0), Vector3(0, 3.3269405, 0), Vector3(0, 3.3269405, 0), Vector3(0, 3.4347794, 0), Vector3(0, 3.4347794, 0), Vector3(0, 6.2831855, 0), Vector3(0, 6.2831855, 0), Vector3(0, 4.7903557, 0), Vector3(0, 4.7903557, 0), Vector3(0, 4.6938725, 0), Vector3(0, 4.6938725, 0), Vector3(0, 3.3683915, 0), Vector3(0, 3.3683915, 0), Vector3(0, 6.2831855, 0), Vector3(0, 6.2831855, 0), Vector3(0, 5.970284, 0), Vector3(0, 5.970284, 0), Vector3(0, 5.3146763, 0), Vector3(0, 5.3146763, 0), Vector3(0, 4.9529233, 0), Vector3(0, 4.9529233, 0), Vector3(0, 6.2831855, 0), Vector3(0, 6.3081803, 0), Vector3(0, 4.5931854, 0), Vector3(0, 4.5931854, 0), Vector3(0, 6.2831855, 0), Vector3(0, 6.2831855, 0), Vector3(0, 4.1032257, 0), Vector3(0, 4.1032257, 0), Vector3(0, 4.5110717, 0), Vector3(0, 4.5110717, 0), Vector3(0, 6.2831855, 0), Vector3(0, 6.2831855, 0), Vector3(0, 6.521795, 0), Vector3(0, 6.521795, 0), Vector3(0, 7.2174735, 0), Vector3(0, 7.2174735, 0), Vector3(0, 5.9438925, 0), Vector3(0, 5.9438925, 0), Vector3(0, 6.2831855, 0), Vector3(0, 6.2831855, 0), Vector3(0, 8.915186, 0), Vector3(0, 8.915186, 0), Vector3(0, 8.71142, 0), Vector3(0, 8.71142, 0), Vector3(0, 8.248773, 0), Vector3(0, 8.248773, 0), Vector3(0, 8.353329, 0), Vector3(0, 8.353329, 0), Vector3(0, 8.577512, 0), Vector3(0, 8.577512, 0), Vector3(0, 8.573185, 0), Vector3(0, 8.573185, 0), Vector3(0, 11.078715, 0), Vector3(0, 11.078715, 0), Vector3(0, 10.977058, 0), Vector3(0, 10.977058, 0), Vector3(0, 9.651577, 0), Vector3(0, 9.651577, 0), Vector3(0, 10.232394, 0), Vector3(0, 10.232394, 0), Vector3(0, 10.119516, 0), Vector3(0, 10.119516, 0), Vector3(0, 9.424778, 0), Vector3(0, 9.424778, 0)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Cam_02_WakingUp:position")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(4, 17.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-129.4, 106.30678, -318.8), Vector3(-129.4, 106.30678, -318.8)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Cam_02_WakingUp:rotation")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(4, 17.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.111730576, 0.86853784, 0), Vector3(-0.111730576, 0.86853784, 0)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Cam_03_TheHollow:position")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(18, 19.4, 19.5, 22.4, 25, 28.8, 32.6, 35.9, 37.5, 37.6, 39.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-132, 107.324646, -326), Vector3(-132, 107.324646, -326), Vector3(-132.94424, 107.324646, -316.08997), Vector3(-132.068, 107.32674, -320.64648), Vector3(-131.2824, 107.38912, -324.73163), Vector3(-130.12146, 107.37636, -330.6998), Vector3(-128.9963, 107.49473, -336.67477), Vector3(-128.0192, 107.411156, -341.8636), Vector3(-127.54544, 107.394325, -344.37936), Vector3(-127.52529, 107.39363, -344.48636), Vector3(-127.52529, 107.39363, -344.48636)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Cam_03_TheHollow:rotation")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(18, 19.4, 19.5, 39.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.13664392, -3.1415925, 0), Vector3(-0.13664392, -3.1415925, 0), Vector3(-0.13664393, -0.18998945, 0), Vector3(-0.13664396, -0.18613157, 0)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Cam_04_TheFirstHouses:position")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(40, 40.4, 40.5, 44.8, 48.3, 48.4, 54, 54.6, 54.7, 56.7, 58.2, 58.3, 59.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-126.6, 107.293625, -353.9), Vector3(-126.6, 107.293625, -353.9), Vector3(-123.9306, 107.293625, -353.02274), Vector3(-128.52197, 107.34176, -346.7916), Vector3(-132.25912, 107.26605, -341.71976), Vector3(-130.69672, 107.26261, -339.09537), Vector3(-140.46523, 107.27591, -336.60886), Vector3(-141.51184, 107.26146, -336.34244), Vector3(-141.54872, 107.25887, -335.2), Vector3(-145.14873, 107.262634, -335.2), Vector3(-147.84872, 107.30976, -335.2), Vector3(-147.9, 107.310135, -335.2), Vector3(-147.9, 107.310135, -335.2)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Cam_04_TheFirstHouses:rotation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(40, 40.4, 40.5, 48.3, 48.4, 54.6, 54.7, 59.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.13255154, -3.1415925, 0), Vector3(-0.13255154, -3.1415925, 0), Vector3(-0.13255179, -3.7766204, 0), Vector3(-0.13255179, -3.7766204, 0), Vector3(-0.13255168, -4.463136, 0), Vector3(-0.13255168, -4.463136, 0), Vector3(-0.13255154, -4.712389, 0), Vector3(-0.13255154, -4.712389, 0)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Cam_05_TheYearMarks:position")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(60, 73.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-150.6, 106.81294, -336.2), Vector3(-150.6, 106.81294, -336.2)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Cam_05_TheYearMarks:rotation")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(60, 73.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.066972, 0.5070985, 0), Vector3(-0.066972, 0.5070985, 0)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Cam_06_TheHealingWall_A:position")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(74, 74.4, 74.5, 79, 79.1, 84.5, 84.6, 85.2, 85.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-153.1, 107.35956, -341.8), Vector3(-153.1, 107.35956, -341.8), Vector3(-149.15564, 107.35956, -338.46478), Vector3(-158.03047, 107.320625, -336.96902), Vector3(-158.1759, 107.32274, -336.4043), Vector3(-168.97188, 107.29211, -336.10983), Vector3(-172.72716, 107.29572, -332.1801), Vector3(-172.81265, 107.30351, -333.37708), Vector3(-172.81502, 107.30325, -333.41016)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Cam_06_TheHealingWall_A:rotation")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(74, 74.4, 74.5, 79, 79.1, 84.5, 84.6, 85.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.15264933, -3.1415925, 0), Vector3(-0.15264933, -3.1415925, 0), Vector3(-0.1526495, -4.5454154, 0), Vector3(-0.1526495, -4.5454154, 0), Vector3(-0.15264921, -4.6851263, 0), Vector3(-0.15264921, -4.6851263, 0), Vector3(-0.15264913, -6.2118783, 0), Vector3(-0.15264913, -6.2118783, 0)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Cam_06_TheHealingWall_B:position")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(85.4, 92.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-170.5, 106.8089, -333.2), Vector3(-170.5, 106.8089, -333.2)]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Cam_06_TheHealingWall_B:rotation")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(85.4, 92.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.052424047, 0.40697157, 0), Vector3(-0.052424047, 0.40697157, 0)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Cam_07_TheGuestHouse_A:position")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(93, 103.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-176, 107.41332, -332.5), Vector3(-176, 107.41332, -332.5)]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Cam_07_TheGuestHouse_A:rotation")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(93, 103.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.13156423, -1.9832067, 0), Vector3(-0.13156423, -1.9832067, 0)]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Cam_07_TheGuestHouse_B:position")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(103.8, 128.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-171.9, 107.55709, -323.4), Vector3(-171.9, 107.55709, -323.4)]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Cam_07_TheGuestHouse_B:rotation")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(103.8, 128.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.20972332, -1.23606, 0), Vector3(-0.20972332, -1.23606, 0)]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Actors/Actor_Creature:position")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(129, 136.4, 325, 341.2, 345, 368.98, 369, 379, 380, 385, 387.8, 388, 393, 402.98, 403, 425, 430.2, 440.3, 450, 452.98, 453, 465, 470.6, 478.5, 483, 496.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-168, 105.04414, -334.6), Vector3(-168, 105.04414, -334.6), Vector3(-232, 105.17114, -332), Vector3(-232, 105.17114, -332), Vector3(-225, 105.06992, -335.2), Vector3(-225, 105.06992, -335.2), Vector3(-225, 105.06992, -335.2), Vector3(-231, 105.141426, -332), Vector3(-231, 105.13871, -331.2), Vector3(-231, 105.13871, -331.2), Vector3(-234.26666, 105.18134, -334.28), Vector3(-234.5, 105.17618, -334.5), Vector3(-235.5, 105.17093, -333), Vector3(-235.5, 105.17093, -333), Vector3(-235.5, 105.17093, -333), Vector3(-235.5, 105.17093, -333), Vector3(-231.50714, 105.1609, -333.92856), Vector3(-223.75179, 105.078926, -335.73215), Vector3(-216.30357, 105.20264, -337.4643), Vector3(-214.01535, 105.18389, -337.99643), Vector3(-206, 105.1037, -338), Vector3(-206, 105.1037, -338), Vector3(-207.6489, 105.014786, -341.6711), Vector3(-209.975, 105.09675, -346.85), Vector3(-211.3, 105.11879, -349.8), Vector3(-211.3, 105.11879, -349.8)]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("Actors/Actor_Creature:rotation")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(129, 136.4, 325, 334.1, 334.4, 334.8, 335.4, 336.1, 336.5, 336.8, 337.5, 341.2, 345, 368.98, 369, 378.9, 379, 379.9, 380, 384.9, 385, 387.9, 388, 392.9, 393, 402.98, 403, 428.3, 452.98, 453, 465.1, 483, 483.1, 496.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, -1.5707964, 0), Vector3(0, -1.560557, 0), Vector3(0, -1.4181381, 0), Vector3(0, -1.0197377, 0), Vector3(0, -0.15684693, 0), Vector3(0, 0.89221233, 0), Vector3(0, 1.3380858, 0), Vector3(0, 1.5307701, 0), Vector3(0, 1.5707964, 0), Vector3(0, 1.5707964, 0), Vector3(0, -1.5707963, 0), Vector3(0, -1.5707964, 0), Vector3(0, -1.080839, 0), Vector3(0, -1.080839, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, -0.28, 0), Vector3(0, -0.28, 0), Vector3(0, -2.3267913, 0), Vector3(0, -2.3267913, 0), Vector3(0, -0.5880026, 0), Vector3(0, -0.5880026, 0), Vector3(0, 1.5707964, 0), Vector3(0, 1.5707964, 0), Vector3(0, 1.5707964, 0), Vector3(0, 1.7992929, 0), Vector3(0, 1.7992929, 0), Vector3(0, 0, 0), Vector3(0, -2.7194438, 0), Vector3(0, -2.7194438, 0), Vector3(0, -3.1415925, 0), Vector3(0, -3.1415925, 0)]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("Cam_08_TheFigureInTheWindow:position")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(129, 142.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-166.8, 107.03601, -323.4), Vector3(-166.8, 107.03601, -323.4)]
+}
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("Cam_08_TheFigureInTheWindow:rotation")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(129, 142.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.062172346, 0.107689545, 0), Vector3(-0.062172346, 0.107689545, 0)]
+}
+tracks/47/type = "value"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("Cam_09_TheFestivalRing_A:position")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"times": PackedFloat32Array(143, 143.4, 143.5, 146.6, 148, 148.1, 152.4, 153.3, 153.4, 155.7, 157, 157.1, 159.5, 159.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-168, 107.32209, -336), Vector3(-168, 107.32209, -336), Vector3(-163.87729, 107.32209, -329.69632), Vector3(-169.27345, 107.32186, -332.05713), Vector3(-171.71043, 107.33505, -333.12332), Vector3(-171.51347, 107.33549, -334.77567), Vector3(-179.6733, 107.36225, -335.18365), Vector3(-181.38115, 107.3813, -335.26904), Vector3(-181.60995, 107.38395, -334.87286), Vector3(-185.93604, 107.42579, -335.49088), Vector3(-188.38121, 107.39066, -335.84018), Vector3(-188.61124, 107.39065, -335.62225), Vector3(-193.08267, 107.47206, -336.51654), Vector3(-193.64467, 107.46528, -336.61322)]
+}
+tracks/48/type = "value"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("Cam_09_TheFestivalRing_A:rotation")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"times": PackedFloat32Array(143, 143.4, 143.5, 148, 148.1, 153.3, 153.4, 157, 157.1, 159.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.14562917, -3.1415925, 0), Vector3(-0.14562917, -3.1415925, 0), Vector3(-0.14562914, -5.1247983, 0), Vector3(-0.14562914, -5.1247983, 0), Vector3(-0.1456291, -4.7623487, 0), Vector3(-0.1456291, -4.7623487, 0), Vector3(-0.14562924, -4.8542833, 0), Vector3(-0.14562924, -4.8542833, 0), Vector3(-0.14562924, -4.9097824, 0), Vector3(-0.14562929, -4.9137053, 0)]
+}
+tracks/49/type = "value"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("Cam_09_TheFestivalRing_B:position")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"times": PackedFloat32Array(159.8, 166.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-197.5, 107.67866, -344), Vector3(-197.5, 107.67866, -344)]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("Cam_09_TheFestivalRing_B:rotation")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(159.8, 166.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.109367564, 2.4468544, 0), Vector3(-0.109367564, 2.4468544, 0)]
+}
+tracks/51/type = "value"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("Cam_10_TheDigSite_A:position")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"times": PackedFloat32Array(167, 167.9, 168, 171.5, 171.7, 171.8, 173.8, 173.9, 176.9, 177, 178.1, 178.2, 179),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-202.4, 107.51866, -342.6), Vector3(-202.4, 107.51866, -342.6), Vector3(-203.51181, 107.51866, -334.34982), Vector3(-202.2147, 107.50978, -339.07504), Vector3(-202.14058, 107.504196, -339.34503), Vector3(-203.14478, 107.501495, -339.92538), Vector3(-201.70418, 107.46281, -342.3264), Vector3(-201.43011, 107.46158, -342.3328), Vector3(-199.47398, 107.48624, -346.04944), Vector3(-199.60858, 107.48853, -346.2857), Vector3(-198.81625, 107.516525, -347.60626), Vector3(-198.7609, 107.518456, -347.69852), Vector3(-198.7609, 107.518456, -347.69852)]
+}
+tracks/52/type = "value"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("Cam_10_TheDigSite_A:rotation")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"times": PackedFloat32Array(167, 167.9, 168, 171.7, 171.8, 173.8, 173.9, 176.9, 177, 179),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.17722572, -3.1415925, 0), Vector3(-0.17722572, -3.1415925, 0), Vector3(-0.1772257, -0.2679101, 0), Vector3(-0.1772257, -0.2679101, 0), Vector3(-0.17722581, -0.5404199, 0), Vector3(-0.17722581, -0.5404199, 0), Vector3(-0.1772267, -0.48447952, 0), Vector3(-0.177226, -0.4844774, 0), Vector3(-0.17722581, -0.5404199, 0), Vector3(-0.17722581, -0.5404199, 0)]
+}
+tracks/53/type = "value"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("Cam_10_TheDigSite_B:position")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"times": PackedFloat32Array(179, 190.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-192.5, 107.09683, -348.2), Vector3(-192.5, 107.09683, -348.2)]
+}
+tracks/54/type = "value"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("Cam_10_TheDigSite_B:rotation")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/keys = {
+"times": PackedFloat32Array(179, 190.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.16152658, 0.7252298, 0), Vector3(-0.16152658, 0.7252298, 0)]
+}
+tracks/55/type = "value"
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/path = NodePath("Cam_11_TheGenerator_A:position")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/keys = {
+"times": PackedFloat32Array(191, 196.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-193, 107.09606, -347.5), Vector3(-193, 107.09606, -347.5)]
+}
+tracks/56/type = "value"
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/path = NodePath("Cam_11_TheGenerator_A:rotation")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/keys = {
+"times": PackedFloat32Array(191, 196.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.21631266, 1.3734008, 0), Vector3(-0.21631266, 1.3734008, 0)]
+}
+tracks/57/type = "value"
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/path = NodePath("Cam_11_TheGenerator_B:position")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/keys = {
+"times": PackedFloat32Array(196.2, 200.27019, 200.36946, 204.83673, 204.936, 207.02072, 207.12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-199.29245, 107.372055, -351.97253), Vector3(-197.2419, 107.400246, -344.516), Vector3(-197.57831, 107.402954, -344.2088), Vector3(-194.59804, 107.45192, -336.2614), Vector3(-194.05809, 107.453514, -336.23233), Vector3(-193.09741, 107.50851, -332.38962), Vector3(-193.09142, 107.508766, -332.36563)]
+}
+tracks/58/type = "value"
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/path = NodePath("Cam_11_TheGenerator_B:rotation")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/keys = {
+"times": PackedFloat32Array(196.2, 200.27019, 200.36946, 204.83673, 204.936, 207.12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.14562923, -2.8732257, 0), Vector3(-0.14562923, -2.8732257, 0), Vector3(-0.14562924, -2.78282, 0), Vector3(-0.14562924, -2.78282, 0), Vector3(-0.14562932, -2.896614, 0), Vector3(-0.14562932, -2.896614, 0)]
+}
+tracks/59/type = "value"
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/path = NodePath("Cam_11_TheGenerator_C:position")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/keys = {
+"times": PackedFloat32Array(207.12, 216.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-187.5, 107.09102, -331.5), Vector3(-187.5, 107.09102, -331.5)]
+}
+tracks/60/type = "value"
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/path = NodePath("Cam_11_TheGenerator_C:rotation")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/keys = {
+"times": PackedFloat32Array(207.12, 216.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.13922767, 2.3334696, 0), Vector3(-0.13922767, 2.3334696, 0)]
+}
+tracks/61/type = "value"
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/path = NodePath("Cam_12_TheRadio_A:position")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/keys = {
+"times": PackedFloat32Array(217, 217.4, 217.5, 222.8, 222.9, 225.1, 227.1, 227.2, 230, 230.2, 230.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-192, 107.508766, -332.5), Vector3(-192, 107.508766, -332.5), Vector3(-191.33247, 107.508766, -323.54977), Vector3(-192.82626, 107.395706, -333.50836), Vector3(-192.698, 107.398415, -333.7227), Vector3(-193.46832, 107.40773, -337.8311), Vector3(-194.16862, 107.38741, -341.566), Vector3(-193.75113, 107.38736, -341.8631), Vector3(-195.28864, 107.41793, -346.9561), Vector3(-195.29948, 107.41846, -346.992), Vector3(-195.29948, 107.41846, -346.992)]
+}
+tracks/62/type = "value"
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/path = NodePath("Cam_12_TheRadio_A:rotation")
+tracks/62/interp = 1
+tracks/62/loop_wrap = true
+tracks/62/keys = {
+"times": PackedFloat32Array(217, 217.4, 217.5, 222.8, 222.9, 227.1, 227.2, 230.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.14562917, -3.1415925, 0), Vector3(-0.14562917, -3.1415925, 0), Vector3(-0.14562918, -6.134296, 0), Vector3(-0.14562918, -6.134296, 0), Vector3(-0.14562954, -6.097836, 0), Vector3(-0.14562954, -6.097836, 0), Vector3(-0.14562905, -5.989998, 0), Vector3(-0.14562905, -5.989998, 0)]
+}
+tracks/63/type = "value"
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/path = NodePath("Cam_12_TheRadio_B:position")
+tracks/63/interp = 1
+tracks/63/loop_wrap = true
+tracks/63/keys = {
+"times": PackedFloat32Array(230.6, 250.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-193.6, 106.79148, -349), Vector3(-193.6, 106.79148, -349)]
+}
+tracks/64/type = "value"
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/path = NodePath("Cam_12_TheRadio_B:rotation")
+tracks/64/interp = 1
+tracks/64/loop_wrap = true
+tracks/64/keys = {
+"times": PackedFloat32Array(230.6, 250.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.12198833, 0.72298026, 0), Vector3(-0.12198833, 0.72298026, 0)]
+}
+tracks/65/type = "value"
+tracks/65/imported = false
+tracks/65/enabled = true
+tracks/65/path = NodePath("Cam_13_TheWrongCode_A:position")
+tracks/65/interp = 1
+tracks/65/loop_wrap = true
+tracks/65/keys = {
+"times": PackedFloat32Array(251, 251.49484, 251.59381, 254.85979, 255.75052, 255.84949, 258.52164, 259.31342, 259.41238, 260.20413, 260.3031, 260.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-196.6, 107.31845, -355.3), Vector3(-196.6, 107.31845, -355.3), Vector3(-192.75244, 107.317245, -351.6006), Vector3(-197.63652, 107.24925, -351.21902), Vector3(-198.96855, 107.27119, -351.11496), Vector3(-199.1054, 107.27457, -350.72787), Vector3(-203.11296, 107.3163, -350.8021), Vector3(-204.30038, 107.30589, -350.82407), Vector3(-207.51138, 107.305244, -347.04935), Vector3(-207.77843, 107.312294, -348.20657), Vector3(-207.80055, 107.312744, -348.30246), Vector3(-207.80055, 107.312744, -348.30246)]
+}
+tracks/66/type = "value"
+tracks/66/imported = false
+tracks/66/enabled = true
+tracks/66/path = NodePath("Cam_13_TheWrongCode_A:rotation")
+tracks/66/interp = 1
+tracks/66/loop_wrap = true
+tracks/66/keys = {
+"times": PackedFloat32Array(251, 251.49484, 251.59381, 255.75052, 255.84949, 259.31342, 259.41238, 260.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.15264933, -3.1415925, 0), Vector3(-0.15264933, -3.1415925, 0), Vector3(-0.15264927, -4.63442, 0), Vector3(-0.15264927, -4.63442, 0), Vector3(-0.15264931, -4.730907, 0), Vector3(-0.15264931, -4.730907, 0), Vector3(-0.15264964, -6.056385, 0), Vector3(-0.15264964, -6.056385, 0)]
+}
+tracks/67/type = "value"
+tracks/67/imported = false
+tracks/67/enabled = true
+tracks/67/path = NodePath("Cam_13_TheWrongCode_B:position")
+tracks/67/interp = 1
+tracks/67/loop_wrap = true
+tracks/67/keys = {
+"times": PackedFloat32Array(260.6, 274.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-205.8, 106.93621, -349.2), Vector3(-205.8, 106.93621, -349.2)]
+}
+tracks/68/type = "value"
+tracks/68/imported = false
+tracks/68/enabled = true
+tracks/68/path = NodePath("Cam_13_TheWrongCode_B:rotation")
+tracks/68/interp = 1
+tracks/68/loop_wrap = true
+tracks/68/keys = {
+"times": PackedFloat32Array(260.6, 274.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.10426831, 0.6435011, 0), Vector3(-0.10426831, 0.6435011, 0)]
+}
+tracks/69/type = "value"
+tracks/69/imported = false
+tracks/69/enabled = true
+tracks/69/path = NodePath("Cam_14_TheBurnedQuarter_A:position")
+tracks/69/interp = 1
+tracks/69/loop_wrap = true
+tracks/69/keys = {
+"times": PackedFloat32Array(275, 275.5, 275.6, 279.7, 283.3, 284.4, 284.5, 291.6, 292.5, 292.6, 296),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-208.7, 107.61275, -357.40002), Vector3(-208.7, 107.61275, -357.40002), Vector3(-207.13628, 107.61219, -357.03333), Vector3(-208.65076, 107.59445, -352.35223), Vector3(-209.98053, 107.59985, -348.24197), Vector3(-210.38686, 107.591675, -346.98608), Vector3(-207.78046, 107.59297, -344.90094), Vector3(-214.8013, 107.67628, -340.07413), Vector3(-215.69125, 107.65417, -339.46225), Vector3(-215.0383, 107.650635, -337.717), Vector3(-219.00084, 107.576416, -336.74506)]
+}
+tracks/70/type = "value"
+tracks/70/imported = false
+tracks/70/enabled = true
+tracks/70/path = NodePath("Cam_14_TheBurnedQuarter_A:rotation")
+tracks/70/interp = 1
+tracks/70/loop_wrap = true
+tracks/70/keys = {
+"times": PackedFloat32Array(275, 275.5, 275.6, 284.4, 284.5, 292.5, 292.6, 296),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.14832796, -3.1415925, 0), Vector3(-0.14832796, -3.1415925, 0), Vector3(-0.14832832, -3.4544945, 0), Vector3(-0.14832832, -3.4544945, 0), Vector3(-0.14832823, -4.110101, 0), Vector3(-0.14832823, -4.110101, 0), Vector3(-0.14832842, -4.4718566, 0), Vector3(-0.14832842, -4.4718566, 0)]
+}
+tracks/71/type = "value"
+tracks/71/imported = false
+tracks/71/enabled = true
+tracks/71/path = NodePath("Cam_14_TheBurnedQuarter_B:position")
+tracks/71/interp = 1
+tracks/71/loop_wrap = true
+tracks/71/keys = {
+"times": PackedFloat32Array(296, 304.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-221.5, 107.134735, -331), Vector3(-221.5, 107.134735, -331)]
+}
+tracks/72/type = "value"
+tracks/72/imported = false
+tracks/72/enabled = true
+tracks/72/path = NodePath("Cam_14_TheBurnedQuarter_B:rotation")
+tracks/72/interp = 1
+tracks/72/loop_wrap = true
+tracks/72/keys = {
+"times": PackedFloat32Array(296, 304.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.16018009, 1.0191413, 0), Vector3(-0.16018009, 1.0191413, 0)]
+}
+tracks/73/type = "value"
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/path = NodePath("Cam_15_TheKeycard:position")
+tracks/73/interp = 1
+tracks/73/loop_wrap = true
+tracks/73/keys = {
+"times": PackedFloat32Array(305, 324.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-222.4, 106.82761, -333.2), Vector3(-222.4, 106.82761, -333.2)]
+}
+tracks/74/type = "value"
+tracks/74/imported = false
+tracks/74/enabled = true
+tracks/74/path = NodePath("Cam_15_TheKeycard:rotation")
+tracks/74/interp = 1
+tracks/74/loop_wrap = true
+tracks/74/keys = {
+"times": PackedFloat32Array(305, 324.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.19913258, 2.1885538, 0), Vector3(-0.19913258, 2.1885538, 0)]
+}
+tracks/75/type = "value"
+tracks/75/imported = false
+tracks/75/enabled = true
+tracks/75/path = NodePath("Cam_16_ItStandsThere:position")
+tracks/75/interp = 1
+tracks/75/loop_wrap = true
+tracks/75/keys = {
+"times": PackedFloat32Array(325, 344.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-222.6, 106.69211, -329.2), Vector3(-222.6, 106.69211, -329.2)]
+}
+tracks/76/type = "value"
+tracks/76/imported = false
+tracks/76/enabled = true
+tracks/76/path = NodePath("Cam_16_ItStandsThere:rotation")
+tracks/76/interp = 1
+tracks/76/loop_wrap = true
+tracks/76/keys = {
+"times": PackedFloat32Array(325, 344.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.012332389, 1.2812936, 0), Vector3(-0.012332389, 1.2812936, 0)]
+}
+tracks/77/type = "value"
+tracks/77/imported = false
+tracks/77/enabled = true
+tracks/77/path = NodePath("Cam_17_TheLastCarving_A:position")
+tracks/77/interp = 1
+tracks/77/loop_wrap = true
+tracks/77/keys = {
+"times": PackedFloat32Array(345, 362.28),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-230.8, 107.0716, -339.3), Vector3(-230.8, 107.0716, -339.3)]
+}
+tracks/78/type = "value"
+tracks/78/imported = false
+tracks/78/enabled = true
+tracks/78/path = NodePath("Cam_17_TheLastCarving_A:rotation")
+tracks/78/interp = 1
+tracks/78/loop_wrap = true
+tracks/78/keys = {
+"times": PackedFloat32Array(345, 362.28),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.04749761, 2.334459, 0), Vector3(-0.04749761, 2.334459, 0)]
+}
+tracks/79/type = "value"
+tracks/79/imported = false
+tracks/79/enabled = true
+tracks/79/path = NodePath("Cam_17_TheLastCarving_B:position")
+tracks/79/interp = 1
+tracks/79/loop_wrap = true
+tracks/79/keys = {
+"times": PackedFloat32Array(362.28, 368.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-233.5, 107.15429, -329.5), Vector3(-233.5, 107.15429, -329.5)]
+}
+tracks/80/type = "value"
+tracks/80/imported = false
+tracks/80/enabled = true
+tracks/80/path = NodePath("Cam_17_TheLastCarving_B:rotation")
+tracks/80/interp = 1
+tracks/80/loop_wrap = true
+tracks/80/keys = {
+"times": PackedFloat32Array(362.28, 368.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.066771254, -0.98008275, 0), Vector3(-0.066771254, -0.98008275, 0)]
+}
+tracks/81/type = "value"
+tracks/81/imported = false
+tracks/81/enabled = true
+tracks/81/path = NodePath("Cam_18_ItHunts_A:position")
+tracks/81/interp = 1
+tracks/81/loop_wrap = true
+tracks/81/keys = {
+"times": PackedFloat32Array(369, 369.7919, 369.8909, 372.26657, 372.36557, 374.14734, 374.24634, 376.62204, 376.721, 376.82),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-234.4, 107.36669, -339.2), Vector3(-234.4, 107.36669, -339.2), Vector3(-235.31319, 107.368645, -338.9542), Vector3(-234.47093, 107.39419, -335.4916), Vector3(-236.68416, 107.39198, -333.85352), Vector3(-234.53488, 107.33855, -332.2649), Vector3(-229.86923, 107.33583, -333.57053), Vector3(-231.05525, 107.37897, -330.21014), Vector3(-231.06871, 107.380165, -330.17197), Vector3(-231.06871, 107.380165, -330.17197)]
+}
+tracks/82/type = "value"
+tracks/82/imported = false
+tracks/82/enabled = true
+tracks/82/path = NodePath("Cam_18_ItHunts_A:rotation")
+tracks/82/interp = 1
+tracks/82/loop_wrap = true
+tracks/82/keys = {
+"times": PackedFloat32Array(369, 369.7919, 369.8909, 372.26657, 372.36557, 374.14734, 374.24634, 376.82),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.14189707, -3.1415925, 0), Vector3(-0.14189707, -3.1415925, 0), Vector3(-0.14189717, -2.9029825, 0), Vector3(-0.14189717, -2.9029825, 0), Vector3(-0.14189717, -2.207305, 0), Vector3(-0.14189717, -2.207305, 0), Vector3(-0.14189667, -3.4808846, 0), Vector3(-0.14189667, -3.4808846, 0)]
+}
+tracks/83/type = "value"
+tracks/83/imported = false
+tracks/83/enabled = true
+tracks/83/path = NodePath("Cam_18_ItHunts_B:position")
+tracks/83/interp = 1
+tracks/83/loop_wrap = true
+tracks/83/keys = {
+"times": PackedFloat32Array(376.82, 402.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-227.8, 107.49992, -322), Vector3(-227.8, 107.49992, -322)]
+}
+tracks/84/type = "value"
+tracks/84/imported = false
+tracks/84/enabled = true
+tracks/84/path = NodePath("Cam_18_ItHunts_B:rotation")
+tracks/84/interp = 1
+tracks/84/loop_wrap = true
+tracks/84/keys = {
+"times": PackedFloat32Array(376.82, 402.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.13793264, 0.45829976, 0), Vector3(-0.13793264, 0.45829976, 0)]
+}
+tracks/85/type = "value"
+tracks/85/imported = false
+tracks/85/enabled = true
+tracks/85/path = NodePath("Cam_19_TheRealCode_A:position")
+tracks/85/interp = 1
+tracks/85/loop_wrap = true
+tracks/85/keys = {
+"times": PackedFloat32Array(403, 409),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-229, 107.52742, -322), Vector3(-229, 107.52742, -322)]
+}
+tracks/86/type = "value"
+tracks/86/imported = false
+tracks/86/enabled = true
+tracks/86/path = NodePath("Cam_19_TheRealCode_A:rotation")
+tracks/86/interp = 1
+tracks/86/loop_wrap = true
+tracks/86/keys = {
+"times": PackedFloat32Array(403, 409),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.27139, 0.6578884, 0), Vector3(-0.27139, 0.6578884, 0)]
+}
+tracks/87/type = "value"
+tracks/87/imported = false
+tracks/87/enabled = true
+tracks/87/path = NodePath("Cam_19_TheRealCode_B:position")
+tracks/87/interp = 1
+tracks/87/loop_wrap = true
+tracks/87/keys = {
+"times": PackedFloat32Array(409, 409.9, 410, 415.2, 415.3, 420.1, 423.2, 425.2, 425.3, 429.4, 434.3, 434.9, 435, 438.2, 440),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-233.57077, 107.52993, -324.30493), Vector3(-233.00002, 107.52301, -325.3263), Vector3(-233.76852, 107.521996, -326.02304), Vector3(-229.34494, 107.4735, -331.13474), Vector3(-230.59843, 107.47289, -333.08398), Vector3(-224.83844, 107.535866, -335.484), Vector3(-221.11844, 107.55562, -337.034), Vector3(-218.71844, 107.542625, -338.034), Vector3(-218.37337, 107.54097, -337.61453), Vector3(-213.69418, 107.44375, -340.1668), Vector3(-208.10199, 107.495575, -343.2171), Vector3(-207.41722, 107.48175, -343.5906), Vector3(-206.67361, 107.47916, -342.75497), Vector3(-203.5558, 107.429375, -345.50903), Vector3(-201.80203, 107.48149, -347.0582)]
+}
+tracks/88/type = "value"
+tracks/88/imported = false
+tracks/88/enabled = true
+tracks/88/path = NodePath("Cam_19_TheRealCode_B:rotation")
+tracks/88/interp = 1
+tracks/88/loop_wrap = true
+tracks/88/keys = {
+"times": PackedFloat32Array(409, 409.9, 410, 415.2, 415.3, 425.2, 425.3, 434.9, 435, 440),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.1402502, -0.5095929, 0), Vector3(-0.1402502, -0.5095929, 0), Vector3(-0.14025028, -0.71335775, 0), Vector3(-0.14025028, -0.71335775, 0), Vector3(-0.14025007, -1.1760061, 0), Vector3(-0.14025007, -1.1760061, 0), Vector3(-0.14025009, -1.0714488, 0), Vector3(-0.14025009, -1.0714488, 0), Vector3(-0.14025031, -0.8472659, 0), Vector3(-0.14025031, -0.8472659, 0)]
+}
+tracks/89/type = "value"
+tracks/89/imported = false
+tracks/89/enabled = true
+tracks/89/path = NodePath("Cam_19_TheRealCode_C:position")
+tracks/89/interp = 1
+tracks/89/loop_wrap = true
+tracks/89/keys = {
+"times": PackedFloat32Array(440, 452.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-193.6, 106.79246, -349.2), Vector3(-193.6, 106.79246, -349.2)]
+}
+tracks/90/type = "value"
+tracks/90/imported = false
+tracks/90/enabled = true
+tracks/90/path = NodePath("Cam_19_TheRealCode_C:rotation")
+tracks/90/interp = 1
+tracks/90/loop_wrap = true
+tracks/90/keys = {
+"times": PackedFloat32Array(440, 452.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.12628014, 0.75315416, 0), Vector3(-0.12628014, 0.75315416, 0)]
+}
+tracks/91/type = "value"
+tracks/91/imported = false
+tracks/91/enabled = true
+tracks/91/path = NodePath("Cam_20_TheCargoLift_A:position")
+tracks/91/interp = 1
+tracks/91/loop_wrap = true
+tracks/91/keys = {
+"times": PackedFloat32Array(453, 453.49915, 453.599, 456.3943, 457.19293, 457.2928, 459.78857, 460.58722, 460.68707, 461.48572, 464.88),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-200.00932, 107.31511, -348.66486), Vector3(-200.00932, 107.31511, -348.66486), Vector3(-193.17166, 107.313156, -351.61902), Vector3(-197.6287, 107.24935, -351.24762), Vector3(-198.90211, 107.26972, -351.14148), Vector3(-199.04832, 107.27325, -350.7268), Vector3(-203.04091, 107.3168, -350.80075), Vector3(-204.31854, 107.305725, -350.8244), Vector3(-207.518, 107.30541, -347.07803), Vector3(-207.80055, 107.312744, -348.30246), Vector3(-207.80055, 107.312744, -348.30246)]
+}
+tracks/92/type = "value"
+tracks/92/imported = false
+tracks/92/enabled = true
+tracks/92/path = NodePath("Cam_20_TheCargoLift_A:rotation")
+tracks/92/interp = 1
+tracks/92/loop_wrap = true
+tracks/92/keys = {
+"times": PackedFloat32Array(453, 453.49915, 453.599, 457.19293, 457.2928, 460.58722, 460.68707, 464.88),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.15264931, -0.8515933, 0), Vector3(-0.15264931, -0.8515933, 0), Vector3(-0.15264952, 1.6539376, 0), Vector3(-0.15264952, 1.6539376, 0), Vector3(-0.15264931, 1.5522782, 0), Vector3(-0.15264931, 1.5522782, 0), Vector3(-0.15264964, 0.22680043, 0), Vector3(-0.15264964, 0.22680043, 0)]
+}
+tracks/93/type = "value"
+tracks/93/imported = false
+tracks/93/enabled = true
+tracks/93/path = NodePath("Cam_20_TheCargoLift_B:position")
+tracks/93/interp = 1
+tracks/93/loop_wrap = true
+tracks/93/keys = {
+"times": PackedFloat32Array(464.88, 470.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-206.2, 106.93179, -349.8), Vector3(-206.2, 106.93179, -349.8)]
+}
+tracks/94/type = "value"
+tracks/94/imported = false
+tracks/94/enabled = true
+tracks/94/path = NodePath("Cam_20_TheCargoLift_B:rotation")
+tracks/94/interp = 1
+tracks/94/loop_wrap = true
+tracks/94/keys = {
+"times": PackedFloat32Array(464.88, 470.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.034419786, 0.78539646, 0), Vector3(-0.034419786, 0.78539646, 0)]
+}
+tracks/95/type = "value"
+tracks/95/imported = false
+tracks/95/enabled = true
+tracks/95/path = NodePath("Cam_20_TheCargoLift_C:position")
+tracks/95/interp = 1
+tracks/95/loop_wrap = true
+tracks/95/keys = {
+"times": PackedFloat32Array(470.6, 490.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-206.5, 107.52906, -349), Vector3(-206.5, 107.52906, -349)]
+}
+tracks/96/type = "value"
+tracks/96/imported = false
+tracks/96/enabled = true
+tracks/96/path = NodePath("Cam_20_TheCargoLift_C:rotation")
+tracks/96/interp = 1
+tracks/96/loop_wrap = true
+tracks/96/keys = {
+"times": PackedFloat32Array(470.6, 471.5, 472.8, 474, 475.3, 476.6, 477.7, 479.1, 480.1, 482.2, 483.7, 486.1, 488.3, 489.7, 490.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.10152785, 0.66596925, 0), Vector3(-0.10152785, 0.66596925, 0), Vector3(-0.09045354, 0.597458, 0), Vector3(-0.053336438, 0.54445666, 0), Vector3(0.030305617, 0.4958949, 0), Vector3(0.1346364, 0.45471928, 0), Vector3(0.23151356, 0.42456168, 0), Vector3(0.35850304, 0.39123532, 0), Vector3(0.42908272, 0.3703237, 0), Vector3(0.5243451, 0.3327049, 0), Vector3(0.55261433, 0.31005535, 0), Vector3(0.5623611, 0.2794479, 0), Vector3(0.543102, 0.25615138, 0), Vector3(0.5681881, 0.24497867, 0), Vector3(0.5681881, 0.24497867, 0)]
+}
+tracks/97/type = "value"
+tracks/97/imported = false
+tracks/97/enabled = true
+tracks/97/path = NodePath("Cam_20_TheCargoLift_D:position")
+tracks/97/interp = 1
+tracks/97/loop_wrap = true
+tracks/97/keys = {
+"times": PackedFloat32Array(490.4, 496.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-208, 122.406456, -371.5), Vector3(-208, 122.406456, -371.5)]
+}
+tracks/98/type = "value"
+tracks/98/imported = false
+tracks/98/enabled = true
+tracks/98/path = NodePath("Cam_20_TheCargoLift_D:rotation")
+tracks/98/interp = 1
+tracks/98/loop_wrap = true
+tracks/98/keys = {
+"times": PackedFloat32Array(490.4, 496.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.6235436, 2.9906752, 0), Vector3(-0.6235436, 2.9906752, 0)]
+}
+tracks/99/type = "value"
+tracks/99/imported = false
+tracks/99/enabled = true
+tracks/99/path = NodePath("Cam_FP:position")
+tracks/99/interp = 1
+tracks/99/loop_wrap = true
+tracks/99/keys = {
+"times": PackedFloat32Array(0, 3.98, 4, 11.6, 11.7, 17.98, 18, 19.5, 31.1, 33.3, 37.5, 37.6, 39.98, 40, 40.5, 46, 48.3, 48.4, 54.7, 58.2, 58.5, 59.98, 60, 61, 63.2, 63.5, 73.98, 74, 74.5, 79.1, 84.5, 85, 85.2, 87.7, 92.98, 93, 93.5, 97.5, 100.3, 102.5, 102.6, 103.6, 103.7, 128.98, 129, 138, 139.9, 142.2, 142.98, 143, 143.5, 148.1, 153.5, 156.8, 157.7, 160.3, 162.1, 162.2, 166.98, 167, 168, 171.8, 174.6, 177.5, 178.2, 190.98, 191, 192, 194.8, 196, 200.6, 205, 207, 207.1, 216.98, 217, 217.5, 223.2, 227.3, 230, 230.8, 250.98, 251, 251.5, 255.5, 256.4, 259.3, 259.4, 260.2, 260.3, 274.98, 275, 275.5, 284.4, 292.2, 292.6, 297, 297.1, 304.98, 305, 305.3, 308.6, 308.9, 309, 324.98, 325, 344.98, 345, 345.5, 350.3, 354.8, 368.98, 369, 369.8, 372.3, 373.1, 374.2, 374.3, 376.6, 376.7, 377.1, 377.2, 402.98, 403, 406.9, 407, 410.1, 415.3, 424.3, 425.6, 430.8, 434.8, 435.3, 439.2, 441.1, 452.98, 453, 453.5, 457, 457.9, 460.6, 460.7, 461.4, 461.5, 467, 469.7, 470.6, 470.7, 471.4, 471.5, 472.8, 473.9, 475.2, 476.4, 477.5, 480, 482.3, 483.5, 485, 485.9, 487.4, 488.3, 489.5, 492.5, 496.98, 497, 502.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-132, 106.66464, -321), Vector3(-132, 106.66464, -321), Vector3(-132, 106.02464, -321), Vector3(-132, 106.02464, -321), Vector3(-132, 106.66464, -321), Vector3(-132, 106.66464, -321), Vector3(-132, 106.66464, -321), Vector3(-132, 106.66464, -321), Vector3(-128.51515, 106.780235, -339.2299), Vector3(-127.86375, 106.82023, -342.6891), Vector3(-126.62015, 106.73432, -349.293), Vector3(-126.6, 106.73363, -349.4), Vector3(-126.6, 106.73363, -349.4), Vector3(-126.6, 106.73363, -349.4), Vector3(-126.6, 106.73363, -349.4), Vector3(-132.47267, 106.757095, -341.42993), Vector3(-134.92851, 106.706055, -338.09702), Vector3(-135.05765, 106.702614, -337.98532), Vector3(-146.04872, 106.698875, -335.2), Vector3(-152.34872, 106.74976, -335.2), Vector3(-152.4, 106.75014, -335.2), Vector3(-152.4, 106.75014, -335.2), Vector3(-152.4, 106.75014, -335.2), Vector3(-152.4, 106.75014, -335.2), Vector3(-153.08633, 106.79932, -337.74924), Vector3(-153.1, 106.79956, -337.8), Vector3(-153.1, 106.79956, -337.8), Vector3(-153.1, 106.79956, -337.8), Vector3(-153.1, 106.79956, -337.8), Vector3(-162.17442, 106.76274, -336.29526), Vector3(-172.9704, 106.73211, -336.0008), Vector3(-173.06914, 106.742966, -336.96793), Vector3(-173.09764, 106.743515, -337.3669), Vector3(-173.1, 106.743256, -337.4), Vector3(-173.1, 106.743256, -337.4), Vector3(-173.1, 106.743256, -337.4), Vector3(-173.1, 106.743256, -337.4), Vector3(-169.04248, 106.65857, -333.5404), Vector3(-168, 106.6849, -329.77136), Vector3(-168, 106.74996, -326.69138), Vector3(-167.9553, 106.752556, -326.58084), Vector3(-166.6685, 106.753624, -326.02936), Vector3(-166.6, 106.753265, -326), Vector3(-166.6, 106.753265, -326), Vector3(-166.6, 106.753265, -326), Vector3(-166.6, 106.753265, -326), Vector3(-168, 106.71183, -328.25232), Vector3(-168, 106.66238, -331.47232), Vector3(-168, 106.66209, -331.5), Vector3(-168, 106.66209, -331.5), Vector3(-168, 106.66209, -331.5), Vector3(-176.00784, 106.67548, -335.0004), Vector3(-186.25282, 106.72505, -335.53613), Vector3(-192.4568, 106.744095, -336.44034), Vector3(-194.14166, 106.744446, -336.7286), Vector3(-198.98459, 106.79523, -337.703), Vector3(-202.33553, 106.75906, -338.38684), Vector3(-202.4, 106.75866, -338.4), Vector3(-202.4, 106.75866, -338.4), Vector3(-202.4, 106.75866, -338.4), Vector3(-202.4, 106.75866, -338.4), Vector3(-200.98389, 106.74149, -343.52686), Vector3(-199.01501, 106.70201, -346.91522), Vector3(-197.09125, 106.74092, -350.48126), Vector3(-196.6, 106.75845, -351.3), Vector3(-196.6, 106.75845, -351.3), Vector3(-196.6, 106.75845, -351.3), Vector3(-196.6, 106.75845, -351.3), Vector3(-198.18803, 106.71119, -348.0247), Vector3(-198.2, 106.7109, -348), Vector3(-195.84508, 106.747925, -339.585), Vector3(-192.93718, 106.79471, -331.74872), Vector3(-192.01555, 106.84809, -328.0622), Vector3(-192, 106.84876, -328), Vector3(-192, 106.84876, -328), Vector3(-192, 106.84876, -328), Vector3(-192, 106.84876, -328), Vector3(-193.63324, 106.74067, -338.7056), Vector3(-195.10657, 106.72845, -346.35297), Vector3(-196.58916, 106.75793, -351.26407), Vector3(-196.6, 106.75845, -351.3), Vector3(-196.6, 106.75845, -351.3), Vector3(-196.6, 106.75845, -351.3), Vector3(-196.6, 106.75845, -351.3), Vector3(-202.5821, 106.70434, -350.84427), Vector3(-203.93034, 106.72545, -350.81723), Vector3(-208.2796, 106.74608, -350.89777), Vector3(-208.40665, 106.74514, -350.9288), Vector3(-208.67648, 106.752266, -352.09808), Vector3(-208.7, 106.75275, -352.2), Vector3(-208.7, 106.75275, -352.2), Vector3(-208.7, 106.75275, -352.2), Vector3(-208.7, 106.75275, -352.2), Vector3(-211.98752, 106.731674, -342.03857), Vector3(-219.6841, 106.80216, -336.73026), Vector3(-220.0886, 106.790634, -336.47827), Vector3(-225.21658, 106.70962, -335.22046), Vector3(-225.3, 106.70964, -335.2), Vector3(-225.3, 106.70964, -335.2), Vector3(-225.3, 106.70964, -335.2), Vector3(-225.3, 106.70964, -335.2), Vector3(-225.2, 106.71348, -331.2), Vector3(-225.2, 106.71348, -331.2), Vector3(-225.2, 106.07348, -331.2), Vector3(-225.2, 106.07348, -331.2), Vector3(-225.2, 106.07348, -331.2), Vector3(-225.2, 106.07348, -331.2), Vector3(-225.2, 106.71348, -331.2), Vector3(-225.2, 106.71348, -331.2), Vector3(-229.53618, 106.76094, -334.20737), Vector3(-234.3862, 106.80679, -335.19717), Vector3(-234.4, 106.806694, -335.2), Vector3(-234.4, 106.806694, -335.2), Vector3(-234.4, 106.806694, -335.19998), Vector3(-233.51367, 106.83343, -331.55624), Vector3(-232.58156, 106.81135, -330.82114), Vector3(-231.25465, 106.77708, -329.8404), Vector3(-231.22731, 106.77589, -329.7226), Vector3(-232.37553, 106.81799, -326.46933), Vector3(-232.4, 106.82017, -326.4), Vector3(-232.4, 106.82017, -326.4), Vector3(-232.4, 106.18017, -326.4), Vector3(-232.4, 106.18017, -326.4), Vector3(-232.4, 106.18017, -326.4), Vector3(-232.4, 106.18017, -326.4), Vector3(-232.4, 106.82017, -326.4), Vector3(-230.41158, 106.76046, -329.9022), Vector3(-225.98303, 106.71289, -335.00705), Vector3(-215.18843, 106.78687, -339.5183), Vector3(-213.64151, 106.77482, -340.19556), Vector3(-207.70692, 106.69354, -343.4326), Vector3(-203.14922, 106.7243, -345.93304), Vector3(-202.63397, 106.7144, -346.32333), Vector3(-198.83769, 106.69469, -349.6767), Vector3(-197, 106.75511, -351.3), Vector3(-197, 106.75511, -351.3), Vector3(-197, 106.75511, -351.3), Vector3(-197, 106.75511, -351.3), Vector3(-202.58112, 106.704475, -350.84863), Vector3(-204.01901, 106.72675, -350.81888), Vector3(-208.33829, 106.74554, -350.89886), Vector3(-208.4221, 106.74554, -350.99573), Vector3(-208.67393, 106.75221, -352.08707), Vector3(-208.7, 106.75275, -352.2), Vector3(-208.7, 106.75275, -352.2), Vector3(-211.20949, 106.76029, -354.65137), Vector3(-211.95851, 106.763016, -355.5502), Vector3(-212, 106.76307, -355.6), Vector3(-212, 106.76308, -355.60004), Vector3(-212, 106.942116, -356), Vector3(-212, 106.96227, -357.08334), Vector3(-212, 107.21641, -358), Vector3(-212, 108.10248, -359.08334), Vector3(-212, 109.29458, -360.08334), Vector3(-212, 110.67359, -361), Vector3(-212, 114.66881, -363.08334), Vector3(-212, 117.72094, -365), Vector3(-212, 118.85549, -366), Vector3(-212, 119.73467, -367.25), Vector3(-212, 120.38365, -368), Vector3(-212, 120.6727, -369.25), Vector3(-212, 120.95338, -370), Vector3(-212, 122.326454, -371), Vector3(-212, 122.37646, -372.8), Vector3(-212, 122.37646, -372.8), Vector3(-212, 122.37646, -372.8), Vector3(-212, 122.37646, -372.8)]
+}
+tracks/100/type = "value"
+tracks/100/imported = false
+tracks/100/enabled = true
+tracks/100/path = NodePath("Cam_FP:rotation")
+tracks/100/interp = 1
+tracks/100/loop_wrap = true
+tracks/100/keys = {
+"times": PackedFloat32Array(0, 3.98, 4, 7.9, 8, 8.1, 8.2, 8.3, 8.4, 8.6, 8.8, 9.1, 9.4, 9.8, 10.5, 11.9, 12.1, 12.3, 12.6, 12.9, 13.4, 14.2, 16.5, 17.98, 18, 19.4, 19.5, 19.6, 19.7, 19.8, 19.9, 20, 20.1, 20.2, 20.3, 20.4, 20.5, 20.6, 20.7, 20.9, 21.1, 21.3, 21.6, 21.9, 22.3, 22.9, 23.9, 24.9, 25, 25.1, 25.2, 25.3, 25.4, 25.5, 25.6, 25.8, 26.2, 32.4, 32.5, 32.6, 32.7, 32.8, 32.9, 33.1, 33.3, 33.6, 34, 34.8, 37.9, 39.5, 39.98, 40, 40.4, 40.5, 40.6, 40.7, 40.8, 40.9, 41, 41.2, 41.6, 45.6, 47.9, 48, 48.1, 48.2, 48.3, 48.4, 48.5, 48.7, 48.9, 49.2, 49.5, 50, 50.8, 53, 53.9, 54, 54.1, 54.2, 54.3, 54.5, 54.6, 54.7, 54.8, 54.9, 55.1, 55.4, 56.4, 59.98, 60, 60.9, 61, 61.1, 61.2, 61.3, 61.4, 61.5, 61.6, 61.7, 61.8, 61.9, 62.1, 62.5, 63.4, 63.5, 63.7, 63.9, 64.2, 64.6, 65.4, 73.98, 74, 74.4, 74.5, 74.6, 74.7, 74.8, 74.9, 75, 75.1, 75.2, 75.4, 75.8, 79, 79.1, 79.2, 79.4, 79.7, 80.9, 84.5, 84.6, 84.7, 84.8, 84.9, 85.1, 85.2, 85.3, 85.4, 85.6, 85.8, 86.1, 86.5, 86.9, 87, 87.1, 87.2, 87.3, 87.4, 87.5, 87.7, 87.9, 88.1, 88.4, 88.8, 89.4, 89.5, 89.6, 89.7, 89.8, 89.9, 90, 90.2, 90.4, 90.7, 91, 91.5, 92.3, 92.98, 93, 93.4, 93.5, 93.6, 93.7, 93.8, 93.9, 94, 94.2, 94.5, 95.4, 97.5, 97.6, 97.7, 97.8, 97.9, 98, 98.1, 98.3, 98.7, 98.9, 99.1, 99.3, 99.6, 99.9, 100.4, 101, 102, 102.6, 102.9, 103.4, 103.8, 103.9, 104, 104.1, 104.2, 104.3, 104.4, 104.5, 104.6, 104.7, 104.8, 104.9, 105, 105.1, 105.3, 105.5, 105.8, 106.3, 107.3, 123.4, 123.5, 123.6, 123.7, 123.8, 123.9, 124, 124.1, 124.2, 124.3, 124.4, 124.5, 124.7, 125, 125.5, 128.98, 129, 136.5, 136.7, 137, 137.4, 137.9, 138, 138.1, 138.2, 138.3, 138.4, 138.6, 139, 139.8, 139.9, 140, 140.1, 140.2, 140.3, 140.4, 140.6, 141, 142.98, 143, 143.4, 143.5, 143.6, 143.7, 143.8, 143.9, 144, 144.1, 144.2, 144.3, 144.5, 144.9, 148, 148.1, 148.2, 148.3, 148.4, 148.6, 148.9, 149.8, 153.3, 153.4, 153.6, 153.9, 155.1, 157, 157.4, 158, 158.9, 159, 159.1, 159.2, 159.3, 159.4, 159.5, 159.6, 159.7, 159.9, 160.1, 160.3, 160.6, 161, 161.5, 161.9, 162, 162.1, 162.2, 162.3, 162.4, 162.5, 162.6, 162.7, 162.9, 163.1, 163.4, 163.7, 164.2, 164.4, 164.5, 164.6, 164.7, 164.8, 164.9, 165.1, 165.3, 165.6, 166, 166.8, 166.98, 167, 168.4, 170.9, 171, 171.1, 171.2, 171.3, 171.4, 171.5, 171.6, 171.7, 171.8, 171.9, 172.1, 172.4, 173.5, 173.8, 174.2, 174.8, 176.9, 177, 177.1, 177.2, 177.3, 177.4, 177.5, 177.6, 177.7, 177.8, 177.9, 178, 178.1, 178.2, 178.3, 178.5, 178.7, 179, 179.3, 179.7, 179.9, 180, 180.1, 180.2, 180.3, 180.4, 180.5, 180.6, 180.7, 180.8, 180.9, 181, 181.1, 181.3, 181.5, 181.8, 182.2, 183, 190.98, 191, 191.9, 192, 192.1, 192.2, 192.3, 192.4, 192.5, 192.6, 192.7, 192.8, 193, 193.3, 194.2, 195.9, 196, 196.1, 196.2, 196.3, 196.4, 196.5, 196.7, 197, 198.1, 200.3, 200.4, 200.6, 200.9, 202.1, 204.8, 204.9, 205, 205.2, 205.6, 206.9, 207, 207.1, 207.3, 207.5, 207.8, 208.2, 209, 210.4, 210.6, 210.9, 211.5, 211.9, 212, 212.1, 212.2, 212.3, 212.4, 212.5, 212.6, 212.7, 212.8, 212.9, 213.1, 213.3, 213.6, 214, 214.8, 216.98, 217, 217.4, 217.5, 217.6, 217.7, 217.8, 217.9, 218, 218.1, 218.2, 218.3, 218.4, 218.6, 219, 222.8, 223.6, 227.1, 227.2, 227.4, 227.7, 228.7, 230.4, 230.5, 230.6, 230.8, 231, 231.3, 231.7, 232.5, 241.1, 250.98, 251, 251.4, 251.5, 251.6, 251.7, 251.8, 251.9, 252, 252.1, 252.2, 252.4, 252.7, 253.9, 255.7, 255.8, 256, 256.3, 257.4, 259.3, 259.4, 259.5, 259.6, 259.7, 259.8, 259.9, 260, 260.1, 260.3, 260.4, 260.6, 260.8, 261.1, 261.5, 262.3, 272.4, 274.98, 275, 275.4, 275.5, 275.6, 275.7, 275.8, 276, 276.3, 277.5, 284.4, 284.5, 284.6, 284.7, 284.8, 284.9, 285, 285.2, 285.5, 286.8, 288.9, 289, 289.1, 289.2, 289.3, 289.5, 289.7, 290, 290.3, 290.8, 292.8, 293.9, 294, 294.1, 294.2, 294.3, 294.4, 294.5, 294.6, 294.8, 295.1, 296.2, 297.4, 297.5, 297.6, 297.8, 298, 298.3, 298.7, 299.5, 304.98, 305, 308.9, 309, 309.1, 309.2, 309.3, 309.4, 309.5, 309.7, 309.9, 310.2, 310.6, 311.3, 312.9, 313, 313.1, 313.3, 313.5, 313.8, 314.2, 315, 317.9, 318, 318.1, 318.2, 318.3, 318.4, 318.5, 318.7, 318.9, 319.2, 319.7, 320.7, 324.98, 325, 327.4, 327.5, 327.6, 327.7, 327.8, 327.9, 328, 328.2, 328.5, 329, 333.6, 341.2, 341.5, 341.9, 342.3, 342.7, 343.1, 343.4, 343.8, 344.3, 344.8, 344.98, 345, 345.4, 345.5, 345.6, 345.7, 345.8, 345.9, 346, 346.1, 346.2, 346.3, 346.5, 346.8, 348.1, 350.2, 350.3, 350.4, 350.5, 350.6, 350.7, 350.9, 351.3, 354.9, 355, 355.1, 355.2, 355.3, 355.4, 355.5, 355.7, 355.9, 356.2, 356.5, 356.9, 357.4, 357.5, 357.6, 357.7, 357.8, 357.9, 358, 358.2, 358.4, 358.7, 359, 359.4, 359.9, 360, 360.1, 360.2, 360.3, 360.4, 360.6, 360.8, 361, 361.3, 361.7, 362.3, 362.9, 363, 363.1, 363.2, 363.3, 363.4, 363.5, 363.6, 363.7, 363.8, 364, 364.3, 365.4, 368.98, 369, 369.7, 369.8, 369.9, 370, 370.2, 370.5, 371.5, 372.3, 372.4, 372.5, 372.6, 372.7, 372.8, 372.9, 373.1, 373.4, 374.2, 374.3, 374.4, 374.5, 374.6, 374.7, 374.8, 374.9, 375, 375.2, 375.6, 377.4, 377.5, 377.6, 377.7, 377.8, 377.9, 378, 378.1, 378.2, 378.3, 378.4, 378.5, 378.6, 378.7, 378.9, 379.1, 379.4, 379.8, 380.5, 385, 385.2, 385.6, 385.9, 386.1, 386.4, 386.7, 387.2, 388, 390.1, 402.98, 403, 406.9, 407, 407.1, 407.3, 407.7, 409.9, 410, 410.1, 410.2, 410.4, 410.7, 411.9, 415.2, 415.3, 415.4, 415.5, 415.6, 415.7, 415.9, 416.2, 417.4, 424.9, 425, 425.1, 425.2, 425.3, 425.4, 425.5, 425.6, 425.7, 425.8, 425.9, 426, 426.1, 426.3, 426.5, 426.8, 427.4, 428.9, 429, 429.1, 429.2, 429.3, 429.4, 429.5, 429.6, 429.7, 429.8, 429.9, 430.1, 430.5, 434.9, 435, 435.1, 435.2, 435.4, 435.7, 436.7, 440.4, 440.5, 440.6, 440.8, 441.1, 441.2, 441.4, 441.6, 441.9, 442.3, 443.1, 443.9, 444, 444.1, 444.2, 444.3, 444.4, 444.6, 445, 451.6, 452.98, 453, 453.4, 453.5, 453.6, 453.7, 453.8, 453.9, 454, 454.1, 454.2, 454.3, 454.5, 454.8, 455.8, 457.2, 457.3, 457.5, 457.8, 458.8, 460.6, 460.7, 460.8, 460.9, 461, 461.1, 461.2, 461.3, 461.4, 461.6, 461.7, 461.9, 462.1, 462.4, 462.8, 463.6, 466.9, 467, 467.1, 467.2, 467.3, 467.4, 467.5, 467.7, 468, 469.1, 469.4, 469.5, 469.6, 469.8, 470.2, 471.4, 471.5, 471.6, 471.7, 471.8, 471.9, 472, 472.1, 472.2, 472.4, 472.6, 472.9, 473.3, 474.1, 478.9, 479, 479.1, 479.2, 479.3, 479.4, 479.5, 479.6, 479.7, 479.8, 479.9, 480, 480.1, 480.2, 480.4, 480.6, 480.9, 481.3, 482.1, 483.2, 483.9, 484, 484.1, 484.2, 484.3, 484.4, 484.5, 484.6, 484.7, 484.8, 484.9, 485, 485.1, 485.2, 485.4, 485.6, 485.8, 486, 486.3, 486.6, 487, 487.5, 488.2, 489.3, 490.4, 490.5, 490.6, 490.7, 490.8, 491, 491.3, 492.4, 492.9, 493, 493.1, 493.2, 493.3, 493.4, 493.5, 493.6, 493.7, 493.8, 493.9, 494, 494.1, 494.2, 494.4, 494.6, 494.9, 495.3, 496.1, 496.98, 497, 502.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.12, 8.742278e-08, 0), Vector3(-0.12, 8.742278e-08, 0), Vector3(-1.1, 8.742278e-08, 0), Vector3(-1.1, 8.742278e-08, 0), Vector3(-0.9885664, 8.742278e-08, 0), Vector3(-0.8926546, 8.742278e-08, 0), Vector3(-0.8101025, 8.742278e-08, 0), Vector3(-0.7390493, 8.742278e-08, 0), Vector3(-0.6778932, 8.742278e-08, 0), Vector3(-0.5799502, 8.742278e-08, 0), Vector3(-0.5073922, 8.742278e-08, 0), Vector3(-0.43223912, 8.742278e-08, 0), Vector3(-0.38431937, 8.742278e-08, 0), Vector3(-0.34627545, 8.742278e-08, 0), Vector3(-0.31619352, 8.742278e-08, 0), Vector3(-0.301983, 8.742278e-08, 0), Vector3(-0.22410192, -0.041446503, 0), Vector3(-0.1664062, -0.07215089, 0), Vector3(-0.10664693, -0.10395345, 0), Vector3(-0.06854274, -0.12423167, 0), Vector3(-0.033165976, -0.14305839, 0), Vector3(-0.011033937, -0.15483658, 0), Vector3(-0.0017975745, -0.15975197, 0), Vector3(-0.0015266646, -0.15989614, 0), Vector3(-0.12, -3.1415925, 0), Vector3(-0.12, -3.141589, 0), Vector3(-0.12, -2.1685054, 0), Vector3(-0.12, -1.5162218, 0), Vector3(-0.12, -1.0789768, 0), Vector3(-0.12, -0.78587645, 0), Vector3(-0.12, -0.5893992, 0), Vector3(-0.12, -0.4576904, 0), Vector3(-0.12, -0.36939713, 0), Vector3(-0.12, -0.31020615, 0), Vector3(-0.12, -0.27052307, 0), Vector3(-0.12, -0.24391647, 0), Vector3(-0.039480958, -0.19857569, 0), Vector3(0.032080915, -0.15824577, 0), Vector3(0.09569902, -0.1223594, 0), Vector3(0.20259744, -0.061961718, 0), Vector3(0.2872528, -0.014002308, 0), Vector3(0.35441518, 0.024178058, 0), Vector3(0.43031013, 0.067563936, 0), Vector3(0.48449376, 0.09882714, 0), Vector3(0.53403395, 0.12785144, 0), Vector3(0.5790343, 0.15509272, 0), Vector3(0.6174603, 0.18035842, 0), Vector3(0.6393278, 0.19681247, 0), Vector3(0.38899267, 0.06963346, 0), Vector3(0.22118798, -0.015610968, 0), Vector3(0.10870515, -0.07274581, 0), Vector3(0.033305645, -0.11103823, 0), Vector3(-0.017236153, -0.1367002, 0), Vector3(-0.051115334, -0.15389572, 0), Vector3(-0.073825225, -0.16541602, 0), Vector3(-0.099252336, -0.17829812, 0), Vector3(-0.11581112, -0.18663646, 0), Vector3(-0.12, -0.18759757, 0), Vector3(-0.003905239, -0.16170684, 0), Vector3(0.09163473, -0.14034213, 0), Vector3(0.17035078, -0.12268071, 0), Vector3(0.23529729, -0.10804918, 0), Vector3(0.28900325, -0.09589598, 0), Vector3(0.3704943, -0.07730017, 0), Vector3(0.42711335, -0.064176194, 0), Vector3(0.48266032, -0.050934207, 0), Vector3(0.52621615, -0.039920576, 0), Vector3(0.5727306, -0.026473245, 0), Vector3(0.69644415, 0.019783657, 0), Vector3(0.7065083, 0.023916196, 0), Vector3(0.7067786, 0.024027204, 0), Vector3(-0.12, 3.1415927, 0), Vector3(-0.12, 3.1415958, 0), Vector3(-0.12, 2.9322393, 0), Vector3(-0.12, 2.7919033, 0), Vector3(-0.12, 2.6978333, 0), Vector3(-0.12, 2.6347764, 0), Vector3(-0.12, 2.5925078, 0), Vector3(-0.12, 2.5641744, 0), Vector3(-0.12, 2.5324512, 0), Vector3(-0.12, 2.511792, 0), Vector3(-0.12, 2.5065658, 0), Vector3(-0.12, 2.5065658, 0), Vector3(-0.10036137, 2.3832035, 0), Vector3(-0.083449125, 2.2767484, 0), Vector3(-0.068883486, 2.1848452, 0), Vector3(-0.056337573, 2.1054654, 0), Vector3(-0.045526717, 2.036932, 0), Vector3(-0.036214136, 1.9778715, 0), Vector3(-0.021277927, 1.8830736, 0), Vector3(-0.0101842275, 1.8125685, 0), Vector3(0.0013582269, 1.7390399, 0), Vector3(0.008779733, 1.6915601, 0), Vector3(0.0157981, 1.646241, 0), Vector3(0.02047891, 1.6150843, 0), Vector3(0.023616018, 1.5905828, 0), Vector3(0.024282245, 1.584284, 0), Vector3(-0.023284718, 1.6620108, 0), Vector3(-0.05516981, 1.7141126, 0), Vector3(-0.076543026, 1.7490376, 0), Vector3(-0.09086992, 1.7724484, 0), Vector3(-0.10691101, 1.7986604, 0), Vector3(-0.111226186, 1.8057103, 0), Vector3(-0.11411874, 1.7282639, 0), Vector3(-0.11605767, 1.67635, 0), Vector3(-0.11735738, 1.641551, 0), Vector3(-0.11881259, 1.6025884, 0), Vector3(-0.11964236, 1.5803719, 0), Vector3(-0.11999345, 1.5709716, 0), Vector3(-0.12, 1.5708082, 0), Vector3(-0.12, 3.1415927, 0), Vector3(-0.12, 3.141607, 0), Vector3(-0.12, 2.1925864, 0), Vector3(-0.12, 1.5564387, 0), Vector3(-0.12, 1.1300161, 0), Vector3(-0.12, 0.84417653, 0), Vector3(-0.12, 0.6525725, 0), Vector3(-0.12, 0.5241365, 0), Vector3(-0.12, 0.4380433, 0), Vector3(-0.12, 0.38033327, 0), Vector3(-0.12, 0.3416491, 0), Vector3(-0.12, 0.3157183, 0), Vector3(-0.12, 0.28668493, 0), Vector3(-0.12, 0.26777765, 0), Vector3(-0.12, 0.26312536, 0), Vector3(-0.112711325, 0.21542883, 0), Vector3(-0.10185811, 0.14440626, 0), Vector3(-0.09458299, 0.09679841, 0), Vector3(-0.08790896, 0.053124096, 0), Vector3(-0.08343857, 0.023870194, 0), Vector3(-0.080527335, 0.0048193093, 0), Vector3(-0.07979088, 1.6335021e-10, 0), Vector3(-0.12, -3.1415927, 0), Vector3(-0.12, -3.1415856, 0), Vector3(-0.12, -3.6044014, 0), Vector3(-0.12, -3.914636, 0), Vector3(-0.12, -4.1225924, 0), Vector3(-0.12, -4.2619896, 0), Vector3(-0.12, -4.3554306, 0), Vector3(-0.12, -4.418066, 0), Vector3(-0.12, -4.4600515, 0), Vector3(-0.12, -4.4881954, 0), Vector3(-0.12, -4.5197067, 0), Vector3(-0.12, -4.5402274, 0), Vector3(-0.12, -4.5454187, 0), Vector3(-0.12, -4.5914764, 0), Vector3(-0.12, -4.6223497, 0), Vector3(-0.12, -4.656917, 0), Vector3(-0.12, -4.6766276, 0), Vector3(-0.12, -4.685053, 0), Vector3(-0.12, -4.685123, 0), Vector3(-0.12, -5.188463, 0), Vector3(-0.12, -5.5258627, 0), Vector3(-0.12, -5.752028, 0), Vector3(-0.12, -5.903631, 0), Vector3(-0.051868223, -5.76956, 0), Vector3(-0.025473092, -5.7065163, 0), Vector3(-0.0038452249, -5.6547313, 0), Vector3(0.013880159, -5.612161, 0), Vector3(0.040323813, -5.5482893, 0), Vector3(0.058113355, -5.5048513, 0), Vector3(0.07454754, -5.4638915, 0), Vector3(0.085655734, -5.4354734, 0), Vector3(0.09064697, -5.422704, 0), Vector3(0.03863608, -5.5512576, 0), Vector3(-0.006130104, -5.6619043, 0), Vector3(-0.044660714, -5.7571387, 0), Vector3(-0.07782432, -5.8391075, 0), Vector3(-0.1063685, -5.909659, 0), Vector3(-0.1309367, -5.970383, 0), Vector3(-0.17028332, -6.0676346, 0), Vector3(-0.19943202, -6.13968, 0), Vector3(-0.2210259, -6.193053, 0), Vector3(-0.24339211, -6.2483344, 0), Vector3(-0.26114884, -6.292223, 0), Vector3(-0.2739662, -6.323903, 0), Vector3(-0.28790203, -6.446341, 0), Vector3(-0.29989672, -6.5517244, 0), Vector3(-0.31022063, -6.6424284, 0), Vector3(-0.31910652, -6.720498, 0), Vector3(-0.32675466, -6.7876935, 0), Vector3(-0.3333375, -6.845529, 0), Vector3(-0.34388006, -6.938154, 0), Vector3(-0.35169017, -7.0067725, 0), Vector3(-0.35977963, -7.0778456, 0), Vector3(-0.3649377, -7.123163, 0), Vector3(-0.36972657, -7.1652374, 0), Vector3(-0.3727225, -7.1915593, 0), Vector3(-0.37356195, -7.1989346, 0), Vector3(-0.12, -9.424778, 0), Vector3(-0.12, -9.424782, 0), Vector3(-0.12, -9.15761, 0), Vector3(-0.12, -8.978519, 0), Vector3(-0.12, -8.858472, 0), Vector3(-0.12, -8.778002, 0), Vector3(-0.12, -8.72406, 0), Vector3(-0.12, -8.687902, 0), Vector3(-0.12, -8.647419, 0), Vector3(-0.12, -8.624334, 0), Vector3(-0.12, -8.614656, 0), Vector3(-0.12, -8.614385, 0), Vector3(-0.12, -8.794532, 0), Vector3(-0.12, -8.915288, 0), Vector3(-0.12, -8.996233, 0), Vector3(-0.12, -9.050492, 0), Vector3(-0.12, -9.0868635, 0), Vector3(-0.12, -9.111243, 0), Vector3(-0.12, -9.13854, 0), Vector3(-0.12, -9.156318, 0), Vector3(-0.12, -9.158793, 0), Vector3(-0.121205024, -9.277572, 0), Vector3(-0.123137146, -9.369722, 0), Vector3(-0.12727296, -9.472994, 0), Vector3(-0.13264509, -9.548801, 0), Vector3(-0.14390862, -9.641568, 0), Vector3(-0.16257304, -9.717411, 0), Vector3(-0.20849471, -9.826379, 0), Vector3(-0.24743392, -9.909895, 0), Vector3(-0.26102415, -9.974228, 0), Vector3(-0.2667494, -10.109727, 0), Vector3(-0.26250085, -10.217772, 0), Vector3(-0.2615372, -10.237799, 0), Vector3(-0.29315433, -9.828229, 0), Vector3(-0.3190402, -9.492902, 0), Vector3(-0.3402338, -9.218359, 0), Vector3(-0.35758567, -8.993582, 0), Vector3(-0.37179214, -8.80955, 0), Vector3(-0.38342342, -8.658878, 0), Vector3(-0.39294633, -8.535519, 0), Vector3(-0.400743, -8.43452, 0), Vector3(-0.4071264, -8.351829, 0), Vector3(-0.41235268, -8.284127, 0), Vector3(-0.41663158, -8.228699, 0), Vector3(-0.42013487, -8.183317, 0), Vector3(-0.4253514, -8.115742, 0), Vector3(-0.42884818, -8.070444, 0), Vector3(-0.43205604, -8.02889, 0), Vector3(-0.4345225, -7.996938, 0), Vector3(-0.4357637, -7.98086, 0), Vector3(-0.43595797, -7.9783435, 0), Vector3(-0.111395776, -8.671449, 0), Vector3(0.1290458, -9.184914, 0), Vector3(0.30716932, -9.565298, 0), Vector3(0.43912643, -9.847094, 0), Vector3(0.5368827, -10.055853, 0), Vector3(0.6093023, -10.2105055, 0), Vector3(0.66295207, -10.325075, 0), Vector3(0.7026968, -10.40995, 0), Vector3(0.7321404, -10.472828, 0), Vector3(0.7539528, -10.519408, 0), Vector3(0.7701118, -10.553916, 0), Vector3(0.7909509, -10.598418, 0), Vector3(0.8059932, -10.630541, 0), Vector3(0.8139995, -10.647638, 0), Vector3(0.8162989, -10.652549, 0), Vector3(-0.023995917, -12.404996, 0), Vector3(-0.023995917, -12.404996, 0), Vector3(-0.07629066, -12.404996, 0), Vector3(-0.12426461, -12.404996, 0), Vector3(-0.1563985, -12.404996, 0), Vector3(-0.1729728, -12.404996, 0), Vector3(-0.15550873, -12.2713585, 0), Vector3(-0.14380221, -12.181779, 0), Vector3(-0.1359551, -12.121732, 0), Vector3(-0.13069503, -12.081481, 0), Vector3(-0.12716909, -12.054501, 0), Vector3(-0.12322128, -12.024291, 0), Vector3(-0.120650366, -12.004618, 0), Vector3(-0.120026514, -11.999839, 0), Vector3(-0.12001777, -12.186613, 0), Vector3(-0.12001191, -12.311811, 0), Vector3(-0.120007984, -12.395735, 0), Vector3(-0.120005354, -12.45199, 0), Vector3(-0.12000359, -12.489698, 0), Vector3(-0.120002404, -12.514976, 0), Vector3(-0.12000108, -12.543278, 0), Vector3(-0.12000022, -12.561708, 0), Vector3(-0.12, -12.56659, 0), Vector3(-0.12, -15.707963, 0), Vector3(-0.12, -15.708003, 0), Vector3(-0.12, -16.361813, 0), Vector3(-0.12, -16.800076, 0), Vector3(-0.12, -17.093851, 0), Vector3(-0.12, -17.290775, 0), Vector3(-0.12, -17.422777, 0), Vector3(-0.12, -17.511261, 0), Vector3(-0.12, -17.570574, 0), Vector3(-0.12, -17.610332, 0), Vector3(-0.12, -17.636982, 0), Vector3(-0.12, -17.666822, 0), Vector3(-0.12, -17.686255, 0), Vector3(-0.12, -17.69117, 0), Vector3(-0.12, -17.571676, 0), Vector3(-0.12, -17.49158, 0), Vector3(-0.12, -17.437887, 0), Vector3(-0.12, -17.401896, 0), Vector3(-0.12, -17.361599, 0), Vector3(-0.12, -17.338621, 0), Vector3(-0.12, -17.328989, 0), Vector3(-0.12, -17.328716, 0), Vector3(-0.12, -17.359028, 0), Vector3(-0.12, -17.392965, 0), Vector3(-0.12, -17.412315, 0), Vector3(-0.12, -17.420588, 0), Vector3(-0.12, -17.420656, 0), Vector3(-0.12, -17.46223, 0), Vector3(-0.12, -17.475132, 0), Vector3(-0.12, -17.47672, 0), Vector3(-0.10369823, -17.273417, 0), Vector3(-0.08972076, -17.094997, 0), Vector3(-0.077743925, -16.937983, 0), Vector3(-0.067488894, -16.799377, 0), Vector3(-0.05871543, -16.676613, 0), Vector3(-0.051216953, -16.567482, 0), Vector3(-0.04481541, -16.470085, 0), Vector3(-0.03935732, -16.382795, 0), Vector3(-0.030672913, -16.23315, 0), Vector3(-0.024094813, -16.109594, 0), Vector3(-0.019076148, -16.005558, 0), Vector3(-0.013617698, -15.875921, 0), Vector3(-0.00883801, -15.736346, 0), Vector3(-0.005128674, -15.595165, 0), Vector3(-0.0031432204, -15.499464, 0), Vector3(-0.001828537, -15.673638, 0), Vector3(-0.0006629618, -15.8220625, 0), Vector3(0.00034877303, -15.949287, 0), Vector3(0.0012195812, -16.058792, 0), Vector3(0.0019690928, -16.153042, 0), Vector3(0.0026142034, -16.234165, 0), Vector3(0.0031694553, -16.303988, 0), Vector3(0.003647365, -16.364084, 0), Vector3(0.00441275, -16.460331, 0), Vector3(0.004979761, -16.531633, 0), Vector3(0.0055670515, -16.605484, 0), Vector3(0.0059415246, -16.652575, 0), Vector3(0.006289194, -16.696293, 0), Vector3(0.0063698646, -16.706438, 0), Vector3(-0.010455752, -16.601835, 0), Vector3(-0.024231402, -16.516195, 0), Vector3(-0.03550995, -16.446077, 0), Vector3(-0.044744045, -16.38867, 0), Vector3(-0.052304283, -16.341671, 0), Vector3(-0.06356186, -16.271685, 0), Vector3(-0.071108036, -16.22477, 0), Vector3(-0.07803073, -16.181734, 0), Vector3(-0.08266767, -16.152906, 0), Vector3(-0.08568738, -16.134132, 0), Vector3(-0.08593921, -16.132568, 0), Vector3(-0.102485776, -15.971529, 0), Vector3(-0.09748691, -15.971811, 0), Vector3(-0.06396925, -15.973698, 0), Vector3(-0.082441464, -14.938695, 0), Vector3(-0.09482376, -14.244912, 0), Vector3(-0.10312386, -13.779855, 0), Vector3(-0.10868759, -13.468119, 0), Vector3(-0.112417065, -13.259155, 0), Vector3(-0.114917, -13.119082, 0), Vector3(-0.116592765, -13.025189, 0), Vector3(-0.11771607, -12.962254, 0), Vector3(-0.11846903, -13.009904, 0), Vector3(-0.11897376, -13.041845, 0), Vector3(-0.11953888, -13.077609, 0), Vector3(-0.11986111, -13.098001, 0), Vector3(-0.11999829, -13.106682, 0), Vector3(-0.11999948, -13.106758, 0), Vector3(-0.11999989, -13.064914, 0), Vector3(-0.11999999, -13.052125, 0), Vector3(-0.12, -13.050849, 0), Vector3(-0.15289523, -12.636383, 0), Vector3(-0.17980209, -12.278944, 0), Vector3(-0.20163015, -11.970632, 0), Vector3(-0.21915706, -11.704642, 0), Vector3(-0.23310341, -11.475324, 0), Vector3(-0.24402452, -11.277589, 0), Vector3(-0.25239477, -11.107058, 0), Vector3(-0.2586186, -10.959959, 0), Vector3(-0.26304054, -10.833045, 0), Vector3(-0.26595458, -10.723519, 0), Vector3(-0.26761076, -10.628974, 0), Vector3(-0.2682215, -10.547335, 0), Vector3(-0.26796767, -10.476817, 0), Vector3(-0.2677492, -10.4161215, 0), Vector3(-0.26739928, -10.318916, 0), Vector3(-0.26714006, -10.246905, 0), Vector3(-0.26687157, -10.172318, 0), Vector3(-0.2667004, -10.12476, 0), Vector3(-0.26656446, -10.087002, 0), Vector3(-0.26652163, -10.075099, 0), Vector3(-0.29416496, -10.5041485, 0), Vector3(-0.31679744, -10.855425, 0), Vector3(-0.3353273, -11.143025, 0), Vector3(-0.3504983, -11.378492, 0), Vector3(-0.36291927, -11.571277, 0), Vector3(-0.3730887, -11.7291155, 0), Vector3(-0.38141468, -11.858343, 0), Vector3(-0.38823146, -11.964146, 0), Vector3(-0.39381254, -12.050769, 0), Vector3(-0.39838198, -12.121691, 0), Vector3(-0.4021231, -12.179756, 0), Vector3(-0.40518606, -12.227296, 0), Vector3(-0.40974697, -12.298085, 0), Vector3(-0.41280425, -12.345537, 0), Vector3(-0.4156089, -12.389069, 0), Vector3(-0.41748753, -12.418226, 0), Vector3(-0.41871095, -12.437215, 0), Vector3(-0.41902044, -12.442018, 0), Vector3(-0.12, -12.566371, 0), Vector3(-0.12, -12.566317, 0), Vector3(-0.12, -11.679449, 0), Vector3(-0.12, -11.084964, 0), Vector3(-0.12, -10.686469, 0), Vector3(-0.12, -10.41935, 0), Vector3(-0.12, -10.240294, 0), Vector3(-0.12, -10.12027, 0), Vector3(-0.12, -10.039815, 0), Vector3(-0.12, -9.985885, 0), Vector3(-0.12, -9.949734, 0), Vector3(-0.12, -9.909258, 0), Vector3(-0.12, -9.886179, 0), Vector3(-0.12, -9.876503, 0), Vector3(-0.12, -9.876217, 0), Vector3(-0.12, -9.638911, 0), Vector3(-0.12, -9.479841, 0), Vector3(-0.12, -9.373213, 0), Vector3(-0.12, -9.301738, 0), Vector3(-0.12, -9.253827, 0), Vector3(-0.12, -9.221711, 0), Vector3(-0.12, -9.185753, 0), Vector3(-0.12, -9.165249, 0), Vector3(-0.12, -9.156521, 0), Vector3(-0.12, -9.156413, 0), Vector3(-0.12, -9.126608, 0), Vector3(-0.12, -9.093237, 0), Vector3(-0.12, -9.074209, 0), Vector3(-0.12, -9.066075, 0), Vector3(-0.12, -9.066007, 0), Vector3(-0.12, -9.103521, 0), Vector3(-0.12, -9.128669, 0), Vector3(-0.12, -9.156825, 0), Vector3(-0.12, -9.175161, 0), Vector3(-0.12, -9.179773, 0), Vector3(-0.15861052, -9.222818, 0), Vector3(-0.19201332, -9.259428, 0), Vector3(-0.2417518, -9.31394, 0), Vector3(-0.2750925, -9.350481, 0), Vector3(-0.3056785, -9.384003, 0), Vector3(-0.32616556, -9.406457, 0), Vector3(-0.33950728, -9.421079, 0), Vector3(-0.3426771, -9.424553, 0), Vector3(-0.3015562, -9.424655, 0), Vector3(-0.27187392, -9.424727, 0), Vector3(-0.25489953, -9.424769, 0), Vector3(-0.2525505, -9.424775, 0), Vector3(-0.008202502, -9.224084, 0), Vector3(0.19185273, -9.059772, 0), Vector3(0.3556441, -8.925244, 0), Vector3(0.48974514, -8.815103, 0), Vector3(0.5995378, -8.724926, 0), Vector3(0.6894284, -8.651095, 0), Vector3(0.76302457, -8.590648, 0), Vector3(0.82328004, -8.541159, 0), Vector3(0.8726131, -8.500639, 0), Vector3(0.9130035, -8.467465, 0), Vector3(0.973147, -8.418067, 0), Vector3(1.0134623, -8.384954, 0), Vector3(1.0504466, -8.354578, 0), Vector3(1.0752195, -8.334231, 0), Vector3(1.0913522, -8.320981, 0), Vector3(1.0953832, -8.317671, 0), Vector3(-0.12, -9.424778, 0), Vector3(-0.12, -9.424838, 0), Vector3(-0.12, -10.411452, 0), Vector3(-0.12, -11.0728, 0), Vector3(-0.12, -11.516114, 0), Vector3(-0.12, -11.813276, 0), Vector3(-0.12, -12.01247, 0), Vector3(-0.12, -12.145994, 0), Vector3(-0.12, -12.235498, 0), Vector3(-0.12, -12.295494, 0), Vector3(-0.12, -12.335711, 0), Vector3(-0.12, -12.362669, 0), Vector3(-0.12, -12.392852, 0), Vector3(-0.12, -12.412508, 0), Vector3(-0.12, -12.41748, 0), Vector3(-0.12, -12.384884, 0), Vector3(-0.12, -12.381025, 0), Vector3(-0.12, -12.345472, 0), Vector3(-0.12, -12.305665, 0), Vector3(-0.12, -12.282967, 0), Vector3(-0.12, -12.273363, 0), Vector3(-0.12, -12.273184, 0), Vector3(-0.1742032, -12.303788, 0), Vector3(-0.21858105, -12.328845, 0), Vector3(-0.2846619, -12.366156, 0), Vector3(-0.3289572, -12.391166, 0), Vector3(-0.3695927, -12.41411, 0), Vector3(-0.39681113, -12.429478, 0), Vector3(-0.41453645, -12.4394865, 0), Vector3(-0.41902044, -12.442018, 0), Vector3(-0.41902044, -12.442018, 0), Vector3(-0.12, -9.424778, 0), Vector3(-0.12, -9.424808, 0), Vector3(-0.12, -9.916954, 0), Vector3(-0.12, -10.246849, 0), Vector3(-0.12, -10.467985, 0), Vector3(-0.12, -10.616217, 0), Vector3(-0.12, -10.715579, 0), Vector3(-0.12, -10.782184, 0), Vector3(-0.12, -10.82683, 0), Vector3(-0.12, -10.856758, 0), Vector3(-0.12, -10.890266, 0), Vector3(-0.12, -10.909372, 0), Vector3(-0.12, -10.91754, 0), Vector3(-0.12, -10.917608, 0), Vector3(-0.12, -10.949417, 0), Vector3(-0.12, -10.985031, 0), Vector3(-0.12, -11.005338, 0), Vector3(-0.12, -11.013984, 0), Vector3(-0.12, -11.014144, 0), Vector3(-0.12, -11.451111, 0), Vector3(-0.12, -11.744019, 0), Vector3(-0.12, -11.940361, 0), Vector3(-0.12, -12.071973, 0), Vector3(-0.12, -12.160194, 0), Vector3(-0.12, -12.219332, 0), Vector3(-0.12, -12.258972, 0), Vector3(-0.12, -12.285544, 0), Vector3(-0.12, -12.315296, 0), Vector3(-0.12, -12.323299, 0), Vector3(-0.17123134, -12.376022, 0), Vector3(-0.20557275, -12.411365, 0), Vector3(-0.23707673, -12.443787, 0), Vector3(-0.2581787, -12.465503, 0), Vector3(-0.27192086, -12.479646, 0), Vector3(-0.2753972, -12.483223, 0), Vector3(-0.2753972, -12.483223, 0), Vector3(-0.12, -9.424778, 0), Vector3(-0.12, -9.424784, 0), Vector3(-0.12, -9.52794, 0), Vector3(-0.12, -9.597086, 0), Vector3(-0.12, -9.643437, 0), Vector3(-0.12, -9.674507, 0), Vector3(-0.12, -9.709294, 0), Vector3(-0.12, -9.72913, 0), Vector3(-0.12, -9.737609, 0), Vector3(-0.12, -9.737693, 0), Vector3(-0.12, -9.953829, 0), Vector3(-0.12, -10.098709, 0), Vector3(-0.12, -10.195826, 0), Vector3(-0.12, -10.260924, 0), Vector3(-0.12, -10.304562, 0), Vector3(-0.12, -10.333813, 0), Vector3(-0.12, -10.366564, 0), Vector3(-0.12, -10.385238, 0), Vector3(-0.12, -10.393243, 0), Vector3(-0.12, -10.393287, 0), Vector3(-0.10842976, -10.503138, 0), Vector3(-0.09853789, -10.599077, 0), Vector3(-0.09009151, -10.683072, 0), Vector3(-0.08288992, -10.756813, 0), Vector3(-0.07155479, -10.879157, 0), Vector3(-0.063420035, -10.975501, 0), Vector3(-0.05547496, -11.085994, 0), Vector3(-0.050983712, -11.169644, 0), Vector3(-0.04801044, -11.276147, 0), Vector3(-0.051819243, -11.610717, 0), Vector3(-0.05408168, -11.797326, 0), Vector3(-0.07581363, -11.453705, 0), Vector3(-0.09038099, -11.22337, 0), Vector3(-0.10014578, -11.068971, 0), Vector3(-0.10669132, -10.965474, 0), Vector3(-0.111078925, -10.896098, 0), Vector3(-0.11402003, -10.849594, 0), Vector3(-0.1159915, -10.818421, 0), Vector3(-0.118198864, -10.783519, 0), Vector3(-0.119457506, -10.7636175, 0), Vector3(-0.11999334, -10.755145, 0), Vector3(-0.119999945, -10.755041, 0), Vector3(-0.17432179, -10.785238, 0), Vector3(-0.21879674, -10.809962, 0), Vector3(-0.28502223, -10.846777, 0), Vector3(-0.3294145, -10.871455, 0), Vector3(-0.3701389, -10.8940935, 0), Vector3(-0.39741692, -10.909258, 0), Vector3(-0.41518104, -10.919132, 0), Vector3(-0.41967475, -10.921631, 0), Vector3(-0.12, -9.424778, 0), Vector3(-0.12, -9.420154, 0), Vector3(-0.19123538, -9.546926, 0), Vector3(-0.24955797, -9.650718, 0), Vector3(-0.29730847, -9.735696, 0), Vector3(-0.33640328, -9.805269, 0), Vector3(-0.3684114, -9.862232, 0), Vector3(-0.3946174, -9.908869, 0), Vector3(-0.43363953, -9.978313, 0), Vector3(-0.45979682, -10.024863, 0), Vector3(-0.4837929, -10.067568, 0), Vector3(-0.49986595, -10.096171, 0), Vector3(-0.5097469, -10.113755, 0), Vector3(-0.5128492, -10.119277, 0), Vector3(-0.45248303, -10.117068, 0), Vector3(-0.40305942, -10.11526, 0), Vector3(-0.32946512, -10.112568, 0), Vector3(-0.2801334, -10.110764, 0), Vector3(-0.23487763, -10.109108, 0), Vector3(-0.20456444, -10.107999, 0), Vector3(-0.18482372, -10.107277, 0), Vector3(-0.17984504, -10.107095, 0), Vector3(-0.22756962, -10.219034, 0), Vector3(-0.26664323, -10.310683, 0), Vector3(-0.29863396, -10.385718, 0), Vector3(-0.3248258, -10.447152, 0), Vector3(-0.34626982, -10.49745, 0), Vector3(-0.36382672, -10.5386305, 0), Vector3(-0.38996983, -10.59995, 0), Vector3(-0.40749407, -10.641054, 0), Vector3(-0.42357042, -10.6787615, 0), Vector3(-0.43593138, -10.707754, 0), Vector3(-0.4421516, -10.722344, 0), Vector3(-0.443125, -10.7246275, 0), Vector3(-0.3985424, -10.7246275, 0), Vector3(-0.3985424, -10.7246275, 0), Vector3(-0.26145998, -10.825204, 0), Vector3(-0.15990683, -10.899713, 0), Vector3(-0.08467442, -10.95491, 0), Vector3(-0.02894087, -10.995802, 0), Vector3(0.0123475585, -11.026094, 0), Vector3(0.04293478, -11.048536, 0), Vector3(0.08238097, -11.077477, 0), Vector3(0.11085443, -11.098369, 0), Vector3(0.12600936, -11.109488, 0), Vector3(0.1303621, -11.112681, 0), Vector3(0.13036203, -11.112681, 0), Vector3(0.13430075, -11.134043, 0), Vector3(0.14483207, -11.193217, 0), Vector3(0.15876591, -11.276735, 0), Vector3(0.17495473, -11.38426, 0), Vector3(0.19227219, -11.519566, 0), Vector3(0.20476678, -11.641509, 0), Vector3(0.21807417, -11.831171, 0), Vector3(0.22393571, -12.099479, 0), Vector3(0.2146197, -12.371357, 0), Vector3(0.20757964, -12.470731, 0), Vector3(-0.12, -9.424778, 0), Vector3(-0.12, -9.424822, 0), Vector3(-0.12, -10.1434965, 0), Vector3(-0.12, -10.625238, 0), Vector3(-0.12, -10.948159, 0), Vector3(-0.12, -11.16462, 0), Vector3(-0.12, -11.309718, 0), Vector3(-0.12, -11.4069805, 0), Vector3(-0.12, -11.472177, 0), Vector3(-0.12, -11.51588, 0), Vector3(-0.12, -11.545175, 0), Vector3(-0.12, -11.577974, 0), Vector3(-0.12, -11.596677, 0), Vector3(-0.12, -11.604693, 0), Vector3(-0.12, -11.6047535, 0), Vector3(-0.12, -11.47029, 0), Vector3(-0.12, -11.380156, 0), Vector3(-0.12, -11.319737, 0), Vector3(-0.12, -11.279238, 0), Vector3(-0.12, -11.2520895, 0), Vector3(-0.12, -11.221694, 0), Vector3(-0.12, -11.201899, 0), Vector3(-0.12, -11.196892, 0), Vector3(-0.07479111, -11.075442, 0), Vector3(-0.035878897, -10.970906, 0), Vector3(-0.0023861397, -10.880925, 0), Vector3(0.026442116, -10.803475, 0), Vector3(0.05125579, -10.73681, 0), Vector3(0.07261381, -10.679424, 0), Vector3(0.10682126, -10.587511, 0), Vector3(0.13216531, -10.519403, 0), Vector3(0.15842041, -10.4488325, 0), Vector3(0.17516728, -10.403804, 0), Vector3(0.18847154, -10.368006, 0), Vector3(0.19702218, -10.344959, 0), Vector3(0.15224485, -10.469676, 0), Vector3(0.11370429, -10.577022, 0), Vector3(0.08053132, -10.6694145, 0), Vector3(0.05197829, -10.748938, 0), Vector3(0.02740161, -10.817386, 0), Vector3(0.0062474674, -10.876299, 0), Vector3(-0.027633786, -10.97065, 0), Vector3(-0.052736774, -11.040547, 0), Vector3(-0.07874252, -11.112947, 0), Vector3(-0.09533008, -11.159114, 0), Vector3(-0.10850868, -11.195769, 0), Vector3(-0.116980016, -11.219301, 0), Vector3(-0.030457685, -11.30392, 0), Vector3(0.04401444, -11.376754, 0), Vector3(0.10811441, -11.4394455, 0), Vector3(0.16328764, -11.493408, 0), Vector3(0.21077734, -11.539856, 0), Vector3(0.2868375, -11.614252, 0), Vector3(0.3431906, -11.669376, 0), Vector3(0.38494426, -11.710222, 0), Vector3(0.42820176, -11.752548, 0), Vector3(0.4625628, -11.786183, 0), Vector3(0.48740223, -11.810523, 0), Vector3(0.4975417, -11.820489, 0), Vector3(0.3357299, -12.584209, 0), Vector3(0.22726417, -13.096147, 0), Vector3(0.15455739, -13.439309, 0), Vector3(0.10582056, -13.669339, 0), Vector3(0.07315126, -13.823533, 0), Vector3(0.051252354, -13.926893, 0), Vector3(0.036573052, -13.996179, 0), Vector3(0.026733203, -14.042623, 0), Vector3(0.020137329, -14.073755, 0), Vector3(0.012752202, -14.108615, 0), Vector3(0.008541629, -14.128496, 0), Vector3(0.00674899, -14.136982, 0), Vector3(0.006726813, -14.137163, 0), Vector3(-0.12, -15.707963, 0), Vector3(-0.12, -15.707973, 0), Vector3(-0.12, -15.629305, 0), Vector3(-0.12, -15.576572, 0), Vector3(-0.12, -15.5412245, 0), Vector3(-0.12, -15.501647, 0), Vector3(-0.12, -15.47908, 0), Vector3(-0.12, -15.469532, 0), Vector3(-0.12, -15.469333, 0), Vector3(-0.12, -15.239988, 0), Vector3(-0.12, -15.086254, 0), Vector3(-0.12, -14.983203, 0), Vector3(-0.12, -14.914126, 0), Vector3(-0.12, -14.867822, 0), Vector3(-0.12, -14.836783, 0), Vector3(-0.12, -14.8020315, 0), Vector3(-0.12, -14.782216, 0), Vector3(-0.12, -14.773972, 0), Vector3(-0.12, -15.193748, 0), Vector3(-0.12, -15.475133, 0), Vector3(-0.12, -15.663751, 0), Vector3(-0.12, -15.790184, 0), Vector3(-0.12, -15.874936, 0), Vector3(-0.12, -15.9317465, 0), Vector3(-0.12, -15.969828, 0), Vector3(-0.12, -15.995355, 0), Vector3(-0.12, -16.023935, 0), Vector3(-0.12, -16.042547, 0), Vector3(-0.12, -16.047253, 0), Vector3(-0.08104602, -16.608778, 0), Vector3(-0.049153198, -17.068516, 0), Vector3(-0.023041561, -17.444918, 0), Vector3(-0.0016631638, -17.75309, 0), Vector3(0.015839988, -18.0054, 0), Vector3(0.030170357, -18.211973, 0), Vector3(0.04190307, -18.381102, 0), Vector3(0.051509004, -18.519571, 0), Vector3(0.059373677, -18.632942, 0), Vector3(0.06581273, -18.725761, 0), Vector3(0.071084574, -18.801756, 0), Vector3(0.0754008, -18.863974, 0), Vector3(0.078934625, -18.914915, 0), Vector3(0.08419667, -18.990768, 0), Vector3(0.087723926, -19.041613, 0), Vector3(0.09095974, -19.088259, 0), Vector3(0.09312716, -19.119501, 0), Vector3(0.10830439, -19.131823, 0), Vector3(0.1112465, -19.133348, 0), Vector3(0.11028842, -19.113575, 0), Vector3(0.106187314, -19.037556, 0), Vector3(0.10223023, -18.972221, 0), Vector3(0.04662372, -19.017, 0), Vector3(-0.010971608, -19.063383, 0), Vector3(-0.04769601, -19.092957, 0), Vector3(-0.08179175, -19.120415, 0), Vector3(-0.10312236, -19.137592, 0), Vector3(-0.11192216, -19.144678, 0), Vector3(-0.11231613, -19.144995, 0), Vector3(-0.067372404, -19.240162, 0), Vector3(-0.067372404, -19.240162, 0), Vector3(-0.08472267, -19.279388, 0), Vector3(-0.0963529, -19.305685, 0), Vector3(-0.10937467, -19.335125, 0), Vector3(-0.11785478, -19.354298, 0), Vector3(-0.11999968, -19.359152, 0), Vector3(-0.11999978, -19.426329, 0), Vector3(-0.119999856, -19.471357, 0), Vector3(-0.1199999, -19.501541, 0), Vector3(-0.11999995, -19.535337, 0), Vector3(-0.11999999, -19.554607, 0), Vector3(-0.12, -19.562845, 0), Vector3(-0.12, -19.562895, 0), Vector3(-0.12, -19.715427, 0), Vector3(-0.12, -19.817673, 0), Vector3(-0.12, -19.88621, 0), Vector3(-0.12, -19.93215, 0), Vector3(-0.12, -19.962946, 0), Vector3(-0.12, -19.997427, 0), Vector3(-0.12, -20.017088, 0), Vector3(-0.12, -20.025492, 0), Vector3(-0.12, -20.02556, 0), Vector3(-0.091566995, -19.348423, 0), Vector3(-0.069421224, -18.820885, 0), Vector3(-0.05217204, -18.409853, 0), Vector3(-0.038736332, -18.089558, 0), Vector3(-0.028270504, -17.83993, 0), Vector3(-0.020117624, -17.64534, 0), Vector3(-0.013754575, -17.493492, 0), Vector3(-0.008785509, -17.374937, 0), Vector3(-0.0049020653, -17.282309, 0), Vector3(-0.0018643191, -17.209875, 0), Vector3(0.0005148858, -17.15317, 0), Vector3(0.0023810824, -17.108715, 0), Vector3(0.0050030863, -17.046322, 0), Vector3(0.006640032, -17.007454, 0), Vector3(0.008051854, -16.974064, 0), Vector3(0.009258917, -16.945873, 0), Vector3(0.010331681, -16.921722, 0), Vector3(-0.03263606, -17.910526, 0), Vector3(-0.0614382, -18.573341, 0), Vector3(-0.080744855, -19.01764, 0), Vector3(-0.093686484, -19.31546, 0), Vector3(-0.10236152, -19.515097, 0), Vector3(-0.108176574, -19.648916, 0), Vector3(-0.112074524, -19.738619, 0), Vector3(-0.11468739, -19.798748, 0), Vector3(-0.11643885, -19.839054, 0), Vector3(-0.11761289, -19.866072, 0), Vector3(-0.118927404, -19.896322, 0), Vector3(-0.119783446, -19.916021, 0), Vector3(-0.12, -19.921001, 0), Vector3(-0.12, -19.847094, 0), Vector3(-0.12, -19.797552, 0), Vector3(-0.12, -19.764343, 0), Vector3(-0.12, -19.727161, 0), Vector3(-0.12, -19.70596, 0), Vector3(-0.12, -19.69699, 0), Vector3(-0.12, -19.696821, 0), Vector3(-0.1525625, -19.607376, 0), Vector3(-0.18214813, -19.528963, 0), Vector3(-0.23536748, -19.395332, 0), Vector3(-0.3085429, -19.224052, 0), Vector3(-0.32825536, -19.178709, 0), Vector3(-0.35760823, -19.11119, 0), Vector3(-0.37728402, -19.065931, 0), Vector3(-0.39533415, -19.024412, 0), Vector3(-0.40742448, -18.996601, 0), Vector3(-0.41529799, -18.97849, 0), Vector3(-0.41688764, -18.974834, 0), Vector3(-0.45113102, -19.098158, 0), Vector3(-0.47408503, -19.180824, 0), Vector3(-0.48947158, -19.236237, 0), Vector3(-0.49978548, -19.27338, 0), Vector3(-0.50669914, -19.298279, 0), Vector3(-0.51443994, -19.326157, 0), Vector3(-0.51948094, -19.344313, 0), Vector3(-0.5207562, -19.348904, 0), Vector3(-0.5207562, -19.348904, 0), Vector3(-0.12, -19.701149, 0), Vector3(-0.12, -19.7011, 0), Vector3(-0.12, -18.875092, 0), Vector3(-0.12, -18.321404, 0), Vector3(-0.12, -17.950254, 0), Vector3(-0.12, -17.701466, 0), Vector3(-0.12, -17.534698, 0), Vector3(-0.12, -17.42291, 0), Vector3(-0.12, -17.347977, 0), Vector3(-0.12, -17.297747, 0), Vector3(-0.12, -17.264078, 0), Vector3(-0.12, -17.22638, 0), Vector3(-0.12, -17.204884, 0), Vector3(-0.12, -17.195787, 0), Vector3(-0.12, -17.195616, 0), Vector3(-0.12, -17.22913, 0), Vector3(-0.12, -17.266657, 0), Vector3(-0.12, -17.288054, 0), Vector3(-0.12, -17.297106, 0), Vector3(-0.12, -17.297249, 0), Vector3(-0.12, -17.734241, 0), Vector3(-0.12, -18.027168, 0), Vector3(-0.12, -18.223522, 0), Vector3(-0.12, -18.35514, 0), Vector3(-0.12, -18.443369, 0), Vector3(-0.12, -18.50251, 0), Vector3(-0.12, -18.542152, 0), Vector3(-0.12, -18.568726, 0), Vector3(-0.12, -18.59848, 0), Vector3(-0.12, -18.606483, 0), Vector3(-0.17123134, -18.659206, 0), Vector3(-0.20557275, -18.69455, 0), Vector3(-0.23707673, -18.72697, 0), Vector3(-0.2581787, -18.748688, 0), Vector3(-0.27192086, -18.76283, 0), Vector3(-0.2753925, -18.766403, 0), Vector3(-0.2241627, -18.527563, 0), Vector3(-0.18982235, -18.367462, 0), Vector3(-0.16680332, -18.260143, 0), Vector3(-0.15137321, -18.188206, 0), Vector3(-0.14103009, -18.139986, 0), Vector3(-0.13409689, -18.107662, 0), Vector3(-0.12633415, -18.07147, 0), Vector3(-0.12190781, -18.050835, 0), Vector3(-0.12002342, -18.04205, 0), Vector3(-0.12000705, -18.041975, 0), Vector3(-0.12000473, -18.079176, 0), Vector3(-0.12000317, -18.104115, 0), Vector3(-0.12000143, -18.132034, 0), Vector3(-0.12000029, -18.150217, 0), Vector3(-0.120000005, -18.154793, 0), Vector3(-0.120000005, -18.383842, 0), Vector3(-0.120000005, -18.537378, 0), Vector3(-0.12, -18.640297, 0), Vector3(-0.12, -18.709286, 0), Vector3(-0.12, -18.75553, 0), Vector3(-0.043866917, -18.772573, 0), Vector3(0.01846558, -18.786528, 0), Vector3(0.06949911, -18.797953, 0), Vector3(0.14549063, -18.814966, 0), Vector3(0.19642928, -18.82637, 0), Vector3(0.24315917, -18.83683, 0), Vector3(0.27445978, -18.843838, 0), Vector3(0.29484352, -18.848402, 0), Vector3(0.29999965, -18.849556, 0), Vector3(0.17565897, -19.396563, 0), Vector3(0.07229097, -19.844788, 0), Vector3(-0.013891706, -20.212137, 0), Vector3(-0.08598998, -20.513271, 0), Vector3(-0.14654239, -20.760193, 0), Vector3(-0.19762744, -20.962725, 0), Vector3(-0.24094689, -21.128916, 0), Vector3(-0.27789387, -21.265352, 0), Vector3(-0.30960885, -21.377426, 0), Vector3(-0.33702618, -21.469555, 0), Vector3(-0.3609101, -21.54535, 0), Vector3(-0.38163367, -21.607775, 0), Vector3(-0.39975977, -21.65925, 0), Vector3(-0.42997795, -21.73693, 0), Vector3(-0.45433667, -21.790329, 0), Vector3(-0.48378006, -21.841648, 0), Vector3(-0.515287, -21.879988, 0), Vector3(-0.5661953, -21.91558, 0), Vector3(-0.6162677, -21.940544, 0), Vector3(-0.6296075, -21.946426, 0), Vector3(-0.5506599, -21.65172, 0), Vector3(-0.4792252, -21.38506, 0), Vector3(-0.41458836, -21.143774, 0), Vector3(-0.35610256, -20.92545, 0), Vector3(-0.3031824, -20.727903, 0), Vector3(-0.25529826, -20.549154, 0), Vector3(-0.2119709, -20.387417, 0), Vector3(-0.17276669, -20.24107, 0), Vector3(-0.13729325, -20.10865, 0), Vector3(-0.105195545, -19.98883, 0), Vector3(-0.07615235, -19.880415, 0), Vector3(-0.04987298, -19.782316, 0), Vector3(-0.026094422, -19.693552, 0), Vector3(0.014889544, -19.540562, 0), Vector3(0.048444375, -19.415302, 0), Vector3(0.07591675, -19.31275, 0), Vector3(0.09840923, -19.228788, 0), Vector3(0.12473971, -19.130497, 0), Vector3(0.1442458, -19.057682, 0), Vector3(0.16262685, -18.989067, 0), Vector3(0.17733203, -18.934174, 0), Vector3(0.18874343, -18.891577, 0), Vector3(0.19625302, -18.863543, 0), Vector3(0.19875273, -18.854212, 0), Vector3(0.093666345, -18.852676, 0), Vector3(0.023224836, -18.851648, 0), Vector3(-0.023993522, -18.850958, 0), Vector3(-0.055644933, -18.850496, 0), Vector3(-0.09108341, -18.849977, 0), Vector3(-0.11129049, -18.849684, 0), Vector3(-0.119893074, -18.849558, 0), Vector3(-0.11998553, -18.849556, 0), Vector3(-0.20546049, -19.413515, 0), Vector3(-0.27544147, -19.875246, 0), Vector3(-0.33273703, -20.253279, 0), Vector3(-0.3796467, -20.562786, 0), Vector3(-0.41805306, -20.816189, 0), Vector3(-0.44949752, -21.023657, 0), Vector3(-0.47524208, -21.19352, 0), Vector3(-0.49631995, -21.33259, 0), Vector3(-0.51357704, -21.446451, 0), Vector3(-0.52770597, -21.539673, 0), Vector3(-0.53927374, -21.615995, 0), Vector3(-0.5487446, -21.678484, 0), Vector3(-0.55649877, -21.729647, 0), Vector3(-0.568045, -21.805828, 0), Vector3(-0.5757847, -21.856894, 0), Vector3(-0.5828849, -21.90374, 0), Vector3(-0.58764076, -21.93512, 0), Vector3(-0.59073794, -21.955553, 0), Vector3(-0.5913919, -21.95987, 0), Vector3(-0.12, -18.849556, 0), Vector3(-0.12, -18.849556, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2vytf"]
+_data = {
+&"play": SubResource("Animation_b75d7")
+}
+
+[node name="Chapter04_TheOldVillage" type="Node3D" unique_id=20263452]
+script = ExtResource("1_hkm60")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2077198809]
+environment = SubResource("Environment_xtlwx")
+
+[node name="MoonLight" type="DirectionalLight3D" parent="." unique_id=1004092354]
+transform = Transform3D(0.91972417, 0.17688443, -0.35045588, 0, 0.8927329, 0.45058614, 0.3925652, -0.41441497, 0.8210681, 0, 30, 0)
+light_color = Color(0.7, 0.78, 1, 1)
+light_energy = 0.7
+shadow_enabled = true
+directional_shadow_max_distance = 120.0
+
+[node name="Level" type="Node3D" parent="." unique_id=1332275824]
+
+[node name="A08_HollowEdge" parent="Level" unique_id=68792892 instance=ExtResource("2_y3oxr")]
+
+[node name="A09_VillageLanes" parent="Level" unique_id=1688255365 instance=ExtResource("3_7umvm")]
+
+[node name="A10_FestivalRing" parent="Level" unique_id=2019913033 instance=ExtResource("4_u4cji")]
+
+[node name="A11_BurnedQuarter" parent="Level" unique_id=1779874957 instance=ExtResource("5_iqi5p")]
+
+[node name="Actors" type="Node3D" parent="." unique_id=296774774]
+
+[node name="Actor_Protagonist" type="Node3D" parent="Actors" unique_id=1972613948]
+
+[node name="Pose_Idle" parent="Actors/Actor_Protagonist" unique_id=923077699 instance=ExtResource("6_dpkyc")]
+
+[node name="Pose_Walk" parent="Actors/Actor_Protagonist" unique_id=1975307219 instance=ExtResource("7_qcvbj")]
+visible = false
+
+[node name="Pose_Run" parent="Actors/Actor_Protagonist" unique_id=1433894866 instance=ExtResource("8_sph4o")]
+visible = false
+
+[node name="Pose_Crouch" parent="Actors/Actor_Protagonist" unique_id=194142777 instance=ExtResource("9_o4mpp")]
+visible = false
+
+[node name="Pose_Climb" parent="Actors/Actor_Protagonist" unique_id=1987742485 instance=ExtResource("10_4k5x1")]
+visible = false
+
+[node name="Actor_Creature" type="Node3D" parent="Actors" unique_id=1780136574]
+visible = false
+
+[node name="Body" type="MeshInstance3D" parent="Actors/Actor_Creature" unique_id=1356222038]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
+material_override = SubResource("StandardMaterial3D_lg1p3")
+mesh = SubResource("CapsuleMesh_y6e1h")
+
+[node name="Head" type="MeshInstance3D" parent="Actors/Actor_Creature" unique_id=867155825]
+transform = Transform3D(0.9, 0, 0, 0, 1.3, 0, 0, 0, 0.95, 0, 2.4, 0.04)
+material_override = SubResource("StandardMaterial3D_lg1p3")
+mesh = SubResource("SphereMesh_v1wth")
+
+[node name="ArmL" type="MeshInstance3D" parent="Actors/Actor_Creature" unique_id=790983317]
+transform = Transform3D(0.99680173, 0.07991469, 0, -0.07991469, 0.99680173, 0, 0, 0, 1, -0.27, 1.45, 0.05)
+material_override = SubResource("StandardMaterial3D_lg1p3")
+mesh = SubResource("BoxMesh_k66ft")
+
+[node name="ArmR" type="MeshInstance3D" parent="Actors/Actor_Creature" unique_id=1329003824]
+transform = Transform3D(0.99680173, -0.07991469, 0, 0.07991469, 0.99680173, 0, 0, 0, 1, 0.27, 1.45, 0.05)
+material_override = SubResource("StandardMaterial3D_lg1p3")
+mesh = SubResource("BoxMesh_rfk7n")
+
+[node name="LegL" type="MeshInstance3D" parent="Actors/Actor_Creature" unique_id=969037025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_lg1p3")
+mesh = SubResource("BoxMesh_kyt6t")
+
+[node name="LegR" type="MeshInstance3D" parent="Actors/Actor_Creature" unique_id=758798893]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.45, 0)
+material_override = SubResource("StandardMaterial3D_lg1p3")
+mesh = SubResource("BoxMesh_4mf42")
+
+[node name="Coat" type="MeshInstance3D" parent="Actors/Actor_Creature" unique_id=1780138974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
+material_override = SubResource("StandardMaterial3D_psa6d")
+mesh = SubResource("BoxMesh_t3io3")
+
+[node name="Button" type="MeshInstance3D" parent="Actors/Actor_Creature" unique_id=841419509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45, 0.17)
+material_override = SubResource("StandardMaterial3D_1p0bh")
+mesh = SubResource("SphereMesh_fptkf")
+
+[node name="Cam_02_WakingUp" type="Camera3D" parent="." unique_id=2091606650]
+transform = Transform3D(0.64594346, -0.08511612, 0.7586253, 0, 0.9937647, 0.11149825, -0.76338524, -0.07202157, 0.6419158, -129.4, 106.30678, -318.8)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_03_TheHollow" type="Camera3D" parent="." unique_id=117305313]
+transform = Transform3D(-1, 0, 0, 0, 0.9906787, 0.13621908, 0, 0.13621908, -0.9906787, -132, 107.324646, -326)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_04_TheFirstHouses" type="Camera3D" parent="." unique_id=1010343507]
+transform = Transform3D(-1, 0, 0, 0, 0.9912279, 0.13216372, 0, 0.13216372, -0.9912279, -126.6, 107.293625, -353.9)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_05_TheYearMarks" type="Camera3D" parent="." unique_id=2126820473]
+transform = Transform3D(0.8741573, -0.032500174, 0.4845542, 0, 0.9977582, 0.06692195, -0.48564294, -0.058500312, 0.87219757, -150.6, 106.81294, -336.2)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_06_TheHealingWall_A" type="Camera3D" parent="." unique_id=1805028478]
+transform = Transform3D(-1, 0, 0, 0, 0.9883717, 0.15205719, 0, 0.15205719, -0.9883717, -153.1, 107.35956, -341.8)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_06_TheHealingWall_B" type="Camera3D" parent="." unique_id=660371918]
+transform = Transform3D(0.91832376, -0.020741511, 0.39528626, 0, 0.9986262, 0.052400038, -0.39583007, -0.0481202, 0.91706216, -170.5, 106.8089, -333.2)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_07_TheGuestHouse_A" type="Camera3D" parent="." unique_id=137550684]
+transform = Transform3D(-0.40081882, 0.12018611, -0.9082398, 0, 0.99135786, 0.13118501, 0.91615736, 0.052581422, -0.3973549, -176, 107.41332, -332.5)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_07_TheGuestHouse_B" type="Camera3D" parent="." unique_id=283667792]
+transform = Transform3D(0.32852015, 0.19663414, -0.92380166, 0, 0.9780885, 0.2081893, 0.9444969, -0.06839438, 0.3213218, -171.9, 107.55709, -323.4)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_08_TheFigureInTheWindow" type="Camera3D" parent="." unique_id=1599554655]
+transform = Transform3D(0.9942071, -0.0066780737, 0.107273854, 0, 0.998068, 0.0621323, -0.10748152, -0.061772373, 0.9922862, -166.8, 107.03601, -323.4)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_09_TheFestivalRing_A" type="Camera3D" parent="." unique_id=1145142121]
+transform = Transform3D(-1, 0, 0, 0, 0.9894148, 0.14511497, 0, 0.14511497, -0.9894148, -168, 107.32209, -336)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_09_TheFestivalRing_B" type="Camera3D" parent="." unique_id=919065205]
+transform = Transform3D(-0.76822126, -0.06987591, 0.6363595, 0, 0.9940253, 0.109149665, -0.6401844, 0.08385109, -0.7636314, -197.5, 107.67866, -344)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_10_TheDigSite_A" type="Camera3D" parent="." unique_id=1292864822]
+transform = Transform3D(-1, 0, 0, 0, 0.98433656, 0.17629944, 0, 0.17629944, -0.98433656, -202.4, 107.51866, -342.6)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_10_TheDigSite_B" type="Camera3D" parent="." unique_id=911827600]
+transform = Transform3D(0.748347, -0.10667649, 0.6546731, 0, 0.9869828, 0.1608251, -0.6633074, -0.12035298, 0.7386057, -192.5, 107.09683, -348.2)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_11_TheGenerator_A" type="Camera3D" parent="." unique_id=1631834975]
+transform = Transform3D(0.19611612, -0.2104617, 0.95772874, 0, 0.9766955, 0.21462968, -0.9805806, -0.04209234, 0.19154574, -193, 107.09606, -347.5)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_11_TheGenerator_B" type="Camera3D" parent="." unique_id=160284647]
+transform = Transform3D(-0.9642052, 0.038478285, -0.2623504, 0, 0.9894148, 0.14511502, 0.26515716, 0.13992065, -0.9539989, -199.29245, 107.372055, -351.97253)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_11_TheGenerator_C" type="Camera3D" parent="." unique_id=626167332]
+transform = Transform3D(-0.69085675, -0.10033555, 0.7159956, 0, 0.9903234, 0.1387783, -0.72299165, 0.09587593, -0.6841717, -187.5, 107.09102, -331.5)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_12_TheRadio_A" type="Camera3D" parent="." unique_id=1334040760]
+transform = Transform3D(-1, 0, 0, 0, 0.9894148, 0.14511497, 0, 0.14511497, -0.9894148, -192, 107.508766, -332.5)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_12_TheRadio_B" type="Camera3D" parent="." unique_id=1436785306]
+transform = Transform3D(0.7498372, -0.08051017, 0.65670556, 0, 0.9925686, 0.121686, -0.6616223, -0.09124469, 0.74426496, -193.6, 106.79148, -349)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_13_TheWrongCode_A" type="Camera3D" parent="." unique_id=1919547183]
+transform = Transform3D(-1, 0, 0, 0, 0.9883717, 0.15205719, 0, 0.15205719, -0.9883717, -196.6, 107.31845, -355.3)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_13_TheWrongCode_B" type="Camera3D" parent="." unique_id=610115111]
+transform = Transform3D(0.8, -0.062447686, 0.5967414, 0, 0.99456894, 0.104079485, -0.59999996, -0.08326359, 0.7956552, -205.8, 106.93621, -349.2)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_14_TheBurnedQuarter_A" type="Camera3D" parent="." unique_id=1597640485]
+transform = Transform3D(-1, 0, 0, 0, 0.9890195, 0.14778467, 0, 0.14778467, -0.9890195, -208.7, 107.61275, -357.40002)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_14_TheBurnedQuarter_B" type="Camera3D" parent="." unique_id=623152597]
+transform = Transform3D(0.52409744, -0.1358361, 0.8407559, 0, 0.9871986, 0.159496, -0.85165834, -0.08359145, 0.5173882, -221.5, 107.134735, -331)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_15_TheKeycard" type="Camera3D" parent="." unique_id=1149679514]
+transform = Transform3D(-0.57920855, -0.16125807, 0.7990703, 0, 0.98023856, 0.19781913, -0.81517935, 0.11457853, -0.5677626, -222.4, 106.82761, -333.2)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_16_ItStandsThere" type="Camera3D" parent="." unique_id=260997467]
+transform = Transform3D(0.28547564, -0.0118188895, 0.9583131, 0, 0.999924, 0.012332076, -0.958386, -0.0035205074, 0.28545392, -222.6, 106.69211, -329.2)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_17_TheLastCarving_A" type="Camera3D" parent="." unique_id=1758638997]
+transform = Transform3D(-0.6915718, -0.034294996, 0.7214931, 0, 0.99887216, 0.047479752, -0.7223078, 0.032835655, -0.6907918, -230.8, 107.0716, -339.3)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_17_TheLastCarving_B" type="Camera3D" parent="." unique_id=1432967022]
+transform = Transform3D(0.55695385, 0.055415228, -0.8286926, 0, 0.9977715, 0.06672165, 0.83054346, -0.037160877, 0.5557127, -233.5, 107.15429, -329.5)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_18_ItHunts_A" type="Camera3D" parent="." unique_id=772569388]
+transform = Transform3D(-1, 0, 0, 0, 0.98994946, 0.14142136, 0, 0.14142136, -0.98994946, -234.4, 107.36669, -339.2)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_18_ItHunts_B" type="Camera3D" parent="." unique_id=439804649]
+transform = Transform3D(0.89680606, -0.060831383, 0.43822196, 0, 0.9905024, 0.13749568, -0.44242394, -0.12330696, 0.8882885, -227.8, 107.49992, -322)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_19_TheRealCode_A" type="Camera3D" parent="." unique_id=196489500]
+transform = Transform3D(0.79128516, -0.1639112, 0.5890679, 0, 0.9633992, 0.26807082, -0.61144733, -0.21212046, 0.76232344, -229, 107.52742, -322)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_19_TheRealCode_B" type="Camera3D" parent="." unique_id=1290447895]
+transform = Transform3D(0.87294316, 0.06819305, -0.48303202, 0, 0.990181, 0.13979086, 0.48782194, -0.122029476, 0.8643718, -233.57077, 107.52993, -324.30493)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_19_TheRealCode_C" type="Camera3D" parent="." unique_id=1465683856]
+transform = Transform3D(0.7295352, -0.08613908, 0.6784972, 0, 0.9920373, 0.1259448, -0.6839432, -0.09188116, 0.72372615, -193.6, 106.79246, -349.2)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_20_TheCargoLift_A" type="Camera3D" parent="." unique_id=1929047510]
+transform = Transform3D(0.6587853, 0.114397325, -0.74358267, 0, 0.9883717, 0.15205717, 0.752331, -0.10017303, 0.6511247, -200.00932, 107.31511, -348.66486)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_20_TheCargoLift_B" type="Camera3D" parent="." unique_id=922704032]
+transform = Transform3D(0.707108, -0.024333619, 0.70668674, 0, 0.9994077, 0.03441299, -0.7071056, -0.024333702, 0.7066892, -206.2, 106.93179, -349.8)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_20_TheCargoLift_C" type="Camera3D" parent="." unique_id=1269619961]
+transform = Transform3D(0.7863183, -0.06261838, 0.6146401, 0, 0.9948505, 0.10135351, -0.6178215, -0.07969612, 0.78226924, -206.5, 107.52906, -349)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_20_TheCargoLift_D" type="Camera3D" parent="." unique_id=83585018]
+transform = Transform3D(-0.9886335, -0.08778894, 0.12205244, 0, 0.81181437, 0.5839156, -0.15034525, 0.5772785, -0.802587, -208, 122.406456, -371.5)
+fov = 60.0
+far = 900.0
+
+[node name="Cam_FP" type="Camera3D" parent="." unique_id=19997662]
+transform = Transform3D(1, -1.0465573e-08, 8.679409e-08, 0, 0.99280864, 0.119712204, -8.742278e-08, -0.119712204, 0.99280864, -132, 106.66464, -321)
+cull_mask = 1048573
+near = 0.03
+far = 900.0
+
+[node name="Timeline" type="AnimationPlayer" parent="." unique_id=309491034]
+libraries/ = SubResource("AnimationLibrary_2vytf")

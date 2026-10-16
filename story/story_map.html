@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tidewater · Story Map</title>
+<style>
+  :root {
+    --bg: #0e1113; --panel: #161b1f; --line: #2a3238;
+    --text: #d8dee3; --muted: #8a969e; --accent: #7fb3a0;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
+    font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+  header { display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    padding: 10px 14px; border-bottom: 1px solid var(--line); }
+  header h1 { font-size: 16px; margin: 0 14px 0 0; }
+  button { background: #22292e; color: var(--text); border: 1px solid var(--line);
+    border-radius: 6px; padding: 6px 10px; cursor: pointer; font: inherit; }
+  button:hover { border-color: var(--accent); }
+  button.small { padding: 3px 7px; font-size: 12px; }
+  #status { color: var(--muted); font-size: 12px; margin-left: auto; }
+  main { display: grid; grid-template-columns: minmax(340px, 440px) 1fr; height: calc(100% - 50px); }
+  #editor { overflow: auto; border-right: 1px solid var(--line); padding: 12px; }
+  #map { overflow: auto; padding: 16px; }
+  #map svg { max-width: none !important; }
+  .chapter { background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+    padding: 10px 12px; margin-bottom: 14px; }
+  .chapter h2 { font-size: 15px; margin: 0; flex: 1; }
+  label { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase;
+    letter-spacing: .05em; margin: 8px 0 3px; }
+  input, textarea { width: 100%; background: #0b0e10; color: var(--text);
+    border: 1px solid var(--line); border-radius: 5px; padding: 6px 8px; font: inherit; }
+  textarea { min-height: 48px; resize: vertical; }
+  .beat { border-top: 1px solid var(--line); padding: 8px 0; display: grid; gap: 5px; }
+  .row { display: flex; gap: 6px; align-items: center; }
+  .row > input { flex: 1; min-width: 0; }
+  .num { width: 26px; color: var(--muted); text-align: right; flex: none; }
+  .muted { color: var(--muted); font-size: 12px; }
+  @media (max-width: 860px) {
+    main { grid-template-columns: 1fr; height: auto; }
+    #editor { border-right: none; border-bottom: 1px solid var(--line); }
+    #map { min-height: 70vh; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Tidewater · Story Map</h1>
+  <button id="addChapter">+ Chapter</button>
+  <button id="download">Download JSON</button>
+  <button id="import">Import JSON</button>
+  <input type="file" id="file" accept="application/json" hidden>
+  <button id="reset">Discard browser edits</button>
+  <span id="status"></span>
+</header>
+<main>
+  <section id="editor"></section>
+  <section id="map"><p class="muted">Drawing chart…</p></section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.0/dist/mermaid.min.js"></script>
+<script>
+// ---- Seed data: taken from godot/story/chapters/*.md (Markdown stays the reference) ----
+const SEED = {
+  chapters: [
+    {
+      title: "The Old Harbor",
+      summary: "The captain drops the protagonist on the beach and leaves. The way back collapses behind them on a scaffold. At the old harbor, Reyes's body waits on the tower, and the gate chain is cut as the black stone rises.",
+      beats: [
+        { title: "Title and chapter card", time: "0:00", area: "", note: "Black screen" },
+        { title: "The crossing: captain's warning", time: "0:10", area: "Beach", note: "7 lines; slow dolly in from the sea" },
+        { title: "The boat leaves", time: "1:01", area: "Beach", note: "Locked-off; the boat lamp shrinks" },
+        { title: "Ashore: fallen tree, ruined wall", time: "1:10", area: "Trail", note: "Crouch under the tree, then climb the wall" },
+        { title: "The shrine", time: "1:39", area: "Trail", note: "Fresh offerings; whisper right behind you" },
+        { title: "The scaffold", time: "1:55", area: "Ravine", note: "Creaks louder each time" },
+        { title: "The collapse", time: "2:19", area: "Ravine", note: "Point of no return" },
+        { title: "The harbor and the chained gate", time: "2:28", area: "Old Harbor", note: "Military insignia" },
+        { title: "The shed: sign-out sheet", time: "2:58", area: "Old Harbor", note: "Reyes never came down. Door slams, footfalls on the roof, door creaks open (29 s locked-off)" },
+        { title: "Out to the tower", time: "3:27", area: "Old Harbor", note: "Crane-style camera tracks the climb" },
+        { title: "The watchtower: Reyes's body", time: "3:36", area: "Old Harbor", note: "Bolt cutters; body found" },
+        { title: "The searchlight", time: "4:17", area: "Old Harbor", note: "Switches on by itself: figure in the yard, flicker, gone" },
+        { title: "Run for the gate", time: "4:31", area: "Old Harbor", note: "Footsteps and breathing right behind" },
+        { title: "The chain", time: "4:41", area: "Old Harbor", note: "Gate opens, figure beyond; ground rumbles; the stone rises; fade" }
+      ]
+    },
+    {
+      title: "Base Camp",
+      summary: "The closed area is a supply base for the research center up the mountain. The cable car needs power: fuel the generator, set the breakers, hear Elias on the intercom, and board car 2 as it charges.",
+      beats: [
+        { title: "Aerial: camp and cable line", time: "0:00", area: "Base Camp", note: "PROPOSED: reveal the line in the opening shot" },
+        { title: "Supply yard: manifest", time: "0:19", area: "Base Camp", note: "PROPOSED: crates stamped UPPER STATION" },
+        { title: "Cable car station: dead drive", time: "0:42", area: "Base Camp", note: "PROPOSED: runs off Substation B" },
+        { title: "Generator is dry: barracks", time: "1:04", area: "Base Camp", note: "Elias's locker, fuel can" },
+        { title: "Encounter 1: hide in locker", time: "1:58", area: "Base Camp", note: "Barracks door bangs; it walks the barracks" },
+        { title: "Fuel and start the generator", time: "2:28", area: "Base Camp", note: "" },
+        { title: "The breakers", time: "2:51", area: "Base Camp", note: "Wrong order: sparks and a bang. Right order: power" },
+        { title: "Back at the station: car 2 lit", time: "3:15", area: "Base Camp", note: "PROPOSED" },
+        { title: "Intercom: Elias went up", time: "3:35", area: "Base Camp", note: "PROPOSED: \"It's climbing the line\"" },
+        { title: "Board car 2, throw RUN", time: "4:12", area: "Base Camp", note: "PROPOSED: car lurches out at the platform as it charges" },
+        { title: "End card: Chapter 3", time: "4:42", area: "", note: "PROPOSED title: The Line" }
+      ]
+    },
+    {
+      title: "The Line",
+      summary: "Car 2 climbs the line; something keeps pace outside. The drive grips and the car stops at pylon 3. The player climbs out, falls, and wakes on the forest side of a lit service path. DRAFT: first part only.",
+      beats: [
+        { title: "Ride up over the camp", time: "0:04", area: "Ropeway", note: "Jolt over the first tower saddle" },
+        { title: "Something on the slope", time: "0:24", area: "Ropeway", note: "Creature keeps pace with the car" },
+        { title: "It's ahead", time: "0:48", area: "Ropeway", note: "Creature is ahead, by the next tower" },
+        { title: "The breakdown", time: "1:02", area: "Ropeway", note: "Grip bangs, car stops, light dies. \"No stop. Don't stop.\"" },
+        { title: "Climbing out", time: "1:24", area: "Ropeway", note: "Pylon ladder; a rung gives way" },
+        { title: "The fall", time: "1:40", area: "Service Path", note: "Blur, black. The ropeway unloads: point of no return" },
+        { title: "Waking up", time: "1:45", area: "Service Path", note: "Forest side; SERVICE PATH sign fills the view" },
+        { title: "The lit path", time: "1:57", area: "Service Path", note: "Fenced path under lamps" },
+        { title: "The old stream", time: "2:19", area: "Service Path", note: "PROPOSED: plank bridge over the stream" },
+        { title: "The forest", time: "2:39", area: "Service Path", note: "Trees both sides; loose scree underfoot" },
+        { title: "End of Chapter 3 (so far)", time: "3:05", area: "", note: "Not designed beyond this point" }
+      ]
+    }
+  ]
+};
+
+// ---- State: browser copy if present, otherwise the seed ----
+const KEY = "tidewater-story-map-v1";
+let state = null;
+try { state = JSON.parse(localStorage.getItem(KEY)); } catch (e) { /* storage blocked: fall through */ }
+if (!state || !Array.isArray(state.chapters)) state = structuredClone(SEED);
+
+const $ = (id) => document.getElementById(id);
+const editor = $("editor"), mapEl = $("map"), statusEl = $("status");
+
+const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const mm = (s) => String(s ?? "").replace(/&/g, "#amp;").replace(/"/g, "#quot;").replace(/</g, "#lt;").replace(/>/g, "#gt;");
+const pad = (n) => String(n).padStart(2, "0");
+
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* ignore */ }
+  const beats = state.chapters.reduce((n, c) => n + c.beats.length, 0);
+  statusEl.textContent = `${state.chapters.length} chapters · ${beats} beats · edits kept in this browser (download JSON to keep a copy)`;
+}
+
+// ---- Editor panel ----
+function renderEditor() {
+  editor.innerHTML = state.chapters.map((ch, ci) => `
+    <div class="chapter">
+      <div class="row">
+        <h2>Ch ${pad(ci + 1)}</h2>
+        <button class="small" data-act="del-chapter" data-c="${ci}">Delete chapter</button>
+      </div>
+      <label>Title</label>
+      <input value="${esc(ch.title)}" data-c="${ci}" data-f="title">
+      <label>Summary</label>
+      <textarea data-c="${ci}" data-f="summary">${esc(ch.summary)}</textarea>
+      ${ch.beats.map((b, bi) => `
+        <div class="beat">
+          <div class="row">
+            <span class="num">${bi + 1}</span>
+            <input value="${esc(b.title)}" placeholder="Beat title" data-c="${ci}" data-b="${bi}" data-f="title">
+            <input value="${esc(b.time)}" placeholder="0:00" style="max-width:72px" data-c="${ci}" data-b="${bi}" data-f="time">
+          </div>
+          <div class="row">
+            <span class="num"></span>
+            <input value="${esc(b.area)}" placeholder="Area" data-c="${ci}" data-b="${bi}" data-f="area">
+            <button class="small" data-act="up" data-c="${ci}" data-b="${bi}" title="Move up">↑</button>
+            <button class="small" data-act="down" data-c="${ci}" data-b="${bi}" title="Move down">↓</button>
+            <button class="small" data-act="del-beat" data-c="${ci}" data-b="${bi}" title="Delete beat">✕</button>
+          </div>
+          <textarea placeholder="Notes: camera, sound, mood, PROPOSED…" data-c="${ci}" data-b="${bi}" data-f="note">${esc(b.note)}</textarea>
+        </div>`).join("")}
+      <div style="margin-top:8px"><button class="small" data-act="add-beat" data-c="${ci}">+ Beat</button></div>
+    </div>`).join("");
+}
+
+editor.addEventListener("input", (e) => {
+  const t = e.target, { c, b, f } = t.dataset;
+  if (c === undefined || !f) return;
+  const ch = state.chapters[+c];
+  if (b === undefined) ch[f] = t.value; else ch.beats[+b][f] = t.value;
+  scheduleRender();
+  save();
+});
+
+editor.addEventListener("click", (e) => {
+  const btn = e.target.closest("[data-act]");
+  if (!btn) return;
+  const { act, c, b } = btn.dataset;
+  const ch = state.chapters[+c];
+  const bi = +b, beats = ch.beats;
+  if (act === "add-beat") beats.push({ title: "New beat", time: "", area: "", note: "" });
+  if (act === "del-beat") beats.splice(bi, 1);
+  if (act === "up" && bi > 0) [beats[bi - 1], beats[bi]] = [beats[bi], beats[bi - 1]];
+  if (act === "down" && bi < beats.length - 1) [beats[bi], beats[bi + 1]] = [beats[bi + 1], beats[bi]];
+  if (act === "del-chapter" && confirm(`Delete chapter "${ch.title}" and its beats?`)) state.chapters.splice(+c, 1);
+  renderEditor(); scheduleRender(); save();
+});
+
+// ---- Flowchart (Mermaid) ----
+function beatLabel(b) {
+  const meta = [b.time, b.area].filter(Boolean).join(" · ");
+  return `<b>${mm(b.title)}</b>${meta ? "<br/>" + mm(meta) : ""}`;
+}
+
+function buildGraph() {
+  const lines = ["flowchart TD"];
+  let prevEnd = null;
+  state.chapters.forEach((ch, ci) => {
+    const cid = "c" + ci;
+    lines.push(`subgraph ${cid}["${mm(`Ch ${pad(ci + 1)} · ${ch.title}`)}"]`);
+    let first = null, prev = null;
+    if (!ch.beats.length) {
+      first = prev = cid + "_empty";
+      lines.push(`${first}["${mm("(no beats yet)")}"]`);
+    }
+    ch.beats.forEach((b, bi) => {
+      const id = `${cid}_b${bi}`;
+      lines.push(`${id}["${beatLabel(b)}"]`);
+      if (prev) lines.push(`${prev} --> ${id}`);
+      if (!first) first = id;
+      prev = id;
+    });
+    lines.push("end");
+    if (prevEnd && first) lines.push(`${prevEnd} ==> ${first}`);
+    if (prev) prevEnd = prev;
+  });
+  const next = `Ch ${pad(state.chapters.length + 1)} · not designed yet`;
+  if (prevEnd) lines.push(`${prevEnd} -.-> next(["${mm(next)}"])`);
+  else lines.push(`next(["${mm(next)}"])`);
+  lines.push("classDef todo stroke-dasharray:5 5,fill:none,color:#8a969e");
+  lines.push("class next todo");
+  return lines.join("\n");
+}
+
+let renderTimer = null, renderCount = 0;
+function scheduleRender() { clearTimeout(renderTimer); renderTimer = setTimeout(render, 250); }
+
+async function render() {
+  if (typeof mermaid === "undefined") {
+    mapEl.innerHTML = '<p class="muted">The chart library did not load (it comes from a CDN, so an internet connection is needed). The editor still works.</p>';
+    return;
+  }
+  try {
+    const { svg } = await mermaid.render("story" + (++renderCount), buildGraph());
+    mapEl.innerHTML = svg;
+  } catch (err) {
+    mapEl.innerHTML = `<pre class="muted">Could not draw the chart:\n${esc(err.message || err)}</pre>`;
+  }
+}
+
+if (typeof mermaid !== "undefined") {
+  mermaid.initialize({ startOnLoad: false, theme: "dark", flowchart: { useMaxWidth: false, curve: "basis", htmlLabels: true } });
+}
+
+// ---- Header buttons ----
+$("addChapter").onclick = () => {
+  state.chapters.push({ title: "New chapter", summary: "", beats: [] });
+  renderEditor(); scheduleRender(); save();
+};
+
+$("download").onclick = () => {
+  const url = URL.createObjectURL(new Blob([JSON.stringify(state, null, 2)], { type: "application/json" }));
+  const a = Object.assign(document.createElement("a"), { href: url, download: "tidewater_story.json" });
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+};
+
+$("import").onclick = () => $("file").click();
+$("file").onchange = async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  try {
+    const data = JSON.parse(await file.text());
+    if (!Array.isArray(data.chapters)) throw new Error("no 'chapters' list in this file");
+    state = data;
+    renderEditor(); scheduleRender(); save();
+  } catch (err) {
+    alert("Could not import: " + err.message);
+  }
+  e.target.value = "";
+};
+
+$("reset").onclick = () => {
+  if (!confirm("Discard the edits saved in this browser and go back to the story files?")) return;
+  try { localStorage.removeItem(KEY); } catch (e) { /* ignore */ }
+  state = structuredClone(SEED);
+  renderEditor(); scheduleRender(); save();
+};
+
+// ---- Start ----
+renderEditor();
+save();
+render();
+</script>
+</body>
+</html>

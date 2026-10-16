@@ -1,0 +1,84 @@
+{
+  "_help": "First-person gaze for Cam_FP, read by tools/add_fp_camera.gd. Per shot marker: gaze = [[seconds from shot start, spec], ...]. spec = \"ahead\" (walk direction) or an object: look [x,y,z] | lookg [x,z,height above ground] | track \"NodePath\" + dy (follow a moving node) | eye/eyeg (override the eye, e.g. inside a locker) | slats true (locker vents) | turn (head-turn speed, default 4) | pitch (for ahead). shakes = [[from, to, amount]]. Shots not listed look ahead.",
+  "eye_height": 1.64,
+  "crouch_height": 1.0,
+  "shots": {
+    "s02_the_base_camp": {
+      "gaze": [
+        [0.0, {"lookg": [12, -100, 2.0]}],
+        [5.0, {"lookg": [-9, -100, 2.0], "turn": 1}],
+        [9.5, {"look": [6, 20, -175], "turn": 1.2}]
+      ]
+    },
+    "s03_the_supply_yard": {
+      "gaze": [
+        [0.0, "ahead"],
+        [1.5, {"lookg": [-14, -103, 1.6], "turn": 1.5}],
+        [7.0, {"lookg": [-9, -100.2, 1.35], "turn": 3}],
+        [16.0, {"lookg": [-15, -101, 2.0], "turn": 1.2}]
+      ]
+    },
+    "s04_the_cable_car_station": {
+      "gaze": [
+        [0.0, "ahead"],
+        [3.5, {"look": [6, 22, -165], "turn": 1.2}],
+        [8.5, "ahead"],
+        [13.0, {"lookg": [12.3, -132.6, 2.3], "turn": 3}]
+      ]
+    },
+    "s05_the_generator": {
+      "gaze": [[0.0, "ahead"], [12.5, {"lookg": [22.5, -89.5, 1.1], "turn": 2.5}]]
+    },
+    "s07_elias_s_locker": {
+      "gaze": [[0.0, "ahead"], [3.5, {"lookg": [28.2, -113.3, 1.5], "turn": 2.5}]]
+    },
+    "s08_the_fuel_can": {
+      "gaze": [
+        [0.0, {"lookg": [33.2, -110.2, 1.15]}],
+        [6.5, {"lookg": [26.5, -100, 1.6], "turn": 2}]
+      ]
+    },
+    "s09_footsteps_at_the_door": {
+      "gaze": [
+        [0.0, {"lookg": [26.5, -100, 1.6], "turn": 9}],
+        [2.0, "ahead"],
+        [6.0, {"eyeg": [31.0, -113.45, 1.79], "lookg": [31.0, -106, 1.5], "slats": true}],
+        [12.0, {"eyeg": [31.0, -113.45, 1.79], "track": "Actors/Actor_Creature", "dy": 1.8, "turn": 1.2, "slats": true}],
+        [27.6, "ahead"]
+      ]
+    },
+    "s10_fuelling_the_generator": {
+      "gaze": [[0.0, "ahead"], [10.0, {"lookg": [21.7, -89.3, 1.3], "turn": 3}]]
+    },
+    "s11_the_breakers": {
+      "gaze": [
+        [0.0, {"lookg": [18.75, -93.17, 1.45]}],
+        [9.2, {"lookg": [19.5, -93.2, 1.45], "turn": 3}],
+        [18.0, {"lookg": [6, -136, 5.0], "turn": 2}]
+      ],
+      "shakes": [[10.6, 11.4, 0.04]]
+    },
+    "s12_back_to_the_station": {
+      "gaze": [
+        [0.0, "ahead"],
+        [8.0, {"lookg": [4.5, -136, 2.8], "turn": 1.5}],
+        [15.5, "ahead"]
+      ]
+    },
+    "s13_the_intercom": {
+      "gaze": [
+        [0.0, {"lookg": [12.3, -131.4, 2.55]}],
+        [30.0, {"lookg": [4.5, -136, 3.0], "turn": 1.5}]
+      ]
+    },
+    "s14_the_cable_car": {
+      "gaze": [
+        [0.0, "ahead"],
+        [4.8, {"lookg": [3.65, -137.25, 2.2], "turn": 3}],
+        [9.5, {"lookg": [4.5, -115, 1.5], "turn": 2}],
+        [13.5, {"track": "Actors/Actor_Creature", "dy": 1.8, "turn": 4}]
+      ],
+      "shakes": [[18.5, 19.3, 0.04]]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+# Godot cache (regenerated on open)
+.godot/
+
+# Licensed asset pack (Synty POLYGON Prototype): do not publish. Copy it back into assets/packs/synty_prototype to run the scenes.
+assets/packs/
+
+# macOS
+.DS_Store

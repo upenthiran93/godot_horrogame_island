@@ -1,0 +1,155 @@
+{
+  "_help": "First-person gaze for Cam_FP, read by tools/add_fp_camera.gd. Per shot marker: gaze = [[seconds from shot start, spec], ...]. spec = \"ahead\" (walk direction) or an object: look [x,y,z] | lookg [x,z,height above ground] | track \"NodePath\" + dy (follow a moving node) | eye/eyeg | turn (head-turn speed, default 4) | pitch (for ahead). shakes = [[from, to, amount]]. Shots not listed look ahead.",
+  "eye_height": 1.64,
+  "crouch_height": 1.0,
+  "shots": {
+    "s02_waking_up": {
+      "gaze": [
+        [0.0, {"pitch": -1.1, "turn": 2}],
+        [4.0, {"pitch": -0.3, "turn": 1.5}],
+        [8.0, {"lookg": [-127, -352, 1.5], "turn": 1.5}]
+      ]
+    },
+    "s03_the_hollow": {
+      "gaze": [
+        [0.0, "ahead"],
+        [2.5, {"lookg": [-140, -375, 3.6], "turn": 1.2}],
+        [7.0, "ahead"],
+        [14.5, {"lookg": [-127, -366, 2.0], "turn": 2}]
+      ]
+    },
+    "s04_the_first_houses": {
+      "gaze": [
+        [0.0, "ahead"],
+        [8.0, {"lookg": [-205, -335, 3.0], "turn": 1.5}],
+        [14.0, "ahead"]
+      ]
+    },
+    "s05_the_year_marks": {
+      "gaze": [
+        [0.0, "ahead"],
+        [3.5, {"lookg": [-153.1, -340.7, 1.4], "turn": 2}]
+      ]
+    },
+    "s06_the_healing_wall": {
+      "gaze": [
+        [0.0, "ahead"],
+        [11.0, {"lookg": [-175, -339, 1.9], "turn": 2}],
+        [13.0, {"lookg": [-173, -339, 1.2], "turn": 1.5}],
+        [15.5, {"lookg": [-171, -339, 0.6], "turn": 1.5}]
+      ]
+    },
+    "s07_the_guest_house": {
+      "gaze": [
+        [0.0, "ahead"],
+        [6.0, {"lookg": [-170, -323.5, 0.5], "turn": 1.5}],
+        [11.0, {"lookg": [-165, -325.8, 0.9], "turn": 2}],
+        [30.5, {"lookg": [-168, -325.5, 3.2], "turn": 3}]
+      ]
+    },
+    "s08_the_figure_in_the_window": {
+      "gaze": [
+        [0.0, {"lookg": [-168, -334.6, 1.5], "turn": 6}],
+        [7.6, {"lookg": [-168, -334.6, 0.1], "turn": 2}],
+        [9.0, "ahead"]
+      ]
+    },
+    "s09_the_festival_ring": {
+      "gaze": [
+        [0.0, "ahead"],
+        [16.0, {"lookg": [-198.9, -329.9, 1.6], "turn": 1.5}],
+        [19.0, {"lookg": [-212.5, -332.3, 1.6], "turn": 1.5}],
+        [21.5, {"lookg": [-205, -332.6, 1.0], "turn": 2}]
+      ]
+    },
+    "s10_the_dig_site": {
+      "gaze": [
+        [0.0, {"lookg": [-204.1, -332.1, 0.9]}],
+        [4.0, "ahead"],
+        [10.0, {"lookg": [-200, -346.5, 0.1], "turn": 1.5}],
+        [13.0, {"lookg": [-196.8, -352.9, 0.9], "turn": 2}]
+      ]
+    },
+    "s11_the_generator": {
+      "gaze": [
+        [0.0, "ahead"],
+        [16.0, {"lookg": [-192, -326, 0.9], "turn": 2}],
+        [19.5, {"lookg": [-192, -326, 1.1], "turn": 3}],
+        [21.0, {"lookg": [-190, -327, 6.0], "turn": 2}]
+      ]
+    },
+    "s12_the_radio": {
+      "gaze": [
+        [0.0, "ahead"],
+        [13.5, {"lookg": [-196.8, -352.9, 0.9], "turn": 2}]
+      ]
+    },
+    "s13_the_wrong_code": {
+      "gaze": [
+        [0.0, "ahead"],
+        [9.5, {"lookg": [-208.8, -353.4, 1.3], "turn": 2}]
+      ]
+    },
+    "s14_the_burned_quarter": {
+      "gaze": [
+        [0.0, "ahead"],
+        [14.0, {"lookg": [-225, -340.5, 1.4], "turn": 1.5}],
+        [19.0, "ahead"],
+        [22.5, {"lookg": [-228, -335, 0.4], "turn": 2}]
+      ]
+    },
+    "s15_the_keycard": {
+      "gaze": [
+        [0.0, "ahead"],
+        [4.0, {"lookg": [-226.2, -330.0, 0.1], "turn": 2}],
+        [8.0, {"lookg": [-226.5, -329.6, 0.6], "turn": 2}],
+        [13.0, {"lookg": [-227, -330.7, 0.1], "turn": 2}]
+      ]
+    },
+    "s16_it_stands_there": {
+      "gaze": [
+        [0.0, {"lookg": [-227, -330.7, 0.2]}],
+        [2.5, {"track": "Actors/Actor_Creature", "dy": 1.8, "turn": 3}]
+      ]
+    },
+    "s17_the_last_carving": {
+      "gaze": [
+        [0.0, "ahead"],
+        [10.0, {"lookg": [-236.4, -333.6, 2.2], "turn": 1.5}],
+        [12.5, {"lookg": [-236.4, -335.7, 1.4], "turn": 1.5}],
+        [15.0, {"lookg": [-236.4, -337.4, 3.3], "turn": 1.5}],
+        [18.0, {"track": "Actors/Actor_Creature", "dy": 1.8, "turn": 4}]
+      ]
+    },
+    "s18_it_hunts": {
+      "gaze": [
+        [0.0, "ahead"],
+        [8.5, {"lookg": [-231, -331, 1.5], "turn": 2}],
+        [11.0, {"track": "Actors/Actor_Creature", "dy": 1.6, "turn": 3}],
+        [17.0, {"lookg": [-231, -331, 0.5], "turn": 1.5}]
+      ]
+    },
+    "s19_the_real_code": {
+      "gaze": [
+        [0.0, {"lookg": [-231, -329.8, 0.8]}],
+        [4.0, "ahead"],
+        [22.0, {"track": "Actors/Actor_Creature", "dy": 1.8, "turn": 2.5}],
+        [26.0, "ahead"],
+        [37.5, {"lookg": [-196.8, -352.9, 0.9], "turn": 2}],
+        [41.0, {"lookg": [-196.4, -352.4, 0.9]}]
+      ]
+    },
+    "s20_the_cargo_lift": {
+      "gaze": [
+        [0.0, "ahead"],
+        [8.8, {"lookg": [-208.8, -353.4, 1.3], "turn": 2}],
+        [14.0, "ahead"],
+        [19.0, {"pitch": 0.3, "turn": 2}],
+        [26.0, {"track": "Actors/Actor_Creature", "dy": 1.8, "turn": 2}],
+        [31.0, {"pitch": 0.2, "turn": 1}],
+        [37.5, "ahead"],
+        [40.0, {"track": "Actors/Actor_Creature", "dy": 1.8, "turn": 2}]
+      ]
+    }
+  }
+}

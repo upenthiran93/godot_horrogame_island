@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://game/levels/a02_trail/a02_trail_blockout.tscn" id="1_blockout"]
+
+[node name="A02_Trail" instance=ExtResource("1_blockout")]
+
+[node name="Decoration" type="Node3D" parent="."]
+
+[node name="Lighting" type="Node3D" parent="."]
