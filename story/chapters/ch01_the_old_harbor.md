@@ -1,7 +1,7 @@
 # Chapter 01 — The Old Harbor
 
 ## Summary
-The captain drops the protagonist off the beach and leaves. They follow the overgrown trail inland (fallen tree, ruined wall, a shrine with fresh offerings), cross the ravine on a rotten scaffold that collapses behind them — no way back. At the old harbor a chained military gate blocks the way; the maintenance shed's sign-out sheet says Reyes took the bolt cutters up the watchtower and never came down. Something traps them in the shed, then lets them out. On the tower: Reyes's body, the cutters, and a searchlight that switches itself on to show a figure in the yard. They run, cut the chain, the gate opens — and far out at sea the black stone rises.
+Lured by a static-laced voicemail from their missing brother **Sgt. Elias**, the protagonist is dropped off on the southern beach by a mainland fishing captain who refuses to touch the sand while the **Black Stone** (the calcified spire of the Sleeper in the Trench) sits above water. They follow the overgrown trail inland (fallen tree, ruined stone wall, an ancient three-hollow shrine with a fresh warning from Elias), and cross the ravine on a rotten scaffold that collapses behind them — no way back. At the Old Harbor, a chained military gate blocks the way; the maintenance shed's sign-out sheet says Cpl. Reyes took the bolt cutters up the watchtower and never came down. Something traps them in the shed with wet footfalls overhead, then lets them out. On the tower: Reyes's body with torn fingernails and pooled seawater, the cutters, and a dead searchlight that **Julian Vane** (trapped in the island's electrical grid) switches on by itself to reveal **The Shepherd** standing in the yard. They run, cut the chain, and open the gate — as a deep sub-bass resonance shakes the island and the Black Stone rises higher out of the sea.
 
 ## Location
 - **Levels (one scene per area):** A01 Beach, A02 Trail, A03 Ravine, A04 Old Harbor (`res://game/levels/a0N_*/`); A05 Base Camp is visible through the gate in the last shot
@@ -9,7 +9,7 @@ The captain drops the protagonist off the beach and leaves. They follow the over
 - **Level nodes animated:** `Dynamic/Scaffold`, `ShedDoor`, `BoltCutters`, `Searchlight` (light + beam), `GateChain`, `GateLeft`, `GateRight`, `ShiftingRock`
 
 ## Characters present
-Protagonist, the Captain (in the boat), Cpl. Reyes (body), the creature (glimpses).
+Protagonist, the Captain (in the boat), Cpl. Reyes (body), The Shepherd / Capt. Alistair Locke (glimpses), Julian Vane (unseen, switches on the searchlight via the grid), Dr. Mara Chen (faint harmonic whisper at the shrine).
 
 ## Beats
 | # | Beat | Target time | Notes (camera / sound / mood) |

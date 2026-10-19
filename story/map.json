@@ -1,128 +1,156 @@
 {
-  "_help": "Story map: the player's route through the whole island, read by game/map/island_miniature.tscn (the 3D miniature). Edit the numbers, save, and re-run the miniature to see the change. Coordinates are the game's world metres: x = east, z = south (north/up the mountain is NEGATIVE z), y = height above sea level. Route points: [x, z] = on the ground (height taken from the terrain); [x, z, y] = at that exact height (underground or in the air). status: built = a level scene exists; proposed = this map's suggestion, nothing built. Everything not 'built' is PROPOSED and open to change. Terrain beyond the built levels (west coast, summit, north coast) is the miniature's own guess, see game/map/island_height.gd.",
-  "stages": [
-    {
-      "id": "S01", "name": "Beach", "act": "I", "chapter": "1", "status": "built", "area": "A01", "mode": "ground",
-      "route": [[0, 78], [0, 66], [-3, 44]],
-      "note": "The captain drops you. The black stone is out past the point."
-    },
-    {
-      "id": "S02", "name": "Trail", "act": "I", "chapter": "1", "status": "built", "area": "A02", "mode": "ground",
-      "route": [[-3, 44], [2, 28], [0, 14]],
-      "note": "Fallen tree, ruined wall, shrine."
-    },
-    {
-      "id": "S03", "name": "Ravine", "act": "I", "chapter": "1", "status": "built", "area": "A03", "mode": "ground",
-      "route": [[0, 14], [0, 7], [3, 0], [4, -8]],
-      "note": "Scaffold collapses behind you: the way back to the beach is gone."
-    },
-    {
-      "id": "S04", "name": "Old Harbor", "act": "I", "chapter": "1", "status": "built", "area": "A04", "mode": "ground",
-      "route": [[4, -8], [8, -30], [12, -46], [10, -80]],
-      "note": "Shed, watchtower, searchlight. The gate chain is cut as the stone rises."
-    },
-    {
-      "id": "S05", "name": "Base Camp", "act": "I", "chapter": "2", "status": "built", "area": "A05", "mode": "ground",
-      "route": [[10, -80], [14, -100], [8, -125], [4.5, -136]],
-      "note": "Supply depot. Power the cable car (generator, fuel, breakers)."
-    },
-    {
-      "id": "S06", "name": "The Line (cable car)", "act": "II", "chapter": "3", "status": "built", "area": "A06", "mode": "ropeway",
-      "route": [[4.5, -141], [4.5, -175], [4.5, -235], [4.5, -303.4]],
-      "note": "The ride up. The car stops dead beside pylon 3."
-    },
-    {
-      "id": "S07", "name": "The Fall", "act": "II", "chapter": "3", "status": "built", "area": "A06/A07", "mode": "ground",
-      "route": [[4.5, -303.4], [7.6, -302.4], [-40, -310], [-100, -318], [-132, -321]],
-      "note": "The ladder rung gives way. Blackout. You wake in the old village (the drag marks lead from the foot of the buried steps)."
-    },
-    {
-      "id": "S08", "name": "The Old Village", "act": "II", "chapter": "4", "status": "built", "area": "A08-A11", "mode": "ground",
-      "route": [[-132, -321], [-127, -350], [-152, -335], [-175, -336], [-168, -326], [-195, -336], [-205, -338], [-197, -351], [-209, -352], [-225, -335], [-232, -318], [-258, -315]],
-      "note": "Carvings, the colonist's log, the dig site, the burned quarter. PROPOSED CHANGE: the exit is the south-west rim gap, not the cargo lift (see MAP.md, conflicts)."
-    },
-    {
-      "id": "S09", "name": "Down to the coast", "act": "III", "chapter": "", "status": "proposed", "mode": "ground",
-      "route": [[-258, -315], [-280, -300], [-300, -310], [-320, -295], [-340, -300], [-352, -300]],
-      "note": "A gully path from the village rim down 115 m to the west coast. One-way (steep, loose)."
-    },
-    {
-      "id": "S10", "name": "The colonial ship wreck", "act": "III", "chapter": "", "status": "proposed", "mode": "ground",
-      "route": [[-352, -300], [-358, -296], [-366, -303], [-380, -320, 1], [-388, -334, 1]],
-      "note": "The captain's ship, beached in the cove. Through the hull, then wade along the waterline under the cliff to the sea cave (the cave is entered from the water)."
-    },
-    {
-      "id": "S11", "name": "The sea cave", "act": "III", "chapter": "", "status": "proposed", "mode": "underground", "radius": 3.2,
-      "route": [[-388, -334, 1], [-378, -342, 1], [-362, -350, 2]],
-      "chambers": [[-380, -341, 3, 9, 5, 9]],
-      "note": "Entered from the water. Tide pools, the colonist's smuggling cache."
-    },
-    {
-      "id": "S12", "name": "The underground tunnel", "act": "III", "chapter": "", "status": "proposed", "mode": "underground", "radius": 2.4,
-      "route": [[-362, -350, 2], [-330, -358, 4], [-290, -375, 9], [-250, -398, 15], [-215, -422, 22], [-192, -440, 28]],
-      "note": "A man-made tunnel, old timbers and newer concrete. It meets the natural cave system."
-    },
-    {
-      "id": "S13", "name": "The cave system", "act": "IV", "chapter": "", "status": "proposed", "mode": "underground", "radius": 3.4,
-      "route": [[-192, -440, 28], [-205, -470, 38], [-185, -500, 52], [-150, -520, 68], [-120, -505, 84], [-95, -530, 102], [-70, -545, 122], [-45, -530, 142], [-30, -505, 162], [-45, -480, 182], [-60, -462, 200]],
-      "chambers": [[-205, -470, 38, 14, 8, 14], [-150, -520, 68, 22, 14, 22], [-95, -530, 102, 16, 10, 16], [-30, -505, 162, 14, 9, 14]],
-      "note": "Natural caves, the longest climb of the game (about 170 m up). Where 'the hollow under the island' lives. Underground river, the god's old place."
-    },
-    {
-      "id": "S14", "name": "Research-center bunker", "act": "IV", "chapter": "", "status": "proposed", "mode": "underground", "radius": 2.0,
-      "route": [[-60, -462, 200], [-45, -455, 214], [-20, -462, 214], [10, -470, 214], [10, -470, 290]],
-      "chambers": [[-45, -455, 214, 9, 5, 9]],
-      "note": "The company's bunker: a sealed door at the cave end, then a long lift shaft up (about 75 m) to the research center basement."
-    },
-    {
-      "id": "S15", "name": "Research center", "act": "V", "chapter": "", "status": "proposed", "mode": "ground",
-      "route": [[10, -470], [10, -462], [7, -455], [25, -490], [5, -505], [10, -520]],
-      "note": "The compound at the top of the cable line (upper station). Survey team's labs, the owner's office. Then a service road up to the next facility."
-    },
-    {
-      "id": "S16", "name": "Second facility", "act": "V", "chapter": "", "status": "proposed", "mode": "ground",
-      "route": [[10, -520], [20, -540], [5, -560]],
-      "note": "Name and purpose TBD. The last building before the summit: the ritual's control room / the owner's dying body?"
-    },
-    {
-      "id": "S17", "name": "The summit: the ritual site", "act": "V", "chapter": "", "status": "proposed", "mode": "ground",
-      "route": [[5, -560], [5, -556]],
-      "note": "The circle, the three crystals, the open void. Where Elias, the researcher and the owner met. The finale."
-    }
-  ],
-  "side_routes": [
-    {
-      "name": "Cable line to the upper station", "style": "air", "status": "built (to pylon 4), rest proposed",
-      "route": [[4.5, -141, 12], [4.5, -175, 24], [4.5, -235, 40], [4.5, -305, 62], [4.5, -390, 200], [7, -455, 292]],
-      "note": "The line really runs to pylon 4 at z -390. The map extends it to the research center's upper station."
-    },
-    {
-      "name": "Service path (surface, bypassed)", "style": "surface", "status": "built (A07) + proposed",
-      "route": [[8, -303], [30, -309], [32, -316], [-18, -325], [-20, -332], [30, -341], [32, -348], [-10, -357], [25, -385], [0, -410], [30, -430], [10, -455]],
-      "note": "The lit fenced path (Ch3) that leads up to the research center on the surface. In this route the player does not take it; see conflicts."
-    },
-    {
-      "name": "Village cargo lift (Ch4 ending)", "style": "surface", "status": "built (Ch4 previs)",
-      "route": [[-212, -356], [-212, -371]],
-      "note": "Ch4 currently ends by riding this lift up to the service path. Conflicts with 'village leads to the wreck'."
-    }
-  ],
-  "structures": [
-    {"name": "Research center", "kind": "box", "pos": [10, -470], "size": [60, 14, 40], "color": "#c8c8d0", "status": "proposed"},
-    {"name": "Upper station", "kind": "box", "pos": [7, -455], "size": [14, 8, 10], "color": "#9fb4c8", "status": "proposed"},
-    {"name": "Second facility", "kind": "box", "pos": [10, -520], "size": [40, 12, 28], "color": "#d0b0a0", "status": "proposed"},
-    {"name": "Ritual circle", "kind": "ring", "pos": [5, -560], "size": [14, 1, 14], "color": "#ff4d6d", "status": "proposed"},
-    {"name": "Bunker", "kind": "box", "pos": [-45, -455, 214], "size": [24, 10, 18], "color": "#ff6b6b", "status": "proposed"},
-    {"name": "Colonial ship wreck", "kind": "ship", "pos": [-360, -298], "size": [34, 9, 11], "yaw": 35, "color": "#8b6a4a", "status": "proposed"},
-    {"name": "Village ring", "kind": "ring", "pos": [-205, -335], "size": [16, 1, 16], "color": "#7fe0a0", "status": "built"},
-    {"name": "Watchtower", "kind": "box", "pos": [26, -66], "size": [4, 11, 4], "color": "#d9b36c", "status": "built"},
-    {"name": "Cable car station", "kind": "box", "pos": [6, -140], "size": [10, 10, 12], "color": "#d9b36c", "status": "built"}
-  ],
-  "landmarks": [
-    {"name": "Black stone", "pos": [22, 114], "status": "built"},
-    {"name": "Pylon 1", "pos": [4.5, -175], "status": "built"},
-    {"name": "Pylon 2", "pos": [4.5, -235], "status": "built"},
-    {"name": "Pylon 3 (car stops)", "pos": [4.5, -305], "status": "built"},
-    {"name": "Pylon 4", "pos": [4.5, -390], "status": "built"}
-  ]
+	"_help": "Story map: the player's route through the whole island, read by game/map/island_miniature.tscn (the 3D miniature). Edit the numbers, save, and re-run the miniature to see the change. Coordinates are the game's world metres: x = east, z = south (north/up the mountain is NEGATIVE z), y = height above sea level. Route points: [x, z] = on the ground (height taken from the terrain); [x, z, y] = at that exact height (underground or in the air). status: built = a level scene exists; proposed = designed for Ch5-Ch6. Terrain beyond the built levels (west coast, summit, north coast) is in game/map/island_height.gd.",
+	"stages": [
+		{
+			"id": "S01", "name": "Beach", "act": "I", "chapter": "1", "area": "A01",
+			"status": "built", "mode": "ground",
+			"route": [[0, 78], [0, 66], [-3, 44]],
+			"note": "The captain drops you. The Black Stone (the Sleeper's spire) sits out past the point."
+		},
+		{
+			"id": "S02", "name": "Trail", "act": "I", "chapter": "1", "area": "A02",
+			"status": "built", "mode": "ground",
+			"route": [[-3, 44], [2, 28], [0, 14]],
+			"note": "Fallen tree, ruined wall, three-hollow shrine with Elias's warning."
+		},
+		{
+			"id": "S03", "name": "Ravine", "act": "I", "chapter": "1", "area": "A03",
+			"status": "built", "mode": "ground",
+			"route": [[0, 14], [0, 7], [3, 0], [4, -8]],
+			"note": "Scaffold collapses behind you: the way back to the beach is gone."
+		},
+		{
+			"id": "S04", "name": "Old Harbor", "act": "I", "chapter": "1", "area": "A04",
+			"status": "built", "mode": "ground",
+			"route": [[4, -8], [8, -30], [12, -46], [10, -80]],
+			"note": "Shed, watchtower, Reyes's body, Vane switching on the searchlight. Cut the gate chain as the Black Stone rises."
+		},
+		{
+			"id": "S05", "name": "Base Camp", "act": "I", "chapter": "2", "area": "A05",
+			"status": "built", "mode": "ground",
+			"route": [[10, -80], [14, -100], [8, -125], [4.5, -136]],
+			"note": "Vane Bio-Marine supply depot. Hide from The Shepherd in the barracks, power the substation, hear Vane's spliced 'Elias' voice on the intercom."
+		},
+		{
+			"id": "S06", "name": "The Line (cable car)", "act": "II", "chapter": "3", "area": "A06",
+			"status": "built", "mode": "ropeway",
+			"route": [[4.5, -141], [4.5, -175], [4.5, -235], [4.5, -303.4]],
+			"note": "The ride up through luminescent fog while The Shepherd races the slope. Elias's sabotage stops Car 2 at Pylon 3."
+		},
+		{
+			"id": "S07", "name": "The Fall", "act": "II", "chapter": "3", "area": "A06/A07",
+			"status": "built", "mode": "ground",
+			"route": [[4.5, -303.4], [7.6, -302.4], [-40, -310], [-100, -318], [-132, -321]],
+			"note": "A rung gives way on Pylon 3. Blackout. You wake in the unpowered Old Village hollow."
+		},
+		{
+			"id": "S08", "name": "The Old Village", "act": "II", "chapter": "4", "area": "A08-A11",
+			"status": "built", "mode": "ground",
+			"route": [[-132, -321], [-127, -350], [-152, -335], [-175, -336], [-168, -326], [-195, -336], [-205, -338], [-197, -351], [-209, -352], [-225, -335], [-232, -318], [-258, -315]],
+			"note": "Carvings of the Sleeper, Capt. Locke's 1784 log, Vane's dig site & false radio code, the Pale Shard in the Burned Quarter. Ride the lift to the Service Path bridge, which collapses into the West Gully."
+		},
+		{
+			"id": "S09", "name": "West Gully (down to coast)", "act": "III", "chapter": "5", "area": "A12",
+			"status": "proposed", "mode": "ground",
+			"route": [[-258, -315], [-280, -300], [-300, -310], [-320, -295], [-340, -300], [-352, -300]],
+			"note": "After the Service Path bridge ambush, tumble/descend 115m down the steep gully to sea level at the West Cove. One-way."
+		},
+		{
+			"id": "S10", "name": "Wreck of HMS Madrigal", "act": "III", "chapter": "5", "area": "A13",
+			"status": "proposed", "mode": "ground",
+			"route": [[-352, -300], [-358, -296], [-366, -303], [-380, -320, 1], [-388, -334, 1]],
+			"note": "Capt. Locke's 1784 brig wedged in the cove. Tidal gun-deck puzzle, Locke's melted iron cage, Elias's waterproof pack."
+		},
+		{
+			"id": "S11", "name": "The Sea Cave", "act": "III", "chapter": "5", "area": "A14",
+			"status": "proposed", "mode": "underground", "radius": 3.2,
+			"route": [[-388, -334, 1], [-378, -342, 1], [-362, -350, 2]],
+			"chambers": [[-380, -341, 3, 9, 5, 9]],
+			"note": "Entered from the surf. Locke's 1784 crew fused like living coral into the wet limestone walls."
+		},
+		{
+			"id": "S12", "name": "Smuggler's Tunnel", "act": "III", "chapter": "5", "area": "A15",
+			"status": "proposed", "mode": "underground", "radius": 2.4,
+			"route": [[-362, -350, 2], [-330, -358, 4], [-290, -375, 9], [-250, -398, 15], [-215, -422, 22], [-192, -440, 28]],
+			"note": "Flooded timber-and-concrete tunnel. Hide in submerged water alcoves and use the Pale Shard to blind The Shepherd."
+		},
+		{
+			"id": "S13", "name": "Abyssal Caverns (Deep Chorus)", "act": "IV", "chapter": "5", "area": "A16-A18",
+			"status": "proposed", "mode": "underground", "radius": 3.4,
+			"route": [[-192, -440, 28], [-205, -470, 38], [-185, -500, 52], [-150, -520, 68], [-120, -505, 84], [-95, -530, 102], [-70, -545, 122], [-45, -530, 142], [-30, -505, 162], [-45, -480, 182], [-60, -462, 200]],
+			"chambers": [
+				[-205, -470, 38, 14, 8, 14],
+				[-150, -520, 68, 22, 14, 22],
+				[-95, -530, 102, 16, 10, 16],
+				[-30, -505, 162, 14, 9, 14]
+			],
+			"note": "170m vertical climb inside the hollow mountain. Bioluminescent ledges of the Deep Chorus villagers, the Sleeper's cathedral-sized Eye in the chasm below, harmonic bridge puzzles."
+		},
+		{
+			"id": "S14", "name": "Sub-Level Bunker B (Elias)", "act": "IV", "chapter": "5", "area": "A19",
+			"status": "proposed", "mode": "underground", "radius": 2.0,
+			"route": [[-60, -462, 200], [-45, -455, 214], [-20, -462, 214], [10, -470, 214], [10, -470, 290]],
+			"chambers": [[-45, -455, 214, 9, 5, 9]],
+			"note": "Find the dying real Sgt. Elias guarding Tide-Stone #3. Vane drops his disguise on the PA. Ride the 75m freight lift up to the Research Center."
+		},
+		{
+			"id": "S15", "name": "Research Center", "act": "V", "chapter": "6", "area": "A20-A21",
+			"status": "proposed", "mode": "ground",
+			"route": [[10, -470], [10, -462], [7, -455], [25, -490], [5, -505], [10, -520]],
+			"note": "Top of the cable line (300m). Mara's Acoustics Lab; Vane uses the building's blast doors, lights, and halon gas against you while The Shepherd prowls."
+		},
+		{
+			"id": "S16", "name": "Neural Siphon Facility", "act": "V", "chapter": "6", "area": "A22",
+			"status": "proposed", "mode": "ground",
+			"route": [[10, -520], [20, -540], [5, -560]],
+			"note": "360m elevation. Confront Julian Vane's half-calcified, mutating body inside the Faraday Siphon Pod. Set the Siphon Routing Console before climbing to the crater."
+		},
+		{
+			"id": "S17", "name": "The Summit: Ritual Crater", "act": "V", "chapter": "6", "area": "A23",
+			"status": "proposed", "mode": "ground",
+			"route": [[5, -560], [5, -556]],
+			"note": "430m crater peak beneath the open Void Halo. Final Shepherd confrontation and the 3 Cosmic Horror Endings with Tide-Stone #3."
+		}
+	],
+	"side_routes": [
+		{
+			"name": "Cable line to the upper station",
+			"status": "built (to pylon 4), rest proposed",
+			"style": "air",
+			"route": [[4.5, -141, 12], [4.5, -175, 24], [4.5, -235, 40], [4.5, -305, 62], [4.5, -390, 200], [7, -455, 292]],
+			"note": "The cargo line runs to the Research Center's Upper Station. The Shepherd climbs this line to reach Chapter 6."
+		},
+		{
+			"name": "Service path (A07 bridge ambush)",
+			"status": "built (A07) + proposed",
+			"style": "surface",
+			"route": [[8, -303], [30, -309], [32, -316], [-18, -325], [-20, -332], [30, -341], [32, -348], [-10, -357], [25, -385], [0, -410], [30, -430], [10, -455]],
+			"note": "After riding the Village Cargo Lift up, the player walks the first section of the lit path until The Shepherd smashes the Old Stream Plank Bridge, dropping them toward the West Gully."
+		},
+		{
+			"name": "Village cargo lift (Ch4 exit)",
+			"status": "built (Ch4 previs)",
+			"style": "surface",
+			"route": [[-212, -356], [-212, -371]],
+			"note": "Takes the player out of the Festival Ring up to the Lit Service Path at the end of Chapter 4."
+		}
+	],
+	"structures": [
+		{"name": "Research center", "pos": [10, -470], "size": [60, 14, 40], "color": "#c8c8d0", "kind": "box", "status": "proposed"},
+		{"name": "Upper station", "pos": [7, -455], "size": [14, 8, 10], "color": "#9fb4c8", "kind": "box", "status": "proposed"},
+		{"name": "Neural Siphon Facility", "pos": [10, -520], "size": [40, 12, 28], "color": "#d0b0a0", "kind": "box", "status": "proposed"},
+		{"name": "Summit Ritual Circle", "pos": [5, -560], "size": [14, 1, 14], "color": "#ff4d6d", "kind": "ring", "status": "proposed"},
+		{"name": "Sub-Level Bunker B", "pos": [-45, -455, 214], "size": [24, 10, 18], "color": "#ff6b6b", "kind": "box", "status": "proposed"},
+		{"name": "Wreck of HMS Madrigal", "pos": [-360, -298], "size": [34, 9, 11], "yaw": 35, "color": "#8b6a4a", "kind": "ship", "status": "proposed"},
+		{"name": "Village ring", "pos": [-205, -335], "size": [16, 1, 16], "color": "#7fe0a0", "kind": "ring", "status": "built"},
+		{"name": "Watchtower", "pos": [26, -66], "size": [4, 11, 4], "color": "#d9b36c", "kind": "box", "status": "built"},
+		{"name": "Cable car station", "pos": [6, -140], "size": [10, 10, 12], "color": "#d9b36c", "kind": "box", "status": "built"}
+	],
+	"landmarks": [
+		{"name": "Black stone (Sleeper's Spire)", "pos": [22, 114], "status": "built"},
+		{"name": "Pylon 1", "pos": [4.5, -175], "status": "built"},
+		{"name": "Pylon 2", "pos": [4.5, -235], "status": "built"},
+		{"name": "Pylon 3 (car stops)", "pos": [4.5, -305], "status": "built"},
+		{"name": "Pylon 4", "pos": [4.5, -390], "status": "built"}
+	]
 }

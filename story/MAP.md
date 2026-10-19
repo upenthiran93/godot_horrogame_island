@@ -1,130 +1,100 @@
-# Tidewater — Story Map
+# Tidewater — Story Map & Level Route (2.5-Hour Cosmic Horror)
 
-> **PROPOSED (2026-10-16).** This is the player's route through the whole island, from the beach to the summit. Stages 1–8 are built (levels exist). Stages 9–17 are this map's suggestion from your notes: **nothing is built, no chapter docs exist for them, and every number can change.** The data lives in [`map.json`](map.json); the 3D miniature reads it, so edit the file and look again.
+> **Updated (v8).** This is the player's complete route through the island, from the southern beach landing to the summit ritual crater. Stages `S01–S08` (plus `A07` Service Path) are built in Godot. Stages `S09–S17` (Chapters 5 & 6) complete the 2.5-hour (150-minute) cosmic horror arc. All spatial data lives in [`map.json`](map.json) and is rendered in 3D by `game/map/island_miniature.tscn`.
 
 ![The whole route, seen from the south-west with the ground see-through](map_views/map_iso.png)
 
-## The route in one line
+---
+
+## The Route in One Line
 ```
-Beach → Trail → Ravine → Old Harbor → Base Camp → Cable car → The fall → Old Village
-   → down to the coast → Colonial ship wreck → Sea cave → Underground tunnel → Cave system
-   → Research-center bunker → Research center → Second facility → Summit: the ritual
+Beach → Trail → Ravine → Old Harbor → Base Camp → Cable Car → The Fall → Old Village (Cargo Lift)
+   → Lit Service Path (Bridge Ambush) → West Gully → Wreck of HMS Madrigal → Sea Cave
+   → Smuggler's Tunnel → Abyssal Caverns (Deep Chorus) → Sub-Level Bunker B (Elias & Stone #3)
+   → Research Center → Neural Siphon Facility (Vane's Body) → Summit Crater: The Ritual Circle
 ```
-You start at sea level, climb to 106 m (the village), **drop back to sea level** at the wreck, go **under the mountain** through the tunnel and caves, and come up inside it to the research center (300 m), then the second facility (360 m) and the summit (430 m).
+You start at sea level (`0 m`), climb by cable car to `120 m` (the Old Village & Service Path), **plummet back to sea level (`1 m`)** at the 1784 shipwreck when The Shepherd collapses the stream bridge, ascend **inside the hollow mountain** through the Abyssal Caverns of the Deep Chorus to Bunker B (`214 m`), take the freight elevator into the Research Center (`300 m`), confront Vane's mutating body in the Neural Siphon Facility (`360 m`), and reach the Summit Crater (`430 m`).
 
-## Stages
-`Chapter` is the existing chapter, where there is one. Area numbers for stages 9 to 17 are **proposed** (one scene per area, as now). Lengths are the through-route only (the line on the map), not every step the player walks in a room, so real play is longer. Elevations are metres above sea level.
+---
 
-| # | Stage | Where | Status | Chapter | Areas | Route | Elevation | Gets you out by |
-|---|-------|-------|--------|---------|-------|-------|-----------|-----------------|
-| S01 | Beach | south shore | built | 1 | A01 | 34 m | 0 → 3 | the trail |
-| S02 | Trail | forest, inland | built | 1 | A02 | 30 m | 3 → 5 | fallen tree, wall, shrine |
-| S03 | Ravine | cliff crossing | built | 1 | A03 | 35 m | 5 → 12 | scaffold; **it collapses: no way back** |
-| S04 | Old Harbor | fenced yard | built | 1 | A04 | 73 m | 12 → 4 | cut the gate chain |
-| S05 | Base Camp | supply depot | built | 2 | A05 | 57 m | 4 | power the cable car |
-| S06 | The Line | cable car up the mountain | built | 3 | A06 | 200 m | 6 → 123 | the car stops; climb down the pylon ladder |
-| S07 | The Fall | pylon 3 → the hollow | built | 3 | A06/A07 | 155 m | 107 | a rung gives way; **no way back up** |
-| S08 | The Old Village | sunken hollow, west slope | built | 4 | A08–A11 | 234 m | 106 → 120 | *proposed change*: the south-west rim gap (see conflict 1) |
-| S09 | Down to the coast | gully, west side | proposed | | A12 | 192 m | 120 → 3 | steep and loose: **one way** |
-| S10 | Colonial ship wreck | the cove, west coast | proposed | | A13 | 56 m | 3 → 1 | through the hull, then wade along the waterline |
-| S11 | Sea cave | cliff foot, from the water | proposed | | A14 | 30 m | 1 → 2 | inward, away from the sea |
-| S12 | Underground tunnel | under the west slope | proposed | | A15 | 196 m | 2 → 28 | meets the cave system |
-| S13 | Cave system | inside the mountain | proposed | | A16–A18 | 364 m | 28 → 200 | the longest climb: about 170 m up |
-| S14 | Research-center bunker | under the research center | proposed | | A19 | 154 m | 200 → 290 | a sealed door, then a lift shaft (about 75 m) |
-| S15 | Research center | top of the cable line | proposed | | A20–A21 | 154 m | 274 → 361 | service road up |
-| S16 | Second facility | between the center and the summit | proposed | | A22 | 92 m | 361 → 431 | steps / funicular up |
-| S17 | Summit: the ritual site | top of the mountain | proposed | | A23 | 6 m | 431 | the finale |
+## Stages & Pacing (150 Minutes Total)
 
-Total through-route: about **2.1 km**, of which about 0.7 km is underground (S11–S14).
+| # | Stage | Where | Status | Ch | Areas | Est. Time | Route | Elevation | How You Progress |
+|---|-------|-------|--------|----|-------|-----------|-------|-----------|------------------|
+| **S01** | Beach | South shore | built | 1 | A01 | 4 min | 34 m | 0 → 3 m | Follow the overgrown trail inland |
+| **S02** | Trail | Pine forest | built | 1 | A02 | 4 min | 30 m | 3 → 5 m | Crouch under tree, climb wall, inspect 3-hollow shrine |
+| **S03** | Ravine | Cliff crossing | built | 1 | A03 | 3 min | 35 m | 5 → 12 m | Rotten scaffold (**collapses behind you: no way back**) |
+| **S04** | Old Harbor | Fenced yard | built | 1 | A04 | 9 min | 73 m | 12 → 4 m | Shed scare, climb tower for Reyes's cutters, cut gate chain as Black Stone rises |
+| **S05** | Base Camp | Supply depot | built | 2 | A05 | 25 min | 57 m | 4 m | Hide from Shepherd in barracks, fuel generator, throw breakers, board Car 2 |
+| **S06** | The Line | Cable car | built | 3 | A06 | 10 min | 200 m | 6 → 123 m | Shepherd races the slope; Elias's sabotage stops Car 2 at Pylon 3 |
+| **S07** | The Fall | Pylon 3 ladder | built | 3 | A06/A07 | 5 min | 155 m | 123 → 106 m | Ladder rung snaps (**point of no return into the village hollow**) |
+| **S08** | The Old Village & False Path | Sunken hollow + Service path | built | 4 | A08–A11 + A07 | 30 min | 234 m | 106 → 120 m | Decode carvings & 1784 log, survive Vane's false code, get **Pale Shard**, ride lift to Service Path; **Shepherd smashes stream bridge** |
+| **S09** | West Gully | West cliff chute | proposed | 5 | A12 | 4 min | 192 m | 120 → 3 m | Steep scree slide from collapsed bridge down to West Cove (**one-way**) |
+| **S10** | Wreck of *HMS Madrigal* | West Cove surf | proposed | 5 | A13 | 8 min | 56 m | 3 → 1 m | Tidal gun-deck puzzle, Capt. Locke's melted iron cage, Elias's pack |
+| **S11** | The Sea Cave | Cliff waterline | proposed | 5 | A14 | 4 min | 30 m | 1 → 2 m | Wade through surf past Locke's 1784 crew calcified into the cave walls |
+| **S12** | Smuggler's Tunnel | Under west slope | proposed | 5 | A15 | 6 min | 196 m | 2 → 28 m | Hide in submerged water alcoves; use **Pale Shard** at totem to blind Shepherd |
+| **S13** | Abyssal Caverns (Deep Chorus) | Inside the mountain | proposed | 5 | A16–A18 | 8 min | 364 m | 28 → 200 m | 170 m climb past petrified villagers & the Sleeper's Eye below; harmonic bridge puzzle |
+| **S14** | Sub-Level Bunker B | Under Research Ctr | proposed | 5 | A19 | 5 min | 154 m | 200 → 290 m | Find dying **Sgt. Elias**, receive **Tide-Stone #3**, hear Vane drop his mask, ride 75 m lift |
+| **S15** | Research Center | Upper cable station | proposed | 6 | A20–A21 | 10 min | 154 m | 290 → 361 m | Mara's Acoustics Lab; survive Vane's automated locks/gas + Shepherd; pull server fuses |
+| **S16** | Neural Siphon Facility | Below the crater | proposed | 6 | A22 | 8 min | 92 m | 361 → 431 m | Confront **Julian Vane's mutating body** in the Faraday Pod; set Siphon Routing Console |
+| **S17** | The Summit: Ritual Crater | Peak caldera | proposed | 6 | A23 | 7 min | 6 m | 431 m | The open Void Halo, final Shepherd stand, and the **3 Cosmic Horror Endings** |
 
-## Length
-**Decision (2026-10-16): a longer game is wanted; no need to squeeze it to 90 minutes.** Rough estimate at the density already built (puzzles, exploring, reading): about **2.5 to 3.5 hours** for the whole route. The built stages (S01–S08) are about 50 to 75 minutes of that. This is a guess from the previs lengths times 2 to 4, not a playtest; revisit it once a stage is playable.
+Total through-route: **~2.1 km** (~0.7 km underground in `S11–S14`).
 
-## Where things are
-Coordinates are the game's world metres: x east, **z south (up the mountain is negative z)**, y up. The grid in the miniature is 100 m.
+---
 
-| Place | x, z | Notes |
-|-------|------|-------|
-| Beach landing | 0, 66 | built |
-| Old Harbor gate | 10, −80 | built |
-| Cable car lower station | 5, −140 | built |
-| Pylon 3 / car stops | 5, −305 | built |
-| Old village (floor) | −140 … −240, −335 | built; floor 105 m |
-| Village west rim (the exit gap) | −258, −315 | proposed |
-| The cove and ship wreck | −355, −300 | proposed; the real terrain has **no coast there yet** |
-| Sea cave mouth | −388, −334 | proposed; at the waterline |
-| Cave system | −60 … −205, −440 … −545 | proposed |
-| Bunker | −45, −455, y 214 | proposed |
-| Research center | 10, −470 | proposed; surface 300 m |
-| Second facility | 10, −520 | proposed; surface 360 m |
-| Summit ritual circle | 5, −560 | proposed; surface 430 m |
+## Seeing It
+| View | Description |
+|------|-------------|
+| ![Plan view](map_views/map_top.png) | **Plan.** Built areas are the white boxes (`A01–A11`). The route climbs to the village, plunges west to the 1784 shipwreck, burrows north-east under the mountain through the Abyssal Caverns, and rises through Bunker B into the Research Center, Siphon Lab, and Summit. |
+| ![Profile from the west](map_views/map_profile_west.png) | **Profile from the west.** Purple is underground (`S11–S14`). Note the dramatic drop from `120 m` (Village/Service Path bridge) down to `1 m` (Shipwreck) before the 430 m climb inside and over the mountain. |
+| ![Underground detail](map_views/map_underground.png) | **Underground detail** at Sub-Level Bunker B (`S14`). The Research Center sits `75 m` above it at the top of the freight elevator shaft. |
 
-## Seeing it
-| View | |
-|------|---|
-| ![Plan view](map_views/map_top.png) | **Plan.** The built areas are the white boxes. The proposed route bends west at the village, goes round the coast and then under the mountain, and comes back east to the summit. |
-| ![Profile from the west](map_views/map_profile_west.png) | **Profile from the west.** Purple is underground. Note the drop from the village (106 m) to sea level, then the climb through the mountain. |
-| ![Underground detail](map_views/map_underground.png) | **Underground detail** at the bunker. The research center sits 75 m above it. |
+---
 
-## How the player moves
-- **Mostly one-way.** Points of no return: the ravine scaffold (S03), the ladder fall (S07), the gully down to the coast (S09). The player never backtracks to the beach, the camp or the cable line.
-- **The big shape is a horseshoe.** Up the mountain (S06–S08), **down to sea level** (S09–S11), then up *through* the mountain (S12–S14), then up *over* it (S15–S17). That means the story has three different "up" feelings: cable car, caves, summit.
-- **Sea level is the middle of the game.** The wreck, sea cave and tunnel are the lowest, darkest part, right after the village. The summit is visible from every outdoor stage, so it can pull the player on.
-- **Light and sound along the route.** Outdoors: the lit path above (the owner's lamps). In the village: no power, so the owner is silent. In the tunnel and caves: ideas only, see below.
+## Who Can Reach the Player Where (The Three Forces)
 
-### Who can reach the player where (proposals)
-| Place | The creature (the Shepherd) | The owner (power) |
-|-------|------------------------------|-------------------|
-| Harbor, camp, cable line | glimpses | yes (lamps, gates, generator) |
-| Village | yes (the colonist's home) | **no** (no power) |
-| Wreck | yes (his ship) | no |
-| Sea cave, tunnel | tracks it | only if the company lit the tunnel |
-| Cave system | the god's place: neither feels welcome | no |
-| Bunker, research center, facility | rarely | **yes** (everything runs on power) |
-| Summit | the finale | yes |
+| Stage / Location | The Shepherd (Capt. Locke) | Julian Vane (The Grid) | Dr. Mara's Echoes (Pale Shard) |
+|------------------|----------------------------|------------------------|--------------------------------|
+| **Harbor & Base Camp (`S01–S05`)** | Glimpses, then stalks the barracks & charges Car 2 | **Yes** (Searchlight, camp power, spliced "Elias" intercom) | Faint whisper at the 3-hollow shrine |
+| **Cable Line (`S06–S07`)** | Races up the mountain slope beside the car | **Yes** (Car cabin radio until Pylon 3 sabotage) | — |
+| **Old Village (`S08`)** | **Yes** (His 1784 massacre site; stalks the Burned Quarter) | **No** until you start the Dig Generator; then **lies** on the radio (`7392`) | **Acquired in `A11`**; hums near carvings & warns of the Shepherd |
+| **Service Path Bridge (`A07`)** | **Yes** (Ambushes you & collapses the bridge into West Gully) | **Yes** (Flickers path lamps; voice glitches) | — |
+| **Shipwreck, Sea Cave & Tunnel (`S09–S12`)** | **Yes** (His 1784 ship; stalks the flooded tunnel) | **No** (Zero electricity at sea level) | Glows at cave totems to flash-blind The Shepherd |
+| **Abyssal Caverns (`S13`)** | **Never enters** (Fears the Sleeper's direct gaze below) | **No** (Unpowered sacred cavern) | Attunes the 3 harmonic stone bridges |
+| **Sub-Level Bunker B (`S14`)** | Sealed out by the cave blast door | **Yes** (Drops his "Elias" disguise on the PA once Elias dies) | Resonates with **Tide-Stone #3** |
+| **Research Center & Siphon Lab (`S15–S16`)** | **Yes** (Climbs the cable line into the upper station) | **Maximum control** (Slams doors, cuts lights, vents halon gas, begs from his pod) | Reveals Mara's hidden audio logs |
+| **Summit Crater (`S17`)** | **Final confrontation** among the standing stones | Speaks through the crater loudspeakers | Unlocks **Ending 3 (Willing Communion)** |
 
-### Shortcuts that would let the world loop (ideas, not decisions)
-- The cable car, once powered again from the research center, takes the player down to camp.
-- The village cargo lift (built in Ch4) goes up to the service path: a late shortcut from the village.
-- The bunker door can only be opened from the research-center side, so the cave route becomes a one-way gate.
+---
 
-## Conflicts with what is already written (please decide)
-1. **Chapter 4 ends on the cargo lift up to the service path, but you now want the village to lead to the wreck.** This map makes the village exit the south-west rim gap, and leaves the lift as a built-but-unused shortcut. The Ch4 previs is **not changed**. Options: keep the lift as a *false* exit (it jams, or it leads up to a dead end), or move the lift to a later shortcut.
-2. **The lit path, stream and forest (Ch3 beats 7–9, drawn as the "service path (surface, bypassed)" line).** In this route the player never walks it; they reach the research center from below. Do you want that path cut, kept as an optional route, or used in the finale?
-3. **The research center now has two entrances.** The cable car (Ch2–3 promise "the car takes you to the research center") and the underground bunker. Which one does the player earn?
-4. **`BACKSTORY.md` puts the ritual in "the research center and the chamber".** You now say the ritual is on the summit. That needs a backstory edit: where was the three-crystal circle opened (the village ring in the old festival, the summit, or both)? And the "sandbar where Elias went" has no place on this map yet.
-5. **The hollow under the island comes back.** It was cut from Ch2 (Elias's blast hatch at the harbor, "the hollow runs under the whole island"). The cave system is a natural home for it, and the hatch at (6, −129) could be a *second* way in. Do you want that connection?
-6. **Terrain does not exist yet** for the west coast, the cove, the sea cave, the summit or the north slope. The miniature invents them in `game/map/island_height.gd`. Building the levels would mean adding those to the real height function in `tools/build_common.gd`.
+## How Previous Map Conflicts Were Resolved (v8)
 
-## Open questions
-- The **second facility**: what is it, and who is in it? (Notes say "another facility"; the map just calls it that.)
-- The **colonial ship**: is the wreck the Shepherd's (the colonist's) ship, so the player learns his story at its source, or the company's?
-- The **sea cave** from the water: does the player swim or take a boat? Is there a tide puzzle?
-- The **tunnel**: man-made by the colonist, by the company, or both? That decides whether the owner can reach it.
-- Does the **summit** include an inside (a chamber in the crater), or is it all outdoors?
-- How many chapters? A suggestion: S09–S11 one chapter, S12–S13 one, S14–S15 one, S16–S17 the finale, but that is only a grouping idea.
+1. **Village Cargo Lift (`A10`) + Lit Service Path (`A07`) + West Gully (`S09`) — ALL KEPT:**
+   - Nothing built in Ch3 or Ch4 is discarded. At the end of Chapter 4, the player rides the **Village Cargo Lift (`A10`)** up to the **Lit Service Path (`A07`)**, walks through the lamp-lit pines onto the **Old Stream Plank Bridge**, and is **ambushed by The Shepherd**, collapsing the bridge into the **West Gully (`S09`)** down to the shipwreck.
+2. **Two Entrances to the Research Center (`S15`):**
+   - The cable car stops at Pylon 3 in Ch3 because Elias sabotaged it; **The Shepherd** later climbs the cable line into the Upper Station, while **the player** earns entry from below via the 75 m Freight Lift from **Sub-Level Bunker B (`S14`)**.
+3. **Two Ritual Circles (Ancient vs. Modern):**
+   - The **Village Ring (`A10`)** is the ancient circle where Captain Locke committed the 1784 massacre and where Vane's team dug up the Three Tide-Stones.
+   - The **Summit Crater Circle (`A23`)** is Vane's modern conduit ring built directly over the volcanic vent and wired to his **Neural Siphon Facility (`A22`)**.
+4. **The Second Facility (`S16`) Defined:**
+   - Named the **Neural Siphon Facility (`A22`)**—the surgical bunker housing Julian Vane's half-calcified, mutating physical body inside the Faraday Siphon Pod.
 
-## Using the miniature
-Open the model (any folder):
+---
+
+## Using the 3D Miniature
+Run the interactive 3D map viewer from the project root:
 
 ```bash
-/Applications/Godot.app/Contents/MacOS/Godot --path "/Users/tharumagulasingamupenthiran/Documents/GameIdea/island horror game /godot" res://game/map/island_miniature.tscn
+godot --path . res://game/map/island_miniature.tscn
 ```
 
-Note the trailing space in `island horror game `, and keep the quotes.
-
-| Control | |
-|---------|--|
-| Left-drag, right-drag, wheel | orbit, pan, zoom (WASD also pans, Q/E down/up) |
-| `Space` | a white marker walks the whole route; `[` `]` change speed; `F` follows it |
-| `,` `.` | previous / next stage (frames it) |
-| `X` | ground see-through or solid |
-| `L` `G` `A` | labels, 100 m grid, built-area outlines |
-| `1` `2` `3` `4` | top, iso, south, west views |
-| `H`, `Esc` | hide panels, quit |
-
-Colours: **green** = built surface, **amber** = proposed surface, **purple** = underground, **blue** = cable car, **white** lines = the built areas A01–A11.
-
-To plan a change: edit [`map.json`](map.json) (the route points are `[x, z]` on the ground, or `[x, z, y]` at a fixed height), save, and open the model again. To print the stage table: add `-- --report` after the scene path with `--headless`. Screenshots: see the header of `game/map/island_miniature.gd`.
-
-Files: `story/map.json` (data), `game/map/island_miniature.tscn` + `.gd` (viewer), `game/map/island_height.gd` (the miniature's terrain), `story/map_views/` (the pictures above).
+| Control | Action |
+|---------|--------|
+| Left-drag, right-drag, wheel | Orbit, pan, zoom (`WASD` also pans, `Q`/`E` down/up) |
+| `Space` | White marker walks the whole 2.1 km route; `[` `]` change speed; `F` follows it |
+| `,` `.` | Previous / next stage (frames it) |
+| `X` | Ground see-through (X-ray) or solid |
+| `L` `G` `A` | Toggle labels, 100 m grid, built-area outlines |
+| `1` `2` `3` `4` | Top, iso, south, west camera presets |
+| `H`, `Esc` | Hide panels, quit |

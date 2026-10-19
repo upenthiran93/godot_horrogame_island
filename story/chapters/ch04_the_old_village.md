@@ -3,7 +3,9 @@
 > **PROPOSED (2026-10-16), previs built as a first draft.** The story it relies on (`BACKSTORY.md`) is still a draft, so beats may change. Shots do not follow the beat numbers below one-to-one: the table in **Previs** is the shot list.
 
 ## Summary
-The fall from the pylon ladder drops the player into a sunken hollow below the service path: the ruins of the island's original village. The way back up is gone and the steps out are buried. No power reaches down here, so the owner can't see or speak to the player. The village tells its own story through carvings (the villagers), torn log pages (the colonist) and dig tags (the company), in an order that goes from warm, to wrong, to horror. At the burned quarter the player meets the creature properly and learns it is **the colonist**, not a monster from nowhere. The only way out is the company's cargo lift at the festival ring, which needs power and a code. Starting the dig-site generator is loud, it gives the owner his first real foothold, and he lies about the code. The chapter ends riding the lift up to the lit service path with the creature below.
+The fall from Pylon 3 drops the player into a sunken hollow below the service path: the roofless stone ruins of the island's original village. The way back up is gone and the steps out are buried. No electrical power reaches down here, so **Julian Vane** (trapped in the grid) cannot see or speak to the player. The village tells its own cosmic horror story through stone carvings (the villagers' willing communion with **The Sleeper in the Trench**), torn 1784 ship's log pages (**Captain Alistair Locke** of the *HMS Madrigal*), and modern dig tags (**Vane Bio-Marine / Detachment 9** removing the **Three Tide-Stones**), progressing from reverence, to greed, to slaughter.
+
+Starting the dig-site generator to power the cargo lift is loud: it attracts **The Shepherd** and gives Julian Vane his first foothold in the hollow. Speaking through the dig radio in Elias's spliced voice, Vane gives a **false lift code (`7392`)** whose alarm buzzer draws the creature. Forced into the **Burned Quarter**, the player claims the **Pale Shard** (a calcified healing crystal clutched by a massacred villager skeleton, humming with **Dr. Mara Chen's** frequency), sees The Shepherd in his 1784 Royal Navy greatcoat, and learns he is Captain Locke—cursed by the Entity for trying to take its gift by force. Using the real code (`2604`) from Elias's dig log, the player rides the cargo lift up to the **Lit Service Path (`A07`)**—where Vane's voice glitches on the lamps and **The Shepherd ambushes the player on the Old Stream Plank Bridge**, collapsing it into the **West Gully (`S09`)** toward the 1784 shipwreck.
 
 ## Location
 - **Levels (one scene per area, shared world coordinates):**
@@ -18,26 +20,26 @@ The fall from the pylon ladder drops the player into a sunken hollow below the s
 - **Animated level nodes (proposed):** `Dynamic/Generator`, `Dynamic/FloodLights`, `Dynamic/Lift`, `Dynamic/DigRadio`
 
 ## Characters present
-Protagonist; the creature (the colonist, **the Shepherd**; name TBD) in glimpses, then seen properly; the owner (voice only, from the dig radio, after the generator starts); Elias (named in the company dig log; possible ghost glimpse, optional).
+Protagonist; **The Shepherd (Captain Alistair Locke, 1784)** in glimpses, then seen properly in the Burned Quarter and on the Service Path bridge; **Julian Vane** (voice only, speaking via spliced recordings of Sgt. Elias from the dig radio after the generator starts); **Sgt. Elias** (named in the company dig log); **Dr. Mara Chen** (harmonic whisper when the **Pale Shard** is picked up).
 
 ## How the story is told
-No one speaks to the player. The villagers' culture is gone, so nothing is explained; the player pieces it together.
-- **The villagers:** carvings and painted stones, pictures only, no text.
-- **The colonist:** pages of his ship's log in old English, found in the guest house.
-- **The company:** modern dig tags, a dig log, trench tape and tarps, with Elias's team named.
+No one speaks to the player until the generator starts. The villagers practiced silent harmonic communion with the Deep, so the player pieces the mythos together layer by layer:
+- **The villagers:** basalt carvings and painted stones—pictures only, showing the **Sleeper Beneath the Tide**, the **Three Tide-Stones**, the **Pale Shards**, and the elderly walking into subterranean water to join the **Deep Chorus**.
+- **The colonist (1784):** torn pages of **Captain Alistair Locke's** logbook from the brig *HMS Madrigal*, found in the guest house.
+- **The company (Present day):** Vane Bio-Marine dig tags, trench tape, floodlights, and a security log naming **Sgt. Elias** and **Dr. Mara Chen**.
 
-Backstory Parts 1–3 are revealed here, mixed with Part 4 (the company recovering the crystals). The rule of the god ("gifts only work when given willingly") is *shown*, not stated, in the last two finds.
+Backstory Parts 1–4 are revealed here. The Cosmic Law (*"The Deep only harmonizes with what opens itself willingly; taken by force, it corrupts"*) is shown visually in the final two finds.
 
-## The reveal order (warm, then wrong, then horror)
+## The reveal order (reverence, then greed, then cosmic horror)
 | # | Find | Area | What the player learns | Voice |
 |---|------|------|------------------------|-------|
-| A | **The festival ring:** a circle of standing stones with three empty sockets; carvings of open-handed figures facing a tall figure | A10 (seen from the lanes first) | A god visited and was welcome; the sockets are where the crystals sat | Villagers |
-| B | **The healing wall:** sick figures lying down, then the same figures standing; each holds a small crystal | A09 | The god gave gifts and each villager kept one | Villagers |
-| C | **The year marks:** tally strokes cut beside the door of every house, one per year | A09 | A festival every year, peaceful, for a very long time | Villagers |
-| D | **The guest house:** beds laid out for strangers; log pages: the leg whole by morning, "they told us all of it" | A09 | Wrecked crew were healed and taught; the captain wanted it for his country | Colonist |
-| E | **The dig site:** trenches, pry marks on the sockets, a tag "Crystal 1 of 3 — recovered", a dig log naming Elias | A10 | The company took the crystals from here, for the owner | Company |
-| F | **The burned quarter:** a pile of bones by the ring's edge, one still gripping a healing crystal; carvings slashed with iron | A11 | The festival day was a massacre; one crystal stayed with a villager who gave it up willingly | Villagers + Colonist |
-| G | **The last carving:** the tall figure turned black and thin and bowed, leading a man in a coat on a cord; a black stone rising from the sea | A11 | The god punished the captain: he is the creature, and the black stone means the door is near | Villagers |
+| A | **The festival ring:** a circle of standing stones with three empty sockets; carvings of open-handed figures facing a colossal oceanic eye beneath the island | A10 (seen from the lanes first) | An ancient entity sleeps beneath the island; the Three Tide-Stones opened the communion breach | Villagers |
+| B | **The healing wall:** sick figures lying down, then standing whole holding small crystals, and finally elders sitting peacefully in underwater caverns | A09 | Willing communion healed the villagers via **Pale Shards**, and at life's end they joined the **Deep Chorus** | Villagers |
+| C | **The year marks:** tally strokes cut beside the door of every stone house, one per year, stopping on the exact same year | A09 | Centuries of peaceful yearly Tide-Festivals ended in a single night | Villagers |
+| D | **The guest house:** beds laid out for shipwrecked strangers; 1784 log pages of **Capt. Alistair Locke** (*HMS Madrigal*): Bosun Hartley's shattered leg whole by morning, *"they showed us the three black stones"* | A09 | Wrecked crew were healed; Locke plotted to massacre the village and bind the god in iron without surrendering his ego | Capt. Locke (1784) |
+| E | **The dig site:** concrete trenches, pry marks on the three sockets, tags `"TIDE-STONE 1–3 OF 3 — RECOVERED FOR SUMMIT ARRAY"`, a dig log signed by **Sgt. Elias** | A10 | Julian Vane's team dug up the Three Tide-Stones and moved them to the mountain summit | Vane Bio-Marine |
+| F | **The burned quarter & The Pale Shard:** charred bones by the ring's edge; one skeleton still clutches a glowing **Pale Shard** (pickable survival item!); carvings slashed with cutlasses | A11 | Locke's crew slaughtered the village on Festival Night; the player acquires the **Pale Shard**, hearing Dr. Mara's faint harmonic echo | Villagers + Mara's Echo |
+| G | **The last carving:** the abyssal eye inverting—turning the naval captain in the greatcoat into a tall, bowed, barnacle-crusted hound on a tether as the Black Stone rises | A11 | The Entity punished Locke for taking by force: **he is The Shepherd**, and the risen Black Stone means the breach is open | Villagers |
 
 ## Beats (proposed)
 | # | Beat | Area | Notes (camera / sound / mood) |
@@ -59,8 +61,8 @@ Backstory Parts 1–3 are revealed here, mixed with Part 4 (the company recoveri
 | 15 | The last carving (find G): the creature was the captain | A11 | the tie is made |
 | 16 | **Stalking:** it hunts the player back through the burned quarter to the ring (standard rules: sees close or lit, hears walking ~7 m, running ~16 m, loud events) | A11 → A10 | hiding spots: stone houses, the ring |
 | 17 | The player finds the **real lift code** in the dig log (it differs from the owner's) and uses the keycard | A10 | puzzle payoff |
-| 18 | The lift rises slowly; the creature comes out of the dark into the floodlights below and stops at the edge | A10 | it can't or won't follow |
-| 19 | The top: the lit path, and the lamps switch on one by one as the owner finds the player again | → A07 | end card "End of Chapter 4" |
+| 18 | The lift rises slowly; the creature comes out of the dark into the floodlights below and stops at the edge | A10 | it can't or won't follow into the floodlights |
+| 19 | **The top & Bridge Ambush (Transition to Ch 5):** The player steps onto the **Lit Service Path (`A07`)** as Vane switches the lamps on one by one, his voice glitching; crossing the **Old Stream Plank Bridge**, The Shepherd ambushes from the pines and smashes the bridge, dropping the player down the **West Gully (`S09`)** | A10 → A07 → S09 | connects built `A07` shots to Chapter 5 |
 
 ## Puzzles
 - **Generator (beat 10):** carry a fuel can from the dig tents to the generator, throw the breaker. It is loud; the creature hears it from anywhere in the hollow.
