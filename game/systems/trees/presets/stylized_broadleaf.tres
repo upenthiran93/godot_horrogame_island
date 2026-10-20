@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="TreeProfile" format=3]
+
+[ext_resource type="Script" path="res://game/systems/trees/tree_profile.gd" id="1_ythpr"]
+
+[resource]
+resource_name = "stylized_broadleaf"
+script = ExtResource("1_ythpr")
+style = 1
+height = 7.0
+height_jitter = 0.2
+trunk_length = 0.55
+trunk_radius = 0.32
+trunk_taper = 0.45
+branch_count = Vector3i(5, 3, 0)
+branch_start = 0.55
+branch_angle = Vector3(50, 40, 0)
+branch_length = Vector3(0.8, 0.5, 0)
+branch_radius = 0.6
+branch_droop = 0.0
+branch_upturn = 0.4
+leaf_color = Color(0.45, 0.68, 0.22, 1)
+leaf_color_2 = Color(0.13, 0.36, 0.16, 1)
+blob_size = 1.1
+bark_color = Color(0.45, 0.3, 0.2, 1)
+bark_color_2 = Color(0.3, 0.19, 0.13, 1)
+radial_segments = 7

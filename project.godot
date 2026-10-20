@@ -13,3 +13,14 @@ config_version=5
 config/name="Tidewater"
 run/main_scene="res://previs/playblast_runner.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
+
+[shader_globals]
+
+tree_wind={
+"type": "vec4",
+"value": Vector4(0.77, 0.64, 0.5, 0.6)
+}
+tree_view_pos={
+"type": "vec3",
+"value": Vector3(0, 0, 0)
+}

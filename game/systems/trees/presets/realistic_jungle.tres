@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="TreeProfile" format=3]
+
+[ext_resource type="Script" path="res://game/systems/trees/tree_profile.gd" id="1_cdv8t"]
+
+[resource]
+resource_name = "realistic_jungle"
+script = ExtResource("1_cdv8t")
+height = 20.0
+height_jitter = 0.2
+trunk_length = 0.72
+trunk_radius = 0.5
+root_flare = 1.4
+buttresses = 5
+lean = 0.03
+gnarl = 0.12
+levels = 3
+branch_count = Vector3i(7, 5, 3)
+branch_start = 0.75
+branch_angle = Vector3(80, 55, 40)
+branch_length = Vector3(0.7, 0.55, 0.5)
+branch_radius = 0.6
+branch_droop = 0.12
+branch_upturn = 0.15
+crown = 2
+leaf_density = 1.2
+leaf_size = 1.5
+leaf_color = Color(0.12, 0.26, 0.07, 1)
+leaf_color_2 = Color(0.22, 0.35, 0.08, 1)
+hanging_moss = 0.35
+moss_color = Color(0.36, 0.4, 0.26, 1)
+bark_color = Color(0.42, 0.38, 0.3, 1)
+bark_color_2 = Color(0.2, 0.18, 0.14, 1)
+bark_moss = 0.6

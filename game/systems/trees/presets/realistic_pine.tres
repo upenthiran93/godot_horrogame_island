@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="TreeProfile" format=3]
+
+[ext_resource type="Script" path="res://game/systems/trees/tree_profile.gd" id="1_lm7m1"]
+
+[resource]
+resource_name = "realistic_pine"
+script = ExtResource("1_lm7m1")
+archetype = 1
+height = 17.0
+height_jitter = 0.2
+trunk_radius = 0.26
+trunk_taper = 0.05
+root_flare = 0.4
+lean = 0.03
+gnarl = 0.06
+branch_count = Vector3i(35, 4, 0)
+branch_start = 0.18
+branch_angle = Vector3(100, 35, 0)
+branch_length = Vector3(0.3, 0.4, 0)
+branch_radius = 0.35
+branch_droop = 0.5
+crown = 1
+leaf_density = 1.6
+leaf_size = 1.05
+leaf_color = Color(0.1, 0.2, 0.1, 1)
+leaf_color_2 = Color(0.16, 0.26, 0.12, 1)
+translucency = 0.35
+bark_color = Color(0.33, 0.24, 0.18, 1)
+bark_color_2 = Color(0.15, 0.11, 0.09, 1)

@@ -1,128 +1,1406 @@
 {
-  "_help": "Story map: the player's route through the whole island, read by game/map/island_miniature.tscn (the 3D miniature). Edit the numbers, save, and re-run the miniature to see the change. Coordinates are the game's world metres: x = east, z = south (north/up the mountain is NEGATIVE z), y = height above sea level. Route points: [x, z] = on the ground (height taken from the terrain); [x, z, y] = at that exact height (underground or in the air). status: built = a level scene exists; proposed = this map's suggestion, nothing built. Everything not 'built' is PROPOSED and open to change. Terrain beyond the built levels (west coast, summit, north coast) is the miniature's own guess, see game/map/island_height.gd.",
+  "_help": "Story map: the player's route through the whole island, read by game/map/island_miniature.tscn (the 3D miniature). Edit the numbers, save, and re-run the miniature to see the change. Coordinates are the game's world metres: x = east, z = south (north/up the mountain is NEGATIVE z), y = height above sea level. Route points (a stage's last point is the next stage's first): [x, z] = on the ground (height taken from the terrain); [x, z, y] = at that exact height (underground or in the air). status: built = a level scene exists; proposed = this map's suggestion, nothing built. Everything not 'built' is PROPOSED and open to change. Terrain beyond the built levels (west coast, summit, north coast) is the miniature's own guess, see game/map/island_height.gd.",
   "stages": [
     {
-      "id": "S01", "name": "Beach", "act": "I", "chapter": "1", "status": "built", "area": "A01", "mode": "ground",
-      "route": [[0, 78], [0, 66], [-3, 44]],
-      "note": "The captain drops you. The black stone is out past the point."
+      "id": "S01",
+      "name": "Beach",
+      "act": "I",
+      "chapter": "1",
+      "status": "built",
+      "area": "A01",
+      "mode": "ground",
+      "route": [
+        [
+          0,
+          78
+        ],
+        [
+          0,
+          66
+        ],
+        [
+          -30,
+          72
+        ],
+        [
+          -60,
+          80
+        ]
+      ],
+      "note": "The captain drops you. The black stone is out past the point. PROPOSED CHANGE: the trail mouth is blocked, so you leave the beach to the WEST along the shore (the built Ch1 beach leads straight to the trail)."
     },
     {
-      "id": "S02", "name": "Trail", "act": "I", "chapter": "1", "status": "built", "area": "A02", "mode": "ground",
-      "route": [[-3, 44], [2, 28], [0, 14]],
-      "note": "Fallen tree, ruined wall, shrine."
+      "id": "S02",
+      "name": "Shore and river ford",
+      "act": "I",
+      "chapter": "1 (insert)",
+      "status": "proposed",
+      "mode": "ground",
+      "route": [
+        [
+          -60,
+          80
+        ],
+        [
+          -95,
+          80
+        ],
+        [
+          -123,
+          76
+        ]
+      ],
+      "note": "The trail mouth is shut by a jackknifed truck and a rockfall (roadblock 1, with a 'DET 9: ROAD CLOSED' stencil). The only way on is west along the shore to the river mouth and across the ford."
     },
     {
-      "id": "S03", "name": "Ravine", "act": "I", "chapter": "1", "status": "built", "area": "A03", "mode": "ground",
-      "route": [[0, 14], [0, 7], [3, 0], [4, -8]],
+      "id": "S03",
+      "name": "Jungle and first roadblock",
+      "act": "I",
+      "chapter": "1 (insert)",
+      "status": "proposed",
+      "mode": "ground",
+      "route": [
+        [
+          -123,
+          76
+        ],
+        [
+          -145,
+          70
+        ],
+        [
+          -175,
+          62
+        ],
+        [
+          -195,
+          40
+        ],
+        [
+          -190,
+          28
+        ],
+        [
+          -165,
+          24
+        ]
+      ],
+      "note": "Dense jungle on the west plateau, 15 m above the trail, kept south of the ravine. Tyre ruts, offerings tied to trees, a bend that doubles back. It ends at the west end of an old military road: a barricade and a rusted jeep."
+    },
+    {
+      "id": "S04",
+      "name": "The old road: bridge convoy",
+      "act": "I",
+      "chapter": "1 (insert)",
+      "status": "proposed",
+      "mode": "ground",
+      "route": [
+        [
+          -165,
+          24
+        ],
+        [
+          -132,
+          26
+        ],
+        [
+          -100,
+          28
+        ],
+        [
+          -60,
+          28
+        ],
+        [
+          -40,
+          30
+        ]
+      ],
+      "note": "The road crosses the river on a half-collapsed bridge with a convoy stuck on it: old trucks from different decades (roadblock 2), the way back over the water. It ends at a boom gate and guard hut at the rim (roadblock 3)."
+    },
+    {
+      "id": "S05",
+      "name": "The rim overlook and the gully",
+      "act": "I",
+      "chapter": "1 (insert)",
+      "status": "proposed",
+      "mode": "ground",
+      "route": [
+        [
+          -40,
+          30
+        ],
+        [
+          -33,
+          38
+        ],
+        [
+          -18,
+          42
+        ],
+        [
+          -5,
+          42
+        ]
+      ],
+      "note": "From the rim you look down on the trail, with the ravine ahead and the lit harbor beyond it, and up at the mountain. A footpath along the rim, then a gully down into the trail."
+    },
+    {
+      "id": "S06",
+      "name": "Trail",
+      "act": "I",
+      "chapter": "1",
+      "status": "built",
+      "area": "A02",
+      "mode": "ground",
+      "route": [
+        [
+          -5,
+          42
+        ],
+        [
+          2,
+          28
+        ],
+        [
+          0,
+          14
+        ]
+      ],
+      "note": "Fallen tree, ruined wall, shrine. Now entered from the gully, not from the beach."
+    },
+    {
+      "id": "S07",
+      "name": "Ravine",
+      "act": "I",
+      "chapter": "1",
+      "status": "built",
+      "area": "A03",
+      "mode": "ground",
+      "route": [
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          -8
+        ]
+      ],
       "note": "Scaffold collapses behind you: the way back to the beach is gone."
     },
     {
-      "id": "S04", "name": "Old Harbor", "act": "I", "chapter": "1", "status": "built", "area": "A04", "mode": "ground",
-      "route": [[4, -8], [8, -30], [12, -46], [10, -80]],
-      "note": "Shed, watchtower, searchlight. The gate chain is cut as the stone rises."
+      "id": "S08",
+      "name": "The cut road and the old hamlet",
+      "act": "I",
+      "chapter": "1 (insert)",
+      "status": "proposed",
+      "mode": "ground",
+      "route": [
+        [
+          4,
+          -8
+        ],
+        [
+          -10,
+          -22
+        ],
+        [
+          -30,
+          -38
+        ],
+        [
+          -60,
+          -58
+        ],
+        [
+          -50,
+          -72
+        ],
+        [
+          -28,
+          -66
+        ],
+        [
+          -24,
+          -64
+        ]
+      ],
+      "note": "After the ravine a landslide has cut the road. A worn path climbs the west wall to the ruins of the mainland fishermen's hamlet (graves, a warning board), then a track drops into the harbor yard from the west."
     },
     {
-      "id": "S05", "name": "Base Camp", "act": "I", "chapter": "2", "status": "built", "area": "A05", "mode": "ground",
-      "route": [[10, -80], [14, -100], [8, -125], [4.5, -136]],
+      "id": "S09",
+      "name": "Old Harbor",
+      "act": "I",
+      "chapter": "1",
+      "status": "built",
+      "area": "A04",
+      "mode": "ground",
+      "route": [
+        [
+          -24,
+          -64
+        ],
+        [
+          -17,
+          -62
+        ],
+        [
+          10,
+          -66
+        ],
+        [
+          26,
+          -62
+        ],
+        [
+          18,
+          -74
+        ],
+        [
+          10,
+          -80
+        ]
+      ],
+      "note": "Shed, watchtower, searchlight. The gate chain is cut as the stone rises. Now entered from the west, from the hamlet track (the built Ch1 enters from the ravine)."
+    },
+    {
+      "id": "S10",
+      "name": "Base Camp",
+      "act": "I",
+      "chapter": "2",
+      "status": "built",
+      "area": "A05",
+      "mode": "ground",
+      "route": [
+        [
+          10,
+          -80
+        ],
+        [
+          14,
+          -100
+        ],
+        [
+          8,
+          -125
+        ],
+        [
+          4.5,
+          -136
+        ]
+      ],
       "note": "Supply depot. Power the cable car (generator, fuel, breakers)."
     },
     {
-      "id": "S06", "name": "The Line (cable car)", "act": "II", "chapter": "3", "status": "built", "area": "A06", "mode": "ropeway",
-      "route": [[4.5, -141], [4.5, -175], [4.5, -235], [4.5, -303.4]],
+      "id": "S11",
+      "name": "The Line (cable car)",
+      "act": "II",
+      "chapter": "3",
+      "status": "built",
+      "area": "A06",
+      "mode": "ropeway",
+      "route": [
+        [
+          4.5,
+          -141
+        ],
+        [
+          4.5,
+          -175
+        ],
+        [
+          4.5,
+          -235
+        ],
+        [
+          4.5,
+          -303.4
+        ]
+      ],
       "note": "The ride up. The car stops dead beside pylon 3."
     },
     {
-      "id": "S07", "name": "The Fall", "act": "II", "chapter": "3", "status": "built", "area": "A06/A07", "mode": "ground",
-      "route": [[4.5, -303.4], [7.6, -302.4], [-40, -310], [-100, -318], [-132, -321]],
+      "id": "S12",
+      "name": "The Fall",
+      "act": "II",
+      "chapter": "3",
+      "status": "built",
+      "area": "A06/A07",
+      "mode": "ground",
+      "route": [
+        [
+          4.5,
+          -303.4
+        ],
+        [
+          7.6,
+          -302.4
+        ],
+        [
+          -40,
+          -310
+        ],
+        [
+          -100,
+          -318
+        ],
+        [
+          -132,
+          -321
+        ]
+      ],
       "note": "The ladder rung gives way. Blackout. You wake in the old village (the drag marks lead from the foot of the buried steps)."
     },
     {
-      "id": "S08", "name": "The Old Village", "act": "II", "chapter": "4", "status": "built", "area": "A08-A11", "mode": "ground",
-      "route": [[-132, -321], [-127, -350], [-152, -335], [-175, -336], [-168, -326], [-195, -336], [-205, -338], [-197, -351], [-209, -352], [-225, -335], [-232, -318], [-258, -315]],
+      "id": "S13",
+      "name": "The Old Village",
+      "act": "II",
+      "chapter": "4",
+      "status": "built",
+      "area": "A08-A11",
+      "mode": "ground",
+      "route": [
+        [
+          -132,
+          -321
+        ],
+        [
+          -127,
+          -350
+        ],
+        [
+          -152,
+          -335
+        ],
+        [
+          -175,
+          -336
+        ],
+        [
+          -168,
+          -326
+        ],
+        [
+          -195,
+          -336
+        ],
+        [
+          -205,
+          -338
+        ],
+        [
+          -197,
+          -351
+        ],
+        [
+          -209,
+          -352
+        ],
+        [
+          -225,
+          -335
+        ],
+        [
+          -232,
+          -318
+        ],
+        [
+          -258,
+          -315
+        ]
+      ],
       "note": "Carvings, the colonist's log, the dig site, the burned quarter. PROPOSED CHANGE: the exit is the south-west rim gap, not the cargo lift (see MAP.md, conflicts)."
     },
     {
-      "id": "S09", "name": "Down to the coast", "act": "III", "chapter": "", "status": "proposed", "mode": "ground",
-      "route": [[-258, -315], [-280, -300], [-300, -310], [-320, -295], [-340, -300], [-352, -300]],
+      "id": "S14",
+      "name": "Down to the coast",
+      "act": "III",
+      "chapter": "",
+      "status": "proposed",
+      "mode": "ground",
+      "route": [
+        [
+          -258,
+          -315
+        ],
+        [
+          -280,
+          -300
+        ],
+        [
+          -300,
+          -310
+        ],
+        [
+          -320,
+          -295
+        ],
+        [
+          -340,
+          -300
+        ],
+        [
+          -352,
+          -300
+        ]
+      ],
       "note": "A gully path from the village rim down 115 m to the west coast. One-way (steep, loose)."
     },
     {
-      "id": "S10", "name": "The colonial ship wreck", "act": "III", "chapter": "", "status": "proposed", "mode": "ground",
-      "route": [[-352, -300], [-358, -296], [-366, -303], [-380, -320, 1], [-388, -334, 1]],
+      "id": "S15",
+      "name": "The colonial ship wreck",
+      "act": "III",
+      "chapter": "",
+      "status": "proposed",
+      "mode": "ground",
+      "route": [
+        [
+          -352,
+          -300
+        ],
+        [
+          -358,
+          -296
+        ],
+        [
+          -366,
+          -303
+        ],
+        [
+          -380,
+          -320,
+          1
+        ],
+        [
+          -388,
+          -334,
+          1
+        ]
+      ],
       "note": "The captain's ship, beached in the cove. Through the hull, then wade along the waterline under the cliff to the sea cave (the cave is entered from the water)."
     },
     {
-      "id": "S11", "name": "The sea cave", "act": "III", "chapter": "", "status": "proposed", "mode": "underground", "radius": 3.2,
-      "route": [[-388, -334, 1], [-378, -342, 1], [-362, -350, 2]],
-      "chambers": [[-380, -341, 3, 9, 5, 9]],
+      "id": "S16",
+      "name": "The sea cave",
+      "act": "III",
+      "chapter": "",
+      "status": "proposed",
+      "mode": "underground",
+      "radius": 3.2,
+      "route": [
+        [
+          -388,
+          -334,
+          1
+        ],
+        [
+          -378,
+          -342,
+          1
+        ],
+        [
+          -362,
+          -350,
+          2
+        ]
+      ],
+      "chambers": [
+        [
+          -380,
+          -341,
+          3,
+          9,
+          5,
+          9
+        ]
+      ],
       "note": "Entered from the water. Tide pools, the colonist's smuggling cache."
     },
     {
-      "id": "S12", "name": "The underground tunnel", "act": "III", "chapter": "", "status": "proposed", "mode": "underground", "radius": 2.4,
-      "route": [[-362, -350, 2], [-330, -358, 4], [-290, -375, 9], [-250, -398, 15], [-215, -422, 22], [-192, -440, 28]],
+      "id": "S17",
+      "name": "The underground tunnel",
+      "act": "III",
+      "chapter": "",
+      "status": "proposed",
+      "mode": "underground",
+      "radius": 2.4,
+      "route": [
+        [
+          -362,
+          -350,
+          2
+        ],
+        [
+          -330,
+          -358,
+          4
+        ],
+        [
+          -290,
+          -375,
+          9
+        ],
+        [
+          -250,
+          -398,
+          15
+        ],
+        [
+          -215,
+          -422,
+          22
+        ],
+        [
+          -192,
+          -440,
+          28
+        ]
+      ],
       "note": "A man-made tunnel, old timbers and newer concrete. It meets the natural cave system."
     },
     {
-      "id": "S13", "name": "The cave system", "act": "IV", "chapter": "", "status": "proposed", "mode": "underground", "radius": 3.4,
-      "route": [[-192, -440, 28], [-205, -470, 38], [-185, -500, 52], [-150, -520, 68], [-120, -505, 84], [-95, -530, 102], [-70, -545, 122], [-45, -530, 142], [-30, -505, 162], [-45, -480, 182], [-60, -462, 200]],
-      "chambers": [[-205, -470, 38, 14, 8, 14], [-150, -520, 68, 22, 14, 22], [-95, -530, 102, 16, 10, 16], [-30, -505, 162, 14, 9, 14]],
+      "id": "S18",
+      "name": "The cave system",
+      "act": "IV",
+      "chapter": "",
+      "status": "proposed",
+      "mode": "underground",
+      "radius": 3.4,
+      "route": [
+        [
+          -192,
+          -440,
+          28
+        ],
+        [
+          -205,
+          -470,
+          38
+        ],
+        [
+          -185,
+          -500,
+          52
+        ],
+        [
+          -150,
+          -520,
+          68
+        ],
+        [
+          -120,
+          -505,
+          84
+        ],
+        [
+          -95,
+          -530,
+          102
+        ],
+        [
+          -70,
+          -545,
+          122
+        ],
+        [
+          -45,
+          -530,
+          142
+        ],
+        [
+          -30,
+          -505,
+          162
+        ],
+        [
+          -45,
+          -480,
+          182
+        ],
+        [
+          -60,
+          -462,
+          200
+        ]
+      ],
+      "chambers": [
+        [
+          -205,
+          -470,
+          38,
+          14,
+          8,
+          14
+        ],
+        [
+          -150,
+          -520,
+          68,
+          22,
+          14,
+          22
+        ],
+        [
+          -95,
+          -530,
+          102,
+          16,
+          10,
+          16
+        ],
+        [
+          -30,
+          -505,
+          162,
+          14,
+          9,
+          14
+        ]
+      ],
       "note": "Natural caves, the longest climb of the game (about 170 m up). Where 'the hollow under the island' lives. Underground river, the god's old place."
     },
     {
-      "id": "S14", "name": "Research-center bunker", "act": "IV", "chapter": "", "status": "proposed", "mode": "underground", "radius": 2.0,
-      "route": [[-60, -462, 200], [-45, -455, 214], [-20, -462, 214], [10, -470, 214], [10, -470, 290]],
-      "chambers": [[-45, -455, 214, 9, 5, 9]],
+      "id": "S19",
+      "name": "Research-center bunker",
+      "act": "IV",
+      "chapter": "",
+      "status": "proposed",
+      "mode": "underground",
+      "radius": 2.0,
+      "route": [
+        [
+          -60,
+          -462,
+          200
+        ],
+        [
+          -45,
+          -455,
+          214
+        ],
+        [
+          -20,
+          -462,
+          214
+        ],
+        [
+          10,
+          -470,
+          214
+        ],
+        [
+          10,
+          -470,
+          290
+        ]
+      ],
+      "chambers": [
+        [
+          -45,
+          -455,
+          214,
+          9,
+          5,
+          9
+        ]
+      ],
       "note": "The company's bunker: a sealed door at the cave end, then a long lift shaft up (about 75 m) to the research center basement."
     },
     {
-      "id": "S15", "name": "Research center", "act": "V", "chapter": "", "status": "proposed", "mode": "ground",
-      "route": [[10, -470], [10, -462], [7, -455], [25, -490], [5, -505], [10, -520]],
+      "id": "S20",
+      "name": "Research center",
+      "act": "V",
+      "chapter": "",
+      "status": "proposed",
+      "mode": "ground",
+      "route": [
+        [
+          10,
+          -470
+        ],
+        [
+          10,
+          -462
+        ],
+        [
+          7,
+          -455
+        ],
+        [
+          25,
+          -490
+        ],
+        [
+          5,
+          -505
+        ],
+        [
+          10,
+          -520
+        ]
+      ],
       "note": "The compound at the top of the cable line (upper station). Survey team's labs, the owner's office. Then a service road up to the next facility."
     },
     {
-      "id": "S16", "name": "Second facility", "act": "V", "chapter": "", "status": "proposed", "mode": "ground",
-      "route": [[10, -520], [20, -540], [5, -560]],
+      "id": "S21",
+      "name": "Second facility",
+      "act": "V",
+      "chapter": "",
+      "status": "proposed",
+      "mode": "ground",
+      "route": [
+        [
+          10,
+          -520
+        ],
+        [
+          20,
+          -540
+        ],
+        [
+          5,
+          -560
+        ]
+      ],
       "note": "Name and purpose TBD. The last building before the summit: the ritual's control room / the owner's dying body?"
     },
     {
-      "id": "S17", "name": "The summit: the ritual site", "act": "V", "chapter": "", "status": "proposed", "mode": "ground",
-      "route": [[5, -560], [5, -556]],
+      "id": "S22",
+      "name": "The summit: the ritual site",
+      "act": "V",
+      "chapter": "",
+      "status": "proposed",
+      "mode": "ground",
+      "route": [
+        [
+          5,
+          -560
+        ],
+        [
+          5,
+          -556
+        ]
+      ],
       "note": "The circle, the three crystals, the open void. Where Elias, the researcher and the owner met. The finale."
     }
   ],
   "side_routes": [
     {
-      "name": "Cable line to the upper station", "style": "air", "status": "built (to pylon 4), rest proposed",
-      "route": [[4.5, -141, 12], [4.5, -175, 24], [4.5, -235, 40], [4.5, -305, 62], [4.5, -390, 200], [7, -455, 292]],
+      "name": "The river (PROPOSED)",
+      "style": "water",
+      "status": "proposed",
+      "route": [
+        [
+          -130,
+          -110
+        ],
+        [
+          -135,
+          -40
+        ],
+        [
+          -133,
+          20
+        ],
+        [
+          -128,
+          60
+        ],
+        [
+          -120,
+          88
+        ],
+        [
+          -118,
+          125
+        ]
+      ],
+      "note": "Runs north to south across the west plateau to the south coast. Crossed twice, both south of the ravine: the ford (south) and the collapsed bridge (north)."
+    },
+    {
+      "name": "The short way (blocked)",
+      "style": "surface",
+      "status": "proposed",
+      "route": [
+        [
+          0,
+          66
+        ],
+        [
+          0,
+          52
+        ],
+        [
+          -3,
+          44
+        ]
+      ],
+      "note": "The built Ch1 beach-to-trail path. Blocked by roadblock 1 so the player must take the jungle loop."
+    },
+    {
+      "name": "Cable line to the upper station",
+      "style": "air",
+      "status": "built (to pylon 4), rest proposed",
+      "route": [
+        [
+          4.5,
+          -141,
+          12
+        ],
+        [
+          4.5,
+          -175,
+          24
+        ],
+        [
+          4.5,
+          -235,
+          40
+        ],
+        [
+          4.5,
+          -305,
+          62
+        ],
+        [
+          4.5,
+          -390,
+          200
+        ],
+        [
+          7,
+          -455,
+          292
+        ]
+      ],
       "note": "The line really runs to pylon 4 at z -390. The map extends it to the research center's upper station."
     },
     {
-      "name": "Service path (surface, bypassed)", "style": "surface", "status": "built (A07) + proposed",
-      "route": [[8, -303], [30, -309], [32, -316], [-18, -325], [-20, -332], [30, -341], [32, -348], [-10, -357], [25, -385], [0, -410], [30, -430], [10, -455]],
+      "name": "Service path (surface, bypassed)",
+      "style": "surface",
+      "status": "built (A07) + proposed",
+      "route": [
+        [
+          8,
+          -303
+        ],
+        [
+          30,
+          -309
+        ],
+        [
+          32,
+          -316
+        ],
+        [
+          -18,
+          -325
+        ],
+        [
+          -20,
+          -332
+        ],
+        [
+          30,
+          -341
+        ],
+        [
+          32,
+          -348
+        ],
+        [
+          -10,
+          -357
+        ],
+        [
+          25,
+          -385
+        ],
+        [
+          0,
+          -410
+        ],
+        [
+          30,
+          -430
+        ],
+        [
+          10,
+          -455
+        ]
+      ],
       "note": "The lit fenced path (Ch3) that leads up to the research center on the surface. In this route the player does not take it; see conflicts."
     },
     {
-      "name": "Village cargo lift (Ch4 ending)", "style": "surface", "status": "built (Ch4 previs)",
-      "route": [[-212, -356], [-212, -371]],
+      "name": "Village cargo lift (Ch4 ending)",
+      "style": "surface",
+      "status": "built (Ch4 previs)",
+      "route": [
+        [
+          -212,
+          -356
+        ],
+        [
+          -212,
+          -371
+        ]
+      ],
       "note": "Ch4 currently ends by riding this lift up to the service path. Conflicts with 'village leads to the wreck'."
     }
   ],
   "structures": [
-    {"name": "Research center", "kind": "box", "pos": [10, -470], "size": [60, 14, 40], "color": "#c8c8d0", "status": "proposed"},
-    {"name": "Upper station", "kind": "box", "pos": [7, -455], "size": [14, 8, 10], "color": "#9fb4c8", "status": "proposed"},
-    {"name": "Second facility", "kind": "box", "pos": [10, -520], "size": [40, 12, 28], "color": "#d0b0a0", "status": "proposed"},
-    {"name": "Ritual circle", "kind": "ring", "pos": [5, -560], "size": [14, 1, 14], "color": "#ff4d6d", "status": "proposed"},
-    {"name": "Bunker", "kind": "box", "pos": [-45, -455, 214], "size": [24, 10, 18], "color": "#ff6b6b", "status": "proposed"},
-    {"name": "Colonial ship wreck", "kind": "ship", "pos": [-360, -298], "size": [34, 9, 11], "yaw": 35, "color": "#8b6a4a", "status": "proposed"},
-    {"name": "Village ring", "kind": "ring", "pos": [-205, -335], "size": [16, 1, 16], "color": "#7fe0a0", "status": "built"},
-    {"name": "Watchtower", "kind": "box", "pos": [26, -66], "size": [4, 11, 4], "color": "#d9b36c", "status": "built"},
-    {"name": "Cable car station", "kind": "box", "pos": [6, -140], "size": [10, 10, 12], "color": "#d9b36c", "status": "built"}
+    {
+      "name": "Research center",
+      "kind": "box",
+      "pos": [
+        10,
+        -470
+      ],
+      "size": [
+        60,
+        14,
+        40
+      ],
+      "color": "#c8c8d0",
+      "status": "proposed"
+    },
+    {
+      "name": "Upper station",
+      "kind": "box",
+      "pos": [
+        7,
+        -455
+      ],
+      "size": [
+        14,
+        8,
+        10
+      ],
+      "color": "#9fb4c8",
+      "status": "proposed"
+    },
+    {
+      "name": "Second facility",
+      "kind": "box",
+      "pos": [
+        10,
+        -520
+      ],
+      "size": [
+        40,
+        12,
+        28
+      ],
+      "color": "#d0b0a0",
+      "status": "proposed"
+    },
+    {
+      "name": "Ritual circle",
+      "kind": "ring",
+      "pos": [
+        5,
+        -560
+      ],
+      "size": [
+        14,
+        1,
+        14
+      ],
+      "color": "#ff4d6d",
+      "status": "proposed"
+    },
+    {
+      "name": "Bunker",
+      "kind": "box",
+      "pos": [
+        -45,
+        -455,
+        214
+      ],
+      "size": [
+        24,
+        10,
+        18
+      ],
+      "color": "#ff6b6b",
+      "status": "proposed"
+    },
+    {
+      "name": "Colonial ship wreck",
+      "kind": "ship",
+      "pos": [
+        -360,
+        -298
+      ],
+      "size": [
+        34,
+        9,
+        11
+      ],
+      "yaw": 35,
+      "color": "#8b6a4a",
+      "status": "proposed"
+    },
+    {
+      "name": "Village ring",
+      "kind": "ring",
+      "pos": [
+        -205,
+        -335
+      ],
+      "size": [
+        16,
+        1,
+        16
+      ],
+      "color": "#7fe0a0",
+      "status": "built"
+    },
+    {
+      "name": "Watchtower",
+      "kind": "box",
+      "pos": [
+        26,
+        -66
+      ],
+      "size": [
+        4,
+        11,
+        4
+      ],
+      "color": "#d9b36c",
+      "status": "built"
+    },
+    {
+      "name": "Cable car station",
+      "kind": "box",
+      "pos": [
+        6,
+        -140
+      ],
+      "size": [
+        10,
+        10,
+        12
+      ],
+      "color": "#d9b36c",
+      "status": "built"
+    },
+    {
+      "name": "Roadblock 1: trail mouth",
+      "kind": "box",
+      "pos": [
+        0,
+        52
+      ],
+      "size": [
+        10,
+        1.8,
+        2.4
+      ],
+      "color": "#e0a030",
+      "status": "proposed"
+    },
+    {
+      "name": "Jackknifed truck",
+      "kind": "vehicle",
+      "pos": [
+        -4,
+        49
+      ],
+      "size": [
+        7,
+        3.0,
+        2.6
+      ],
+      "color": "#6b6a50",
+      "status": "proposed",
+      "yaw": 72,
+      "label": false
+    },
+    {
+      "name": "Roadblock 2: barricade and jeep",
+      "kind": "box",
+      "pos": [
+        -168,
+        25
+      ],
+      "size": [
+        3,
+        1.8,
+        9
+      ],
+      "color": "#e0a030",
+      "status": "proposed",
+      "yaw": 0
+    },
+    {
+      "name": "Old jeep",
+      "kind": "vehicle",
+      "pos": [
+        -172,
+        22
+      ],
+      "size": [
+        4.2,
+        2.0,
+        2.0
+      ],
+      "color": "#7a7a55",
+      "status": "proposed",
+      "yaw": 20,
+      "label": false
+    },
+    {
+      "name": "Bridge convoy (old trucks)",
+      "kind": "vehicle",
+      "pos": [
+        -139,
+        26
+      ],
+      "size": [
+        7,
+        3.2,
+        2.6
+      ],
+      "color": "#6e5a45",
+      "status": "proposed",
+      "y_from": [
+        -150,
+        26
+      ],
+      "yaw": 90
+    },
+    {
+      "name": "Convoy truck 2",
+      "kind": "vehicle",
+      "pos": [
+        -132,
+        25
+      ],
+      "size": [
+        6,
+        3.0,
+        2.5
+      ],
+      "color": "#5c6a58",
+      "status": "proposed",
+      "y_from": [
+        -150,
+        26
+      ],
+      "yaw": 84,
+      "label": false
+    },
+    {
+      "name": "Convoy truck 3",
+      "kind": "vehicle",
+      "pos": [
+        -126,
+        27
+      ],
+      "size": [
+        5,
+        2.6,
+        2.3
+      ],
+      "color": "#6a6a70",
+      "status": "proposed",
+      "y_from": [
+        -150,
+        26
+      ],
+      "yaw": 96,
+      "label": false
+    },
+    {
+      "name": "Old road bridge",
+      "kind": "box",
+      "pos": [
+        -132,
+        26
+      ],
+      "size": [
+        26,
+        0.8,
+        7
+      ],
+      "color": "#8a8a8a",
+      "status": "proposed",
+      "y_from": [
+        -150,
+        26
+      ]
+    },
+    {
+      "name": "Roadblock 3: boom gate at the rim",
+      "kind": "box",
+      "pos": [
+        -42,
+        30
+      ],
+      "size": [
+        2,
+        1.4,
+        9
+      ],
+      "color": "#e0a030",
+      "status": "proposed",
+      "yaw": 0
+    },
+    {
+      "name": "Guard hut",
+      "kind": "box",
+      "pos": [
+        -45,
+        35
+      ],
+      "size": [
+        3.5,
+        2.8,
+        3.5
+      ],
+      "color": "#9a8a70",
+      "status": "proposed",
+      "label": false
+    },
+    {
+      "name": "Old fishing hamlet",
+      "kind": "box",
+      "pos": [
+        -58,
+        -58
+      ],
+      "size": [
+        6,
+        3,
+        5
+      ],
+      "color": "#8a7a68",
+      "status": "proposed"
+    },
+    {
+      "name": "Hamlet house",
+      "kind": "box",
+      "pos": [
+        -66,
+        -52
+      ],
+      "size": [
+        6,
+        3,
+        5
+      ],
+      "color": "#8a7a68",
+      "status": "proposed",
+      "label": false
+    },
+    {
+      "name": "Hamlet house",
+      "kind": "box",
+      "pos": [
+        -47,
+        -63
+      ],
+      "size": [
+        6,
+        3,
+        5
+      ],
+      "color": "#8a7a68",
+      "status": "proposed",
+      "label": false
+    },
+    {
+      "name": "Hamlet graves",
+      "kind": "box",
+      "pos": [
+        -52,
+        -73
+      ],
+      "size": [
+        10,
+        1,
+        6
+      ],
+      "color": "#7a7a7a",
+      "status": "proposed",
+      "label": false
+    }
   ],
   "landmarks": [
-    {"name": "Black stone", "pos": [22, 114], "status": "built"},
-    {"name": "Pylon 1", "pos": [4.5, -175], "status": "built"},
-    {"name": "Pylon 2", "pos": [4.5, -235], "status": "built"},
-    {"name": "Pylon 3 (car stops)", "pos": [4.5, -305], "status": "built"},
-    {"name": "Pylon 4", "pos": [4.5, -390], "status": "built"}
+    {
+      "name": "Black stone",
+      "pos": [
+        22,
+        114
+      ],
+      "status": "built"
+    },
+    {
+      "name": "Pylon 1",
+      "pos": [
+        4.5,
+        -175
+      ],
+      "status": "built"
+    },
+    {
+      "name": "Pylon 2",
+      "pos": [
+        4.5,
+        -235
+      ],
+      "status": "built"
+    },
+    {
+      "name": "Pylon 3 (car stops)",
+      "pos": [
+        4.5,
+        -305
+      ],
+      "status": "built"
+    },
+    {
+      "name": "Pylon 4",
+      "pos": [
+        4.5,
+        -390
+      ],
+      "status": "built"
+    },
+    {
+      "name": "Rim overlook",
+      "pos": [
+        -40,
+        30
+      ],
+      "status": "proposed"
+    },
+    {
+      "name": "River ford",
+      "pos": [
+        -123,
+        76
+      ],
+      "status": "proposed"
+    },
+    {
+      "name": "Collapsed bridge",
+      "pos": [
+        -132,
+        26
+      ],
+      "status": "proposed"
+    }
   ]
 }

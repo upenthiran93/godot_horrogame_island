@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="TreeProfile" format=3]
+
+[ext_resource type="Script" path="res://game/systems/trees/tree_profile.gd" id="1_5p8u0"]
+
+[resource]
+resource_name = "realistic_palm"
+script = ExtResource("1_5p8u0")
+archetype = 2
+height = 9.0
+height_jitter = 0.25
+trunk_radius = 0.17
+trunk_taper = 0.65
+lean = 0.4
+curve = 0.45
+gnarl = 0.05
+levels = 0
+leaf_size = 1.2
+leaf_color = Color(0.24, 0.36, 0.1, 1)
+leaf_color_2 = Color(0.36, 0.44, 0.14, 1)
+translucency = 0.8
+frond_count = 16
+frond_length = 3.8
+frond_droop = 0.9
+bark_color = Color(0.45, 0.4, 0.33, 1)
+bark_color_2 = Color(0.27, 0.23, 0.18, 1)
+rings_per_meter = 2.5

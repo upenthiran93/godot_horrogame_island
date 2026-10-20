@@ -1,0 +1,215 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://game/systems/trees/demo/tree_demo.gd" id="1_tpbgu"]
+[ext_resource type="ArrayMesh" path="res://game/systems/trees/demo/terrain_mesh.res" id="2_rjpvw"]
+[ext_resource type="Shape3D" path="res://game/systems/trees/demo/terrain_shape.res" id="3_0gcwo"]
+[ext_resource type="Script" path="res://game/systems/trees/tree_wind.gd" id="4_lu2po"]
+[ext_resource type="Script" path="res://game/systems/trees/proc_tree.gd" id="5_np3dq"]
+[ext_resource type="Resource" path="res://game/systems/trees/presets/realistic_broadleaf.tres" id="6_ohqbw"]
+[ext_resource type="Resource" path="res://game/systems/trees/presets/realistic_jungle.tres" id="7_4jp4g"]
+[ext_resource type="Resource" path="res://game/systems/trees/presets/realistic_pine.tres" id="8_das38"]
+[ext_resource type="Resource" path="res://game/systems/trees/presets/realistic_palm.tres" id="9_6jd36"]
+[ext_resource type="Resource" path="res://game/systems/trees/presets/realistic_dead.tres" id="10_pga3i"]
+[ext_resource type="Resource" path="res://game/systems/trees/presets/stylized_broadleaf.tres" id="11_26uxs"]
+[ext_resource type="Resource" path="res://game/systems/trees/presets/stylized_pine.tres" id="12_xv7ob"]
+[ext_resource type="Resource" path="res://game/systems/trees/presets/stylized_palm.tres" id="13_ose82"]
+[ext_resource type="Resource" path="res://game/systems/trees/presets/stylized_dead.tres" id="14_0bads"]
+[ext_resource type="Script" path="res://game/systems/trees/tree_forest.gd" id="15_wuyfl"]
+[ext_resource type="Script" path="res://game/systems/trees/tree_profile.gd" id="16_pybus"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_aqegw"]
+sky_top_color = Color(0.36, 0.48, 0.62, 1)
+sky_horizon_color = Color(0.68, 0.72, 0.74, 1)
+ground_horizon_color = Color(0.5, 0.52, 0.5, 1)
+
+[sub_resource type="Sky" id="Sky_0o274"]
+sky_material = SubResource("ProceduralSkyMaterial_aqegw")
+
+[sub_resource type="Environment" id="Environment_vpi4k"]
+background_mode = 2
+sky = SubResource("Sky_0o274")
+ambient_light_source = 3
+tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0.62, 0.68, 0.72, 1)
+fog_density = 0.004
+fog_sky_affect = 0.4
+
+[node name="TreeDemo" type="Node3D" unique_id=2104124133]
+script = ExtResource("1_tpbgu")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=816338041]
+environment = SubResource("Environment_vpi4k")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1383986490]
+transform = Transform3D(0.81915206, -0.38379756, 0.42625037, 0, 0.7431448, 0.6691306, -0.57357645, -0.5481197, 0.6087486, 0, 0, 0)
+light_energy = 1.2
+shadow_enabled = true
+directional_shadow_max_distance = 140.0
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=1005799613]
+
+[node name="Mesh" type="MeshInstance3D" parent="Ground" unique_id=226489745]
+mesh = ExtResource("2_rjpvw")
+
+[node name="Shape" type="CollisionShape3D" parent="Ground" unique_id=1322649142]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+shape = ExtResource("3_0gcwo")
+
+[node name="TreeWind" type="Node" parent="." unique_id=1026719194]
+script = ExtResource("4_lu2po")
+strength = 0.6
+
+[node name="Showcase" type="Node3D" parent="." unique_id=147050705]
+
+[node name="RealisticBroadleaf" type="MeshInstance3D" parent="Showcase" unique_id=1678026874]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -14)
+script = ExtResource("5_np3dq")
+profile = ExtResource("6_ohqbw")
+
+[node name="RealisticBroadleafLabel" type="Label3D" parent="Showcase" unique_id=1906949007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0.6, -9.5)
+pixel_size = 0.006
+billboard = 1
+modulate = Color(1, 1, 0.9, 1)
+text = "realistic broadleaf"
+font_size = 64
+
+[node name="RealisticJungle" type="MeshInstance3D" parent="Showcase" unique_id=1144849774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -14)
+script = ExtResource("5_np3dq")
+profile = ExtResource("7_4jp4g")
+
+[node name="RealisticJungleLabel" type="Label3D" parent="Showcase" unique_id=198674068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0.6, -9.5)
+pixel_size = 0.006
+billboard = 1
+modulate = Color(1, 1, 0.9, 1)
+text = "realistic jungle"
+font_size = 64
+
+[node name="RealisticPine" type="MeshInstance3D" parent="Showcase" unique_id=1443595495]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14)
+script = ExtResource("5_np3dq")
+profile = ExtResource("8_das38")
+
+[node name="RealisticPineLabel" type="Label3D" parent="Showcase" unique_id=1819330925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -9.5)
+pixel_size = 0.006
+billboard = 1
+modulate = Color(1, 1, 0.9, 1)
+text = "realistic pine"
+font_size = 64
+
+[node name="RealisticPalm" type="MeshInstance3D" parent="Showcase" unique_id=1495932368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -14)
+script = ExtResource("5_np3dq")
+profile = ExtResource("9_6jd36")
+
+[node name="RealisticPalmLabel" type="Label3D" parent="Showcase" unique_id=123989597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0.6, -9.5)
+pixel_size = 0.006
+billboard = 1
+modulate = Color(1, 1, 0.9, 1)
+text = "realistic palm"
+font_size = 64
+
+[node name="RealisticDead" type="MeshInstance3D" parent="Showcase" unique_id=2024343798]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, -14)
+script = ExtResource("5_np3dq")
+profile = ExtResource("10_pga3i")
+
+[node name="RealisticDeadLabel" type="Label3D" parent="Showcase" unique_id=114617205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0.6, -9.5)
+pixel_size = 0.006
+billboard = 1
+modulate = Color(1, 1, 0.9, 1)
+text = "realistic dead"
+font_size = 64
+
+[node name="StylizedBroadleaf" type="MeshInstance3D" parent="Showcase" unique_id=1434009871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 14)
+script = ExtResource("5_np3dq")
+profile = ExtResource("11_26uxs")
+
+[node name="StylizedBroadleafLabel" type="Label3D" parent="Showcase" unique_id=915995362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0.6, 18.5)
+pixel_size = 0.006
+billboard = 1
+modulate = Color(1, 1, 0.9, 1)
+text = "stylized broadleaf"
+font_size = 64
+
+[node name="StylizedPine" type="MeshInstance3D" parent="Showcase" unique_id=717610579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 14)
+script = ExtResource("5_np3dq")
+profile = ExtResource("12_xv7ob")
+
+[node name="StylizedPineLabel" type="Label3D" parent="Showcase" unique_id=552882539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.6, 18.5)
+pixel_size = 0.006
+billboard = 1
+modulate = Color(1, 1, 0.9, 1)
+text = "stylized pine"
+font_size = 64
+
+[node name="StylizedPalm" type="MeshInstance3D" parent="Showcase" unique_id=2047655]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 14)
+script = ExtResource("5_np3dq")
+profile = ExtResource("13_ose82")
+
+[node name="StylizedPalmLabel" type="Label3D" parent="Showcase" unique_id=1966155915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.6, 18.5)
+pixel_size = 0.006
+billboard = 1
+modulate = Color(1, 1, 0.9, 1)
+text = "stylized palm"
+font_size = 64
+
+[node name="StylizedDead" type="MeshInstance3D" parent="Showcase" unique_id=1869594645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 14)
+script = ExtResource("5_np3dq")
+profile = ExtResource("14_0bads")
+
+[node name="StylizedDeadLabel" type="Label3D" parent="Showcase" unique_id=1890902975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0.6, 18.5)
+pixel_size = 0.006
+billboard = 1
+modulate = Color(1, 1, 0.9, 1)
+text = "stylized dead"
+font_size = 64
+
+[node name="RealisticForest" type="Node3D" parent="." unique_id=153718344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -150)
+script = ExtResource("15_wuyfl")
+profiles = Array[ExtResource("16_pybus")]([ExtResource("6_ohqbw"), ExtResource("7_4jp4g"), ExtResource("9_6jd36"), ExtResource("8_das38"), ExtResource("10_pga3i")])
+profile_weights = PackedFloat32Array(3, 1, 2, 1.5, 0.5)
+area = Vector2(440, 200)
+spacing = 6.0
+density = 0.8
+random_seed = 3
+
+[node name="StylizedForest" type="Node3D" parent="." unique_id=897764670]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 150)
+script = ExtResource("15_wuyfl")
+profiles = Array[ExtResource("16_pybus")]([ExtResource("11_26uxs"), ExtResource("12_xv7ob"), ExtResource("13_ose82"), ExtResource("14_0bads")])
+profile_weights = PackedFloat32Array(3, 2, 1.5, 0.4)
+area = Vector2(440, 200)
+spacing = 6.0
+density = 0.8
+random_seed = 5
+
+[node name="Camera" type="Camera3D" parent="." unique_id=435970704]
+transform = Transform3D(1, 0, 0, 0, 0.99820054, 0.059964005, 0, -0.059964005, 0.99820054, 0, 3, 42)
+fov = 70.0
+far = 1000.0
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1065388314]
+
+[node name="Stats" type="Label" parent="HUD" unique_id=216567297]
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 12.0
+offset_bottom = 10.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6

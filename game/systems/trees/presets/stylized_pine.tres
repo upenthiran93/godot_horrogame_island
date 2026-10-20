@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="TreeProfile" format=3]
+
+[ext_resource type="Script" path="res://game/systems/trees/tree_profile.gd" id="1_igvaw"]
+
+[resource]
+resource_name = "stylized_pine"
+script = ExtResource("1_igvaw")
+style = 1
+archetype = 1
+height = 9.0
+height_jitter = 0.25
+trunk_radius = 0.22
+root_flare = 0.4
+lean = 0.03
+gnarl = 0.05
+levels = 0
+leaf_color = Color(0.25, 0.55, 0.35, 1)
+leaf_color_2 = Color(0.08, 0.25, 0.2, 1)
+bark_color = Color(0.42, 0.28, 0.2, 1)
+bark_color_2 = Color(0.26, 0.17, 0.12, 1)
+radial_segments = 6

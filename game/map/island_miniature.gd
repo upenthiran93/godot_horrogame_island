@@ -7,6 +7,7 @@ extends Node3D
 ##   Space play/pause the walk · , . previous/next stage · [ ] speed · F follow · X x-ray ground · L labels
 ##   G grid · A built-area outlines · 1 top  2 iso  3 south  4 west · H hide panels · Esc quit
 ## Screenshots: godot --path . res://game/map/island_miniature.tscn --write-movie out.png --fixed-fps 1 --quit-after 3 -- --view=iso --xray=1
+##   options after the --: --view=top|iso|south|west  --xray=0|1  --stage=N (0-based)  --focus=x,y,z,distance  --no-hud  --no-areas  --report (headless: print the stage table)
 
 const C := preload("res://tools/build_common.gd")
 const IH := preload("res://game/map/island_height.gd")
@@ -87,6 +88,10 @@ func _ready() -> void:
 			areas_node.visible = false
 		elif a.begins_with("--dist="):
 			dist = a.get_slice("=", 1).to_float()
+		elif a.begins_with("--focus="):   # x,y,z,dist
+			var fv := a.get_slice("=", 1).split_floats(",")
+			target = Vector3(fv[0], fv[1], fv[2])
+			dist = fv[3]
 	apply_xray()
 	update_hud()
 	if "--report" in args:
@@ -400,12 +405,18 @@ func build_routes() -> void:
 	for sr in map.get("side_routes", []):
 		var style: String = sr.get("style", "surface")
 		var col2 := Color(0.55, 0.78, 0.95) if style == "air" else Color(0.85, 0.85, 0.88)
-		var pts2 := route_points(sr["route"], "air" if style == "air" else "ground", 1.4)
+		var rad := 0.55
+		var lift2 := 1.4
+		if style == "water":
+			col2 = Color(0.25, 0.6, 1.0)
+			rad = 2.6
+			lift2 = -1.2
+		var pts2 := route_points(sr["route"], "air" if style == "air" else "ground", lift2)
 		var side := Node3D.new()
 		side.name = "Side_" + sr["name"]
 		routes.add_child(side)
 		for i in pts2.size() - 1:
-			tube(side, pts2[i], pts2[i + 1], 0.55, glow(col2))
+			tube(side, pts2[i], pts2[i + 1], rad, glow(col2))
 		make_label(sr["name"], pts2[pts2.size() / 2] + Vector3(0, 8, 0), 26, col2)
 
 
@@ -417,6 +428,8 @@ func build_structures() -> void:
 		var s: Dictionary = raw
 		var pos: Array = s["pos"]
 		var y: float = pos[2] if pos.size() == 3 else ground_y(pos[0], pos[1])
+		if s.has("y_from"):
+			y = ground_y(s["y_from"][0], s["y_from"][1]) + 0.4
 		var sz: Array = s["size"]
 		var col := hex(s.get("color", "#cccccc"))
 		var node := Node3D.new()
@@ -446,6 +459,18 @@ func build_structures() -> void:
 				prow.rotation = Vector3(0, PI / 2.0, 0.12)
 				prow.material_override = flat(col)
 				node.add_child(prow)
+			"vehicle":
+				var vb := BoxMesh.new()
+				vb.size = Vector3(sz[0], sz[1] * 0.75, sz[2])
+				mi.mesh = vb
+				mi.position.y = sz[1] * 0.45
+				var cab := MeshInstance3D.new()
+				var cb := BoxMesh.new()
+				cb.size = Vector3(sz[0] * 0.28, sz[1], sz[2] * 0.96)
+				cab.mesh = cb
+				cab.position = Vector3(sz[0] * 0.36, sz[1] * 0.6, 0)
+				cab.material_override = flat(col.darkened(0.25))
+				node.add_child(cab)
 			_:
 				var bm2 := BoxMesh.new()
 				bm2.size = Vector3(sz[0], sz[1], sz[2])
@@ -453,7 +478,8 @@ func build_structures() -> void:
 				mi.position.y = sz[1] * 0.5
 		mi.material_override = flat(col)
 		node.add_child(mi)
-		make_label(s["name"], node.position + Vector3(0, float(sz[1]) + 14.0, 0), 28, Color(0.95, 0.95, 0.95))
+		if s.get("label", true):
+			make_label(s["name"], node.position + Vector3(0, float(sz[1]) + 14.0, 0), 28, Color(0.95, 0.95, 0.95))
 	for raw in map.get("landmarks", []):
 		var lm: Dictionary = raw
 		var lp: Array = lm["pos"]
