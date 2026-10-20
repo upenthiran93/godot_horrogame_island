@@ -1,8 +1,10 @@
 @tool
+@icon("res://addons/proc_trees/icons/proc_tree.svg")
 class_name ProcTree
 extends MeshInstance3D
 ## One procedural tree for hand placement (hero trees, set dressing). Rebuilds live in the editor when the
 ## profile changes. The mesh is generated on load and never saved into the scene. For many trees use TreeForest.
+## Tip: the plugin's "Trees" menu (3D toolbar) adds one with its own editable copy of a preset.
 
 @export var profile: TreeProfile:
 	set(v):
@@ -21,6 +23,12 @@ extends MeshInstance3D
 ## Trunk collider (runtime only).
 @export var collision := true
 @export_flags_3d_physics var collision_layer := 1
+@export_tool_button("New variant", "RandomNumberGenerator") var new_variant_action := new_variant
+
+@export_group("Bake")
+## Where "Bake mesh" saves. Empty = res://baked_trees/<profile>_v<variant>_lod<lod>.res
+@export_file("*.res", "*.tres") var bake_path := ""
+@export_tool_button("Bake mesh to file", "Save") var bake_action := bake
 
 var _key := 0
 var _poll := 0.0
@@ -72,3 +80,30 @@ func _rebuild() -> void:
 		_body.collision_mask = 0
 		_body.add_child(cs)
 		add_child(_body, false, INTERNAL_MODE_FRONT)
+
+
+func new_variant() -> void:
+	variant = randi() % 1000
+
+
+## Save the current mesh as a normal mesh resource (use it anywhere, no plugin needed to display it,
+## though the tree shaders still need the shader globals: TreeMaterials.ensure_globals()). Returns the path.
+func bake() -> String:
+	if mesh == null:
+		push_warning("ProcTree: nothing to bake (no profile)")
+		return ""
+	var path := bake_path
+	if path.is_empty():
+		var nm := profile.resource_name if profile.resource_name else (profile.resource_path.get_file().get_basename() if profile.resource_path else "tree")
+		path = "res://baked_trees/%s_v%d_lod%d.res" % [nm.validate_filename(), variant, lod]
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(path.get_base_dir()))
+	var err := ResourceSaver.save(mesh.duplicate(true), path)
+	if err != OK:
+		push_error("ProcTree: could not save %s (%s)" % [path, error_string(err)])
+		return ""
+	print("ProcTree: baked %s" % path)
+	if Engine.is_editor_hint():
+		var ei := Engine.get_singleton("EditorInterface")
+		if ei:
+			ei.get_resource_filesystem().scan()
+	return path

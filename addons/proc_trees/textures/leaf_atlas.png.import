@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://55etkdrovew7"
-path.s3tc="res://.godot/imported/leaf_atlas.png-298a15c3006bac5b580c0d9d024bbc77.s3tc.ctex"
+uid="uid://beufrm88togns"
+path.s3tc="res://.godot/imported/leaf_atlas.png-e963194eacbdffa38b21ca61c97b5747.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://game/systems/trees/textures/leaf_atlas.png"
-dest_files=["res://.godot/imported/leaf_atlas.png-298a15c3006bac5b580c0d9d024bbc77.s3tc.ctex"]
+source_file="res://addons/proc_trees/textures/leaf_atlas.png"
+dest_files=["res://.godot/imported/leaf_atlas.png-e963194eacbdffa38b21ca61c97b5747.s3tc.ctex"]
 
 [params]
 

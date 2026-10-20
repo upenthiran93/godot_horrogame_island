@@ -1,9 +1,12 @@
 @tool
+@icon("res://addons/proc_trees/icons/tree_profile.svg")
 class_name TreeProfile
 extends Resource
 ## Recipe for one kind of procedural tree. TreeBuilder grows it (plus a variant number) into LOD meshes;
-## ProcTree shows one tree, TreeForest scatters thousands. Ready-made recipes: TreeProfile.preset("realistic_palm"),
-## or the saved copies in res://game/systems/trees/presets/. Edit a copy in the inspector — trees update live.
+## ProcTree shows one tree, TreeForest / TreeInstances draw thousands. Ready-made recipes: TreeProfile.preset("realistic_palm"),
+## or the saved copies in res://addons/proc_trees/presets/. Edit a copy in the inspector: trees update live.
+## Also implements the scatter-item API (get_lod_count / get_lod_mesh / get_item_info / get_cache_key) that
+## TreeInstances and forest/scatter plugins use. See the README.
 
 enum Style { REALISTIC, STYLIZED }
 enum Archetype { BROADLEAF, CONIFER, PALM, DEAD }
@@ -12,6 +15,9 @@ enum Crown { SPHERE, CONE, DOME, CYLINDER, FLAME }
 ## REALISTIC: bark textures + alpha-cut leaf cards. STYLIZED: toon-shaded solid canopy (puffs, tiers, fronds).
 @export var style := Style.REALISTIC
 @export var archetype := Archetype.BROADLEAF
+## The random shape of the tree. Other settings keep the shape when you change them; change this to get a new one.
+@export var shape_seed := 0
+@export_tool_button("Reroll shape", "RandomNumberGenerator") var reroll_action := reroll
 
 @export_group("Trunk")
 @export_range(1.0, 60.0, 0.1, "suffix:m") var height := 12.0
@@ -91,9 +97,38 @@ enum Crown { SPHERE, CONE, DOME, CYLINDER, FLAME }
 func cache_key() -> int:
 	var vals := []
 	for prop in get_property_list():
-		if prop.usage & PROPERTY_USAGE_SCRIPT_VARIABLE:
+		if prop.usage & PROPERTY_USAGE_SCRIPT_VARIABLE and prop.usage & PROPERTY_USAGE_STORAGE:
 			vals.append(get(prop.name))
 	return hash(vals)
+
+
+## New random shape, same settings.
+func reroll() -> void:
+	shape_seed = randi() % 1000000
+	emit_changed()
+	notify_property_list_changed()
+
+
+# --- scatter-item API (TreeInstances, forest/scatter plugins) -------------------------------------------------
+
+func get_lod_count() -> int:
+	return TreeBuilder.LOD_COUNT
+
+
+## Mesh for one variant (any int; each is a different seed) at one LOD (0 = full detail). Cached and shared.
+func get_lod_mesh(variant: int, lod: int) -> Mesh:
+	return TreeBuilder.build(self, variant, lod)
+
+
+## Unscaled size facts for placement, culling and collision:
+## {height, trunk_radius, crown_radius, collision_radius, collision_height}.
+func get_item_info(variant: int) -> Dictionary:
+	return TreeBuilder.info(self, variant)
+
+
+## Changes whenever any setting changes (poll it in the editor to refresh).
+func get_cache_key() -> int:
+	return cache_key()
 
 
 const PRESET_NAMES := [

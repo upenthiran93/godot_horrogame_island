@@ -161,7 +161,9 @@ static func build(p: TreeProfile, variant := 0, lod := 0) -> ArrayMesh:
 ## Height and trunk radius of one variant (unscaled), for collision and culling.
 static func info(p: TreeProfile, variant := 0) -> Dictionary:
 	var sk := skeleton(p, variant)
-	return {"height": sk.height, "trunk_radius": sk.trunk_radius * (1.0 + p.root_flare * 0.35)}
+	var r := sk.trunk_radius * (1.0 + p.root_flare * 0.35)
+	return {"height": sk.height, "trunk_radius": r, "crown_radius": maxf(sk.crown_radii.x, sk.crown_radii.z),
+		"collision_radius": r, "collision_height": minf(sk.height, 8.0)}
 
 
 static func clear_cache() -> void:
@@ -174,7 +176,7 @@ static func skeleton(p: TreeProfile, variant := 0) -> Skeleton:
 	if _skeletons.has(key):
 		return _skeletons[key]
 	var rng := RandomNumberGenerator.new()
-	rng.seed = key
+	rng.seed = hash([p.shape_seed, variant])  # not the full key: editing colours or sizes keeps the shape
 	var sk := Skeleton.new()
 	sk.height = p.height * (1.0 + rng.randf_range(-p.height_jitter, p.height_jitter))
 	sk.trunk_radius = p.trunk_radius * sqrt(sk.height / p.height)

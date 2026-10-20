@@ -2,15 +2,22 @@ class_name TreeMaterials
 extends RefCounted
 ## Shader materials for tree profiles (shared by every tree with the same look) and the textures they use:
 ## a 2x2 leaf atlas (broad leaves, needles, palm frond, hanging moss) and tiling bark noise.
-## The atlas is painted procedurally; tools/build_tree_assets.gd bakes it to textures/leaf_atlas.png
+## The atlas is painted procedurally; addons/proc_trees/tools/build_assets.gd bakes it to textures/leaf_atlas.png
 ## (imported with mipmaps + VRAM compression). If that file is missing, a smaller copy is painted at runtime.
 
-const SHADER_DIR := "res://game/systems/trees/shaders/"
-const ATLAS_PATH := "res://game/systems/trees/textures/leaf_atlas.png"
+const SHADER_DIR := "res://addons/proc_trees/shaders/"
+const ATLAS_PATH := "res://addons/proc_trees/textures/leaf_atlas.png"
+## Shader globals every tree shader reads. The editor plugin adds them to Project Settings; ensure_globals()
+## also registers them at runtime, so trees work in projects/exports where that never happened.
+const GLOBALS := {
+	"tree_wind": [RenderingServer.GLOBAL_VAR_TYPE_VEC4, "vec4", Vector4(0.77, 0.64, 0.5, 0.6)],
+	"tree_view_pos": [RenderingServer.GLOBAL_VAR_TYPE_VEC3, "vec3", Vector3.ZERO],
+}
 
 enum Tile { LEAVES, NEEDLES, FROND, MOSS }
 
 static var _materials := {}
+static var _globals_ok := false
 static var _atlas: Texture2D
 static var _bark_noise: Texture2D
 static var _bark_normal: Texture2D
@@ -22,6 +29,7 @@ static func for_profile(p: TreeProfile) -> Array:
 		p.bark_moss, p.bark_normal, p.translucency, p.wind_bend, p.wind_branch, p.wind_flutter])
 	if _materials.has(key):
 		return _materials[key]
+	ensure_globals()
 	var stylized := p.style == TreeProfile.Style.STYLIZED
 	var bark := ShaderMaterial.new()
 	var fol := ShaderMaterial.new()
@@ -47,6 +55,18 @@ static func for_profile(p: TreeProfile) -> Array:
 		fol.set_shader_parameter("translucency", p.translucency)
 	_materials[key] = [bark, fol]
 	return _materials[key]
+
+
+static func ensure_globals() -> void:
+	if _globals_ok:
+		return
+	_globals_ok = true
+	# at runtime, globals from Project Settings are already registered; the list query is editor-only
+	var have: Array = Array(RenderingServer.global_shader_parameter_get_list()) if Engine.is_editor_hint() else []
+	for n: StringName in GLOBALS:
+		var known := have.has(n) if Engine.is_editor_hint() else ProjectSettings.has_setting("shader_globals/" + n)
+		if not known:
+			RenderingServer.global_shader_parameter_add(n, GLOBALS[n][0], GLOBALS[n][2])
 
 
 ## UV rectangle of an atlas tile, inset a little against bleeding.

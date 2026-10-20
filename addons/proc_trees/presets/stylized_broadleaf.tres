@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="TreeProfile" format=3]
 
-[ext_resource type="Script" path="res://game/systems/trees/tree_profile.gd" id="1_ythpr"]
+[ext_resource type="Script" path="res://addons/proc_trees/core/tree_profile.gd" id="1_b4kn8"]
 
 [resource]
 resource_name = "stylized_broadleaf"
-script = ExtResource("1_ythpr")
+script = ExtResource("1_b4kn8")
 style = 1
 height = 7.0
 height_jitter = 0.2

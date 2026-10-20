@@ -2,8 +2,8 @@
 shader_type spatial;
 render_mode cull_back;
 
-#include "res://game/systems/trees/shaders/tree_common.gdshaderinc"
-#include "res://game/systems/trees/shaders/tree_toon.gdshaderinc"
+#include "res://addons/proc_trees/shaders/tree_common.gdshaderinc"
+#include "res://addons/proc_trees/shaders/tree_toon.gdshaderinc"
 
 uniform vec4 bark_color : source_color = vec4(0.45, 0.3, 0.2, 1.0);
 uniform vec4 bark_color_2 : source_color = vec4(0.3, 0.19, 0.13, 1.0);

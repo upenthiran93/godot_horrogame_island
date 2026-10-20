@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="TreeProfile" format=3]
 
-[ext_resource type="Script" path="res://game/systems/trees/tree_profile.gd" id="1_lm7m1"]
+[ext_resource type="Script" path="res://addons/proc_trees/core/tree_profile.gd" id="1_cg5xv"]
 
 [resource]
 resource_name = "realistic_pine"
-script = ExtResource("1_lm7m1")
+script = ExtResource("1_cg5xv")
 archetype = 1
 height = 17.0
 height_jitter = 0.2

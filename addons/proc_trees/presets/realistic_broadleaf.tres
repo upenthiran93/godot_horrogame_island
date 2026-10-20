@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="TreeProfile" format=3]
 
-[ext_resource type="Script" path="res://game/systems/trees/tree_profile.gd" id="1_pv0hj"]
+[ext_resource type="Script" path="res://addons/proc_trees/core/tree_profile.gd" id="1_x1h7t"]
 
 [resource]
 resource_name = "realistic_broadleaf"
-script = ExtResource("1_pv0hj")
+script = ExtResource("1_x1h7t")
 height = 13.0
 height_jitter = 0.18
 trunk_length = 0.55

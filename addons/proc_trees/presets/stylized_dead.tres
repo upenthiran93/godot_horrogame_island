@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="TreeProfile" format=3]
 
-[ext_resource type="Script" path="res://game/systems/trees/tree_profile.gd" id="1_da7nr"]
+[ext_resource type="Script" path="res://addons/proc_trees/core/tree_profile.gd" id="1_u5bw0"]
 
 [resource]
 resource_name = "stylized_dead"
-script = ExtResource("1_da7nr")
+script = ExtResource("1_u5bw0")
 style = 1
 archetype = 3
 height = 6.0

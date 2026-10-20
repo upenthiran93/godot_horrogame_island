@@ -1,21 +1,23 @@
 extends SceneTree
-## One-off generator for the tree system (res://game/systems/trees/):
+## Asset generator for the Proc Trees plugin (res://addons/proc_trees/):
 ##   textures/leaf_atlas.png       painted leaf/needle/frond/moss atlas
 ##   presets/<name>.tres           every TreeProfile preset, to drag into ProcTree / TreeForest and tweak
 ##   demo/tree_demo.tscn           showcase + benchmark scene (+ demo/terrain_mesh.res, terrain_shape.res)
-## Run:  godot --headless --path . --script res://tools/build_tree_assets.gd [-- --force]
+## Run:  godot --headless --path . --script res://addons/proc_trees/tools/build_assets.gd [-- --force]
 ## Never overwrites existing files unless --force is passed (presets and the demo are meant to be edited).
 
-const C := preload("res://tools/build_common.gd")
-const DIR := "res://game/systems/trees/"
+const DIR := "res://addons/proc_trees/"
 const TERRAIN_SIZE := 520.0
 const TERRAIN_RES := 130
 
 var force := false
+var _noise := FastNoiseLite.new()
 
 
 func _init() -> void:
 	force = "--force" in OS.get_cmdline_user_args()
+	_noise.frequency = 0.006
+	_noise.fractal_octaves = 4
 	build_atlas()
 	build_presets()
 	build_demo()
@@ -58,7 +60,7 @@ func build_presets() -> void:
 
 func _height(x: float, z: float) -> float:
 	var r := Vector2(x, z).length()
-	var hills := (C.fbm(x * 0.012, z * 0.012, 4) - 0.5) * 26.0 + sin(x * 0.02) * 3.0
+	var hills := _noise.get_noise_2d(x, z) * 16.0 + sin(x * 0.02) * 3.0
 	return hills * smoothstep(70.0, 140.0, r)
 
 

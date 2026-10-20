@@ -4,7 +4,7 @@ extends Node3D
 ## 1 calm · 2 breeze · 3 storm · F toggle forests · H hide HUD (fps, draw calls, triangles) · Esc quit.
 ##
 ## Benchmark (flies through both forests, prints averages; add --no-shadows or --only=realistic|stylized):
-##   godot --path . --disable-vsync res://game/systems/trees/demo/tree_demo.tscn -- --bench
+##   godot --path . --disable-vsync res://addons/proc_trees/demo/tree_demo.tscn -- --bench
 ## Screenshots: ... -- --shots=/abs/dir --views="x,y,z,lx,ly,lz;..."
 
 const WIND := [Vector2(0.15, 0.3), Vector2(0.6, 0.6), Vector2(1.8, 1.0)]  # strength, gustiness

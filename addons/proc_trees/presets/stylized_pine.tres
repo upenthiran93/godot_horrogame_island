@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="TreeProfile" format=3]
 
-[ext_resource type="Script" path="res://game/systems/trees/tree_profile.gd" id="1_igvaw"]
+[ext_resource type="Script" path="res://addons/proc_trees/core/tree_profile.gd" id="1_jeh1l"]
 
 [resource]
 resource_name = "stylized_pine"
-script = ExtResource("1_igvaw")
+script = ExtResource("1_jeh1l")
 style = 1
 archetype = 1
 height = 9.0

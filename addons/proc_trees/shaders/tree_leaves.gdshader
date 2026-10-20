@@ -3,7 +3,7 @@
 shader_type spatial;
 render_mode cull_disabled;
 
-#include "res://game/systems/trees/shaders/tree_common.gdshaderinc"
+#include "res://addons/proc_trees/shaders/tree_common.gdshaderinc"
 
 uniform sampler2D leaf_atlas : source_color, filter_linear_mipmap_anisotropic, repeat_disable;
 uniform vec4 leaf_color : source_color = vec4(0.2, 0.33, 0.09, 1.0);

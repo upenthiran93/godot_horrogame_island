@@ -1,4 +1,5 @@
 @tool
+@icon("res://addons/proc_trees/icons/tree_wind.svg")
 class_name TreeWind
 extends Node
 ## Sets the global wind every tree shader reads (shader global `tree_wind`). One per scene is enough;
@@ -24,5 +25,6 @@ func _ready() -> void:
 
 
 func _apply() -> void:
+	TreeMaterials.ensure_globals()
 	var a := deg_to_rad(direction)
 	RenderingServer.global_shader_parameter_set("tree_wind", Vector4(cos(a), sin(a), strength, gustiness))

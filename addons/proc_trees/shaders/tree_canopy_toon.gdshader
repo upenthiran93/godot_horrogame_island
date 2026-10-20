@@ -3,8 +3,8 @@
 shader_type spatial;
 render_mode cull_disabled;
 
-#include "res://game/systems/trees/shaders/tree_common.gdshaderinc"
-#include "res://game/systems/trees/shaders/tree_toon.gdshaderinc"
+#include "res://addons/proc_trees/shaders/tree_common.gdshaderinc"
+#include "res://addons/proc_trees/shaders/tree_toon.gdshaderinc"
 
 uniform vec4 leaf_color : source_color = vec4(0.45, 0.68, 0.22, 1.0);
 uniform vec4 leaf_color_2 : source_color = vec4(0.13, 0.36, 0.16, 1.0);
