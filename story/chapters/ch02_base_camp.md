@@ -3,7 +3,7 @@
 > Reworked 2026-10-14 from "The Closed Area". No underground: the hatch, blast site, command building, door code, incident report and the hollow are cut. Everything marked **PROPOSED** is new and needs your OK.
 
 ## Summary
-Through the gate, the ground still shaking: if the stone rose, no boat is coming. The closed area turns out to be a **supply base camp**. Everything here is crated and stamped for the **research center at the top of the mountain**, and it all goes up on a **cargo cable car**. The car's lower station is dead. It runs off Substation B, whose generator is dry, so the player gets fuel from the barracks (finding Elias's locker, then hiding when it comes through the door). They start the generator, set the breakers, and power comes back across the camp. At the station the intercom to the upper station plays Elias's message: he went **up**. The player boards car 2 and throws the RUN lever. The drive takes its time winding up while it runs at them across the yard, and the car lurches out just as it reaches the platform.
+Through the gate, the ground still vibrating with a low oceanic hum: the Black Stone has risen, meaning no boat is coming. The closed area turns out to be a **supply base camp** for **Vane Bio-Marine's Project TIDEWATER** (operating under the cover of Detachment 9). Everything here is crated and stamped for the **Research Center and Upper Crater Array at the top of the mountain**, fed by a heavy **cargo cable car**. The car's lower station is dead. It runs off Substation B, whose generator is dry, so the player gets fuel from the barracks (finding Elias's locker with a photo of **Elias and Dr. Mara Chen** and a draft warning never to trust his phone, then hiding in a locker when **The Shepherd** enters dripping seawater and mimicking dead voices). They start the generator, set the breakers in order, and power returns across the camp—giving **Julian Vane** (fused into the grid) his voice. At the station, the intercom plays a message in **Elias's spliced voice** luring them up the mountain. The player boards Car 2 and throws the RUN lever. The drive winds up while The Shepherd sprints across the yard, and the car lurches out just as it slams against the platform rail.
 
 ## Location
 - **Level:** `res://game/levels/a05_base_camp/a05_base_camp_blockout.tscn` (A04 Old Harbor is also loaded for the opening aerial shot)
@@ -11,7 +11,7 @@ Through the gate, the ground still shaking: if the stone rose, no boat is coming
 - **Level nodes animated:** `Dynamic/BasePower` (camp + station lights), `FuelCan`, `Lever_Lighting/Comms/Main`, `CableCar` (+ `CabinLight`, `RunLever`); the gate (A04) starts open.
 
 ## Characters present
-Protagonist, the creature, Sgt. Elias (intercom voice only).
+Protagonist, The Shepherd / Capt. Alistair Locke (stalks barracks, charges platform), Julian Vane (speaks over the station intercom using spliced recordings of Sgt. Elias).
 
 ## Beats
 | # | Beat | Target time | Notes |

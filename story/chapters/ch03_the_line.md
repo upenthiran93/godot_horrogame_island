@@ -3,7 +3,9 @@
 > **DRAFT — first part only (2026-10-14).** Chapters are edited one at a time, so nothing here is final. The part below is built in previs; everything after the forest is **not designed yet**.
 
 ## Summary
-Car 2 climbs up the line above the camp. The ride shakes now and then as it crosses the towers, and something can be seen on the slope outside, keeping pace with the car, then ahead of it. Halfway up the drive lets go: a grip bangs, the car stops dead beside pylon 3 and the cabin light dies. Nothing else for it, the player climbs out and down the pylon ladder. A fenced, lit service path leads up through a forest, crosses an old stream on a plank bridge, and carries on past loose scree toward the research center.
+Car 2 climbs up the line above the camp through luminescent, ozone-scented fog. The ride jolts as it crosses the tower saddles, and **The Shepherd** can be seen on the steep slope outside—keeping pace with the machine, then appearing ahead of it by the next tower. Halfway up, **Elias's earlier sabotage** takes effect: a mechanical clamp bangs shut at **Pylon 3**, stopping the car dead and killing the cabin light (cutting off Julian Vane's radio reach). With no other way forward, the player climbs out and down the icy pylon ladder. A rusted rung snaps, dropping the player through the canopy into the sunken **Old Village hollow** (Chapter 4).
+
+*(Note: Beats 7–9 in this previs scene—the Lit Service Path, Old Stream Plank Bridge, and Forest in `A07`—are traversed immediately after the player rides the Cargo Lift out of the Old Village at the end of Chapter 4, culminating in The Shepherd's bridge ambush that drops the player into the West Gully for Chapter 5.)*
 
 ## Location
 - **Levels:** A06 Ropeway (the line, pylons, the stopped car), A07 Service Path (the path, forest, scree, stream and bridge). A05 is loaded at the start for the view back over the camp. The fall is the transition: A06 unloads and A07 loads, so the ropeway is never shown again.
@@ -30,7 +32,10 @@ Protagonist, the creature (on the slope; then by the next tower; then it's out o
 | 10 | End card: "End of Chapter 3 (so far)" | |
 
 ## What comes next
-> **PROPOSED restructure (2026-10-16):** the fall is where this chapter ends. The player lands in the ruins of the island's original village, which becomes its own chapter: **Chapter 4 — The Old Village** (`ch04_the_old_village.md`). The lit path, stream and forest shots built here (beats 7 to 9, shots `s09` to `s11`) would move to a later chapter, **Chapter 5 — The Service Path**, which the player reaches by leaving the village. The previs is **not changed yet**; those shots stay in this scene until you confirm the split.
+> **Cosmic Horror Route Integration (v8):**
+> 1. **The Fall (`s07`)** drops the player into the unpowered **Old Village (`A08–A11`, Chapter 4)**.
+> 2. At the end of **Chapter 4**, the player rides the **Village Cargo Lift (`A10`)** up to the **Lit Service Path (`A07`)**.
+> 3. The player then walks the **Lit Path, Old Stream Plank Bridge, and Forest (`s08–s11`)**, where **The Shepherd ambushes them on the bridge**, collapsing it into the **West Gully (`S09`)** and starting **Chapter 5: The Belly of the Mountain**. All built `A06` and `A07` assets remain 100% used.
 
 ## Previs
 - **Status:** draft (first part, with the fall)
